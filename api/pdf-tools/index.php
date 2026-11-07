@@ -1,0 +1,1 @@
+<?php header("Content-Type: application/json; charset=utf-8"); http_response_code(503); echo json_encode(["error"=>"Эта операция требует отдельного сервера обработки; на обычном PHP-хостинге недоступна."], JSON_UNESCAPED_UNICODE);

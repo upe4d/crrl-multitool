@@ -1,0 +1,13 @@
+Options -Indexes
+<IfModule mod_mime.c>
+AddType application/javascript .mjs
+AddType application/wasm .wasm
+AddType application/octet-stream .onnx
+</IfModule>
+<IfModule mod_setenvif.c>
+SetEnvIf Request_URI "^/(n|api)(/|$)" MULTITOOL_PRIVATE=1
+SetEnvIf Query_String ".+" MULTITOOL_PRIVATE=1
+</IfModule>
+<IfModule mod_headers.c>
+Header always set Cache-Control "no-store" env=MULTITOOL_PRIVATE
+</IfModule>

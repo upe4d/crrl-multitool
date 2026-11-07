@@ -1,0 +1,73 @@
+/* Keep short settings beside the data they affect on wider screens. */
+@media (min-width: 651px) {
+  #toolsExtra .text-tool-password .text-tool-workspace {
+    display:grid;
+    grid-template-columns:minmax(0,390px) minmax(115px,140px) minmax(0,1fr);
+    column-gap:16px;
+    align-items:end;
+  }
+  #toolsExtra .text-tool-password .text-tool-head,
+  #toolsExtra .text-tool-password .text-tool-modes,
+  #toolsExtra .text-tool-password .text-tool-actions,
+  #toolsExtra .text-tool-password .text-tool-status { grid-column:1 / -1; }
+  #toolsExtra .text-tool-password .text-tool-grid { grid-column:1; min-width:0; }
+  #toolsExtra .text-tool-password #text-length-label { grid-column:2; margin:0; max-width:none; }
+
+  #toolsImages .image-tool-workspace {
+    display:grid;
+    grid-template-columns:minmax(0,420px) minmax(140px,170px) minmax(0,150px);
+    column-gap:16px;
+    row-gap:12px;
+    align-items:end;
+  }
+  #toolsImages .image-heading { grid-column:1 / -1; grid-row:1; }
+  #toolsImages .image-file { grid-column:1; grid-row:2; min-width:0; width:100%; }
+  #toolsImages .image-output-settings { grid-column:2 / -1; grid-row:2; margin:0; min-width:0; }
+  #toolsImages .image-output-settings label { flex:0 1 160px; width:auto; min-width:0; }
+  #toolsImages #image-source-info { grid-column:1 / -1; grid-row:3; margin:0; }
+  #toolsImages .image-settings { grid-column:1 / -1; grid-row:4; margin:0; }
+  #toolsImages .image-settings .image-hint { margin:0; }
+  #toolsImages .image-actions { grid-column:1 / -1; grid-row:5; margin-top:4px; }
+  #toolsImages .image-status { grid-column:1 / -1; grid-row:6; margin:0; }
+  #toolsImages .image-previews { grid-column:1 / -1; grid-row:7; margin-top:0; }
+}
+
+/* A single-column layout avoids cramped controls on narrow phones. */
+@media (max-width:650px) {
+  #toolsExtra .text-tool-password .text-tool-grid,
+  #toolsExtra .text-tool-password .text-tool-actions { max-width:100%; }
+}
+
+#mapsSection .maps-form { max-width:1060px; }
+#pdf-tools-root .pdf-tool-grid { max-width:1100px; }
+#toolsConvert .convert-layout, #toolsImages .image-panel,
+#toolsCalculations .calc-panel, #toolsExtra .text-tool-panel,
+#pdf-tools-root .pdf-tool-card { max-width:1200px; }
+
+.calculation-tools .calc-result-row {
+  display:flex;
+  align-items:end;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:18px;
+}
+.calculation-tools .calc-result-row .calc-output {
+  flex:0 1 440px;
+  min-width:0;
+  margin:0;
+}
+.calculation-tools .calc-result-row .calc-result {
+  min-height:44px;
+  height:44px;
+  max-height:160px;
+  resize:vertical;
+}
+.calculation-tools .calc-result-row .calc-copy { min-height:44px; }
+@media (min-width:701px) {
+  .calculation-tools .calc-fields:not(.calc-fields-offers) {
+    grid-template-columns:repeat(auto-fit,minmax(165px,220px));
+  }
+}
+@media (max-width:650px) {
+  .calculation-tools .calc-result-row .calc-output { flex:1 1 230px; }
+}

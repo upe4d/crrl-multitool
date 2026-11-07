@@ -1,0 +1,23 @@
+/* Secondary navigation uses a distinct palette from the main section tabs. */
+#convert :is(.tool-subtabs,.text-tool-tabs,.image-tabs,.calc-tabs,.pdf-action-tabs) button {
+  background:#1c1d29;
+  border:1px solid #45465d;
+  border-radius:7px;
+  color:#c9c9dc;
+}
+#convert :is(.tool-subtabs,.text-tool-tabs,.image-tabs,.calc-tabs,.pdf-action-tabs) button:hover {
+  border-color:#b0a9f4;
+  color:#f5f3ff;
+}
+#convert :is(.tool-subtabs,.text-tool-tabs,.image-tabs,.calc-tabs,.pdf-action-tabs) button:is(.active,[aria-selected="true"],[aria-pressed="true"]),
+#convert :is(.tool-subtabs,.text-tool-tabs,.image-tabs,.calc-tabs,.pdf-action-tabs) button:is(.active,[aria-selected="true"],[aria-pressed="true"]):hover {
+  background:#c3bcff;
+  border-color:#c3bcff;
+  color:#171526;
+}
+#sectionMenu .side-subnav button.active,
+#sectionMenu .side-game-genre.active {
+  background:#302e49;
+  border-color:#766faa;
+  color:#f2efff;
+}

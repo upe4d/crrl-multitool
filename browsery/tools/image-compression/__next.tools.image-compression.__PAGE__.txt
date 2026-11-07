@@ -1,0 +1,61 @@
+2:"$Sreact.fragment"
+3:"static/chunks/7333-75dfba7a68201efd.js"
+4:"static/chunks/6441-7ec7e787dfa68ede.js"
+5:"static/chunks/8560-50fbd5701734f2f4.js"
+6:"static/chunks/9862-42c198338bb6917b.js"
+7:"static/chunks/3813-a3ef0b777d2688ff.js"
+8:"static/chunks/8500-63a4afbeacab3b52.js"
+9:"static/chunks/997-886b7c7fa7cddc62.js"
+a:"static/chunks/1818-c35092e9fae51dfd.js"
+b:"static/chunks/8555-eff9f0b72f5799f0.js"
+c:"static/chunks/8367-d8123463448d2e83.js"
+d:"static/chunks/8308-388ad69007d773de.js"
+e:"static/chunks/app/tools/layout-368883f5e4848ce0.js"
+f:I[60664,["7333","$3","6441","$4","8560","$5","9862","$6","3813","$7","8500","$8","997","$9","1818","$a","8555","$b","8367","$c","8308","$d","8093","$e"],"default"]
+10:I[69001,["7333","$3","6441","$4","8560","$5","9862","$6","3813","$7","8500","$8","997","$9","1818","$a","8555","$b","8367","$c","8308","$d","8093","$e"],"AppShell"]
+11:I[70300,["7333","$3","6441","$4","8560","$5","9862","$6","3813","$7","8500","$8","997","$9","1818","$a","8555","$b","8367","$c","8308","$d","8093","$e"],"TopBar"]
+12:I[37264,["7333","$3","6441","$4","8560","$5","9862","$6","3813","$7","8500","$8","997","$9","1818","$a","8555","$b","8367","$c","8308","$d","8093","$e"],"ToolTitle"]
+13:I[57121,[],""]
+14:I[74581,[],""]
+15:I[96879,["7333","$3","6441","$4","8560","$5","9862","$6","3813","$7","8500","$8","997","$9","1818","$a","8555","$b","8367","$c","8308","$d","8093","$e"],"ToolHelp"]
+1c:"static/chunks/2668-34617b71053dbf63.js"
+1d:"static/chunks/908-f67099ecb76f4eda.js"
+1e:"static/chunks/27-effb96aec47dc4cb.js"
+1f:"static/chunks/7532-03c928c3d15a69ae.js"
+20:"static/chunks/6415-e57db935eb469c7f.js"
+21:"static/chunks/4973-4248d092a579d8b6.js"
+22:"static/chunks/1052-de00decd62312cf6.js"
+23:"static/chunks/1326-48ec8a310a5d1833.js"
+24:"static/chunks/app/tools/image-compression/page-0dd216972fc43b4d.js"
+25:I[31338,["7333","$3","6441","$4","8560","$5","2668","$1c","908","$1d","9862","$6","3813","$7","27","$1e","7532","$1f","6415","$20","4973","$21","8367","$c","1052","$22","1326","$23","4271","$24"],"default"]
+2c:"ViewportBoundary"
+2d:I[90484,[],"$2c"]
+2e:"MetadataBoundary"
+2f:I[90484,[],"$2e"]
+30:"$Sreact.suspense"
+31:I[86869,[],"IconMark"]
+:HL["/browsery/_next/static/css/bf1fd9ed1d317829.css","style"]
+17:X
+1a:X
+1a:C
+1b:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[[["$","$L25",null,{}],["$","div",null,{"className":"app-shell_toolSeoZone__j1_i1","children":["$","section",null,{"aria-label":"Об этом инструменте","className":"mx-auto w-full max-w-4xl px-4 pb-16 pt-10","data-testid":"tool-seo-content","data-seo-content":true,"children":[[null,null,null,null],["$","div",null,{"className":"flex flex-col gap-6","children":[["$","div",null,{"className":"rounded-[11px] border bg-card text-card-foreground","children":[["$","div",null,{"className":"flex flex-col space-y-1.5 px-5 py-4","children":["$","div",null,{"className":"font-semibold tracking-tight flex items-center gap-2 text-xl","children":[["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-list-checks size-5 shrink-0 text-muted-foreground","aria-hidden":"true","children":[["$","path","a7qcls",{"d":"M13 5h8"}],["$","path","h98zly",{"d":"M13 12h8"}],["$","path","c3s6r1",{"d":"M13 19h8"}],["$","path","1jhpwq",{"d":"m3 17 2 2 4-4"}],["$","path","1obspn",{"d":"m3 7 2 2 4-4"}],"$undefined"]}],"Как пользоваться инструментом «Сжатие изображений»"]}]}],["$","div",null,{"className":"px-5 pb-4 pt-0","children":["$","ol",null,{"className":"flex list-decimal flex-col gap-2 ps-5 text-sm text-muted-foreground marker:text-muted-foreground/70","children":[["$","li","0",{"className":"ps-1","children":"Загрузите PNG, JPG или WebP размером до 25 МБ."}],["$","li","1",{"className":"ps-1","children":"Выберите режим: «Авто», «Агрессивный», «Свой» (качество) или целевой размер в КБ."}],["$","li","2",{"className":"ps-1","children":"При желании задайте формат вывода и максимальную ширину."}],["$","li","3",{"className":"ps-1","children":"Сравните оригинал со сжатой версией и скачайте результат."}]]}]}]]}],["$","div",null,{"className":"rounded-[11px] border bg-card text-card-foreground","data-testid":"tool-seo-limitations","children":[["$","div",null,{"className":"flex flex-col space-y-1.5 px-5 py-4","children":["$","div",null,{"className":"font-semibold tracking-tight flex items-center gap-2 text-xl","children":[["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-scale size-5 shrink-0 text-muted-foreground","aria-hidden":"true","children":[["$","path","7g6ntu",{"d":"m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"}],["$","path","ijws7r",{"d":"m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"}],["$","path","1b0cd5",{"d":"M7 21h10"}],["$","path","108xh3",{"d":"M12 3v18"}],["$","path","3gwbw2",{"d":"M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"}],"$undefined"]}],"Ограничения и компромиссы"]}]}],["$","div",null,{"className":"px-5 pb-4 pt-0","children":["$","ul",null,{"className":"flex list-disc flex-col gap-2 ps-5 text-sm leading-relaxed text-muted-foreground marker:text-muted-foreground/70","children":[["$","li","0",{"className":"ps-1","children":"Инструмент использует встроенный кодировщик браузера — это грубый инструмент по сравнению со специализированным. Решения на MozJPEG или oxipng обычно дают файл меньше при том же визуальном качестве. Для продакшен-ресурсов, где важны последние проценты, используйте оптимизатор на этапе сборки."}],["$","li","1",{"className":"ps-1","children":"PNG почти не выигрывает и может стать больше. Изображение перерисовывается из исходных пикселей без учёта палитры и фильтров оригинала, поэтому индексированный PNG возвращается как полноценный RGBA. Поэтому же PNG недоступен в режиме целевого размера. Чтобы действительно уменьшить PNG, измените его размер или переведите в WebP или JPEG."}],"$L26","$L27"]}]}]]}],"$L28"]}]]}]}]],["$L29"],"$L2a"]}],"p":"$@2b","v":null,"s":"$17"}}]]
+18:[["children",{"s":"image-compression","h":96,"d":{"r":["$","$2","c",{"children":[null,["$","$L13",null,{"parallelRouterKey":"children","template":["$","$L14",null,{}]}]]}],"p":"$@19","v":"$1a","s":"$17"},"c":"$Q1b"}]]
+1:[["children",{"s":"tools","h":64,"d":{"r":["$","$2","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/browsery/_next/static/css/bf1fd9ed1d317829.css","precedence":"next"}]],[["$","$Lf",null,{}],["$","$L10",null,{}],["$","div",null,{"className":"app-shell_contentScroll__33rS4","children":[["$","$L11",null,{}],["$","main",null,{"className":"py-2","children":["$","div",null,{"className":"tool-help_container__0OvBQ","children":["$","div",null,{"className":"tool-help_layout__HLWkP","children":[["$","div",null,{"className":"tool-help_workspace__9Z094","children":[["$","$L12",null,{}],["$","$L13",null,{"parallelRouterKey":"children","template":["$","$L14",null,{}]}]]}],["$","$L15",null,{}]]}]}]}]]}]]]}],"p":"$@16","v":null,"s":"$17"},"c":"$Q18"}]]
+0:{"t":{"t":{"s":"","h":16,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L2d",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1, maximum-scale=5"}],["$","meta","2",{"name":"theme-color","content":"#FCFCFB","media":"(prefers-color-scheme: light)"}],["$","meta","3",{"name":"theme-color","content":"#0E0E0D","media":"(prefers-color-scheme: dark)"}],["$","meta","4",{"name":"color-scheme","content":"light dark"}]]}],["$","$L2f",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$30",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Сжатие изображений"}],["$","meta","1",{"name":"description","content":"Уменьшайте размер изображений JPG, PNG и WebP, выбирая подходящие настройки качества."}],["$","link","2",{"rel":"manifest","href":"/browsery/manifest.webmanifest"}],["$","link","3",{"rel":"icon","href":"/browsery/favicon.ico?4e76f8c6d4198396","type":"image/x-icon","sizes":"16x16"}],["$","$L31","4",{}]]}]}],null]}],null]}],"p":"$@32","v":null,"s":"$17"}},"a":"$@33","u":"$@34","b":"d1OqBdghwEAvTe2bOSQhT"}
+35:I[43842,["7333","$3","6441","$4","8560","$5","2668","$1c","908","$1d","9862","$6","3813","$7","27","$1e","7532","$1f","6415","$20","4973","$21","8367","$c","1052","$22","1326","$23","4271","$24"],"SeoFaq"]
+36:I[90484,[],"OutletBoundary"]
+:HL["/browsery/_next/static/css/1efdd98ee0d27fd1.css","style"]
+26:["$","li","2",{"className":"ps-1","children":"Любой режим перерисовывает изображение на canvas, и все метаданные теряются: EXIF, GPS-координаты, настройки камеры, цветовые профили ICC и XMP. Обычно это плюс для приватности, иногда проблема: цвета фото с широким охватом могут сместиться без профиля, а дата съёмки пропадёт."}]
+27:["$","li","3",{"className":"ps-1","children":"Один файл за раз: без пакетной обработки и ZIP, предел 25 МБ, без AVIF на входе и на выходе. Кодирование идёт в основном потоке, поэтому большое изображение ненадолго подвешивает страницу, а если выбрать формат вывода, который браузер не умеет кодировать, инструмент молча запишет PNG с неверным расширением."}]
+28:["$","div",null,{"className":"rounded-[11px] border bg-card text-card-foreground","children":[["$","div",null,{"className":"flex flex-col space-y-1.5 px-5 py-4","children":["$","div",null,{"className":"font-semibold tracking-tight flex items-center gap-2 text-xl","children":[["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-circle-question-mark size-5 shrink-0 text-muted-foreground","aria-hidden":"true","children":[["$","circle","1mglay",{"cx":"12","cy":"12","r":"10"}],["$","path","1u773s",{"d":"M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"}],["$","path","p32p05",{"d":"M12 17h.01"}],"$undefined"]}],"Частые вопросы"]}]}],["$","div",null,{"className":"px-5 pb-4 pt-0","children":["$","$L35",null,{"faq":[{"q":"Можно ли сжать фото до точного размера, например до 100 КБ?","a":"Почти. Режим целевого размера принимает значение от 5 КБ до 5 МБ, подбирает подходящее качество и уменьшает ширину, если одного качества мало. Он останавливается, как только файл становится меньше вашего числа, так что результат получается равным цели или чуть ниже. Если без потери пригодности изображения цель недостижима, инструмент сообщит об этом и отдаст самую маленькую версию, которую удалось получить."},{"q":"Загружаются ли мои изображения на сервер при сжатии?","a":"Нет. Файл читается и перекодируется внутри вкладки браузера. Ничего не передаётся, аккаунт и регистрация не нужны, а сам инструмент работает и без подключения к интернету."},{"q":"Почему PNG не стал меньше?","a":"PNG — формат без потерь, регулятора качества у него нет: браузер просто заново кодирует те же пиксели, а PNG с палитрой может даже вырасти, потому что возвращается как полноцветный. Уменьшите ширину или смените формат вывода на WebP или JPEG."},{"q":"Удаляются ли при сжатии данные о местоположении на фото?","a":"Да, как побочный эффект. Перерисовка через canvas отбрасывает весь EXIF, включая GPS-координаты и сведения о камере. Если цель — именно очистить метаданные, прямее подойдёт отдельный инструмент для удаления EXIF."},{"q":"Какой формат вывода выбрать?","a":"WebP для сайта: обычно он заметно меньше JPEG при том же качестве и сегодня поддерживается везде, где это важно. JPEG, когда нужен файл, который откроет любая старая система. Оставьте исходный формат, если тип файла должен остаться прежним."}]}]}]]}]
+29:["$","link","0",{"rel":"stylesheet","href":"/browsery/_next/static/css/1efdd98ee0d27fd1.css","precedence":"next"}]
+2a:["$","$L36",null,{"children":["$","$30",null,{"name":"Next.MetadataOutlet","children":"$@37"}]}]
+34:true
+17:300
+37:null
+17:C
+33:0
+19:"$undefined"
+16:"$undefined"
+32:"$undefined"
+2b:"$undefined"

@@ -1,0 +1,13 @@
+# Личные данные и конфигурация экземпляра
+/n/data/*
+!/n/data/.htaccess
+/n/cfg/conf.php
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+.env
+.env.*
+/models/

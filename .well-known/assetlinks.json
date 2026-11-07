@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "ru.crrl.tools",
+      "sha256_cert_fingerprints": [
+        "4E:8F:BA:53:99:1C:AF:6F:CA:35:0E:59:F0:9D:F4:C0:9C:06:9F:58:67:DA:61:B9:BE:60:B6:C4:D3:75:B5:83"
+      ]
+    }
+  }
+]

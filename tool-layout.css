@@ -1,0 +1,10 @@
+/* Tool panels share the converter's working area and contextual side note. */
+.tool-layout{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:0;padding:0;overflow:hidden}
+.tool-layout>.tool-workspace{min-width:0;padding:30px}
+.tool-layout>.tool-help{min-width:0;padding:30px;border-left:1px solid #303638;background:#141718;color:#b7c4ba}
+.tool-layout>.tool-help h3{margin:0 0 18px;color:#f1f3ee;font-size:13px;line-height:1.4}
+.tool-layout>.tool-help .tool-help-group{padding:15px 0;border-top:1px solid #303638}
+.tool-layout>.tool-help .tool-help-group b{display:block;color:#e7eee8;font-size:13px;line-height:1.4}
+.tool-layout>.tool-help .tool-help-group p{margin:7px 0 0;color:#a0aaa5;font-size:12px;line-height:1.6;overflow-wrap:anywhere}
+@media(max-width:900px){.tool-layout{grid-template-columns:minmax(0,1fr)}.tool-layout>.tool-help{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 20px;border-left:0;border-top:1px solid #303638}.tool-layout>.tool-help h3{grid-column:1/-1}}
+@media(max-width:650px){.tool-layout>.tool-workspace,.tool-layout>.tool-help{padding:20px}.tool-layout>.tool-help{grid-template-columns:minmax(0,1fr)}.tool-layout>.tool-help h3{grid-column:auto}}

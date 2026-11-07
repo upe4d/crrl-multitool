@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>pixelfx</title>
+<link rel="icon" type="image/svg+xml" href="./favicon.svg">
+<meta name="description" content="Каталог пиксельных эффектов с просмотром и экспортом спрайтов.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!--BODY-->
+<header class="head">
+  <div class="title">
+    <svg class="mark" viewBox="0 0 7 7" shape-rendering="crispEdges" role="img" aria-label="Patch"><rect x="1" y="1" width="6" height="6" fill="#ffffff"/><rect x="0" y="0" width="3" height="3" fill="#f53cd1"/></svg>
+    <div>
+      <h1>pixelfx.</h1>
+      <p class="sub"><span id="count">0</span> пиксельных эффектов для игр — просмотр, настройка и экспорт. Названия и описания эффектов сохранены на языке оригинала.</p>
+    </div>
+  </div>
+  <nav class="links">
+    <a href="../../" class="back-link">← В мультитул</a>
+    <a href="../LICENSE" target="_blank" rel="noopener">Лицензия MIT</a>
+    <a href="../NOTICE.md" target="_blank" rel="noopener">Авторы</a>
+  </nav>
+</header>
+<div class="bar">
+  <div class="bar-in">
+    <div class="chips" id="chips" role="toolbar" aria-label="Категории эффектов"></div>
+    <input id="q" type="search" placeholder="Поиск" aria-label="Поиск эффектов" autocomplete="off">
+  </div>
+</div>
+<main id="grid"></main>
+<p class="empty" id="none" hidden>Эффекты не найдены. Попробуйте изменить запрос.</p>
+<nav class="pager" id="pager" aria-label="Страницы эффектов"></nav>
+<dialog class="detail" id="detail" aria-labelledby="d-name">
+  <div class="sheet">
+    <div>
+      <div class="big"><canvas id="big"></canvas><button class="close" id="d-close" type="button">Закрыть</button></div>
+    </div>
+    <div class="info">
+      <h2 id="d-name"></h2>
+      <div class="id" id="d-id"></div>
+      <p id="d-desc"></p>
+      <dl class="facts" id="d-facts"></dl>
+      <div class="controls">
+        <div class="row"><label>Показ</label><button class="btn" id="d-play" type="button">Пауза</button><button class="btn" id="d-again" type="button">Сначала</button><span id="d-speed" class="row"></span></div>
+        <div class="row"><label>Фон</label><span id="d-bg" class="row"></span></div>
+        <div class="row"><label>Палитра</label><select class="btn" id="d-pal" aria-label="Палитра"></select><button class="btn" id="d-seed" type="button">Другой вариант</button></div>
+        <div class="row"><label>Действия</label><button class="btn" id="d-flip" type="button">Отразить</button><button class="btn" id="d-actor" type="button">Персонаж</button><button class="btn" id="d-make" type="button">Спрайт-лист</button></div>
+      </div>
+      <div class="code-head"><span>Код для игры</span><span><a id="d-src" target="_blank" rel="noopener">Исходный файл</a> · <button class="btn" id="d-copy" type="button">Копировать</button></span></div>
+      <pre id="d-code"></pre>
+    </div>
+    <div class="sheetout" id="d-sheet"></div>
+  </div>
+</dialog>
+<!--/BODY-->
+<script type="module" src="app.js"></script>
+</body>
+</html>
