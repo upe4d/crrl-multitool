@@ -5,7 +5,7 @@ const SHELL_CACHE = CACHE_PREFIX + 'shell-v2';
 const ASSET_CACHE = CACHE_PREFIX + 'assets-v2';
 const OFFLINE_PAGE = '/pwa/offline.html';
 const REQUIRED = ['/', OFFLINE_PAGE, '/pwa/offline.css', '/pwa/pwa.css', '/pwa/register.js', '/pwa/manifest.webmanifest', '/pwa/icon-192.png', '/pwa/icon-512.png'];
-const OPTIONAL = ['/nav-shell.css','/navigation.js','/text-ui.js','/text-ui.css','/image-tools.js','/image-tools.css','/calculation-tools.js','/calculation-tools.css','/pdf-ui.js','/pdf-ui.css','/news-editor.js','/games-ui.js','/games-ui.css','/maps_ui.js','/maps_ui.css','/subcategory-theme.css','/phosphor-icons.css','/compact-forms.css','/tool-layout.js','/tool-layout.css','/assets/pdf/pdf-lib.min.js','/assets/pdf/jszip.min.js','/host-convert.js'];
+const OPTIONAL = ['/nav-shell.css','/nav-groups.css','/navigation.js','/text-ui.js','/text-ui.css','/image-tools.js','/image-tools.css','/calculation-tools.js','/calculation-tools.css','/pdf-ui.js','/pdf-ui.css','/news-editor.js','/games-ui.js','/games-ui.css','/maps_ui.js','/maps_ui.css','/subcategory-theme.css','/phosphor-icons.css','/compact-forms.css','/tool-layout.js','/tool-layout.css','/assets/pdf/pdf-lib.min.js','/assets/pdf/jszip.min.js','/host-convert.js'];
 // Версионированные CSS и JS доступны также при автономном запуске PWA.
 const versioned = path => /\.(?:css|js)$/.test(path) ? `${path}?v=${VERSION}` : path;
 for (let i=0;i<REQUIRED.length;i++) REQUIRED[i]=versioned(REQUIRED[i]);
