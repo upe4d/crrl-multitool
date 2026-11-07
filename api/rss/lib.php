@@ -52,6 +52,8 @@ function rss_fetch(string $url): array {
     throw new RuntimeException('Слишком много перенаправлений');
 }
 function rss_parse(string $xml,string $url): array {
+    // HTML-страница сайта может объявлять DOCTYPE: RSS следует искать в её ссылках.
+    if (preg_match('/<!doctype\s+html(?:\s|>)/i',substr($xml,0,4096))) return [];
     if (stripos($xml,'<!DOCTYPE')!==false) throw new RuntimeException('Неподдерживаемый формат ленты');
     $doc=new DOMDocument();$old=libxml_use_internal_errors(true);$ok=$doc->loadXML($xml,LIBXML_NONET|LIBXML_NOERROR|LIBXML_NOWARNING);libxml_clear_errors();libxml_use_internal_errors($old);
     if(!$ok || !$doc->documentElement) return [];
