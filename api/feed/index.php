@@ -12,7 +12,20 @@ try {
   foreach ($queries as $query) {
     $params=['hl'=>$lang==='ru'?'ru-RU':'en-US','gl'=>$lang==='ru'?'RU':'US','ceid'=>$lang==='ru'?'RU:ru':'US:en']; if($query!=='')$params['q']=$query.($days?' when:'.$days.'d':''); $url='https://news.google.com/rss'.($query!==''?'/search':'').'?'.http_build_query($params);
     $context=stream_context_create(['http'=>['timeout'=>15,'header'=>"User-Agent: Mozilla/5.0\r\n",'follow_location'=>0],'ssl'=>['verify_peer'=>true,'verify_peer_name'=>true]]);
-    $xml=@file_get_contents($url,false,$context,0,2000001); if ($xml===false || $xml==='' || strlen($xml)>2000000) {$failed++;continue;}
+    // Google иногда перенаправляет на канонический адрес. Разрешаем переходы только внутри Google News.
+    $xml=false;
+    for($redirect=0;$redirect<4;$redirect++) {
+      $parts=parse_url($url);
+      if(!$parts || strtolower($parts['scheme']??'')!=='https' || strtolower($parts['host']??'')!=='news.google.com' || isset($parts['user']) || isset($parts['pass']) || (isset($parts['port']) && $parts['port']!==443)) break;
+      $http_response_header=[];
+      $body=@file_get_contents($url,false,$context,0,2000001);
+      $status=0;$location='';
+      foreach($http_response_header as $header){if(preg_match('~^HTTP/\\S+\\s+(\\d{3})~i',$header,$match))$status=(int)$match[1];elseif(stripos($header,'Location:')===0)$location=trim(substr($header,9));}
+      if(in_array($status,[301,302,303,307,308],true) && $location!==''){$url=str_starts_with($location,'/')?'https://news.google.com'.$location:$location;continue;}
+      if($status===200 && is_string($body))$xml=$body;
+      break;
+    }
+    if ($xml===false || $xml==='' || strlen($xml)>2000000) {$failed++;continue;}
     $doc=new DOMDocument(); $old=libxml_use_internal_errors(true); $ok=$doc->loadXML($xml,LIBXML_NONET); libxml_clear_errors(); libxml_use_internal_errors($old); if(!$ok) {$failed++;continue;}
     foreach ($doc->getElementsByTagName('item') as $item) {
       $get=static function(string $key) use($item): string {return trim($item->getElementsByTagName($key)->item(0)?->textContent??'');};
