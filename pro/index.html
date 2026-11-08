@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0e1011">
+  <title>Профессиональные инструменты — Мультитул</title>
+  <link rel="icon" href="/pwa/avatar.ico">
+  <link rel="stylesheet" href="./pro.css?v=20261108-1">
+  <script src="./pro.js?v=20261108-1" defer></script>
+</head>
+<body>
+  <header class="topbar"><a class="brand" href="/">МУЛЬТИ<span>ТУЛ</span></a><nav aria-label="Навигация"><a href="/">Мультитул</a><a href="/#news">Агрегаторы</a><a href="/#catalogs">Дизайнеру и разработчику</a><a href="/#notes">Передай текст и фото</a><a href="/#games">Игры</a></nav></header>
+  <main class="page">
+    <a class="back" href="/">← На главную</a>
+    <section class="hero"><p class="eyebrow">РАБОЧЕЕ ПРОСТРАНСТВО / ПРОФИ</p><h1>Профессиональные<br>инструменты</h1><p>Для работы с доменами, документами и сложными задачами</p></section>
+    <div class="tabs" role="tablist" aria-label="Инструменты"><button role="tab" aria-selected="true" aria-controls="dns" id="tab-dns" data-tab="dns">Проверка DNS</button><button role="tab" aria-selected="false" aria-controls="documents" id="tab-documents" data-tab="documents">Документы и сканы</button></div>
+    <section id="dns" role="tabpanel" aria-labelledby="tab-dns" class="panel">
+      <div class="panel-heading"><div><p class="eyebrow">СЕТЬ / ДОМЕНЫ</p><h2>Проверка DNS</h2><p>Сравните ответы общедоступных DNS-серверов после изменения записи</p></div><span class="badge">2 DNS-СЕРВИСА</span></div>
+      <form id="dns-form" class="form-row"><label>Домен<input id="domain" name="domain" type="text" placeholder="example.com" autocomplete="url" required maxlength="253"></label><label>Тип записи<select id="type" name="type"><option>A</option><option>AAAA</option><option>CNAME</option><option>MX</option><option>NS</option><option>TXT</option><option>SOA</option></select></label><button class="primary" type="submit">Проверить ↗</button></form>
+      <div class="toolbar"><label class="check"><input id="repeat" type="checkbox"> Повторять каждые 30 секунд</label><span id="status" role="status" aria-live="polite">Введите домен и нажмите «Проверить»</span></div>
+      <div id="results" class="results" aria-live="polite"></div>
+      <p class="hint">Запрос отправляется из вашего браузера сервисам Google Public DNS и Cloudflare. Их сети используют ближайшие доступные узлы; результаты не показывают все регионы мира. TTL — оставшееся время хранения ответа в кэше.</p>
+    </section>
+    <section id="documents" role="tabpanel" aria-labelledby="tab-documents" class="panel" hidden>
+      <div class="panel-heading"><div><p class="eyebrow">ДОКУМЕНТЫ / MINERU</p><h2>Разбор PDF и сканов</h2><p>Распознавание структуры, таблиц и текста документов</p></div><span class="badge pending">В ПОДГОТОВКЕ</span></div>
+      <div class="notice"><strong>Движок ещё не подключён</strong><p>Для обработки требуется отдельный запущенный MinerU. Сейчас загрузка документов здесь недоступна.</p><a href="/browsery/tools/extract-text-from-pdf/">Открыть извлечение текста из PDF ↗</a></div>
+    </section>
+  </main>
+</body>
+</html>

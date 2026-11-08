@@ -18,3 +18,5 @@ body[data-page=catalogs] .hero::after{content:"";position:absolute;z-index:-1;ri
 @media(max-width:650px){.primary-nav-links{grid-template-columns:.9fr .95fr 1.4fr 1.05fr .6fr}.primary-nav-links button{font-size:clamp(8px,2.3vw,11px)}.primary-nav-links [data-page=catalogs]{white-space:normal;text-align:center;line-height:1.1}}
 @media(max-width:420px){.catalog-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.catalog-card{padding:15px;min-height:180px}.catalog-card h2{font-size:16px}.catalog-card p{font-size:12px}.catalog-card .catalog-label{font-size:10px}.primary-nav-links [data-page]::before{width:14px;height:14px}}
 @media(prefers-reduced-motion:reduce){.catalog-card{transition:none}}
+/* Шесть разделов главного меню на телефоне размещаются в две строки. */
+@media(max-width:650px){.primary-nav-links{grid-template-columns:repeat(3,minmax(0,1fr))}.primary-nav-links a{white-space:normal;min-height:54px;text-align:center;font-size:10px}}
