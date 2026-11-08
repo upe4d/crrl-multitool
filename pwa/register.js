@@ -44,6 +44,12 @@
     apk.download = 'multitool-android-1.0.1.apk';
     apk.textContent = 'Android APK (тест)';
     controls.append(apk);
+    // Страница доступна в браузере и в установленном приложении.
+    const about = document.createElement('a');
+    about.className = 'pwa-apk';
+    about.href = '/about/';
+    about.textContent = 'О проекте';
+    controls.append(about);
     if (waiting) controls.append(makeButton('Обновить приложение', () => {
       updateRequested = true;
       registration.waiting.postMessage({ type: 'MULTITOOL_ACTIVATE_UPDATE' });
