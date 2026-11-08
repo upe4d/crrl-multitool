@@ -31,3 +31,70 @@ html{scrollbar-width:thin;scrollbar-color:#536057 #151916}::-webkit-scrollbar{wi
 #editorTabs,main section.container-fluid > article{width:100%;max-width:900px;margin-inline:auto}
 #message{width:100%;max-width:none;height:340px;min-height:240px;max-height:60vh;margin:0;overflow-y:auto;resize:vertical}
 @media(max-width:700px){#message{height:280px;min-height:220px;max-height:55vh}}
+
+/* Встроенный редактор: общая компактная рабочая область и настройки в строках. */
+html.multitool-embedded,html.multitool-embedded body{height:auto!important;min-height:0!important}
+.multitool-embedded body{display:block!important}
+.multitool-embedded .navbar{margin:0!important;padding:18px 24px!important}
+.multitool-embedded .navbar .container-fluid{max-width:1120px;padding:0;align-items:flex-start;gap:14px}
+.multitool-embedded .navbar-brand{margin:4px 0 0}
+.multitool-embedded .navbar-toggler{display:none}
+.multitool-embedded .navbar-collapse{display:flex!important;flex:1 1 0;min-width:0;gap:12px;align-items:flex-start;flex-wrap:wrap}
+.multitool-embedded .navbar-nav{flex-direction:row;flex-wrap:wrap;align-items:center;gap:8px!important}
+.multitool-embedded .navbar-nav.me-auto{flex:1 1 650px}
+.multitool-embedded .navbar-nav .nav-item{min-width:0}
+.multitool-embedded .navbar-nav .btn,.multitool-embedded .navbar-nav .form-select,.multitool-embedded .navbar-nav .form-control{min-height:38px;font-size:13px}
+.multitool-embedded #expiration,.multitool-embedded #formatter{align-items:center;gap:6px}
+.multitool-embedded #expiration label,.multitool-embedded #formatter label{margin:0!important;color:#aebbb2;font-size:13px}
+.multitool-embedded #pasteExpiration{width:132px}.multitool-embedded #pasteFormatter{width:170px}
+.multitool-embedded #password{width:235px;max-width:100%}
+.multitool-embedded #password .form-control{width:1%;min-width:0}
+.multitool-embedded .navbar-text{font-size:13px}
+.multitool-embedded main .container-fluid{max-width:1120px;padding-left:24px;padding-right:24px}
+.multitool-embedded #editorTabs,.multitool-embedded main section.container-fluid > article{max-width:none}
+.multitool-embedded #editorTabs:not(.hidden){align-items:center;gap:4px;margin-top:18px;padding:10px 14px;border:1px solid #344039;border-bottom:0;border-radius:12px 12px 0 0;background:#1a201d}
+.multitool-embedded #editorTabs .nav-link{border:0;border-radius:7px;padding:8px 12px;color:#a7b6ac;font-size:14px}
+.multitool-embedded #editorTabs .nav-link.active{background:#34483a;color:#edf8e7}
+.multitool-embedded #editorTabs .nav-link:hover{color:#c8f28b}
+.multitool-embedded #editorTabs #sendbutton{min-height:38px;padding:7px 15px;border-radius:8px;font-weight:600}
+.multitool-embedded main section.container-fluid > article{padding:16px;border:1px solid #344039;border-radius:0 0 12px 12px;background:#171c19}
+.multitool-embedded section:has(#editorTabs.hidden) + section > article{border-radius:12px}
+.multitool-embedded article > p{margin-bottom:12px}
+.multitool-embedded #message{height:300px;min-height:200px;max-height:60vh;padding:16px;resize:vertical;overflow-y:auto;box-shadow:none}
+.multitool-embedded #message:focus{border-color:#91c866!important;box-shadow:0 0 0 2px #baf66b22}
+.multitool-embedded #message::placeholder{color:#87948a}
+.multitool-embedded #messagetab + label{font-size:12px;color:#a9b8ad;white-space:normal}
+.multitool-embedded footer.container-fluid{max-width:1072px;margin:16px auto 0!important;padding:12px 0 18px;font-size:11px;opacity:.8}
+.multitool-embedded footer .row{align-items:baseline;row-gap:4px}
+.multitool-embedded footer h5{font-size:12px;margin:0}.multitool-embedded footer p{margin:0}
+@media(max-width:700px){
+ .multitool-embedded .navbar{padding:14px 16px!important}
+ .multitool-embedded .navbar .container-fluid{gap:10px}
+ .multitool-embedded .navbar-nav.me-auto{flex-basis:100%}
+ .multitool-embedded .navbar-nav .btn,.multitool-embedded .navbar-nav .form-select,.multitool-embedded .navbar-nav .form-control{width:auto;min-height:42px}
+ .multitool-embedded #password{width:min(235px,100%)}
+ .multitool-embedded #password .form-control{width:1%}
+ .multitool-embedded .navbar-nav .form-check{min-height:38px}
+ .multitool-embedded main .container-fluid{padding-left:16px;padding-right:16px}
+ .multitool-embedded #message{height:260px;max-height:55vh}
+ .multitool-embedded footer.container-fluid{width:calc(100% - 32px);padding-bottom:16px}
+ .multitool-embedded footer .row{display:flex;flex-wrap:wrap}
+ .multitool-embedded footer .row>*{width:auto}
+ .multitool-embedded #aboutbox{flex-basis:100%}
+}
+@media(max-width:500px){
+ /* Настройки занимают две колонки, когда в одну строку они уже не помещаются. */
+ .multitool-embedded .navbar .container-fluid{display:block}
+ .multitool-embedded .navbar-brand{display:none}
+ .multitool-embedded .navbar-collapse{display:flex!important}
+ .multitool-embedded .navbar-nav.me-auto{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:center;width:100%;gap:10px!important}
+ .multitool-embedded .navbar-nav.me-auto > .nav-item{min-width:0}
+ .multitool-embedded #expiration,.multitool-embedded #formatter{flex-wrap:wrap;gap:4px}
+ .multitool-embedded #pasteExpiration,.multitool-embedded #pasteFormatter{width:100%;min-width:0}
+ .multitool-embedded #password{width:100%}
+ .multitool-embedded #burnafterreadingoption{white-space:normal;line-height:1.3}
+ .multitool-embedded #editorTabs{gap:2px;padding:8px}
+ .multitool-embedded #editorTabs .me-1{margin-right:0!important}
+ .multitool-embedded #editorTabs .nav-link{padding:8px 7px;font-size:12px}
+ .multitool-embedded #editorTabs #sendbutton{padding:7px 7px;font-size:13px}
+}

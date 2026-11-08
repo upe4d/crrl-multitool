@@ -101,3 +101,6 @@ body[data-page=notes] #notes .hero:before{content:"";position:absolute;right:3%;
 #toolsConvert .convert-layout,#toolsImages .image-panel,#toolsCalculations .calc-panel,#toolsExtra .text-tool-panel,#pdf-tools-root .pdf-tool-card{margin-left:auto;margin-right:auto}
 .design-resource-link.studio-resource-link{background:#293023;border-color:#647952;color:#e8f3d9}
 .design-resource-link.studio-resource-link:hover{border-color:#baf66b}
+/* Высота заметок подстраивается под содержимое, без вложенного пустого экрана. */
+.notes-panel iframe{height:580px;min-height:0}
+@media(max-width:650px){.notes-panel iframe{min-height:0;height:650px}}

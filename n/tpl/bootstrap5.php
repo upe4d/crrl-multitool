@@ -24,7 +24,7 @@ if ($SYNTAXHIGHLIGHTING) :
     endif;
 endif;
 ?>
-		<link rel="stylesheet" href="css/bootstrap5/multitool.css?v=3" />
+		<link rel="stylesheet" href="css/bootstrap5/multitool.css?v=5" />
 		<noscript><link type="text/css" rel="stylesheet" href="css/noscript.css" /></noscript>
 		<?php $this->_linkTag('js/zlib-1.3.2.js'); ?>
 <?php
@@ -53,7 +53,7 @@ endif;
 		<?php $this->_scriptTag('js/purify-3.4.17.js', 'defer'); ?>
 		<?php $this->_scriptTag('js/legacy.js', 'defer'); ?>
 		<?php $this->_scriptTag('js/privatebin.js', 'defer'); ?>
-		<script src="js/multitool-resize.js" defer></script>
+		<script src="js/multitool-resize.js?v=2" defer></script>
 		<!-- icon -->
 		<link rel="apple-touch-icon" href="<?php echo I18n::encode($BASEPATH); ?>img/apple-touch-icon.png" sizes="180x180" />
 		<link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32" />
@@ -493,7 +493,7 @@ endif;
 						<pre id="prettyprint" class="card-body col-md-12 prettyprint linenums:1"></pre>
 					</div>
 					<div id="plaintext" class="col-md-12 hidden"></div>
-					<p class="col-md-12"><textarea id="message" name="message" cols="80" rows="25" aria-label="<?php echo I18n::_('Document text'); ?>" tabindex="1" class="form-control hidden" disabled></textarea></p>
+					<p class="col-md-12"><textarea id="message" name="message" cols="80" rows="25" aria-label="<?php echo I18n::_('Document text'); ?>" placeholder="<?php echo I18n::_('Write or paste your text here'); ?>" tabindex="1" class="form-control hidden" disabled></textarea></p>
 					<p class="col-md-12 form-check form-switch">
 						<input id="messagetab" type="checkbox" tabindex="3" class="form-check-input" checked="checked" />
 						<label for="messagetab" class="form-check-label">
