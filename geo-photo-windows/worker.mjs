@@ -4,9 +4,10 @@ import { pathToFileURL } from 'node:url';
 import path from 'node:path';
 import { assess } from './assess.mjs';
 import { nearCandidates } from './near-fallback.mjs';
+import { parseLandmark } from './parse-landmark.mjs';
 
 // Фотография обрабатывается моделью локально; наружу передаются название и координаты ориентира.
-const [configFile, photo, runDir] = process.argv.slice(2);
+const [configFile, photo, runDir, hint = ''] = process.argv.slice(2);
 const c = JSON.parse(await readFile(configFile, 'utf8'));
 const emit = (stage, extra = {}) => console.log(JSON.stringify({ stage, ...extra }));
 const env = { ...process.env, UV_CACHE_DIR: c.uvCache, UV_PYTHON: c.python, HF_HOME: c.hfCache, PYTHONUTF8: '1' };
@@ -20,6 +21,8 @@ try {
   emit('Читаем метаданные');
   let metadata = null, metadataError = null;
   try { metadata = JSON.parse(run('metadata-check.py', [photo], 30000, false)); } catch (e) { metadataError = e.message; }
+  let hypothesis = hint;
+  if (!hint) {
   emit('Загружаем модель в память');
   const { AutoProcessor, AutoTokenizer, Qwen2_5_VLForConditionalGeneration, RawImage, env: hf } = await import(pathToFileURL(c.transformers).href);
   hf.cacheDir = c.modelCache; hf.allowRemoteModels = false;
@@ -35,10 +38,8 @@ try {
   const prompt = tokenizer.apply_chat_template([{ role: 'user', content: [{ type: 'image' }, { type: 'text', text: 'Name the most recognizable landmark and its city in the image. Respond as JSON only: {"landmark":"name, city"}. If unsure use an empty string.' }] }], { tokenize: false, add_generation_prompt: true });
   const answer = await model.generate({ ...await processor(prompt, image), max_new_tokens: 80, do_sample: false });
   const decoded = tokenizer.batch_decode(answer, { skip_special_tokens: true })[0].split('assistant\n').at(-1);
-  const match = decoded.match(/\{[^{}]*\}/);
-  if (!match) throw new Error('Модель не смогла сформировать название ориентира');
-  const hypothesis = JSON.parse(match[0]).landmark;
-  if (typeof hypothesis !== 'string' || hypothesis.length < 3 || hypothesis.length > 150 || /[\r\n]/.test(hypothesis) || hypothesis.startsWith('-')) throw new Error('На фотографии не удалось уверенно распознать ориентир');
+  hypothesis = parseLandmark(decoded);
+  }
   emit('Ищем ориентир на карте', { hypothesis });
   const pois = path.join(runDir, 'poi.json');
   run('poi.py', [hypothesis, '--sources', 'osm', '--limit', '5', '--proxy', 'direct', '--out', pois], 60000);
@@ -62,5 +63,5 @@ try {
     run('match.py', ['rank', '--query', photo, '--items', index, '--render', 'gsv', '--max-candidates', '18', '--method', 'dino', '--refine', 'sift', '--top', '18', '--proxy', 'direct', '--out', result], 300000);
     rows = JSON.parse(await readFile(result, 'utf8'));
   } catch (e) { panoramaError = e.message; }
-  emit('Готово', { result: { hypothesis, metadata, metadataError, candidates, assessment: assess(rows), panoramaError } });
+  emit('Готово', { result: { hypothesis, suppliedHint: !!hint, metadata, metadataError, candidates, assessment: assess(rows), panoramaError } });
 } catch (e) { emit('Ошибка', { error: e.message }); process.exitCode = 1; }

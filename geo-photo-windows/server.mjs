@@ -38,6 +38,8 @@ const server = http.createServer(async (req, res) => {
     const parts = []; let size = 0;
     for await (const part of req) { size += part.length; if (size > 17 * 1024 * 1024) return send(res, 413, { error: 'Файл слишком большой: максимум 12 МиБ' }); parts.push(part); }
     const body = JSON.parse(Buffer.concat(parts).toString('utf8'));
+    const hint = typeof body.hint === 'string' ? body.hint.trim() : '';
+    if (hint && (hint.length < 3 || hint.length > 150 || /[\r\n]/.test(hint) || hint.startsWith('-'))) return send(res, 400, { error: 'Подсказка должна содержать от 3 до 150 символов' });
     if (typeof body.image !== 'string' || !/^[A-Za-z0-9+/]*={0,2}$/.test(body.image)) return send(res, 400, { error: 'Не удалось прочитать изображение' });
     const bytes = Buffer.from(body.image, 'base64');
     const jpeg = bytes[0] === 0xff && bytes[1] === 0xd8 && bytes[2] === 0xff;
@@ -49,7 +51,7 @@ const server = http.createServer(async (req, res) => {
     await writeFile(photo, bytes, { flag: 'wx' });
     const conf = path.join(dir, 'runtime.json'); await writeFile(conf, JSON.stringify(c));
     last = { stage: 'Запускаем обработку' };
-    active = spawn(process.execPath, [path.join(appDir, 'worker.mjs'), conf, photo, dir], { cwd: c.dataDir, windowsHide: true, stdio: ['ignore', 'pipe', 'pipe'] });
+    active = spawn(process.execPath, [path.join(appDir, 'worker.mjs'), conf, photo, dir, hint], { cwd: c.dataDir, windowsHide: true, stdio: ['ignore', 'pipe', 'pipe'] });
     let pending = '', err = '';
     active.stdout.on('data', chunk => { pending += chunk.toString(); const lines = pending.split('\n'); pending = lines.pop(); for (const line of lines) { try { const obj = JSON.parse(line); if (obj.stage) last = obj; } catch {} } });
     active.stderr.on('data', chunk => { err = (err + chunk.toString()).slice(-3000); });

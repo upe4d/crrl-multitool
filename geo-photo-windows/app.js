@@ -18,7 +18,7 @@ function line(parent, text) { const p = document.createElement('p'); p.textConte
 function link(parent, label, url) { const a = document.createElement('a'); a.href = url; a.target = '_blank'; a.rel = 'noopener noreferrer'; a.textContent = label + ' ↗'; parent.append(a); }
 function showResult(r) {
   const result = $('#results-content'); result.replaceChildren(); $('#results').hidden = false;
-  const guess = card('Ориентир по версии модели'); line(guess, r.hypothesis); line(guess, 'Это предположение: модель может ошибиться.'); result.append(guess);
+  const guess = card(r.suppliedHint ? 'Ваша подсказка' : 'Ориентир по версии модели'); line(guess, r.hypothesis); line(guess, r.suppliedHint ? 'Название предоставлено вами и требует проверки.' : 'Это предположение: модель может ошибиться.'); result.append(guess);
   const gps = card('Метаданные снимка');
   if (r.metadata?.coordinates) { const { latitude, longitude } = r.metadata.coordinates; line(gps, `GPS: ${latitude}, ${longitude}`); link(gps, 'Открыть на карте', `https://www.openstreetmap.org/?mlat=${latitude}&mlon=${longitude}#map=17/${latitude}/${longitude}`); }
   else line(gps, r.metadataError ? 'Не удалось прочитать метаданные' : 'GPS-координаты не найдены');
@@ -36,7 +36,7 @@ async function poll() {
 button.addEventListener('click', async () => {
   if (!selected) return; button.disabled = true; $('#results').hidden = true; status.textContent = 'Подготавливаем изображение';
   try { const encoded = await new Promise((resolve, reject) => { const reader = new FileReader(); reader.onload = () => resolve(reader.result.split(',')[1]); reader.onerror = () => reject(new Error('Не удалось прочитать файл')); reader.readAsDataURL(selected); });
-    const response = await fetch('/api/run', { method: 'POST', headers: { ...headers, 'Content-Type': 'application/json' }, body: JSON.stringify({ image: encoded }) }); const data = await response.json(); if (!response.ok) throw new Error(data.error); clearTimeout(timer); poll();
+    const response = await fetch('/api/run', { method: 'POST', headers: { ...headers, 'Content-Type': 'application/json' }, body: JSON.stringify({ image: encoded, hint: $('#hint').value }) }); const data = await response.json(); if (!response.ok) throw new Error(data.error); clearTimeout(timer); poll();
   } catch (error) { status.textContent = `Ошибка: ${error.message}`; button.disabled = false; }
 });
 poll();
