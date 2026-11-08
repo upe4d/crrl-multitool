@@ -26,3 +26,7 @@ footer{border-top:1px solid var(--tool-border);padding-top:20px;margin-top:45px!
 
 html{scrollbar-width:thin;scrollbar-color:#536057 #151916}::-webkit-scrollbar{width:7px;height:7px}::-webkit-scrollbar-track{background:#151916}::-webkit-scrollbar-thumb{background:#536057;border-radius:8px}::-webkit-scrollbar-thumb:hover{background:#77897a}
 @media(max-width:700px){.navbar .container-fluid{gap:6px}.navbar .navbar-collapse{white-space:normal}.navbar-nav .btn,.navbar-nav .form-select,.navbar-nav .form-control{min-height:44px;width:100%}.navbar-nav .input-group .form-control{width:1%;min-width:0}.navbar-nav .input-group .btn{width:auto}.navbar-nav .form-check{min-height:44px;display:flex;align-items:center;gap:10px}#pastesuccess .nav{gap:8px}#pastesuccess .nav>.btn{flex:1 1 auto;min-height:44px}#message{min-height:300px}#prettymessage pre{font-size:13px}footer{overflow-wrap:anywhere}}
+
+/* Компактное поле: длинные заметки прокручиваются внутри редактора. */
+#message{width:100%;max-width:900px;height:340px;min-height:240px;max-height:60vh;margin-inline:auto;overflow-y:auto;resize:vertical}
+@media(max-width:700px){#message{height:280px;min-height:220px;max-height:55vh}}

@@ -69,6 +69,26 @@
   }
 
   async function setup() {
+    // Каталог BrowseryTools имеет собственную шапку, поэтому добавляем общий переход после её загрузки.
+    if (location.pathname.startsWith('/browsery/')) {
+      const nav = document.querySelector('nav[class*="main-navigation_links"]');
+      const addCatalogLink = () => {
+        if (!nav || nav.querySelector('a[href="/#catalogs"]')) return;
+        const link = document.createElement('a');
+        link.href = '/#catalogs';
+        link.textContent = 'Дизайнеру и разработчику';
+        // Длинное название остаётся читаемым в мобильной шапке.
+        link.style.whiteSpace = 'normal';
+        link.style.textAlign = 'center';
+        link.style.lineHeight = '1.15';
+        const next = nav.querySelector('a[href="/#notes"]');
+        nav.insertBefore(link, next);
+      };
+      if (nav) {
+        addCatalogLink();
+        new MutationObserver(addCatalogLink).observe(nav, { childList: true });
+      }
+    }
     controls = document.getElementById('pwa-controls');
     if (!controls) return;
     render();

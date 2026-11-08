@@ -1,13 +1,14 @@
 /* Кэшируется только публичная оболочка; личные данные и модели сюда не попадают. */
 const CACHE_PREFIX = 'multitool-pwa-';
 const VERSION = '20261107-5';
-const SHELL_CACHE = CACHE_PREFIX + 'shell-v2';
-const ASSET_CACHE = CACHE_PREFIX + 'assets-v2';
+const SHELL_CACHE = CACHE_PREFIX + 'shell-v3';
+const ASSET_CACHE = CACHE_PREFIX + 'assets-v3';
 const OFFLINE_PAGE = '/pwa/offline.html';
 const REQUIRED = ['/', OFFLINE_PAGE, '/pwa/offline.css', '/pwa/pwa.css', '/pwa/register.js', '/pwa/manifest.webmanifest', '/pwa/icon-192.png', '/pwa/icon-512.png'];
-const OPTIONAL = ['/nav-shell.css','/nav-groups.css','/navigation.js','/text-ui.js','/text-ui.css','/image-tools.js','/image-tools.css','/calculation-tools.js','/calculation-tools.css','/pdf-ui.js','/pdf-ui.css','/news-editor.js','/rss-ui.js','/rss-ui.css','/games-ui.js','/games-ui.css','/maps_ui.js','/maps_ui.css','/subcategory-theme.css','/phosphor-icons.css','/compact-forms.css','/tool-layout.js','/tool-layout.css','/assets/pdf/pdf-lib.min.js','/assets/pdf/jszip.min.js','/host-convert.js'];
+const OPTIONAL = ['/nav-shell.css','/nav-groups.css','/navigation.js','/catalog-navigation.css','/text-ui.js','/text-ui.css','/image-tools.js','/image-tools.css','/calculation-tools.js','/calculation-tools.css','/pdf-ui.js','/pdf-ui.css','/news-editor.js','/rss-ui.js','/rss-ui.css','/games-ui.js','/games-ui.css','/maps_ui.js','/maps_ui.css','/subcategory-theme.css','/phosphor-icons.css','/compact-forms.css','/tool-layout.js','/tool-layout.css','/assets/pdf/pdf-lib.min.js','/assets/pdf/jszip.min.js','/host-convert.js'];
 // Версионированные CSS и JS доступны также при автономном запуске PWA.
-const versioned = path => /\.(?:css|js)$/.test(path) ? `${path}?v=${VERSION}` : path;
+const versions = {'/navigation.js':'20261108-3','/nav-groups.css':'20261108-1','/catalog-navigation.css':'20261108-2'};
+const versioned = path => /\.(?:css|js)$/.test(path) ? `${path}?v=${versions[path] || VERSION}` : path;
 for (let i=0;i<REQUIRED.length;i++) REQUIRED[i]=versioned(REQUIRED[i]);
 for (let i=0;i<OPTIONAL.length;i++) OPTIONAL[i]=versioned(OPTIONAL[i]);
 const CORE = new Set([...REQUIRED, ...OPTIONAL].map(path => new URL(path, self.location.origin).pathname));
@@ -89,7 +90,7 @@ self.addEventListener('fetch', event => {
   }
 
   if (!isPublicAsset(url)) return;
-  if (url.search && (url.searchParams.size !== 1 || url.searchParams.get('v') !== VERSION)) return;
+  if (url.search && (url.searchParams.size !== 1 || url.searchParams.get('v') !== (versions[url.pathname] || VERSION))) return;
   event.respondWith((async () => {
     const cache = await caches.open(ASSET_CACHE);
     const immutable = url.pathname.startsWith('/browsery/_next/static/');
