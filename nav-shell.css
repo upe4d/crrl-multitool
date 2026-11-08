@@ -104,3 +104,7 @@ body[data-page=notes] #notes .hero:before{content:"";position:absolute;right:3%;
 /* Высота заметок подстраивается под содержимое, без вложенного пустого экрана. */
 .notes-panel iframe{height:580px;min-height:0}
 @media(max-width:650px){.notes-panel iframe{min-height:0;height:650px}}
+
+/*На узком экране пять пунктов меню размещаются без обрезания. */
+@media(max-width:650px){.primary-nav-links{grid-template-columns:minmax(0,.9fr) minmax(0,1fr) minmax(0,1.5fr) minmax(0,1.35fr) minmax(0,.6fr)}.primary-nav-links button{white-space:normal;line-height:1.12;overflow-wrap:normal}}
+@media(min-width:651px) and (max-width:1000px){.primary-nav-links button{padding:0 6px;font-size:11px;white-space:normal;line-height:1.2;text-align:center}}

@@ -1,1 +1,4 @@
 .share-image-link{display:flex;justify-content:flex-end;margin:-8px 0 16px}.share-image-link a{display:inline-flex;align-items:center;padding:11px 16px;border:1px solid #719178;border-radius:10px;color:#d6f8c2;background:#203024;font-weight:650;text-decoration:none}.share-image-link a:hover{background:#2d4431}.share-image-link a:focus-visible{outline:2px solid #c2f17d;outline-offset:3px}
+
+/* Компактное основное меню каталога инструментов на телефоне. */
+@media(max-width:650px){.main-navigation_links__HDLsa{display:grid!important;grid-template-columns:minmax(0,.9fr) minmax(0,1fr) minmax(0,1.5fr) minmax(0,1.35fr) minmax(0,.6fr);gap:0}.main-navigation_links__HDLsa a{min-width:0;padding:0 2px;font-size:clamp(9px,2.4vw,11px);white-space:normal;line-height:1.1;text-align:center}}
