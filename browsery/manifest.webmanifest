@@ -1,1 +1,32 @@
-{"id":"/","name":"Мультитул","short_name":"Мультитул","description":"Инструменты для файлов, текста, данных и других задач","start_url":"/","scope":"/","display":"standalone","background_color":"#0e1011","theme_color":"#0e1011","lang":"ru","icons":[{"src":"/pwa/icon-192.png","sizes":"192x192","type":"image/png","purpose":"any"},{"src":"/pwa/icon-512.png","sizes":"512x512","type":"image/png","purpose":"any"},{"src":"/pwa/icon-512.png","sizes":"512x512","type":"image/png","purpose":"maskable"}]}
+{
+  "id": "/",
+  "name": "Мультитул",
+  "short_name": "Мультитул",
+  "description": "Инструменты для файлов, текста, данных и других задач",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0e1011",
+  "theme_color": "#0e1011",
+  "lang": "ru",
+  "icons": [
+    {
+      "src": "/pwa/avatar-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/pwa/avatar-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/pwa/avatar-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

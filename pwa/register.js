@@ -40,8 +40,8 @@
     // Отдельная ссылка позволяет загрузить тестовый APK и с компьютера.
     const apk = document.createElement('a');
     apk.className = 'pwa-apk';
-    apk.href = '/downloads/multitool-android-1.0.0.apk';
-    apk.download = 'multitool-android-1.0.0.apk';
+    apk.href = '/downloads/multitool-android-1.0.1.apk';
+    apk.download = 'multitool-android-1.0.1.apk';
     apk.textContent = 'Android APK (тест)';
     controls.append(apk);
     if (waiting) controls.append(makeButton('Обновить приложение', () => {
@@ -71,6 +71,13 @@
   async function setup() {
     // Каталог BrowseryTools имеет собственную шапку, поэтому добавляем общий переход после её загрузки.
     if (location.pathname.startsWith('/browsery/')) {
+      if (!document.querySelector('link[data-multitool-brand]')) {
+        const style = document.createElement('link');
+        style.rel = 'stylesheet';
+        style.href = '/pwa/brand.css?v=20261108-1';
+        style.dataset.multitoolBrand = '';
+        document.head.append(style);
+      }
       const nav = document.querySelector('nav[class*="main-navigation_links"]');
       const addCatalogLink = () => {
         if (!nav || nav.querySelector('a[href="/#catalogs"]')) return;

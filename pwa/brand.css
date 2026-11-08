@@ -1,0 +1,6 @@
+/* Знак рядом с названием сайта на всех страницах общей оболочки. */
+.primary-brand::before,.topbar .brand::before,.top .brand::before,[class*="main-navigation_brand"]::before{
+  content:"";display:inline-block;vertical-align:middle;width:30px;height:30px;
+  margin-right:9px;border-radius:7px;background:#030810 url('/pwa/avatar-192.png') center/cover no-repeat;
+}
+@media(max-width:650px){.topbar .brand::before,.top .brand::before{width:26px;height:26px;margin-right:7px}}
