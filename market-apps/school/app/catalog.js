@@ -78,6 +78,6 @@
   measureControls(); filter();
   // Обновляем прежний автономный каталог; сами занятия сохраняют свои ресурсы.
   if ('serviceWorker' in navigator && window.isSecureContext) {
-    navigator.serviceWorker.register('/market-apps/school/app/sw.js').catch(() => {});
+    navigator.serviceWorker.register('/market-apps/school/app/sw.js?v=20261116-5', { scope: '/market-apps/school/app/' }).catch(() => {});
   }
 })();
