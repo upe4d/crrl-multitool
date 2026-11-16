@@ -120,7 +120,7 @@
   async function refreshAccount() { try { const response=await fetch('/api/favorites/', {credentials:'same-origin',cache:'no-store'}); if(!response.ok) throw new Error(); await adoptAccount(await response.json()); } catch (_) { online=false; draw(); } }
   window.addEventListener('online', refreshAccount);
   Promise.all([
-    fetch('/directions/catalog.json').then(r=>{if(!r.ok) throw new Error(); return r.json();}),
+    fetch('/directions/catalog.json?v=20261116-19',{cache:'no-store'}).then(r=>{if(!r.ok) throw new Error(); return r.json();}),
     fetch('/games/catalog.json').then(r=>{if(!r.ok) throw new Error(); return r.json();}).catch(()=>[]),
     fetch('/api/favorites/', {credentials:'same-origin', cache:'no-store'}).then(r=>{if(!r.ok) throw new Error(); return r.json();}).catch(()=>null)
   ]).then(async ([items,games,account]) => { catalog=[...items,...games]; document.dispatchEvent(new Event('multitool:favorites-change'));  mount(); if (account) await adoptAccount(account); else { username=state.owner || null; online=false; draw(); } }).catch(()=>{});
