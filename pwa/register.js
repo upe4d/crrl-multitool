@@ -68,6 +68,16 @@
     about.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5m0-8h.01"/></svg>';
     const aboutCaption = document.createElement('span'); aboutCaption.textContent = 'О проекте'; about.append(aboutCaption);
     controls.append(about);
+    // Фирменный знак GitHub ведёт прямо к исходникам этой версии Мультитула.
+    const github = document.createElement('a');
+    github.className = 'pwa-apk pwa-icon pwa-github';
+    github.href = 'https://github.com/upe4d/crrl-multitool';
+    github.target = '_blank'; github.rel = 'noopener noreferrer';
+    github.title = 'Исходный код Мультитула на GitHub';
+    github.setAttribute('aria-label', 'Мультитул на GitHub — откроется в новой вкладке');
+    github.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 .297a12 12 0 0 0-3.793 23.385c.6.111.82-.258.82-.577v-2.234c-3.338.726-4.043-1.416-4.043-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.071 1.835 2.809 1.305 3.495.998.108-.776.419-1.305.762-1.605-2.665-.303-5.466-1.333-5.466-5.931 0-1.31.469-2.381 1.236-3.221-.124-.303-.536-1.524.117-3.176 0 0 1.008-.323 3.301 1.23a11.52 11.52 0 0 1 6.004 0c2.291-1.553 3.297-1.23 3.297-1.23.655 1.652.243 2.873.119 3.176.769.84 1.235 1.911 1.235 3.221 0 4.61-2.805 5.624-5.475 5.921.43.372.823 1.102.823 2.222v3.293c0 .322.216.694.825.576A12.001 12.001 0 0 0 12 .297Z"/></svg>';
+    const githubCaption = document.createElement('span'); githubCaption.textContent = 'GitHub'; github.append(githubCaption);
+    controls.append(github);
     if (waiting) controls.append(makeButton('Обновить приложение', () => {
       updateRequested = true;
       registration.waiting.postMessage({ type: 'MULTITOOL_ACTIVATE_UPDATE' });
