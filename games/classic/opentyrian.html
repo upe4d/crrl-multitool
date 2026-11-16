@@ -189,9 +189,9 @@
     document.addEventListener('fullscreenchange', () => { if (document.fullscreenElement === canvas) canvas.focus({ preventScroll: true }); });
     document.getElementById('btn-fullscreen').addEventListener('click', async () => {
       try {
-        if (document.fullscreenElement) await document.exitНа весь экран();
-        else await canvas.requestНа весь экран({ navigationUI: 'hide' });
-      } catch (error) { setStatus(`На весь экран unavailable\n${error.message}`); }
+        if (document.fullscreenElement) await document.exitFullscreen();
+        else await canvas.requestFullscreen({ navigationUI: 'hide' });
+      } catch (error) { setStatus(`Fullscreen unavailable\n${error.message}`); }
     });
     window.Module = {
       canvas,

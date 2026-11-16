@@ -174,7 +174,7 @@
     };
     canvas.addEventListener('pointerdown', () => { pointerLockArmed = true; canvas.focus({ preventScroll: true }); captureMouse(); });
     document.addEventListener('fullscreenchange', () => { if (document.fullscreenElement === canvas) canvas.focus({ preventScroll: true }); });
-    document.getElementById('btn-fullscreen').addEventListener('click', async () => { try { if (document.fullscreenElement) await document.exitНа весь экран(); else await canvas.requestНа весь экран({ navigationUI: 'hide' }); canvas.focus({ preventScroll: true }); } catch (error) { setStatus(`На весь экран unavailable\n${error.message}`); } });
+    document.getElementById('btn-fullscreen').addEventListener('click', async () => { try { if (document.fullscreenElement) await document.exitFullscreen(); else await canvas.requestFullscreen({ navigationUI: 'hide' }); canvas.focus({ preventScroll: true }); } catch (error) { setStatus(`Fullscreen unavailable\n${error.message}`); } });
     const output = [];
     window.Module = {
       preRun: [], postRun: [], canvas, _canLockPointer: true,

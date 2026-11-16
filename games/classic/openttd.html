@@ -234,9 +234,9 @@
     document.addEventListener('fullscreenchange', () => { resizeRuntime(); canvas.focus({ preventScroll:true }); });
     document.getElementById('btn-fullscreen').addEventListener('click', async () => {
       try {
-        if (document.fullscreenElement) await document.exitНа весь экран();
-        else await playSurface.requestНа весь экран({ navigationUI:'hide' });
-      } catch (error) { status(`На весь экран unavailable\n${error.message}`); }
+        if (document.fullscreenElement) await document.exitFullscreen();
+        else await playSurface.requestFullscreen({ navigationUI:'hide' });
+      } catch (error) { status(`Fullscreen unavailable\n${error.message}`); }
     });
 
     const LIVE_ROOT = '/home/web_user/.openttd';

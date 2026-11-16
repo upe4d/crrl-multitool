@@ -190,7 +190,7 @@
       if (document.fullscreenElement === canvas) canvas.focus({ preventScroll: true });
     });
     document.getElementById('btn-fullscreen').addEventListener('click', () => {
-      (document.fullscreenElement ? document.exitНа весь экран() : canvas.requestНа весь экран({ navigationUI: 'hide' })).catch((error) => setStatus(`На весь экран unavailable\n${error.message}`));
+      (document.fullscreenElement ? document.exitFullscreen() : canvas.requestFullscreen({ navigationUI: 'hide' })).catch((error) => setStatus(`Fullscreen unavailable\n${error.message}`));
     });
     window.Module = {
       canvas,
