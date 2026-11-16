@@ -7,7 +7,7 @@
   let items=[],active='',limit=30,onlyFavorites=false;
   const favs=()=>window.multitoolFavorites?.urls()||[];
   const el=(tag,text,cls)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(cls)n.className=cls;return n;};
-  function subset(){const q=$('query').value.trim().toLocaleLowerCase('ru').replace(/ё/g,'е'),terms=q.split(/\s+/);return items.filter(i=>(!$('collection').value||i.collection===$('collection').value)&&(!onlyFavorites||favs().includes(i.url))&&terms.every(t=>(i.title+' '+i.originalTitle+' '+i.description).toLocaleLowerCase('ru').replace(/ё/g,'е').includes(t)));}
+  function subset(){const q=$('query').value.trim().toLocaleLowerCase('ru').replace(/ё/g,'е'),terms=q.split(/\s+/);return items.filter(i=>(!$('collection').value||i.collection===$('collection').value)&&(!onlyFavorites||favs().includes(i.url))&&terms.every(t=>(i.title+' '+i.originalTitle+' '+i.description+' '+(i.keywords||'')).toLocaleLowerCase('ru').replace(/ё/g,'е').includes(t)));}
   function render(){
     const base=subset(),filtered=base.filter(i=>!active||i.category===active);$('categories').replaceChildren();
     for(const [id,title] of [['','Все игры'],...categories]){const n=id?base.filter(x=>x.category===id).length:base.length;const b=el('button',title);b.type='button';b.append(el('span',String(n)));b.classList.toggle('active',id===active);b.setAttribute('aria-pressed',String(id===active));b.onclick=()=>{active=id;limit=30;render();};$('categories').append(b);}

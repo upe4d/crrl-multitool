@@ -10,7 +10,8 @@
     "path": "/games/night-fair/ru/index.html#g/g2048",
     "originalPath": "/games/night-fair/en/index.html#g/g2048",
     "url": "/games/play.html?id=fair-g2048",
-    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7"
+    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7",
+    "keywords": "fair g2048 2048"
   },
   {
     "id": "mini-air-traffic-control",
@@ -23,7 +24,8 @@
     "path": "/games/mini/air-traffic-control.html",
     "originalPath": "/games/mini/air-traffic-control.html?lang=original",
     "url": "/games/play.html?id=mini-air-traffic-control",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/air-traffic-control.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/air-traffic-control.html",
+    "keywords": "mini air traffic control "
   },
   {
     "id": "fair-anagram",
@@ -36,7 +38,8 @@
     "path": "/games/night-fair/ru/index.html#g/anagram",
     "originalPath": "/games/night-fair/en/index.html#g/anagram",
     "url": "/games/play.html?id=fair-anagram",
-    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7"
+    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7",
+    "keywords": "fair anagram "
   },
   {
     "id": "mini-backpack-arena",
@@ -49,7 +52,8 @@
     "path": "/games/mini/backpack-arena.html",
     "originalPath": "/games/mini/backpack-arena.html?lang=original",
     "url": "/games/play.html?id=mini-backpack-arena",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/backpack-arena.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/backpack-arena.html",
+    "keywords": "mini backpack arena "
   },
   {
     "id": "fair-breakout",
@@ -62,7 +66,8 @@
     "path": "/games/night-fair/ru/index.html#g/breakout",
     "originalPath": "/games/night-fair/en/index.html#g/breakout",
     "url": "/games/play.html?id=fair-breakout",
-    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7"
+    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7",
+    "keywords": "fair breakout breakout арканоид"
   },
   {
     "id": "mini-auction-fever",
@@ -75,7 +80,8 @@
     "path": "/games/mini/auction-fever.html",
     "originalPath": "/games/mini/auction-fever.html?lang=original",
     "url": "/games/play.html?id=mini-auction-fever",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/auction-fever.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/auction-fever.html",
+    "keywords": "mini auction fever "
   },
   {
     "id": "fair-stacker",
@@ -88,7 +94,8 @@
     "path": "/games/night-fair/ru/index.html#g/stacker",
     "originalPath": "/games/night-fair/en/index.html#g/stacker",
     "url": "/games/play.html?id=fair-stacker",
-    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7"
+    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7",
+    "keywords": "fair stacker "
   },
   {
     "id": "mini-chalk-billiards",
@@ -101,7 +108,8 @@
     "path": "/games/mini/chalk-billiards.html",
     "originalPath": "/games/mini/chalk-billiards.html?lang=original",
     "url": "/games/play.html?id=mini-chalk-billiards",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/chalk-billiards.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/chalk-billiards.html",
+    "keywords": "mini chalk billiards "
   },
   {
     "id": "fair-blackjack",
@@ -114,7 +122,8 @@
     "path": "/games/night-fair/ru/index.html#g/blackjack",
     "originalPath": "/games/night-fair/en/index.html#g/blackjack",
     "url": "/games/play.html?id=fair-blackjack",
-    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7"
+    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7",
+    "keywords": "fair blackjack "
   },
   {
     "id": "mini-slingstorm",
@@ -127,7 +136,8 @@
     "path": "/games/mini/slingstorm.html",
     "originalPath": "/games/mini/slingstorm.html?lang=original",
     "url": "/games/play.html?id=mini-slingstorm",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/slingstorm.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/slingstorm.html",
+    "keywords": "mini slingstorm "
   },
   {
     "id": "mini-frequency-bureau",
@@ -140,7 +150,8 @@
     "path": "/games/mini/frequency-bureau.html",
     "originalPath": "/games/mini/frequency-bureau.html?lang=original",
     "url": "/games/play.html?id=mini-frequency-bureau",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/frequency-bureau.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/frequency-bureau.html",
+    "keywords": "mini frequency bureau "
   },
   {
     "id": "fair-mastermind",
@@ -153,7 +164,8 @@
     "path": "/games/night-fair/ru/index.html#g/mastermind",
     "originalPath": "/games/night-fair/en/index.html#g/mastermind",
     "url": "/games/play.html?id=fair-mastermind",
-    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7"
+    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7",
+    "keywords": "fair mastermind "
   },
   {
     "id": "fair-videopoker",
@@ -166,7 +178,8 @@
     "path": "/games/night-fair/ru/index.html#g/videopoker",
     "originalPath": "/games/night-fair/en/index.html#g/videopoker",
     "url": "/games/play.html?id=fair-videopoker",
-    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7"
+    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7",
+    "keywords": "fair videopoker "
   },
   {
     "id": "fair-hangman",
@@ -179,7 +192,8 @@
     "path": "/games/night-fair/ru/index.html#g/hangman",
     "originalPath": "/games/night-fair/en/index.html#g/hangman",
     "url": "/games/play.html?id=fair-hangman",
-    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7"
+    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7",
+    "keywords": "fair hangman "
   },
   {
     "id": "fair-pipes",
@@ -192,7 +206,8 @@
     "path": "/games/night-fair/ru/index.html#g/pipes",
     "originalPath": "/games/night-fair/en/index.html#g/pipes",
     "url": "/games/play.html?id=fair-pipes",
-    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7"
+    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7",
+    "keywords": "fair pipes "
   },
   {
     "id": "fair-flappy",
@@ -205,7 +220,8 @@
     "path": "/games/night-fair/ru/index.html#g/flappy",
     "originalPath": "/games/night-fair/en/index.html#g/flappy",
     "url": "/games/play.html?id=fair-flappy",
-    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7"
+    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7",
+    "keywords": "fair flappy "
   },
   {
     "id": "mini-charm-reels",
@@ -218,7 +234,8 @@
     "path": "/games/mini/charm-reels.html",
     "originalPath": "/games/mini/charm-reels.html?lang=original",
     "url": "/games/play.html?id=mini-charm-reels",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/charm-reels.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/charm-reels.html",
+    "keywords": "mini charm reels "
   },
   {
     "id": "fair-maze",
@@ -231,7 +248,8 @@
     "path": "/games/night-fair/ru/index.html#g/maze",
     "originalPath": "/games/night-fair/en/index.html#g/maze",
     "url": "/games/play.html?id=fair-maze",
-    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7"
+    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7",
+    "keywords": "fair maze "
   },
   {
     "id": "fair-hilo",
@@ -244,7 +262,8 @@
     "path": "/games/night-fair/ru/index.html#g/hilo",
     "originalPath": "/games/night-fair/en/index.html#g/hilo",
     "url": "/games/play.html?id=fair-hilo",
-    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7"
+    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7",
+    "keywords": "fair hilo "
   },
   {
     "id": "mini-mist-valley-herbarium",
@@ -257,7 +276,8 @@
     "path": "/games/mini/mist-valley-herbarium.html",
     "originalPath": "/games/mini/mist-valley-herbarium.html?lang=original",
     "url": "/games/play.html?id=mini-mist-valley-herbarium",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/mist-valley-herbarium.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/mist-valley-herbarium.html",
+    "keywords": "mini mist valley herbarium "
   },
   {
     "id": "mini-shan-hai",
@@ -270,7 +290,8 @@
     "path": "/games/mini/shan-hai.html",
     "originalPath": "/games/mini/shan-hai.html?lang=original",
     "url": "/games/play.html?id=mini-shan-hai",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/shan-hai.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/shan-hai.html",
+    "keywords": "mini shan hai "
   },
   {
     "id": "mini-thunder-vanguard",
@@ -283,7 +304,8 @@
     "path": "/games/mini/thunder-vanguard.html",
     "originalPath": "/games/mini/thunder-vanguard.html?lang=original",
     "url": "/games/play.html?id=mini-thunder-vanguard",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/thunder-vanguard.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/thunder-vanguard.html",
+    "keywords": "mini thunder vanguard "
   },
   {
     "id": "mini-observatory-watch",
@@ -296,7 +318,8 @@
     "path": "/games/mini/observatory-watch.html",
     "originalPath": "/games/mini/observatory-watch.html?lang=original",
     "url": "/games/play.html?id=mini-observatory-watch",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/observatory-watch.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/observatory-watch.html",
+    "keywords": "mini observatory watch "
   },
   {
     "id": "mini-island-survival",
@@ -309,7 +332,8 @@
     "path": "/games/mini/island-survival.html",
     "originalPath": "/games/mini/island-survival.html?lang=original",
     "url": "/games/play.html?id=mini-island-survival",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/island-survival.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/island-survival.html",
+    "keywords": "mini island survival "
   },
   {
     "id": "mini-dojo-duel",
@@ -322,7 +346,8 @@
     "path": "/games/mini/dojo-duel.html",
     "originalPath": "/games/mini/dojo-duel.html?lang=original",
     "url": "/games/play.html?id=mini-dojo-duel",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/dojo-duel.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/dojo-duel.html",
+    "keywords": "mini dojo duel "
   },
   {
     "id": "mini-switchyard-rush",
@@ -335,7 +360,8 @@
     "path": "/games/mini/switchyard-rush.html",
     "originalPath": "/games/mini/switchyard-rush.html?lang=original",
     "url": "/games/play.html?id=mini-switchyard-rush",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/switchyard-rush.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/switchyard-rush.html",
+    "keywords": "mini switchyard rush "
   },
   {
     "id": "fair-digitspan",
@@ -348,7 +374,8 @@
     "path": "/games/night-fair/ru/index.html#g/digitspan",
     "originalPath": "/games/night-fair/en/index.html#g/digitspan",
     "url": "/games/play.html?id=fair-digitspan",
-    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7"
+    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7",
+    "keywords": "fair digitspan "
   },
   {
     "id": "mini-ball-arena",
@@ -361,7 +388,8 @@
     "path": "/games/mini/ball-arena.html",
     "originalPath": "/games/mini/ball-arena.html?lang=original",
     "url": "/games/play.html?id=mini-ball-arena",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/ball-arena.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/ball-arena.html",
+    "keywords": "mini ball arena "
   },
   {
     "id": "mini-starforge-idle",
@@ -374,7 +402,8 @@
     "path": "/games/mini/starforge-idle.html",
     "originalPath": "/games/mini/starforge-idle.html?lang=original",
     "url": "/games/play.html?id=mini-starforge-idle",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/starforge-idle.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/starforge-idle.html",
+    "keywords": "mini starforge idle "
   },
   {
     "id": "mini-starline-route",
@@ -387,7 +416,8 @@
     "path": "/games/mini/starline-route.html",
     "originalPath": "/games/mini/starline-route.html?lang=original",
     "url": "/games/play.html?id=mini-starline-route",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/starline-route.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/starline-route.html",
+    "keywords": "mini starline route "
   },
   {
     "id": "fair-shooter",
@@ -400,7 +430,8 @@
     "path": "/games/night-fair/ru/index.html#g/shooter",
     "originalPath": "/games/night-fair/en/index.html#g/shooter",
     "url": "/games/play.html?id=fair-shooter",
-    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7"
+    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7",
+    "keywords": "fair shooter "
   },
   {
     "id": "mini-garden-front",
@@ -413,7 +444,8 @@
     "path": "/games/mini/garden-front.html",
     "originalPath": "/games/mini/garden-front.html?lang=original",
     "url": "/games/play.html?id=mini-garden-front",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/garden-front.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/garden-front.html",
+    "keywords": "mini garden front "
   },
   {
     "id": "fair-snake",
@@ -426,7 +458,8 @@
     "path": "/games/night-fair/ru/index.html#g/snake",
     "originalPath": "/games/night-fair/en/index.html#g/snake",
     "url": "/games/play.html?id=fair-snake",
-    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7"
+    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7",
+    "keywords": "fair snake snake змейка"
   },
   {
     "id": "mini-snake-game",
@@ -439,7 +472,8 @@
     "path": "/games/mini/snake-game.html",
     "originalPath": "/games/mini/snake-game.html?lang=original",
     "url": "/games/play.html?id=mini-snake-game",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/snake-game.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/snake-game.html",
+    "keywords": "mini snake game snake змейка"
   },
   {
     "id": "fair-visualmem",
@@ -452,7 +486,8 @@
     "path": "/games/night-fair/ru/index.html#g/visualmem",
     "originalPath": "/games/night-fair/en/index.html#g/visualmem",
     "url": "/games/play.html?id=fair-visualmem",
-    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7"
+    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7",
+    "keywords": "fair visualmem "
   },
   {
     "id": "mini-checkpoint-inspector",
@@ -465,7 +500,8 @@
     "path": "/games/mini/checkpoint-inspector.html",
     "originalPath": "/games/mini/checkpoint-inspector.html?lang=original",
     "url": "/games/play.html?id=mini-checkpoint-inspector",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/checkpoint-inspector.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/checkpoint-inspector.html",
+    "keywords": "mini checkpoint inspector "
   },
   {
     "id": "mini-dungeon-delver",
@@ -478,7 +514,8 @@
     "path": "/games/mini/dungeon-delver.html",
     "originalPath": "/games/mini/dungeon-delver.html?lang=original",
     "url": "/games/play.html?id=mini-dungeon-delver",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/dungeon-delver.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/dungeon-delver.html",
+    "keywords": "mini dungeon delver "
   },
   {
     "id": "mini-branching-tales",
@@ -491,7 +528,8 @@
     "path": "/games/mini/branching-tales.html",
     "originalPath": "/games/mini/branching-tales.html?lang=original",
     "url": "/games/play.html?id=mini-branching-tales",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/branching-tales.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/branching-tales.html",
+    "keywords": "mini branching tales "
   },
   {
     "id": "mini-signal-caravan",
@@ -504,7 +542,8 @@
     "path": "/games/mini/signal-caravan.html",
     "originalPath": "/games/mini/signal-caravan.html?lang=original",
     "url": "/games/play.html?id=mini-signal-caravan",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/signal-caravan.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/signal-caravan.html",
+    "keywords": "mini signal caravan "
   },
   {
     "id": "mini-metro-weaver",
@@ -517,7 +556,8 @@
     "path": "/games/mini/metro-weaver.html",
     "originalPath": "/games/mini/metro-weaver.html?lang=original",
     "url": "/games/play.html?id=mini-metro-weaver",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/metro-weaver.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/metro-weaver.html",
+    "keywords": "mini metro weaver "
   },
   {
     "id": "mini-pocket-golf",
@@ -530,7 +570,8 @@
     "path": "/games/mini/pocket-golf.html",
     "originalPath": "/games/mini/pocket-golf.html?lang=original",
     "url": "/games/play.html?id=mini-pocket-golf",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/pocket-golf.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/pocket-golf.html",
+    "keywords": "mini pocket golf "
   },
   {
     "id": "mini-pocket-companion",
@@ -543,7 +584,8 @@
     "path": "/games/mini/pocket-companion.html",
     "originalPath": "/games/mini/pocket-companion.html?lang=original",
     "url": "/games/play.html?id=mini-pocket-companion",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/pocket-companion.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/pocket-companion.html",
+    "keywords": "mini pocket companion "
   },
   {
     "id": "mini-spud-arena",
@@ -556,7 +598,8 @@
     "path": "/games/mini/spud-arena.html",
     "originalPath": "/games/mini/spud-arena.html?lang=original",
     "url": "/games/play.html?id=mini-spud-arena",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/spud-arena.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/spud-arena.html",
+    "keywords": "mini spud arena "
   },
   {
     "id": "fair-war",
@@ -569,7 +612,8 @@
     "path": "/games/night-fair/ru/index.html#g/war",
     "originalPath": "/games/night-fair/en/index.html#g/war",
     "url": "/games/play.html?id=fair-war",
-    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7"
+    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7",
+    "keywords": "fair war "
   },
   {
     "id": "mini-crossword-cafe",
@@ -582,7 +626,8 @@
     "path": "/games/mini/crossword-cafe.html",
     "originalPath": "/games/mini/crossword-cafe.html?lang=original",
     "url": "/games/play.html?id=mini-crossword-cafe",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/crossword-cafe.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/crossword-cafe.html",
+    "keywords": "mini crossword cafe "
   },
   {
     "id": "mini-solitaire-classic",
@@ -595,7 +640,8 @@
     "path": "/games/mini/solitaire-classic.html",
     "originalPath": "/games/mini/solitaire-classic.html?lang=original",
     "url": "/games/play.html?id=mini-solitaire-classic",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/solitaire-classic.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/solitaire-classic.html",
+    "keywords": "mini solitaire classic "
   },
   {
     "id": "mini-pocket-empire",
@@ -608,7 +654,8 @@
     "path": "/games/mini/pocket-empire.html",
     "originalPath": "/games/mini/pocket-empire.html?lang=original",
     "url": "/games/play.html?id=mini-pocket-empire",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/pocket-empire.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/pocket-empire.html",
+    "keywords": "mini pocket empire "
   },
   {
     "id": "mini-museum-climate",
@@ -621,7 +668,8 @@
     "path": "/games/mini/museum-climate.html",
     "originalPath": "/games/mini/museum-climate.html?lang=original",
     "url": "/games/play.html?id=mini-museum-climate",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/museum-climate.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/museum-climate.html",
+    "keywords": "mini museum climate "
   },
   {
     "id": "fair-wheel",
@@ -634,7 +682,8 @@
     "path": "/games/night-fair/ru/index.html#g/wheel",
     "originalPath": "/games/night-fair/en/index.html#g/wheel",
     "url": "/games/play.html?id=fair-wheel",
-    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7"
+    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7",
+    "keywords": "fair wheel "
   },
   {
     "id": "fair-pig",
@@ -647,7 +696,8 @@
     "path": "/games/night-fair/ru/index.html#g/pig",
     "originalPath": "/games/night-fair/en/index.html#g/pig",
     "url": "/games/play.html?id=fair-pig",
-    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7"
+    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7",
+    "keywords": "fair pig "
   },
   {
     "id": "fair-ttt",
@@ -660,7 +710,8 @@
     "path": "/games/night-fair/ru/index.html#g/ttt",
     "originalPath": "/games/night-fair/en/index.html#g/ttt",
     "url": "/games/play.html?id=fair-ttt",
-    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7"
+    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7",
+    "keywords": "fair ttt "
   },
   {
     "id": "mini-moba-frontier",
@@ -673,7 +724,8 @@
     "path": "/games/mini/moba-frontier.html",
     "originalPath": "/games/mini/moba-frontier.html?lang=original",
     "url": "/games/play.html?id=mini-moba-frontier",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/moba-frontier.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/moba-frontier.html",
+    "keywords": "mini moba frontier "
   },
   {
     "id": "mini-block-forge",
@@ -686,7 +738,8 @@
     "path": "/games/mini/block-forge.html",
     "originalPath": "/games/mini/block-forge.html?lang=original",
     "url": "/games/play.html?id=mini-block-forge",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/block-forge.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/block-forge.html",
+    "keywords": "mini block forge тетрис блоки"
   },
   {
     "id": "mini-courier-grid",
@@ -699,7 +752,8 @@
     "path": "/games/mini/courier-grid.html",
     "originalPath": "/games/mini/courier-grid.html?lang=original",
     "url": "/games/play.html?id=mini-courier-grid",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/courier-grid.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/courier-grid.html",
+    "keywords": "mini courier grid "
   },
   {
     "id": "mini-bytebot-lab",
@@ -712,7 +766,8 @@
     "path": "/games/mini/bytebot-lab.html",
     "originalPath": "/games/mini/bytebot-lab.html?lang=original",
     "url": "/games/play.html?id=mini-bytebot-lab",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/bytebot-lab.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/bytebot-lab.html",
+    "keywords": "mini bytebot lab "
   },
   {
     "id": "mini-chromatography-lab",
@@ -725,7 +780,8 @@
     "path": "/games/mini/chromatography-lab.html",
     "originalPath": "/games/mini/chromatography-lab.html?lang=original",
     "url": "/games/play.html?id=mini-chromatography-lab",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/chromatography-lab.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/chromatography-lab.html",
+    "keywords": "mini chromatography lab "
   },
   {
     "id": "mini-forest-dash",
@@ -738,7 +794,8 @@
     "path": "/games/mini/forest-dash.html",
     "originalPath": "/games/mini/forest-dash.html?lang=original",
     "url": "/games/play.html?id=mini-forest-dash",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/forest-dash.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/forest-dash.html",
+    "keywords": "mini forest dash "
   },
   {
     "id": "mini-comet-weaver",
@@ -751,7 +808,8 @@
     "path": "/games/mini/comet-weaver.html",
     "originalPath": "/games/mini/comet-weaver.html?lang=original",
     "url": "/games/play.html?id=mini-comet-weaver",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/comet-weaver.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/comet-weaver.html",
+    "keywords": "mini comet weaver "
   },
   {
     "id": "fair-catcher",
@@ -764,7 +822,8 @@
     "path": "/games/night-fair/ru/index.html#g/catcher",
     "originalPath": "/games/night-fair/en/index.html#g/catcher",
     "url": "/games/play.html?id=fair-catcher",
-    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7"
+    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7",
+    "keywords": "fair catcher "
   },
   {
     "id": "mini-moon-lander",
@@ -777,7 +836,8 @@
     "path": "/games/mini/moon-lander.html",
     "originalPath": "/games/mini/moon-lander.html?lang=original",
     "url": "/games/play.html?id=mini-moon-lander",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/moon-lander.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/moon-lander.html",
+    "keywords": "mini moon lander "
   },
   {
     "id": "mini-tiny-factory",
@@ -790,7 +850,8 @@
     "path": "/games/mini/tiny-factory.html",
     "originalPath": "/games/mini/tiny-factory.html?lang=original",
     "url": "/games/play.html?id=mini-tiny-factory",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/tiny-factory.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/tiny-factory.html",
+    "keywords": "mini tiny factory "
   },
   {
     "id": "mini-climbing-route",
@@ -803,7 +864,8 @@
     "path": "/games/mini/climbing-route.html",
     "originalPath": "/games/mini/climbing-route.html?lang=original",
     "url": "/games/play.html?id=mini-climbing-route",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/climbing-route.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/climbing-route.html",
+    "keywords": "mini climbing route "
   },
   {
     "id": "mini-alchemy-workshop",
@@ -816,7 +878,8 @@
     "path": "/games/mini/alchemy-workshop.html",
     "originalPath": "/games/mini/alchemy-workshop.html?lang=original",
     "url": "/games/play.html?id=mini-alchemy-workshop",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/alchemy-workshop.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/alchemy-workshop.html",
+    "keywords": "mini alchemy workshop "
   },
   {
     "id": "mini-truss-workshop",
@@ -829,7 +892,8 @@
     "path": "/games/mini/truss-workshop.html",
     "originalPath": "/games/mini/truss-workshop.html?lang=original",
     "url": "/games/play.html?id=mini-truss-workshop",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/truss-workshop.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/truss-workshop.html",
+    "keywords": "mini truss workshop "
   },
   {
     "id": "mini-sudoku-studio",
@@ -842,7 +906,8 @@
     "path": "/games/mini/sudoku-studio.html",
     "originalPath": "/games/mini/sudoku-studio.html?lang=original",
     "url": "/games/play.html?id=mini-sudoku-studio",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/sudoku-studio.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/sudoku-studio.html",
+    "keywords": "mini sudoku studio "
   },
   {
     "id": "fair-mathsprint",
@@ -855,7 +920,8 @@
     "path": "/games/night-fair/ru/index.html#g/mathsprint",
     "originalPath": "/games/night-fair/en/index.html#g/mathsprint",
     "url": "/games/play.html?id=fair-mathsprint",
-    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7"
+    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7",
+    "keywords": "fair mathsprint "
   },
   {
     "id": "mini-mine-matrix",
@@ -868,7 +934,8 @@
     "path": "/games/mini/mine-matrix.html",
     "originalPath": "/games/mini/mine-matrix.html?lang=original",
     "url": "/games/play.html?id=mini-mine-matrix",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/mine-matrix.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/mine-matrix.html",
+    "keywords": "mini mine matrix minesweeper сапёр сапер"
   },
   {
     "id": "fair-dodger",
@@ -881,7 +948,8 @@
     "path": "/games/night-fair/ru/index.html#g/dodger",
     "originalPath": "/games/night-fair/en/index.html#g/dodger",
     "url": "/games/play.html?id=fair-dodger",
-    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7"
+    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7",
+    "keywords": "fair dodger "
   },
   {
     "id": "mini-mosaic-jigsaw",
@@ -894,7 +962,8 @@
     "path": "/games/mini/mosaic-jigsaw.html",
     "originalPath": "/games/mini/mosaic-jigsaw.html?lang=original",
     "url": "/games/play.html?id=mini-mosaic-jigsaw",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/mosaic-jigsaw.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/mosaic-jigsaw.html",
+    "keywords": "mini mosaic jigsaw "
   },
   {
     "id": "mini-fleet-duel",
@@ -907,7 +976,8 @@
     "path": "/games/mini/fleet-duel.html",
     "originalPath": "/games/mini/fleet-duel.html?lang=original",
     "url": "/games/play.html?id=mini-fleet-duel",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/fleet-duel.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/fleet-duel.html",
+    "keywords": "mini fleet duel "
   },
   {
     "id": "fair-battleship",
@@ -920,7 +990,8 @@
     "path": "/games/night-fair/ru/index.html#g/battleship",
     "originalPath": "/games/night-fair/en/index.html#g/battleship",
     "url": "/games/play.html?id=fair-battleship",
-    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7"
+    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7",
+    "keywords": "fair battleship "
   },
   {
     "id": "mini-pulse-studio",
@@ -933,7 +1004,8 @@
     "path": "/games/mini/pulse-studio.html",
     "originalPath": "/games/mini/pulse-studio.html?lang=original",
     "url": "/games/play.html?id=mini-pulse-studio",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/pulse-studio.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/pulse-studio.html",
+    "keywords": "mini pulse studio "
   },
   {
     "id": "fair-memory",
@@ -946,7 +1018,8 @@
     "path": "/games/night-fair/ru/index.html#g/memory",
     "originalPath": "/games/night-fair/en/index.html#g/memory",
     "url": "/games/play.html?id=fair-memory",
-    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7"
+    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7",
+    "keywords": "fair memory "
   },
   {
     "id": "mini-gear-calibrator",
@@ -959,7 +1032,8 @@
     "path": "/games/mini/gear-calibrator.html",
     "originalPath": "/games/mini/gear-calibrator.html?lang=original",
     "url": "/games/play.html?id=mini-gear-calibrator",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/gear-calibrator.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/gear-calibrator.html",
+    "keywords": "mini gear calibrator "
   },
   {
     "id": "mini-neon-2048",
@@ -972,7 +1046,8 @@
     "path": "/games/mini/neon-2048.html",
     "originalPath": "/games/mini/neon-2048.html?lang=original",
     "url": "/games/play.html?id=mini-neon-2048",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/neon-2048.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/neon-2048.html",
+    "keywords": "mini neon 2048 2048"
   },
   {
     "id": "mini-tank-arena",
@@ -985,7 +1060,8 @@
     "path": "/games/mini/tank-arena.html",
     "originalPath": "/games/mini/tank-arena.html?lang=original",
     "url": "/games/play.html?id=mini-tank-arena",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/tank-arena.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/tank-arena.html",
+    "keywords": "mini tank arena "
   },
   {
     "id": "mini-maze-chase",
@@ -998,7 +1074,8 @@
     "path": "/games/mini/maze-chase.html",
     "originalPath": "/games/mini/maze-chase.html?lang=original",
     "url": "/games/play.html?id=mini-maze-chase",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/maze-chase.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/maze-chase.html",
+    "keywords": "mini maze chase "
   },
   {
     "id": "fair-nim",
@@ -1011,7 +1088,8 @@
     "path": "/games/night-fair/ru/index.html#g/nim",
     "originalPath": "/games/night-fair/en/index.html#g/nim",
     "url": "/games/play.html?id=fair-nim",
-    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7"
+    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7",
+    "keywords": "fair nim "
   },
   {
     "id": "fair-runner",
@@ -1024,7 +1102,8 @@
     "path": "/games/night-fair/ru/index.html#g/runner",
     "originalPath": "/games/night-fair/en/index.html#g/runner",
     "url": "/games/play.html?id=fair-runner",
-    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7"
+    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7",
+    "keywords": "fair runner "
   },
   {
     "id": "mini-orbital-pinball",
@@ -1037,7 +1116,8 @@
     "path": "/games/mini/orbital-pinball.html",
     "originalPath": "/games/mini/orbital-pinball.html?lang=original",
     "url": "/games/play.html?id=mini-orbital-pinball",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/orbital-pinball.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/orbital-pinball.html",
+    "keywords": "mini orbital pinball "
   },
   {
     "id": "mini-merge-orbit",
@@ -1050,7 +1130,8 @@
     "path": "/games/mini/merge-orbit.html",
     "originalPath": "/games/mini/merge-orbit.html?lang=original",
     "url": "/games/play.html?id=mini-merge-orbit",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/merge-orbit.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/merge-orbit.html",
+    "keywords": "mini merge orbit "
   },
   {
     "id": "mini-monster-horde",
@@ -1063,7 +1144,8 @@
     "path": "/games/mini/monster-horde.html",
     "originalPath": "/games/mini/monster-horde.html?lang=original",
     "url": "/games/play.html?id=mini-monster-horde",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/monster-horde.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/monster-horde.html",
+    "keywords": "mini monster horde "
   },
   {
     "id": "fair-tetris",
@@ -1076,7 +1158,8 @@
     "path": "/games/night-fair/ru/index.html#g/tetris",
     "originalPath": "/games/night-fair/en/index.html#g/tetris",
     "url": "/games/play.html?id=fair-tetris",
-    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7"
+    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7",
+    "keywords": "fair tetris тетрис"
   },
   {
     "id": "fair-verbal",
@@ -1089,7 +1172,8 @@
     "path": "/games/night-fair/ru/index.html#g/verbal",
     "originalPath": "/games/night-fair/en/index.html#g/verbal",
     "url": "/games/play.html?id=fair-verbal",
-    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7"
+    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7",
+    "keywords": "fair verbal "
   },
   {
     "id": "mini-wonder-park",
@@ -1102,7 +1186,8 @@
     "path": "/games/mini/wonder-park.html",
     "originalPath": "/games/mini/wonder-park.html?lang=original",
     "url": "/games/play.html?id=mini-wonder-park",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/wonder-park.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/wonder-park.html",
+    "keywords": "mini wonder park "
   },
   {
     "id": "fair-golf",
@@ -1115,7 +1200,8 @@
     "path": "/games/night-fair/ru/index.html#g/golf",
     "originalPath": "/games/night-fair/en/index.html#g/golf",
     "url": "/games/play.html?id=fair-golf",
-    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7"
+    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7",
+    "keywords": "fair golf "
   },
   {
     "id": "fair-pegsol",
@@ -1128,7 +1214,8 @@
     "path": "/games/night-fair/ru/index.html#g/pegsol",
     "originalPath": "/games/night-fair/en/index.html#g/pegsol",
     "url": "/games/play.html?id=fair-pegsol",
-    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7"
+    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7",
+    "keywords": "fair pegsol "
   },
   {
     "id": "fair-hopper",
@@ -1141,7 +1228,8 @@
     "path": "/games/night-fair/ru/index.html#g/hopper",
     "originalPath": "/games/night-fair/en/index.html#g/hopper",
     "url": "/games/play.html?id=fair-hopper",
-    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7"
+    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7",
+    "keywords": "fair hopper "
   },
   {
     "id": "mini-elemental-sandbox",
@@ -1154,7 +1242,8 @@
     "path": "/games/mini/elemental-sandbox.html",
     "originalPath": "/games/mini/elemental-sandbox.html?lang=original",
     "url": "/games/play.html?id=mini-elemental-sandbox",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/elemental-sandbox.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/elemental-sandbox.html",
+    "keywords": "mini elemental sandbox "
   },
   {
     "id": "mini-pixel-clues",
@@ -1167,7 +1256,8 @@
     "path": "/games/mini/pixel-clues.html",
     "originalPath": "/games/mini/pixel-clues.html?lang=original",
     "url": "/games/play.html?id=mini-pixel-clues",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/pixel-clues.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/pixel-clues.html",
+    "keywords": "mini pixel clues японский кроссворд"
   },
   {
     "id": "fair-plinko",
@@ -1180,7 +1270,8 @@
     "path": "/games/night-fair/ru/index.html#g/plinko",
     "originalPath": "/games/night-fair/en/index.html#g/plinko",
     "url": "/games/play.html?id=fair-plinko",
-    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7"
+    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7",
+    "keywords": "fair plinko "
   },
   {
     "id": "mini-clockwork-escape",
@@ -1193,7 +1284,8 @@
     "path": "/games/mini/clockwork-escape.html",
     "originalPath": "/games/mini/clockwork-escape.html?lang=original",
     "url": "/games/play.html?id=mini-clockwork-escape",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/clockwork-escape.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/clockwork-escape.html",
+    "keywords": "mini clockwork escape "
   },
   {
     "id": "mini-hive-sovereign",
@@ -1206,7 +1298,8 @@
     "path": "/games/mini/hive-sovereign.html",
     "originalPath": "/games/mini/hive-sovereign.html?lang=original",
     "url": "/games/play.html?id=mini-hive-sovereign",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/hive-sovereign.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/hive-sovereign.html",
+    "keywords": "mini hive sovereign "
   },
   {
     "id": "fair-simon",
@@ -1219,7 +1312,8 @@
     "path": "/games/night-fair/ru/index.html#g/simon",
     "originalPath": "/games/night-fair/en/index.html#g/simon",
     "url": "/games/play.html?id=fair-simon",
-    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7"
+    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7",
+    "keywords": "fair simon "
   },
   {
     "id": "fair-lightsout",
@@ -1232,7 +1326,8 @@
     "path": "/games/night-fair/ru/index.html#g/lightsout",
     "originalPath": "/games/night-fair/en/index.html#g/lightsout",
     "url": "/games/play.html?id=fair-lightsout",
-    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7"
+    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7",
+    "keywords": "fair lightsout "
   },
   {
     "id": "mini-frontier-command",
@@ -1245,7 +1340,8 @@
     "path": "/games/mini/frontier-command.html",
     "originalPath": "/games/mini/frontier-command.html?lang=original",
     "url": "/games/play.html?id=mini-frontier-command",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/frontier-command.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/frontier-command.html",
+    "keywords": "mini frontier command "
   },
   {
     "id": "mini-dice-delver",
@@ -1258,7 +1354,8 @@
     "path": "/games/mini/dice-delver.html",
     "originalPath": "/games/mini/dice-delver.html?lang=original",
     "url": "/games/play.html?id=mini-dice-delver",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/dice-delver.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/dice-delver.html",
+    "keywords": "mini dice delver "
   },
   {
     "id": "mini-runway-stylist",
@@ -1271,7 +1368,8 @@
     "path": "/games/mini/runway-stylist.html",
     "originalPath": "/games/mini/runway-stylist.html?lang=original",
     "url": "/games/play.html?id=mini-runway-stylist",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/runway-stylist.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/runway-stylist.html",
+    "keywords": "mini runway stylist "
   },
   {
     "id": "fair-wordsearch",
@@ -1284,7 +1382,8 @@
     "path": "/games/night-fair/ru/index.html#g/wordsearch",
     "originalPath": "/games/night-fair/en/index.html#g/wordsearch",
     "url": "/games/play.html?id=fair-wordsearch",
-    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7"
+    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7",
+    "keywords": "fair wordsearch "
   },
   {
     "id": "fair-whack",
@@ -1297,7 +1396,8 @@
     "path": "/games/night-fair/ru/index.html#g/whack",
     "originalPath": "/games/night-fair/en/index.html#g/whack",
     "url": "/games/play.html?id=fair-whack",
-    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7"
+    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7",
+    "keywords": "fair whack "
   },
   {
     "id": "mini-midnight-monitor",
@@ -1310,7 +1410,8 @@
     "path": "/games/mini/midnight-monitor.html",
     "originalPath": "/games/mini/midnight-monitor.html?lang=original",
     "url": "/games/play.html?id=mini-midnight-monitor",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/midnight-monitor.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/midnight-monitor.html",
+    "keywords": "mini midnight monitor "
   },
   {
     "id": "mini-midnight-chess",
@@ -1323,7 +1424,8 @@
     "path": "/games/mini/midnight-chess.html",
     "originalPath": "/games/mini/midnight-chess.html?lang=original",
     "url": "/games/play.html?id=mini-midnight-chess",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/midnight-chess.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/midnight-chess.html",
+    "keywords": "mini midnight chess chess шахматы"
   },
   {
     "id": "mini-air-hockey",
@@ -1336,7 +1438,8 @@
     "path": "/games/mini/air-hockey.html",
     "originalPath": "/games/mini/air-hockey.html?lang=original",
     "url": "/games/play.html?id=mini-air-hockey",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/air-hockey.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/air-hockey.html",
+    "keywords": "mini air hockey "
   },
   {
     "id": "fair-pong",
@@ -1349,7 +1452,8 @@
     "path": "/games/night-fair/ru/index.html#g/pong",
     "originalPath": "/games/night-fair/en/index.html#g/pong",
     "url": "/games/play.html?id=fair-pong",
-    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7"
+    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7",
+    "keywords": "fair pong "
   },
   {
     "id": "mini-prism-breaker",
@@ -1362,7 +1466,8 @@
     "path": "/games/mini/prism-breaker.html",
     "originalPath": "/games/mini/prism-breaker.html?lang=original",
     "url": "/games/play.html?id=mini-prism-breaker",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/prism-breaker.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/prism-breaker.html",
+    "keywords": "mini prism breaker арканоид"
   },
   {
     "id": "mini-prism-orchard",
@@ -1375,7 +1480,8 @@
     "path": "/games/mini/prism-orchard.html",
     "originalPath": "/games/mini/prism-orchard.html?lang=original",
     "url": "/games/play.html?id=mini-prism-orchard",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/prism-orchard.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/prism-orchard.html",
+    "keywords": "mini prism orchard "
   },
   {
     "id": "mini-claw-carnival",
@@ -1388,7 +1494,8 @@
     "path": "/games/mini/claw-carnival.html",
     "originalPath": "/games/mini/claw-carnival.html?lang=original",
     "url": "/games/play.html?id=mini-claw-carnival",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/claw-carnival.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/claw-carnival.html",
+    "keywords": "mini claw carnival "
   },
   {
     "id": "fair-slots",
@@ -1401,7 +1508,8 @@
     "path": "/games/night-fair/ru/index.html#g/slots",
     "originalPath": "/games/night-fair/en/index.html#g/slots",
     "url": "/games/play.html?id=fair-slots",
-    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7"
+    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7",
+    "keywords": "fair slots "
   },
   {
     "id": "mini-tidal-grid",
@@ -1414,7 +1522,8 @@
     "path": "/games/mini/tidal-grid.html",
     "originalPath": "/games/mini/tidal-grid.html?lang=original",
     "url": "/games/play.html?id=mini-tidal-grid",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/tidal-grid.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/tidal-grid.html",
+    "keywords": "mini tidal grid "
   },
   {
     "id": "fair-reaction",
@@ -1427,7 +1536,8 @@
     "path": "/games/night-fair/ru/index.html#g/reaction",
     "originalPath": "/games/night-fair/en/index.html#g/reaction",
     "url": "/games/play.html?id=fair-reaction",
-    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7"
+    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7",
+    "keywords": "fair reaction "
   },
   {
     "id": "fair-vowels",
@@ -1440,7 +1550,8 @@
     "path": "/games/night-fair/ru/index.html#g/vowels",
     "originalPath": "/games/night-fair/en/index.html#g/vowels",
     "url": "/games/play.html?id=fair-vowels",
-    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7"
+    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7",
+    "keywords": "fair vowels "
   },
   {
     "id": "fair-missingop",
@@ -1453,7 +1564,8 @@
     "path": "/games/night-fair/ru/index.html#g/missingop",
     "originalPath": "/games/night-fair/en/index.html#g/missingop",
     "url": "/games/play.html?id=fair-missingop",
-    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7"
+    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7",
+    "keywords": "fair missingop "
   },
   {
     "id": "mini-pathogen-protocol",
@@ -1466,7 +1578,8 @@
     "path": "/games/mini/pathogen-protocol.html",
     "originalPath": "/games/mini/pathogen-protocol.html?lang=original",
     "url": "/games/play.html?id=mini-pathogen-protocol",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/pathogen-protocol.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/pathogen-protocol.html",
+    "keywords": "mini pathogen protocol "
   },
   {
     "id": "mini-sky-hop",
@@ -1479,7 +1592,8 @@
     "path": "/games/mini/sky-hop.html",
     "originalPath": "/games/mini/sky-hop.html?lang=original",
     "url": "/games/play.html?id=mini-sky-hop",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/sky-hop.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/sky-hop.html",
+    "keywords": "mini sky hop "
   },
   {
     "id": "fair-jumper",
@@ -1492,7 +1606,8 @@
     "path": "/games/night-fair/ru/index.html#g/jumper",
     "originalPath": "/games/night-fair/en/index.html#g/jumper",
     "url": "/games/play.html?id=fair-jumper",
-    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7"
+    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7",
+    "keywords": "fair jumper "
   },
   {
     "id": "mini-market-pulse",
@@ -1505,7 +1620,8 @@
     "path": "/games/mini/market-pulse.html",
     "originalPath": "/games/mini/market-pulse.html?lang=original",
     "url": "/games/play.html?id=mini-market-pulse",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/market-pulse.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/market-pulse.html",
+    "keywords": "mini market pulse "
   },
   {
     "id": "fair-slide15",
@@ -1518,7 +1634,8 @@
     "path": "/games/night-fair/ru/index.html#g/slide15",
     "originalPath": "/games/night-fair/en/index.html#g/slide15",
     "url": "/games/play.html?id=fair-slide15",
-    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7"
+    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7",
+    "keywords": "fair slide15 "
   },
   {
     "id": "mini-drone-survey",
@@ -1531,7 +1648,8 @@
     "path": "/games/mini/drone-survey.html",
     "originalPath": "/games/mini/drone-survey.html?lang=original",
     "url": "/games/play.html?id=mini-drone-survey",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/drone-survey.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/drone-survey.html",
+    "keywords": "mini drone survey "
   },
   {
     "id": "fair-reversi",
@@ -1544,7 +1662,8 @@
     "path": "/games/night-fair/ru/index.html#g/reversi",
     "originalPath": "/games/night-fair/en/index.html#g/reversi",
     "url": "/games/play.html?id=fair-reversi",
-    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7"
+    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7",
+    "keywords": "fair reversi "
   },
   {
     "id": "mini-relay-coordination",
@@ -1557,7 +1676,8 @@
     "path": "/games/mini/relay-coordination.html",
     "originalPath": "/games/mini/relay-coordination.html?lang=original",
     "url": "/games/play.html?id=mini-relay-coordination",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/relay-coordination.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/relay-coordination.html",
+    "keywords": "mini relay coordination "
   },
   {
     "id": "mini-river-holdem",
@@ -1570,7 +1690,8 @@
     "path": "/games/mini/river-holdem.html",
     "originalPath": "/games/mini/river-holdem.html?lang=original",
     "url": "/games/play.html?id=mini-river-holdem",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/river-holdem.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/river-holdem.html",
+    "keywords": "mini river holdem "
   },
   {
     "id": "mini-curling-endgame",
@@ -1583,7 +1704,8 @@
     "path": "/games/mini/curling-endgame.html",
     "originalPath": "/games/mini/curling-endgame.html?lang=original",
     "url": "/games/play.html?id=mini-curling-endgame",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/curling-endgame.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/curling-endgame.html",
+    "keywords": "mini curling endgame "
   },
   {
     "id": "mini-beat-bento",
@@ -1596,7 +1718,8 @@
     "path": "/games/mini/beat-bento.html",
     "originalPath": "/games/mini/beat-bento.html?lang=original",
     "url": "/games/play.html?id=mini-beat-bento",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/beat-bento.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/beat-bento.html",
+    "keywords": "mini beat bento "
   },
   {
     "id": "mini-auto-chess-forge",
@@ -1609,7 +1732,8 @@
     "path": "/games/mini/auto-chess-forge.html",
     "originalPath": "/games/mini/auto-chess-forge.html?lang=original",
     "url": "/games/play.html?id=mini-auto-chess-forge",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/auto-chess-forge.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/auto-chess-forge.html",
+    "keywords": "mini auto chess forge "
   },
   {
     "id": "mini-fishing-harbor",
@@ -1622,7 +1746,8 @@
     "path": "/games/mini/fishing-harbor.html",
     "originalPath": "/games/mini/fishing-harbor.html?lang=original",
     "url": "/games/play.html?id=mini-fishing-harbor",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/fishing-harbor.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/fishing-harbor.html",
+    "keywords": "mini fishing harbor "
   },
   {
     "id": "mini-clean-slate",
@@ -1635,7 +1760,8 @@
     "path": "/games/mini/clean-slate.html",
     "originalPath": "/games/mini/clean-slate.html?lang=original",
     "url": "/games/play.html?id=mini-clean-slate",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/clean-slate.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/clean-slate.html",
+    "keywords": "mini clean slate "
   },
   {
     "id": "mini-gem-garden",
@@ -1648,7 +1774,8 @@
     "path": "/games/mini/gem-garden.html",
     "originalPath": "/games/mini/gem-garden.html?lang=original",
     "url": "/games/play.html?id=mini-gem-garden",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/gem-garden.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/gem-garden.html",
+    "keywords": "mini gem garden три в ряд match3"
   },
   {
     "id": "fair-mines",
@@ -1661,7 +1788,8 @@
     "path": "/games/night-fair/ru/index.html#g/mines",
     "originalPath": "/games/night-fair/en/index.html#g/mines",
     "url": "/games/play.html?id=fair-mines",
-    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7"
+    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7",
+    "keywords": "fair mines minesweeper сапёр сапер"
   },
   {
     "id": "fair-striker",
@@ -1674,7 +1802,8 @@
     "path": "/games/night-fair/ru/index.html#g/striker",
     "originalPath": "/games/night-fair/en/index.html#g/striker",
     "url": "/games/play.html?id=fair-striker",
-    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7"
+    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7",
+    "keywords": "fair striker "
   },
   {
     "id": "fair-horserace",
@@ -1687,7 +1816,8 @@
     "path": "/games/night-fair/ru/index.html#g/horserace",
     "originalPath": "/games/night-fair/en/index.html#g/horserace",
     "url": "/games/play.html?id=fair-horserace",
-    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7"
+    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7",
+    "keywords": "fair horserace "
   },
   {
     "id": "fair-estimate",
@@ -1700,7 +1830,8 @@
     "path": "/games/night-fair/ru/index.html#g/estimate",
     "originalPath": "/games/night-fair/en/index.html#g/estimate",
     "url": "/games/play.html?id=fair-estimate",
-    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7"
+    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7",
+    "keywords": "fair estimate "
   },
   {
     "id": "fair-typing",
@@ -1713,7 +1844,8 @@
     "path": "/games/night-fair/ru/index.html#g/typing",
     "originalPath": "/games/night-fair/en/index.html#g/typing",
     "url": "/games/play.html?id=fair-typing",
-    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7"
+    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7",
+    "keywords": "fair typing "
   },
   {
     "id": "fair-wordle",
@@ -1726,7 +1858,8 @@
     "path": "/games/night-fair/ru/index.html#g/wordle",
     "originalPath": "/games/night-fair/en/index.html#g/wordle",
     "url": "/games/play.html?id=fair-wordle",
-    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7"
+    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7",
+    "keywords": "fair wordle wordle вордл"
   },
   {
     "id": "mini-noodle-shift",
@@ -1739,7 +1872,8 @@
     "path": "/games/mini/noodle-shift.html",
     "originalPath": "/games/mini/noodle-shift.html?lang=original",
     "url": "/games/play.html?id=mini-noodle-shift",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/noodle-shift.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/noodle-shift.html",
+    "keywords": "mini noodle shift "
   },
   {
     "id": "mini-lockmaster-shift",
@@ -1752,7 +1886,8 @@
     "path": "/games/mini/lockmaster-shift.html",
     "originalPath": "/games/mini/lockmaster-shift.html?lang=original",
     "url": "/games/play.html?id=mini-lockmaster-shift",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/lockmaster-shift.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/lockmaster-shift.html",
+    "keywords": "mini lockmaster shift "
   },
   {
     "id": "mini-snow-ridge",
@@ -1765,7 +1900,8 @@
     "path": "/games/mini/snow-ridge.html",
     "originalPath": "/games/mini/snow-ridge.html?lang=original",
     "url": "/games/play.html?id=mini-snow-ridge",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/snow-ridge.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/snow-ridge.html",
+    "keywords": "mini snow ridge "
   },
   {
     "id": "fair-sokoban",
@@ -1778,7 +1914,8 @@
     "path": "/games/night-fair/ru/index.html#g/sokoban",
     "originalPath": "/games/night-fair/en/index.html#g/sokoban",
     "url": "/games/play.html?id=fair-sokoban",
-    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7"
+    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7",
+    "keywords": "fair sokoban sokoban"
   },
   {
     "id": "mini-sokoban-quest",
@@ -1791,7 +1928,8 @@
     "path": "/games/mini/sokoban-quest.html",
     "originalPath": "/games/mini/sokoban-quest.html?lang=original",
     "url": "/games/play.html?id=mini-sokoban-quest",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/sokoban-quest.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/sokoban-quest.html",
+    "keywords": "mini sokoban quest sokoban"
   },
   {
     "id": "mini-tide-salvage",
@@ -1804,7 +1942,8 @@
     "path": "/games/mini/tide-salvage.html",
     "originalPath": "/games/mini/tide-salvage.html?lang=original",
     "url": "/games/play.html?id=mini-tide-salvage",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/tide-salvage.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/tide-salvage.html",
+    "keywords": "mini tide salvage "
   },
   {
     "id": "mini-abyss-sonar",
@@ -1817,7 +1956,8 @@
     "path": "/games/mini/abyss-sonar.html",
     "originalPath": "/games/mini/abyss-sonar.html?lang=original",
     "url": "/games/play.html?id=mini-abyss-sonar",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/abyss-sonar.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/abyss-sonar.html",
+    "keywords": "mini abyss sonar "
   },
   {
     "id": "mini-spectrum-console",
@@ -1830,7 +1970,8 @@
     "path": "/games/mini/spectrum-console.html",
     "originalPath": "/games/mini/spectrum-console.html?lang=original",
     "url": "/games/play.html?id=mini-spectrum-console",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/spectrum-console.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/spectrum-console.html",
+    "keywords": "mini spectrum console "
   },
   {
     "id": "mini-radish-guard",
@@ -1843,7 +1984,8 @@
     "path": "/games/mini/radish-guard.html",
     "originalPath": "/games/mini/radish-guard.html?lang=original",
     "url": "/games/play.html?id=mini-radish-guard",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/radish-guard.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/radish-guard.html",
+    "keywords": "mini radish guard "
   },
   {
     "id": "mini-courtroom-clash",
@@ -1856,7 +1998,8 @@
     "path": "/games/mini/courtroom-clash.html",
     "originalPath": "/games/mini/courtroom-clash.html?lang=original",
     "url": "/games/play.html?id=mini-courtroom-clash",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/courtroom-clash.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/courtroom-clash.html",
+    "keywords": "mini courtroom clash "
   },
   {
     "id": "fair-sudoku",
@@ -1869,7 +2012,8 @@
     "path": "/games/night-fair/ru/index.html#g/sudoku",
     "originalPath": "/games/night-fair/en/index.html#g/sudoku",
     "url": "/games/play.html?id=fair-sudoku",
-    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7"
+    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7",
+    "keywords": "fair sudoku "
   },
   {
     "id": "fair-schulte",
@@ -1882,7 +2026,8 @@
     "path": "/games/night-fair/ru/index.html#g/schulte",
     "originalPath": "/games/night-fair/en/index.html#g/schulte",
     "url": "/games/play.html?id=fair-schulte",
-    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7"
+    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7",
+    "keywords": "fair schulte "
   },
   {
     "id": "mini-ember-tactics",
@@ -1895,7 +2040,8 @@
     "path": "/games/mini/ember-tactics.html",
     "originalPath": "/games/mini/ember-tactics.html?lang=original",
     "url": "/games/play.html?id=mini-ember-tactics",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/ember-tactics.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/ember-tactics.html",
+    "keywords": "mini ember tactics "
   },
   {
     "id": "mini-shadow-post",
@@ -1908,7 +2054,8 @@
     "path": "/games/mini/shadow-post.html",
     "originalPath": "/games/mini/shadow-post.html?lang=original",
     "url": "/games/play.html?id=mini-shadow-post",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/shadow-post.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/shadow-post.html",
+    "keywords": "mini shadow post "
   },
   {
     "id": "fair-chimp",
@@ -1921,7 +2068,8 @@
     "path": "/games/night-fair/ru/index.html#g/chimp",
     "originalPath": "/games/night-fair/en/index.html#g/chimp",
     "url": "/games/play.html?id=fair-chimp",
-    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7"
+    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7",
+    "keywords": "fair chimp "
   },
   {
     "id": "fair-stroop",
@@ -1934,7 +2082,8 @@
     "path": "/games/night-fair/ru/index.html#g/stroop",
     "originalPath": "/games/night-fair/en/index.html#g/stroop",
     "url": "/games/play.html?id=fair-stroop",
-    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7"
+    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7",
+    "keywords": "fair stroop "
   },
   {
     "id": "fair-dotsboxes",
@@ -1947,7 +2096,8 @@
     "path": "/games/night-fair/ru/index.html#g/dotsboxes",
     "originalPath": "/games/night-fair/en/index.html#g/dotsboxes",
     "url": "/games/play.html?id=fair-dotsboxes",
-    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7"
+    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7",
+    "keywords": "fair dotsboxes "
   },
   {
     "id": "fair-match3",
@@ -1960,7 +2110,8 @@
     "path": "/games/night-fair/ru/index.html#g/match3",
     "originalPath": "/games/night-fair/en/index.html#g/match3",
     "url": "/games/play.html?id=fair-match3",
-    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7"
+    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7",
+    "keywords": "fair match3 три в ряд match3"
   },
   {
     "id": "mini-drift-racer",
@@ -1973,7 +2124,8 @@
     "path": "/games/mini/drift-racer.html",
     "originalPath": "/games/mini/drift-racer.html?lang=original",
     "url": "/games/play.html?id=mini-drift-racer",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/drift-racer.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/drift-racer.html",
+    "keywords": "mini drift racer "
   },
   {
     "id": "fair-guessnum",
@@ -1986,7 +2138,8 @@
     "path": "/games/night-fair/ru/index.html#g/guessnum",
     "originalPath": "/games/night-fair/en/index.html#g/guessnum",
     "url": "/games/play.html?id=fair-guessnum",
-    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7"
+    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7",
+    "keywords": "fair guessnum "
   },
   {
     "id": "mini-basin-control",
@@ -1999,7 +2152,8 @@
     "path": "/games/mini/basin-control.html",
     "originalPath": "/games/mini/basin-control.html?lang=original",
     "url": "/games/play.html?id=mini-basin-control",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/basin-control.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/basin-control.html",
+    "keywords": "mini basin control "
   },
   {
     "id": "fair-ducks",
@@ -2012,7 +2166,8 @@
     "path": "/games/night-fair/ru/index.html#g/ducks",
     "originalPath": "/games/night-fair/en/index.html#g/ducks",
     "url": "/games/play.html?id=fair-ducks",
-    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7"
+    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7",
+    "keywords": "fair ducks "
   },
   {
     "id": "mini-cozy-organizer",
@@ -2025,7 +2180,8 @@
     "path": "/games/mini/cozy-organizer.html",
     "originalPath": "/games/mini/cozy-organizer.html?lang=original",
     "url": "/games/play.html?id=mini-cozy-organizer",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/cozy-organizer.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/cozy-organizer.html",
+    "keywords": "mini cozy organizer "
   },
   {
     "id": "mini-pocket-farm",
@@ -2038,7 +2194,8 @@
     "path": "/games/mini/pocket-farm.html",
     "originalPath": "/games/mini/pocket-farm.html?lang=original",
     "url": "/games/play.html?id=mini-pocket-farm",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/pocket-farm.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/pocket-farm.html",
+    "keywords": "mini pocket farm "
   },
   {
     "id": "mini-photo-safari",
@@ -2051,7 +2208,8 @@
     "path": "/games/mini/photo-safari.html",
     "originalPath": "/games/mini/photo-safari.html?lang=original",
     "url": "/games/play.html?id=mini-photo-safari",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/photo-safari.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/photo-safari.html",
+    "keywords": "mini photo safari "
   },
   {
     "id": "mini-fruit-slice",
@@ -2064,7 +2222,8 @@
     "path": "/games/mini/fruit-slice.html",
     "originalPath": "/games/mini/fruit-slice.html?lang=original",
     "url": "/games/play.html?id=mini-fruit-slice",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/fruit-slice.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/fruit-slice.html",
+    "keywords": "mini fruit slice "
   },
   {
     "id": "mini-touchline-manager",
@@ -2077,7 +2236,8 @@
     "path": "/games/mini/touchline-manager.html",
     "originalPath": "/games/mini/touchline-manager.html?lang=original",
     "url": "/games/play.html?id=mini-touchline-manager",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/touchline-manager.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/touchline-manager.html",
+    "keywords": "mini touchline manager "
   },
   {
     "id": "fair-hanoi",
@@ -2090,7 +2250,8 @@
     "path": "/games/night-fair/ru/index.html#g/hanoi",
     "originalPath": "/games/night-fair/en/index.html#g/hanoi",
     "url": "/games/play.html?id=fair-hanoi",
-    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7"
+    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7",
+    "keywords": "fair hanoi "
   },
   {
     "id": "mini-glyph-warden",
@@ -2103,7 +2264,8 @@
     "path": "/games/mini/glyph-warden.html",
     "originalPath": "/games/mini/glyph-warden.html?lang=original",
     "url": "/games/play.html?id=mini-glyph-warden",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/glyph-warden.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/glyph-warden.html",
+    "keywords": "mini glyph warden "
   },
   {
     "id": "mini-chromatic-press",
@@ -2116,7 +2278,8 @@
     "path": "/games/mini/chromatic-press.html",
     "originalPath": "/games/mini/chromatic-press.html?lang=original",
     "url": "/games/play.html?id=mini-chromatic-press",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/chromatic-press.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/chromatic-press.html",
+    "keywords": "mini chromatic press "
   },
   {
     "id": "mini-bomb-grid",
@@ -2129,7 +2292,8 @@
     "path": "/games/mini/bomb-grid.html",
     "originalPath": "/games/mini/bomb-grid.html?lang=original",
     "url": "/games/play.html?id=mini-bomb-grid",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/bomb-grid.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/bomb-grid.html",
+    "keywords": "mini bomb grid "
   },
   {
     "id": "fair-connect4",
@@ -2142,7 +2306,8 @@
     "path": "/games/night-fair/ru/index.html#g/connect4",
     "originalPath": "/games/night-fair/en/index.html#g/connect4",
     "url": "/games/play.html?id=fair-connect4",
-    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7"
+    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7",
+    "keywords": "fair connect4 "
   },
   {
     "id": "mini-ecosystem-keeper",
@@ -2155,7 +2320,8 @@
     "path": "/games/mini/ecosystem-keeper.html",
     "originalPath": "/games/mini/ecosystem-keeper.html?lang=original",
     "url": "/games/play.html?id=mini-ecosystem-keeper",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/ecosystem-keeper.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/ecosystem-keeper.html",
+    "keywords": "mini ecosystem keeper "
   },
   {
     "id": "mini-monster-tamer",
@@ -2168,7 +2334,8 @@
     "path": "/games/mini/monster-tamer.html",
     "originalPath": "/games/mini/monster-tamer.html?lang=original",
     "url": "/games/play.html?id=mini-monster-tamer",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/monster-tamer.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/monster-tamer.html",
+    "keywords": "mini monster tamer "
   },
   {
     "id": "mini-cipher-relay",
@@ -2181,7 +2348,8 @@
     "path": "/games/mini/cipher-relay.html",
     "originalPath": "/games/mini/cipher-relay.html?lang=original",
     "url": "/games/play.html?id=mini-cipher-relay",
-    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/cipher-relay.html"
+    "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/cipher-relay.html",
+    "keywords": "mini cipher relay "
   },
   {
     "id": "fair-nonogram",
@@ -2194,7 +2362,8 @@
     "path": "/games/night-fair/ru/index.html#g/nonogram",
     "originalPath": "/games/night-fair/en/index.html#g/nonogram",
     "url": "/games/play.html?id=fair-nonogram",
-    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7"
+    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7",
+    "keywords": "fair nonogram японский кроссворд"
   },
   {
     "id": "fair-yahtzee",
@@ -2207,6 +2376,7 @@
     "path": "/games/night-fair/ru/index.html#g/yahtzee",
     "originalPath": "/games/night-fair/en/index.html#g/yahtzee",
     "url": "/games/play.html?id=fair-yahtzee",
-    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7"
+    "source": "https://github.com/berkaslan7988/night-fair/tree/ce38886ff483947dbc6c0a637db0a86c1e433ee7",
+    "keywords": "fair yahtzee "
   }
 ]

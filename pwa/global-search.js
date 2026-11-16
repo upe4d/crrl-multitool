@@ -17,7 +17,7 @@
     popup.hidden=false; input.setAttribute('aria-expanded','true');
     if(!items){status.textContent='Загружаем каталог…';return;}
     const terms=query.split(/\s+/);
-    matches=items.filter(i=>terms.every(term=>norm(i.title+' '+i.description).includes(term))).sort((a,b)=>Number(norm(b.title).includes(query))-Number(norm(a.title).includes(query)));
+    matches=items.filter(i=>terms.every(term=>norm(i.title+' '+i.description+' '+(i.keywords||'')).includes(term))).sort((a,b)=>Number(norm(b.title).includes(query))-Number(norm(a.title).includes(query)));
     status.textContent=matches.length ? 'Найдено: '+matches.length : 'Ничего не найдено. Попробуйте другое название.';
     matches.slice(0,visible).forEach(item=>{
       const a=document.createElement('a'); a.href=item.url; if (item.external) { a.target='_blank'; a.rel='noopener noreferrer'; } const title=document.createElement('strong'); title.textContent=item.title;

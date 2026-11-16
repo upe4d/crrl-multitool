@@ -134,7 +134,7 @@
     if (!controls) return;
     render();
     const globalSearch = document.createElement('script');
-    globalSearch.src = '/pwa/global-search.js?v=20261116-1';
+    globalSearch.src = '/pwa/global-search.js?v=20261116-2';
     globalSearch.defer = true; document.head.append(globalSearch);
     // Журнал остаётся на панели и после обновления состояния PWA.
     const updates = document.createElement('script');
