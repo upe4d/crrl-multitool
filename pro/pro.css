@@ -2,3 +2,6 @@
 @media(max-width:700px){.tabs button{font-size:13px;padding:10px 12px}}
 
 .pro-open{display:inline-flex;align-items:center;min-height:48px;padding:0 23px;border-radius:9px;background:#c4f77a;color:#14200d;font-weight:750;text-decoration:none}.pro-open:hover{background:#dcffa1}
+
+/* Памятка на русском и официальный TempMail, без копирования чужого приложения. */
+.tempmail-intro{display:grid;grid-template-columns:1fr 1fr;gap:24px;color:#b9c9be;font-size:14px;line-height:1.65}.tempmail-intro h3{color:#edf3ed;font-size:17px}.tempmail-intro ol{padding-left:22px}.tempmail-intro a{color:#c4f77a}.tempmail-actions{display:flex;align-items:center;flex-wrap:wrap;gap:18px;margin-top:20px}.tempmail-frame{border:1px solid #34413a;border-radius:12px;overflow:hidden;margin-top:18px}.tempmail-frame iframe{display:block;width:100%;height:max(720px,85vh);border:0;background:#0c0d10}@media(max-width:650px){.tempmail-intro{grid-template-columns:1fr;gap:0}.tempmail-frame iframe{height:85dvh}}

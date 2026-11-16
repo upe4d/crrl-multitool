@@ -11,6 +11,14 @@ let currentFormat = 'video';
       cardData.forEach((card, index) => renderCard(index));
     }
 
+    // Название источника определяется по домену исходной ссылки, а не по заголовку ролика.
+    function sourceName(raw) {
+      let host;try{host=new URL(raw).hostname.toLowerCase().replace(/^www\./,'');}catch(_){return 'Неизвестный источник';}
+      const sources=[['YouTube',['youtube.com','youtu.be']],['VK Видео',['vk.com','vkvideo.ru','vk.ru']],['Rutube',['rutube.ru']],['Instagram',['instagram.com']],['Threads',['threads.com','threads.net']],['TikTok',['tiktok.com']],['X / Twitter',['x.com','twitter.com']],['Facebook',['facebook.com','fb.watch']],['Vimeo',['vimeo.com']],['Twitch',['twitch.tv']],['Reddit',['reddit.com','redd.it']],['Pinterest',['pinterest.com','pin.it']],['Dailymotion',['dailymotion.com','dai.ly']],['SoundCloud',['soundcloud.com']],['Bilibili',['bilibili.com','b23.tv']]];
+      for(const [label,domains] of sources)if(domains.some(domain=>host===domain||host.endsWith('.'+domain)))return label;
+      return host;
+    }
+
     function parseUrls(text) {
       return [...new Set(text.split(/[\s,]+/).map(u => u.trim()).filter(u => u.startsWith('http')))];
     }
@@ -164,7 +172,7 @@ let currentFormat = 'video';
             </div>
           </div>
           <div class="card-body">
-            <div class="card-title" style="color:var(--error)">Не удалось получить видео</div>
+            <div class="source-badge">Источник: ${esc(sourceName(c.url))}</div><div class="card-title" style="color:var(--error)">Не удалось получить видео</div>
             <div class="card-error-msg">${esc(friendlyError(c.error || ''))}</div>
             <div class="card-error-url">${esc(c.url)}</div>
           </div>
@@ -208,7 +216,7 @@ let currentFormat = 'video';
       el.innerHTML = `
         <div class="card-thumb">${thumbHtml}</div>
         <div class="card-body">
-          <div class="card-title">${esc(c.title || 'Без названия')}</div>
+          <div class="source-badge">Источник: ${esc(sourceName(c.url))}</div><div class="card-title">${esc(c.title || 'Без названия')}</div>
           <div class="card-meta">${esc(c.uploader)}${c.duration ? ' · ' + fmtDur(c.duration) : ''}</div>
           <div class="card-actions">${actionHtml}</div>
         </div>

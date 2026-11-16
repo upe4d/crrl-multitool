@@ -8,6 +8,8 @@
   try { state = JSON.parse(localStorage.getItem(key) || '{}'); } catch (_) { state = {}; }
   if (!state || typeof state !== 'object') state = {};
   for (const name of ['urls','add','remove']) if (!Array.isArray(state[name])) state[name] = [];
+  const canonical=url=>url==='/reclip/?source=threads'?'/reclip/':url;
+  for(const name of ['urls','add','remove'])state[name]=[...new Set(state[name].map(canonical))];
   let catalog = [], csrf = '', username = null, online = false, busy = false, showAll = false;
   const link = document.createElement('link'); link.rel = 'stylesheet'; link.href = '/favorites/favorites.css?v=20261109-1'; document.head.append(link);
   function persist() { try { localStorage.setItem(key, JSON.stringify(state)); } catch (_) {} document.dispatchEvent(new Event('multitool:favorites-change')); }
@@ -54,7 +56,7 @@
     try {
       const result = await request('change', {add, remove});
       state.add = state.add.filter(url => !add.includes(url)); state.remove = state.remove.filter(url => !remove.includes(url));
-      state.urls = [...new Set([...result.favorites, ...state.add])].filter(url => !state.remove.includes(url));
+      state.urls = [...new Set([...result.favorites.map(canonical), ...state.add])].filter(url => !state.remove.includes(url));
       state.owner = username; persist();
     } catch (_) { online = false; }
     finally { busy = false; draw(); if (online && (state.add.length || state.remove.length)) flush(); }
@@ -73,7 +75,7 @@
     username = data.username; online = true; csrf = data.csrf;
     if (username) {
       if (state.owner !== username) { state.add = [...new Set([...state.urls, ...state.add])]; state.remove = []; }
-      state.urls = [...new Set([...(data.favorites || []), ...state.add])].filter(url => !state.remove.includes(url));
+      state.urls = [...new Set([...(data.favorites || []).map(canonical), ...state.add])].filter(url => !state.remove.includes(url));
       state.owner = username;
     }
     persist(); draw(); await flush();

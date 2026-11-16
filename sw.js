@@ -1,8 +1,8 @@
 /* Кэшируется только публичная оболочка; личные данные и модели сюда не попадают. */
 const CACHE_PREFIX = 'multitool-pwa-';
 const VERSION = '20261107-5';
-const SHELL_CACHE = CACHE_PREFIX + 'shell-v24';
-const ASSET_CACHE = CACHE_PREFIX + 'assets-v24';
+const SHELL_CACHE = CACHE_PREFIX + 'shell-v25';
+const ASSET_CACHE = CACHE_PREFIX + 'assets-v25';
 const OFFLINE_PAGE = '/pwa/offline.html';
 const REQUIRED = ['/', OFFLINE_PAGE, '/pwa/offline.css', '/pwa/pwa.css', '/pwa/register.js', '/pwa/manifest.webmanifest', '/pwa/avatar-180.png', '/pwa/avatar-192.png', '/pwa/avatar-512.png', '/pwa/avatar-maskable-512.png', '/pwa/avatar.ico'];
 const OPTIONAL = ['/pwa/updates.json','/pwa/updates.js','/pwa/updates.css','/pwa/external-resources.json','/pwa/global-search.js','/pwa/global-search.css','/directions/icons.svg','/favorites/favorites.js','/favorites/favorites.css','/directions/hub.css','/directions/hub.js','/directions/catalog.json','/pwa/brand.css','/nav-shell.css','/nav-groups.css','/navigation.js','/catalog-navigation.css','/text-ui.js','/text-ui.css','/image-tools.js','/image-tools.css','/calculation-tools.js','/calculation-tools.css','/pdf-ui.js','/pdf-ui.css','/news-editor.js','/rss-ui.js','/rss-ui.css','/games-ui.js','/games-ui.css','/maps_ui.js','/maps_ui.css','/subcategory-theme.css','/phosphor-icons.css','/compact-forms.css','/tool-layout.js','/tool-layout.css','/assets/pdf/pdf-lib.min.js','/assets/pdf/jszip.min.js','/host-convert.js'];
