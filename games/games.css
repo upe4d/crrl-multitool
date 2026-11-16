@@ -10,3 +10,6 @@
 
 /* Подготовка больших игр до скачивания */
 .launch-intro{max-width:800px;margin:clamp(24px,6vh,70px) auto;padding:24px;line-height:1.65}.launch-intro h2{font-size:32px;line-height:1.2}.launch-intro button{background:#d0eaa0;color:#142116;padding:14px 22px;font-weight:bold;border:0;border-radius:10px;cursor:pointer}.launch-note{color:#aebcaa;font-size:14px}.launch-intro button:focus-visible{outline:3px solid #f1c279;outline-offset:4px}@media(max-width:600px){.launch-intro{margin:12px auto;padding:18px}.launch-intro h2{font-size:26px}}
+
+/* Справка поверх игры: компактные блоки, без изменений оформления самого игрового поля. */
+.player-help{width:min(900px,calc(100vw - 32px));max-width:900px}.player-help h3{font-size:16px;margin:18px 0 8px}.guide-details{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 24px}.guide-details section{min-width:0}.guide-details p,.guide-details ol{margin:8px 0;padding-inline-start:0}.guide-details ol{padding-inline-start:20px}.guide-details li+li{margin-top:6px}@media(max-width:620px){.guide-details{grid-template-columns:1fr}}

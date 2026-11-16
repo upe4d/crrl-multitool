@@ -1,0 +1,34 @@
+[Unit]
+Description=ReClip isolated media downloader
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=reclip
+Group=www-data
+WorkingDirectory=/opt/reclip
+Environment=PATH=/opt/reclip/venv/bin:/usr/bin:/bin
+Environment=RECLIP_DOWNLOAD_DIR=/var/lib/reclip
+RuntimeDirectory=reclip
+RuntimeDirectoryMode=0750
+UMask=0007
+ExecStart=/opt/reclip/venv/bin/gunicorn --no-control-socket --bind unix:/run/reclip/app.sock --workers 1 --threads 4 --timeout 90 app:app
+Restart=on-failure
+NoNewPrivileges=yes
+PrivateTmp=yes
+PrivateDevices=yes
+ProtectSystem=strict
+ProtectHome=yes
+ReadWritePaths=/var/lib/reclip
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+MemoryMax=700M
+CPUQuota=100%
+TasksMax=40
+LimitFSIZE=250M
+# Внутри службы используем внешние DNS напрямую, не открывая доступ к loopback.
+BindReadOnlyPaths=/run/systemd/resolve/resolv.conf:/etc/resolv.conf
+IPAddressDeny=0.0.0.0/8 10.0.0.0/8 100.64.0.0/10 127.0.0.0/8 169.254.0.0/16 172.16.0.0/12 192.0.0.0/24 192.168.0.0/16 198.18.0.0/15 224.0.0.0/4 240.0.0.0/4 ::/128 ::1/128 fc00::/7 fe80::/10 ff00::/8
+
+[Install]
+WantedBy=multi-user.target

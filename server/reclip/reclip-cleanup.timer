@@ -1,0 +1,10 @@
+[Unit]
+Description=Clean ReClip temporary files
+
+[Timer]
+OnBootSec=10min
+OnUnitActiveSec=10min
+Unit=reclip-cleanup.service
+
+[Install]
+WantedBy=timers.target

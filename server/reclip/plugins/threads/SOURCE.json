@@ -1,0 +1,6 @@
+{
+  "repository": "https://github.com/tribixbite/yt-dlp-threads",
+  "commit": "c4c44141cb10715f94296a808f5d89a0d24dfe94",
+  "license": "Unlicense",
+  "changes": "Reject unresolved canonical post IDs; never substitute a recommended video."
+}

@@ -3,26 +3,9 @@
   'use strict';
   if(new URLSearchParams(location.search).get('lang')==='original')return;
   const gameName=location.pathname.split('/').at(-1).replace(/\.html$/,''),context=window.MultitoolContextDictionary?.[gameName]||{};
-  const dict={...window.MultitoolGameDictionary,...window.MultitoolReviewedDictionary,...context},cache=new Map(),trie=Object.create(null),templates=[];
-  const phrases=Object.entries(context).filter(([key])=>key.length>12).sort((a,b)=>b[0].length-a[0].length);
-  const escape=s=>s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
-  for(const [key,value] of Object.entries(dict)){
-    if(/^[\u3400-\u9fff]+$/.test(key)&&!/[\u3400-\u9fff]/.test(value)){
-      let node=trie;for(const ch of key){node[ch]??=Object.create(null);node=node[ch];}node.$=value;
-    }
-    const tokens=[...key.matchAll(/\{([a-zA-Z]\w*)\}/g)];
-    if(tokens.length&&tokens.length<7&&tokens.every(t=>value.includes(t[0]))){let cursor=0,pattern='^';for(const t of tokens){pattern+=escape(key.slice(cursor,t.index))+'(.+?)';cursor=t.index+t[0].length;}pattern+=escape(key.slice(cursor))+'$';templates.push([new RegExp(pattern),value,tokens.map(t=>t[0])]);}
-  }
-  function translate(raw){
-    if(typeof raw!=='string'||!raw.trim()||raw.length>12000)return raw;if(cache.has(raw))return cache.get(raw);
-    let result=dict[raw],trimmed=raw.trim();if(result!==undefined&&/[\u3400-\u9fff]/.test(result))result=undefined;if(result===undefined&&dict[trimmed]!==undefined)result=raw.replace(trimmed,dict[trimmed]);
-    let editorial=raw;for(const[key,value]of phrases)if(editorial.includes(key))editorial=editorial.split(key).join(value);if(editorial!==raw)result=editorial;
-    if(result===undefined){for(const [pattern,value,tokens] of templates){const m=raw.match(pattern);if(m){result=value;tokens.forEach((token,i)=>{result=result.split(token).join(m[i+1]);});break;}}}
-    if(result===undefined&&/[\u3400-\u9fff]/.test(raw)){
-      result=raw.replace(/[\u3400-\u9fff]+/g,part=>{if(dict[part]!==undefined)return dict[part];let out='';for(let i=0;i<part.length;){let node=trie,j=i,end=i,value;while(j<part.length&&node[part[j]]){node=node[part[j++]];if(node.$!==undefined){end=j;value=node.$;}}if(value!==undefined){if(/[а-яё]$/i.test(out)&&/^[а-яё]/i.test(value))out+=' ';out+=value;i=end;}else out+=part[i++];}return out;});
-    }
-    result??=raw;if(cache.size>12000)cache.clear();cache.set(raw,result);return result;
-  }
+  const translate=window.MultitoolGameTranslation.createTranslator(window.MultitoolGameLocale||{strings:{},templates:[]},window.MultitoolReviewedDictionary||{},context);
+  // Диалоги импорта и игровые ошибки тоже видны игроку, но не входят в DOM.
+  for(const name of ['alert','confirm','prompt']){const original=window[name];window[name]=function(message,...args){return original.call(window,translate(String(message)),...args);};}
   // Не сплющиваем кириллицу по ширине исходных иероглифов. При явном лимите
   // уменьшается размер всего шрифта с сохранением пропорций букв.
   if(window.CanvasRenderingContext2D){const proto=CanvasRenderingContext2D.prototype,measure=proto.measureText;for(const name of ['fillText','strokeText']){const original=proto[name];proto[name]=function(text,x,y,maxWidth){const translated=translate(String(text));if(translated===String(text))return maxWidth===undefined?original.call(this,text,x,y):original.call(this,text,x,y,maxWidth);const transform=this.getTransform(),scale=Math.hypot(transform.a,transform.b)||1,px=transform.a*x+transform.c*y+transform.e;const available=(['center'].includes(this.textAlign)?2*Math.min(px,this.canvas.width-px):['right','end'].includes(this.textAlign)?px:this.canvas.width-px)/scale;const bound=Math.max(20,Math.min(maxWidth??Infinity,available-8)),width=measure.call(this,translated).width,oldFont=this.font;
@@ -33,7 +16,7 @@
   // Не обрабатываем поля ввода, исходный код и скрытые шаблоны.
   const skip='script,style,textarea,code,pre,[contenteditable="true"],[data-no-translate]';
   function textNode(node){if(node.parentElement?.closest(skip))return;const ballButtons={splitBtn:'÷',ejectBtn:'●',pauseBtn:'Ⅱ',musicBtn:'♫',menuBtn:'≡',restartBtn:'↻'};const value=gameName==='ball-arena'&&ballButtons[node.parentElement?.id]?ballButtons[node.parentElement.id]:translate(node.data);if(node.data!==value)node.data=value;}
-  function element(el){if(!(el instanceof Element)||el.matches(skip))return;for(const name of ['title','placeholder','aria-label','alt']){const raw=el.getAttribute(name);if(raw!==null){const value=translate(raw);if(value!==raw)el.setAttribute(name,value);}}}
+  function element(el){if(!(el instanceof Element)||el.matches(skip))return;if(el.tagName==='OPTION'&&!el.hasAttribute('value'))el.setAttribute('value',el.textContent);if(el.matches('input[type=button],input[type=submit],input[type=reset]'))el.value=translate(el.value);for(const name of ['title','placeholder','aria-label','alt']){const raw=el.getAttribute(name);if(raw!==null){const value=translate(raw);if(value!==raw)el.setAttribute(name,value);}}}
   function walk(root){if(root.nodeType===3){textNode(root);return;}if(root.nodeType!==1||root.matches(skip))return;element(root);const walker=document.createTreeWalker(root,NodeFilter.SHOW_ELEMENT|NodeFilter.SHOW_TEXT);while(walker.nextNode()){const node=walker.currentNode;if(node.nodeType===3)textNode(node);else element(node);}}
   const observer=new MutationObserver(records=>{for(const m of records){if(m.type==='characterData')textNode(m.target);else if(m.type==='attributes')element(m.target);else m.addedNodes.forEach(walk);}});
   document.addEventListener('DOMContentLoaded',()=>{document.documentElement.lang='ru';const style=document.createElement('style');style.textContent='button{min-width:0!important;max-width:100%;white-space:normal!important;overflow-wrap:normal;word-break:normal;hyphens:auto}.layout>*,.app>*,.metrics>*,.record-grid>*,.panel,.board,.panel-inner,.stats>*{min-width:0;overflow-wrap:normal;word-break:normal;hyphens:auto}';document.head.append(style);walk(document.body);document.title=translate(document.title);observer.observe(document.body,{subtree:true,childList:true,characterData:true,attributes:true,attributeFilter:['title','placeholder','aria-label','alt']});});

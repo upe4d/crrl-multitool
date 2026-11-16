@@ -1,0 +1,13 @@
+[Unit]
+Description=Remove expired ReClip files
+
+[Service]
+Type=oneshot
+User=reclip
+Group=www-data
+ExecStart=/usr/bin/find /var/lib/reclip -maxdepth 1 -type f -mmin +60 -delete
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+ReadWritePaths=/var/lib/reclip

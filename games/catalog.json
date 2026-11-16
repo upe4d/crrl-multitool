@@ -53,7 +53,7 @@
     "title": "2048",
     "originalTitle": "2048",
     "description": "Сдвигайте поле свайпами или стрелками. Одинаковые числа объединяются; цель — получить плитку 2048.",
-    "controls": "Управляйте мышью, касанием или клавишами, указанными в правилах на странице игры. Кнопка «Новая игра» начинает новый раунд.",
+    "controls": "Стрелки или свайп сдвигают все плитки. Две одинаковые объединяются. Получите 2048; если свободных клеток и допустимых слияний не останется, партия закончится.",
     "category": "puzzle",
     "path": "/games/night-fair/ru/index.html#g/g2048",
     "originalPath": "/games/night-fair/en/index.html#g/g2048",
@@ -75,7 +75,7 @@
     "url": "/games/play.html?id=mini-air-traffic-control",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/air-traffic-control.html",
     "keywords": "mini air traffic control ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "fair-anagram",
@@ -83,7 +83,7 @@
     "title": "Анаграммы на время",
     "originalTitle": "Anagram Rush",
     "description": "Соберите слово из перемешанных букв и введите его. Решите как можно больше анаграмм за минуту.",
-    "controls": "Управление и правила показаны на странице игры. Для игр со словами используйте русскую раскладку или экранную клавиатуру.",
+    "controls": "Прочитайте перемешанные буквы, введите русское слово и подтвердите ответ. Если застряли, нажмите «Пропустить». Таймер ограничивает всю серию.",
     "category": "word",
     "path": "/games/night-fair/ru/index.html#g/anagram",
     "originalPath": "/games/night-fair/en/index.html#g/anagram",
@@ -105,7 +105,7 @@
     "url": "/games/play.html?id=mini-backpack-arena",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/backpack-arena.html",
     "keywords": "mini backpack arena ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "fair-breakout",
@@ -113,7 +113,7 @@
     "title": "Арканоид",
     "originalTitle": "Brick Breaker",
     "description": "Двигайте платформу и отбивайте мяч, чтобы разбить все кирпичи. Подбирайте выпадающие улучшения.",
-    "controls": "Управляйте мышью, касанием или клавишами, указанными в правилах на странице игры. Кнопка «Новая игра» начинает новый раунд.",
+    "controls": "Двигайте платформу мышью, пальцем или стрелками ← →. Пробел или щелчок запускает мяч. Не дайте мячу упасть за платформу.",
     "category": "action",
     "path": "/games/night-fair/ru/index.html#g/breakout",
     "originalPath": "/games/night-fair/en/index.html#g/breakout",
@@ -135,7 +135,7 @@
     "url": "/games/play.html?id=mini-auction-fever",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/auction-fever.html",
     "keywords": "mini auction fever ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "fair-stacker",
@@ -143,7 +143,7 @@
     "title": "Башня из блоков",
     "originalTitle": "Tower Stack",
     "description": "Останавливайте движущийся блок над предыдущим. Чем точнее попадание, тем выше получится башня.",
-    "controls": "Управляйте мышью, касанием или клавишами, указанными в правилах на странице игры. Кнопка «Новая игра» начинает новый раунд.",
+    "controls": "Щелчок или пробел останавливает движущийся блок. Старайтесь совместить его с верхним блоком башни: выступающая часть отрезается.",
     "category": "action",
     "path": "/games/night-fair/ru/index.html#g/stacker",
     "originalPath": "/games/night-fair/en/index.html#g/stacker",
@@ -165,7 +165,7 @@
     "url": "/games/play.html?id=mini-chalk-billiards",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/chalk-billiards.html",
     "keywords": "mini chalk billiards ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "fair-blackjack",
@@ -173,7 +173,7 @@
     "title": "Блэкджек",
     "originalTitle": "Blackjack",
     "description": "Наберите больше очков, чем дилер, но не больше 21. Можно взять ещё карту, остановиться или удвоить ставку.",
-    "controls": "Управляйте мышью, касанием или клавишами, указанными в правилах на странице игры. Кнопка «Новая игра» начинает новый раунд.",
+    "controls": "После раздачи выбирайте «Ещё карту» или «Хватит». Нужно набрать больше дилера, не превысив 21. Туз считается за 1 или 11. Ставки здесь игровые.",
     "category": "cards",
     "path": "/games/night-fair/ru/index.html#g/blackjack",
     "originalPath": "/games/night-fair/en/index.html#g/blackjack",
@@ -195,7 +195,7 @@
     "url": "/games/play.html?id=mini-slingstorm",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/slingstorm.html",
     "keywords": "mini slingstorm ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "mini-frequency-bureau",
@@ -210,7 +210,7 @@
     "url": "/games/play.html?id=mini-frequency-bureau",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/frequency-bureau.html",
     "keywords": "mini frequency bureau ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "fair-mastermind",
@@ -218,7 +218,7 @@
     "title": "Взломщик кода",
     "originalTitle": "Code Breaker",
     "description": "Угадайте последовательность из четырёх цветов за десять попыток. Подсказки показывают, какие цвета угаданы и стоят ли они на своих местах.",
-    "controls": "Управляйте мышью, касанием или клавишами, указанными в правилах на странице игры. Кнопка «Новая игра» начинает новый раунд.",
+    "controls": "Нажимайте на цветные позиции, составьте последовательность из четырёх цветов и нажмите «Проверить». Подсказки различают верный цвет на верном месте и верный цвет на другом месте. Следующую попытку выбирайте с учётом всех ответов.",
     "category": "puzzle",
     "path": "/games/night-fair/ru/index.html#g/mastermind",
     "originalPath": "/games/night-fair/en/index.html#g/mastermind",
@@ -233,7 +233,7 @@
     "title": "Видеопокер",
     "originalTitle": "Video Poker",
     "description": "Сохраните нужные карты и один раз замените остальные. Выигрышные комбинации начинаются с пары валетов.",
-    "controls": "Управляйте мышью, касанием или клавишами, указанными в правилах на странице игры. Кнопка «Новая игра» начинает новый раунд.",
+    "controls": "Получите пять карт. Нажмите на карты, которые хотите оставить, затем обменяйте остальные. Выигрыш зависит от комбинации, указанной в таблице. Используются игровые жетоны.",
     "category": "cards",
     "path": "/games/night-fair/ru/index.html#g/videopoker",
     "originalPath": "/games/night-fair/en/index.html#g/videopoker",
@@ -248,7 +248,7 @@
     "title": "Виселица",
     "originalTitle": "Hangman",
     "description": "Открывайте слово по одной букве. Можно допустить не больше шести ошибок.",
-    "controls": "Управление и правила показаны на странице игры. Для игр со словами используйте русскую раскладку или экранную клавиатуру.",
+    "controls": "Выбирайте русские буквы на экранной или обычной клавиатуре. Угаданная буква откроется во всех позициях. Откройте слово до исчерпания допустимых ошибок.",
     "category": "word",
     "path": "/games/night-fair/ru/index.html#g/hangman",
     "originalPath": "/games/night-fair/en/index.html#g/hangman",
@@ -263,7 +263,7 @@
     "title": "Водопровод",
     "originalTitle": "Pipe Network",
     "description": "Поворачивайте участки труб и соедините всю сеть без разрывов.",
-    "controls": "Управляйте мышью, касанием или клавишами, указанными в правилах на странице игры. Кнопка «Новая игра» начинает новый раунд.",
+    "controls": "Нажимайте на трубы, чтобы поворачивать их. Соедините все участки в одну сеть без разрывов.",
     "category": "puzzle",
     "path": "/games/night-fair/ru/index.html#g/pipes",
     "originalPath": "/games/night-fair/en/index.html#g/pipes",
@@ -278,7 +278,7 @@
     "title": "Воздушный шар",
     "originalTitle": "Balloon Flight",
     "description": "Нажимайте, чтобы шар поднимался. Пролетайте через промежутки между препятствиями.",
-    "controls": "Управляйте мышью, касанием или клавишами, указанными в правилах на странице игры. Кнопка «Новая игра» начинает новый раунд.",
+    "controls": "Щелчок, касание или пробел поднимает шар. Без нажатий он опускается. Проходите через промежутки, не задевая препятствия.",
     "category": "action",
     "path": "/games/night-fair/ru/index.html#g/flappy",
     "originalPath": "/games/night-fair/en/index.html#g/flappy",
@@ -300,7 +300,7 @@
     "url": "/games/play.html?id=mini-charm-reels",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/charm-reels.html",
     "keywords": "mini charm reels ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "fair-maze",
@@ -308,7 +308,7 @@
     "title": "Выход из лабиринта",
     "originalTitle": "Maze Escape",
     "description": "Найдите проход к флажку в случайно созданном лабиринте.",
-    "controls": "Управляйте мышью, касанием или клавишами, указанными в правилах на странице игры. Кнопка «Новая игра» начинает новый раунд.",
+    "controls": "Двигайтесь стрелками или экранными кнопками. Найдите путь от начальной клетки до флажка. Через стены пройти нельзя.",
     "category": "puzzle",
     "path": "/games/night-fair/ru/index.html#g/maze",
     "originalPath": "/games/night-fair/en/index.html#g/maze",
@@ -323,7 +323,7 @@
     "title": "Выше или ниже",
     "originalTitle": "High-Low",
     "description": "Угадайте, будет ли следующая карта старше или младше текущей. Соберите как можно более длинную серию верных ответов.",
-    "controls": "Управляйте мышью, касанием или клавишами, указанными в правилах на странице игры. Кнопка «Новая игра» начинает новый раунд.",
+    "controls": "Посмотрите на открытую карту и выберите, будет следующая выше или ниже. Старайтесь продлить серию верных прогнозов. Это игра с картами, а не реальными ставками.",
     "category": "cards",
     "path": "/games/night-fair/ru/index.html#g/hilo",
     "originalPath": "/games/night-fair/en/index.html#g/hilo",
@@ -345,7 +345,7 @@
     "url": "/games/play.html?id=mini-mist-valley-herbarium",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/mist-valley-herbarium.html",
     "keywords": "mini mist valley herbarium ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "mini-shan-hai",
@@ -360,7 +360,7 @@
     "url": "/games/play.html?id=mini-shan-hai",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/shan-hai.html",
     "keywords": "mini shan hai ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "mini-thunder-vanguard",
@@ -375,7 +375,7 @@
     "url": "/games/play.html?id=mini-thunder-vanguard",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/thunder-vanguard.html",
     "keywords": "mini thunder vanguard ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "mini-observatory-watch",
@@ -390,7 +390,7 @@
     "url": "/games/play.html?id=mini-observatory-watch",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/observatory-watch.html",
     "keywords": "mini observatory watch ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "mini-island-survival",
@@ -405,7 +405,7 @@
     "url": "/games/play.html?id=mini-island-survival",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/island-survival.html",
     "keywords": "mini island survival ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "mini-dojo-duel",
@@ -420,7 +420,7 @@
     "url": "/games/play.html?id=mini-dojo-duel",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/dojo-duel.html",
     "keywords": "mini dojo duel ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "mini-switchyard-rush",
@@ -435,7 +435,7 @@
     "url": "/games/play.html?id=mini-switchyard-rush",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/switchyard-rush.html",
     "keywords": "mini switchyard rush ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "fair-digitspan",
@@ -443,7 +443,7 @@
     "title": "Запомни числа",
     "originalTitle": "Digit Span",
     "description": "Запомните последовательность цифр, дождитесь поля ввода и повторите её.",
-    "controls": "Управляйте мышью, касанием или клавишами, указанными в правилах на странице игры. Кнопка «Новая игра» начинает новый раунд.",
+    "controls": "Запомните показанную последовательность. Когда появится поле, введите цифры в том же порядке и подтвердите. С каждой удачной попыткой последовательность длиннее.",
     "category": "brain",
     "path": "/games/night-fair/ru/index.html#g/digitspan",
     "originalPath": "/games/night-fair/en/index.html#g/digitspan",
@@ -465,7 +465,7 @@
     "url": "/games/play.html?id=mini-ball-arena",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/ball-arena.html",
     "keywords": "mini ball arena ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "mini-starforge-idle",
@@ -480,7 +480,7 @@
     "url": "/games/play.html?id=mini-starforge-idle",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/starforge-idle.html",
     "keywords": "mini starforge idle ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "mini-starline-route",
@@ -495,7 +495,7 @@
     "url": "/games/play.html?id=mini-starline-route",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/starline-route.html",
     "keywords": "mini starline route ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "fair-shooter",
@@ -503,7 +503,7 @@
     "title": "Звёздный стрелок",
     "originalTitle": "Star Hunter",
     "description": "Сбивайте вражеские корабли и переживите как можно больше волн.",
-    "controls": "Управляйте мышью, касанием или клавишами, указанными в правилах на странице игры. Кнопка «Новая игра» начинает новый раунд.",
+    "controls": "Стрелки ← → двигают корабль, пробел стреляет. Можно двигаться указателем или пальцем и нажимать для огня. Избегайте попаданий и сбивайте корабли противника.",
     "category": "action",
     "path": "/games/night-fair/ru/index.html#g/shooter",
     "originalPath": "/games/night-fair/en/index.html#g/shooter",
@@ -525,7 +525,7 @@
     "url": "/games/play.html?id=mini-garden-front",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/garden-front.html",
     "keywords": "mini garden front ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "fair-snake",
@@ -533,7 +533,7 @@
     "title": "Змейка",
     "originalTitle": "Snake",
     "description": "Собирайте еду и растите. В классическом режиме нельзя задевать стены и собственный хвост.",
-    "controls": "Управляйте мышью, касанием или клавишами, указанными в правилах на странице игры. Кнопка «Новая игра» начинает новый раунд.",
+    "controls": "Стрелки или экранные кнопки меняют направление змейки. Собирайте еду, не врезайтесь в хвост и учитывайте правила выбранного режима стен.",
     "category": "action",
     "path": "/games/night-fair/ru/index.html#g/snake",
     "originalPath": "/games/night-fair/en/index.html#g/snake",
@@ -555,7 +555,7 @@
     "url": "/games/play.html?id=mini-snake-game",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/snake-game.html",
     "keywords": "mini snake game snake змейка",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "fair-visualmem",
@@ -563,7 +563,7 @@
     "title": "Зрительная память",
     "originalTitle": "Visual Memory",
     "description": "Запомните подсвеченные клетки и повторите рисунок после того, как он исчезнет.",
-    "controls": "Управляйте мышью, касанием или клавишами, указанными в правилах на странице игры. Кнопка «Новая игра» начинает новый раунд.",
+    "controls": "Запомните подсвеченные клетки. После их исчезновения нажмите на те же клетки. Проверяйте узор целиком; ошибочные нажатия расходуют жизни.",
     "category": "brain",
     "path": "/games/night-fair/ru/index.html#g/visualmem",
     "originalPath": "/games/night-fair/en/index.html#g/visualmem",
@@ -585,7 +585,7 @@
     "url": "/games/play.html?id=mini-checkpoint-inspector",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/checkpoint-inspector.html",
     "keywords": "mini checkpoint inspector ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "mini-dungeon-delver",
@@ -600,7 +600,7 @@
     "url": "/games/play.html?id=mini-dungeon-delver",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/dungeon-delver.html",
     "keywords": "mini dungeon delver ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "mini-branching-tales",
@@ -615,7 +615,7 @@
     "url": "/games/play.html?id=mini-branching-tales",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/branching-tales.html",
     "keywords": "mini branching tales ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "mini-signal-caravan",
@@ -630,7 +630,7 @@
     "url": "/games/play.html?id=mini-signal-caravan",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/signal-caravan.html",
     "keywords": "mini signal caravan ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "mini-metro-weaver",
@@ -645,7 +645,7 @@
     "url": "/games/play.html?id=mini-metro-weaver",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/metro-weaver.html",
     "keywords": "mini metro weaver ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "mini-pocket-golf",
@@ -660,7 +660,7 @@
     "url": "/games/play.html?id=mini-pocket-golf",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/pocket-golf.html",
     "keywords": "mini pocket golf ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "mini-pocket-companion",
@@ -675,7 +675,7 @@
     "url": "/games/play.html?id=mini-pocket-companion",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/pocket-companion.html",
     "keywords": "mini pocket companion ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "mini-spud-arena",
@@ -690,7 +690,7 @@
     "url": "/games/play.html?id=mini-spud-arena",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/spud-arena.html",
     "keywords": "mini spud arena ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "fair-war",
@@ -698,7 +698,7 @@
     "title": "Карточная война",
     "originalTitle": "Card War",
     "description": "Открывайте карты: старшая забирает взятку. Если карты равны, начинается дополнительный розыгрыш.",
-    "controls": "Управляйте мышью, касанием или клавишами, указанными в правилах на странице игры. Кнопка «Новая игра» начинает новый раунд.",
+    "controls": "Нажмите кнопку следующего хода, чтобы открыть карты. Старшая карта забирает взятку; при равенстве разыгрывается спор. Здесь важен результат раздач, выбирать карту из колоды нельзя.",
     "category": "cards",
     "path": "/games/night-fair/ru/index.html#g/war",
     "originalPath": "/games/night-fair/en/index.html#g/war",
@@ -720,7 +720,7 @@
     "url": "/games/play.html?id=mini-crossword-cafe",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/crossword-cafe.html",
     "keywords": "mini crossword cafe ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "mini-solitaire-classic",
@@ -735,7 +735,7 @@
     "url": "/games/play.html?id=mini-solitaire-classic",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/solitaire-classic.html",
     "keywords": "mini solitaire classic ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "mini-pocket-empire",
@@ -750,7 +750,7 @@
     "url": "/games/play.html?id=mini-pocket-empire",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/pocket-empire.html",
     "keywords": "mini pocket empire ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "mini-museum-climate",
@@ -765,7 +765,7 @@
     "url": "/games/play.html?id=mini-museum-climate",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/museum-climate.html",
     "keywords": "mini museum climate ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "fair-wheel",
@@ -773,7 +773,7 @@
     "title": "Колесо призов",
     "originalTitle": "Spinning Wheel",
     "description": "Потратьте пять игровых билетов, чтобы раскрутить колесо и получить случайный приз.",
-    "controls": "Управляйте мышью, касанием или клавишами, указанными в правилах на странице игры. Кнопка «Новая игра» начинает новый раунд.",
+    "controls": "Выберите игровую ставку и запустите колесо. Дождитесь остановки: выплата зависит от сектора. Жетоны существуют только внутри игры.",
     "category": "carnival",
     "path": "/games/night-fair/ru/index.html#g/wheel",
     "originalPath": "/games/night-fair/en/index.html#g/wheel",
@@ -788,7 +788,7 @@
     "title": "Кости: свинья",
     "originalTitle": "Pig",
     "description": "Бросайте кость и копите очки либо завершите ход, чтобы их сохранить. Выпадет единица — потеряете очки текущего хода. Цель — первым набрать 100 очков.",
-    "controls": "Управляйте мышью, касанием или клавишами, указанными в правилах на странице игры. Кнопка «Новая игра» начинает новый раунд.",
+    "controls": "Нажимайте «Бросить», чтобы накапливать очки хода. «Забрать очки» переносит их в общий счёт и передаёт ход. Если выпадет 1, очки текущего хода сгорят. Решайте, когда остановиться.",
     "category": "cards",
     "path": "/games/night-fair/ru/index.html#g/pig",
     "originalPath": "/games/night-fair/en/index.html#g/pig",
@@ -803,7 +803,7 @@
     "title": "Крестики-нолики",
     "originalTitle": "Tic-Tac-Toe",
     "description": "Поставьте три своих знака в ряд по горизонтали, вертикали или диагонали.",
-    "controls": "Управляйте мышью, касанием или клавишами, указанными в правилах на странице игры. Кнопка «Новая игра» начинает новый раунд.",
+    "controls": "Нажмите на пустую клетку, чтобы поставить свой знак. Соберите три знака в ряд по горизонтали, вертикали или диагонали раньше компьютера.",
     "category": "board",
     "path": "/games/night-fair/ru/index.html#g/ttt",
     "originalPath": "/games/night-fair/en/index.html#g/ttt",
@@ -825,7 +825,7 @@
     "url": "/games/play.html?id=mini-moba-frontier",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/moba-frontier.html",
     "keywords": "mini moba frontier ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "mini-block-forge",
@@ -840,7 +840,7 @@
     "url": "/games/play.html?id=mini-block-forge",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/block-forge.html",
     "keywords": "mini block forge тетрис блоки",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "mini-courier-grid",
@@ -855,7 +855,7 @@
     "url": "/games/play.html?id=mini-courier-grid",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/courier-grid.html",
     "keywords": "mini courier grid ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "mini-bytebot-lab",
@@ -870,7 +870,7 @@
     "url": "/games/play.html?id=mini-bytebot-lab",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/bytebot-lab.html",
     "keywords": "mini bytebot lab ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "mini-chromatography-lab",
@@ -885,7 +885,7 @@
     "url": "/games/play.html?id=mini-chromatography-lab",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/chromatography-lab.html",
     "keywords": "mini chromatography lab ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "mini-forest-dash",
@@ -900,7 +900,7 @@
     "url": "/games/play.html?id=mini-forest-dash",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/forest-dash.html",
     "keywords": "mini forest dash ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "mini-comet-weaver",
@@ -915,7 +915,7 @@
     "url": "/games/play.html?id=mini-comet-weaver",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/comet-weaver.html",
     "keywords": "mini comet weaver ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "fair-catcher",
@@ -923,7 +923,7 @@
     "title": "Ловец конфет",
     "originalTitle": "Candy Catch",
     "description": "Ловите падающие конфеты и избегайте бомб. У вас три жизни.",
-    "controls": "Управляйте мышью, касанием или клавишами, указанными в правилах на странице игры. Кнопка «Новая игра» начинает новый раунд.",
+    "controls": "Передвигайте корзину мышью, пальцем или стрелками ← →. Ловите конфеты, избегайте бомб и следите за оставшимися жизнями.",
     "category": "action",
     "path": "/games/night-fair/ru/index.html#g/catcher",
     "originalPath": "/games/night-fair/en/index.html#g/catcher",
@@ -945,7 +945,7 @@
     "url": "/games/play.html?id=mini-moon-lander",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/moon-lander.html",
     "keywords": "mini moon lander ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "mini-tiny-factory",
@@ -960,7 +960,7 @@
     "url": "/games/play.html?id=mini-tiny-factory",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/tiny-factory.html",
     "keywords": "mini tiny factory ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "mini-climbing-route",
@@ -975,7 +975,7 @@
     "url": "/games/play.html?id=mini-climbing-route",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/climbing-route.html",
     "keywords": "mini climbing route ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "mini-alchemy-workshop",
@@ -990,7 +990,7 @@
     "url": "/games/play.html?id=mini-alchemy-workshop",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/alchemy-workshop.html",
     "keywords": "mini alchemy workshop ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "mini-truss-workshop",
@@ -1005,7 +1005,7 @@
     "url": "/games/play.html?id=mini-truss-workshop",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/truss-workshop.html",
     "keywords": "mini truss workshop ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "mini-sudoku-studio",
@@ -1020,7 +1020,7 @@
     "url": "/games/play.html?id=mini-sudoku-studio",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/sudoku-studio.html",
     "keywords": "mini sudoku studio ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "fair-mathsprint",
@@ -1028,7 +1028,7 @@
     "title": "Математический спринт",
     "originalTitle": "Math Sprint",
     "description": "Решите как можно больше примеров за 60 секунд.",
-    "controls": "Управляйте мышью, касанием или клавишами, указанными в правилах на странице игры. Кнопка «Новая игра» начинает новый раунд.",
+    "controls": "Введите ответ на пример и подтвердите. За ограниченное время решите как можно больше примеров; ошибка не засчитывается как верный ответ.",
     "category": "brain",
     "path": "/games/night-fair/ru/index.html#g/mathsprint",
     "originalPath": "/games/night-fair/en/index.html#g/mathsprint",
@@ -1050,7 +1050,7 @@
     "url": "/games/play.html?id=mini-mine-matrix",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/mine-matrix.html",
     "keywords": "mini mine matrix minesweeper сапёр сапер",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "fair-dodger",
@@ -1058,7 +1058,7 @@
     "title": "Метеоритный дождь",
     "originalTitle": "Meteor Dodge",
     "description": "Уклоняйтесь от падающих метеоритов и продержитесь как можно дольше.",
-    "controls": "Управляйте мышью, касанием или клавишами, указанными в правилах на странице игры. Кнопка «Новая игра» начинает новый раунд.",
+    "controls": "Двигайте героя в стороны стрелками или экранным управлением. Уклоняйтесь от падающих метеоритов. Время выживания — ваш результат.",
     "category": "action",
     "path": "/games/night-fair/ru/index.html#g/dodger",
     "originalPath": "/games/night-fair/en/index.html#g/dodger",
@@ -1080,7 +1080,7 @@
     "url": "/games/play.html?id=mini-mosaic-jigsaw",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/mosaic-jigsaw.html",
     "keywords": "mini mosaic jigsaw ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "mini-fleet-duel",
@@ -1095,7 +1095,7 @@
     "url": "/games/play.html?id=mini-fleet-duel",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/fleet-duel.html",
     "keywords": "mini fleet duel ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "fair-battleship",
@@ -1103,7 +1103,7 @@
     "title": "Морской бой",
     "originalTitle": "Battleship",
     "description": "Расставьте корабли на поле 8×8, затем стреляйте по полю соперника. Побеждает тот, кто первым потопит весь флот.",
-    "controls": "Управляйте мышью, касанием или клавишами, указанными в правилах на странице игры. Кнопка «Новая игра» начинает новый раунд.",
+    "controls": "Сначала нажимайте клетки своего поля для расстановки кораблей; R или кнопка поворота меняет ориентацию. После расстановки нажимайте клетки поля противника для выстрела. Потопите весь вражеский флот раньше, чем потеряете свой.",
     "category": "board",
     "path": "/games/night-fair/ru/index.html#g/battleship",
     "originalPath": "/games/night-fair/en/index.html#g/battleship",
@@ -1125,7 +1125,7 @@
     "url": "/games/play.html?id=mini-pulse-studio",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/pulse-studio.html",
     "keywords": "mini pulse studio ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "fair-memory",
@@ -1133,7 +1133,7 @@
     "title": "Найди пару",
     "originalTitle": "Memory Cards",
     "description": "Открывайте по две карты и находите одинаковые. Постарайтесь сделать как можно меньше ходов.",
-    "controls": "Управляйте мышью, касанием или клавишами, указанными в правилах на странице игры. Кнопка «Новая игра» начинает новый раунд.",
+    "controls": "Открывайте по две карточки нажатием. Одинаковые пары остаются открытыми, остальные снова закрываются. Запоминайте расположение и найдите все пары.",
     "category": "puzzle",
     "path": "/games/night-fair/ru/index.html#g/memory",
     "originalPath": "/games/night-fair/en/index.html#g/memory",
@@ -1155,7 +1155,7 @@
     "url": "/games/play.html?id=mini-gear-calibrator",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/gear-calibrator.html",
     "keywords": "mini gear calibrator ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "mini-neon-2048",
@@ -1170,7 +1170,7 @@
     "url": "/games/play.html?id=mini-neon-2048",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/neon-2048.html",
     "keywords": "mini neon 2048 2048",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "mini-tank-arena",
@@ -1185,7 +1185,7 @@
     "url": "/games/play.html?id=mini-tank-arena",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/tank-arena.html",
     "keywords": "mini tank arena ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "mini-maze-chase",
@@ -1200,7 +1200,7 @@
     "url": "/games/play.html?id=mini-maze-chase",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/maze-chase.html",
     "keywords": "mini maze chase ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "fair-nim",
@@ -1208,7 +1208,7 @@
     "title": "Ним",
     "originalTitle": "Nim",
     "description": "За ход возьмите от одной до трёх фишек из одной кучки. Проиграет тот, кто заберёт последнюю фишку.",
-    "controls": "Управляйте мышью, касанием или клавишами, указанными в правилах на странице игры. Кнопка «Новая игра» начинает новый раунд.",
+    "controls": "Выберите кучку и возьмите из неё от одной до трёх фишек. Затем ходит соперник. В этой версии проигрывает тот, кто забрал последнюю фишку.",
     "category": "board",
     "path": "/games/night-fair/ru/index.html#g/nim",
     "originalPath": "/games/night-fair/en/index.html#g/nim",
@@ -1223,7 +1223,7 @@
     "title": "Ночной забег",
     "originalTitle": "Night Run",
     "description": "Перепрыгивайте препятствия и старайтесь пробежать как можно дальше.",
-    "controls": "Управляйте мышью, касанием или клавишами, указанными в правилах на странице игры. Кнопка «Новая игра» начинает новый раунд.",
+    "controls": "Пробел, ↑, щелчок или касание — прыжок. Герой бежит сам. Перепрыгивайте препятствия и продержитесь как можно дольше.",
     "category": "action",
     "path": "/games/night-fair/ru/index.html#g/runner",
     "originalPath": "/games/night-fair/en/index.html#g/runner",
@@ -1245,7 +1245,7 @@
     "url": "/games/play.html?id=mini-orbital-pinball",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/orbital-pinball.html",
     "keywords": "mini orbital pinball ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "mini-merge-orbit",
@@ -1260,7 +1260,7 @@
     "url": "/games/play.html?id=mini-merge-orbit",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/merge-orbit.html",
     "keywords": "mini merge orbit ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "mini-monster-horde",
@@ -1275,7 +1275,7 @@
     "url": "/games/play.html?id=mini-monster-horde",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/monster-horde.html",
     "keywords": "mini monster horde ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "fair-tetris",
@@ -1283,7 +1283,7 @@
     "title": "Тетрис",
     "originalTitle": "Block Rain",
     "description": "Укладывайте падающие фигуры. Заполненная горизонтальная линия исчезает; если поле заполнится доверху, партия закончится.",
-    "controls": "Управляйте мышью, касанием или клавишами, указанными в правилах на странице игры. Кнопка «Новая игра» начинает новый раунд.",
+    "controls": "← → — сдвиг фигуры, ↑ — поворот, ↓ — ускоренное падение, пробел — мгновенный сброс. Заполняйте горизонтальные линии. Не допускайте заполнения поля доверху.",
     "category": "action",
     "path": "/games/night-fair/ru/index.html#g/tetris",
     "originalPath": "/games/night-fair/en/index.html#g/tetris",
@@ -1298,7 +1298,7 @@
     "title": "Память на слова",
     "originalTitle": "Verbal Memory",
     "description": "Для каждого слова отметьте: оно уже встречалось в этой партии или показано впервые.",
-    "controls": "Управление и правила показаны на странице игры. Для игр со словами используйте русскую раскладку или экранную клавиатуру.",
+    "controls": "Прочитайте слово и нажмите «ВПЕРВЫЕ», если его ещё не было в этой партии, или «УЖЕ БЫЛО», если оно встречалось. Запоминайте всю последовательность.",
     "category": "word",
     "path": "/games/night-fair/ru/index.html#g/verbal",
     "originalPath": "/games/night-fair/en/index.html#g/verbal",
@@ -1320,7 +1320,7 @@
     "url": "/games/play.html?id=mini-wonder-park",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/wonder-park.html",
     "keywords": "mini wonder park ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "fair-golf",
@@ -1328,7 +1328,7 @@
     "title": "Пасьянс «Гольф»",
     "originalTitle": "Golf Solitaire",
     "description": "Уберите все карты из семи столбцов. На открытую карту можно положить карту на один ранг старше или младше.",
-    "controls": "Управляйте мышью, касанием или клавишами, указанными в правилах на странице игры. Кнопка «Новая игра» начинает новый раунд.",
+    "controls": "Нажимайте на нижние открытые карты столбцов. На карту в сбросе кладётся карта на один ранг выше или ниже; король и туз тоже соседние. Если хода нет, берите из колоды. Уберите все карты со стола до исчерпания возможностей.",
     "category": "cards",
     "path": "/games/night-fair/ru/index.html#g/golf",
     "originalPath": "/games/night-fair/en/index.html#g/golf",
@@ -1343,7 +1343,7 @@
     "title": "Пасьянс с фишками",
     "originalTitle": "Peg Solitaire",
     "description": "Перепрыгивайте одной фишкой через другую на свободное место. Перепрыгнутая фишка снимается; постарайтесь оставить на поле только одну.",
-    "controls": "Управляйте мышью, касанием или клавишами, указанными в правилах на странице игры. Кнопка «Новая игра» начинает новый раунд.",
+    "controls": "Нажмите фишку, затем свободную клетку через одну соседнюю фишку по прямой. Перепрыгнутая фишка исчезнет. Постарайтесь оставить одну фишку, не запирая остальные.",
     "category": "puzzle",
     "path": "/games/night-fair/ru/index.html#g/pegsol",
     "originalPath": "/games/night-fair/en/index.html#g/pegsol",
@@ -1358,7 +1358,7 @@
     "title": "Переход через дорогу",
     "originalTitle": "Road Crossing",
     "description": "Перейдите дорогу и реку. Избегайте машин и не падайте в воду.",
-    "controls": "Управляйте мышью, касанием или клавишами, указанными в правилах на странице игры. Кнопка «Новая игра» начинает новый раунд.",
+    "controls": "Стрелки или экранные кнопки двигают героя на одну клетку. Избегайте машин. Реку пересекайте по плавающим опорам, а не по воде.",
     "category": "action",
     "path": "/games/night-fair/ru/index.html#g/hopper",
     "originalPath": "/games/night-fair/en/index.html#g/hopper",
@@ -1380,7 +1380,7 @@
     "url": "/games/play.html?id=mini-elemental-sandbox",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/elemental-sandbox.html",
     "keywords": "mini elemental sandbox ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "mini-pixel-clues",
@@ -1395,7 +1395,7 @@
     "url": "/games/play.html?id=mini-pixel-clues",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/pixel-clues.html",
     "keywords": "mini pixel clues японский кроссворд",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "fair-plinko",
@@ -1403,7 +1403,7 @@
     "title": "Плинко",
     "originalTitle": "Plinko",
     "description": "Бросьте шарик за пять игровых билетов. Он отскочит от штырьков и попадёт в одну из призовых ячеек.",
-    "controls": "Управляйте мышью, касанием или клавишами, указанными в правилах на странице игры. Кнопка «Новая игра» начинает новый раунд.",
+    "controls": "Выберите место выпуска и бросьте шарик. Он отскакивает от штырьков и попадает в один из нижних секторов. Награда зависит от сектора; жетоны игровые.",
     "category": "carnival",
     "path": "/games/night-fair/ru/index.html#g/plinko",
     "originalPath": "/games/night-fair/en/index.html#g/plinko",
@@ -1425,7 +1425,7 @@
     "url": "/games/play.html?id=mini-clockwork-escape",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/clockwork-escape.html",
     "keywords": "mini clockwork escape ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "mini-hive-sovereign",
@@ -1440,7 +1440,7 @@
     "url": "/games/play.html?id=mini-hive-sovereign",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/hive-sovereign.html",
     "keywords": "mini hive sovereign ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "fair-simon",
@@ -1448,7 +1448,7 @@
     "title": "Повтори мелодию",
     "originalTitle": "Simon",
     "description": "Посмотрите и послушайте последовательность, затем повторите её. С каждым раундом она становится длиннее.",
-    "controls": "Управляйте мышью, касанием или клавишами, указанными в правилах на странице игры. Кнопка «Новая игра» начинает новый раунд.",
+    "controls": "Сначала посмотрите и послушайте последовательность цветных кнопок. Затем нажмите их в том же порядке. Каждый раунд добавляется следующий сигнал.",
     "category": "puzzle",
     "path": "/games/night-fair/ru/index.html#g/simon",
     "originalPath": "/games/night-fair/en/index.html#g/simon",
@@ -1463,7 +1463,7 @@
     "title": "Погаси свет",
     "originalTitle": "Lights Out",
     "description": "Погасите все клетки. Нажатие переключает выбранную клетку и её соседей по вертикали и горизонтали.",
-    "controls": "Управляйте мышью, касанием или клавишами, указанными в правилах на странице игры. Кнопка «Новая игра» начинает новый раунд.",
+    "controls": "Нажатие меняет состояние выбранной лампы и её соседей. Подберите последовательность, после которой все лампы будут выключены.",
     "category": "puzzle",
     "path": "/games/night-fair/ru/index.html#g/lightsout",
     "originalPath": "/games/night-fair/en/index.html#g/lightsout",
@@ -1485,7 +1485,7 @@
     "url": "/games/play.html?id=mini-frontier-command",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/frontier-command.html",
     "keywords": "mini frontier command ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "mini-dice-delver",
@@ -1500,7 +1500,7 @@
     "url": "/games/play.html?id=mini-dice-delver",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/dice-delver.html",
     "keywords": "mini dice delver ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "mini-runway-stylist",
@@ -1515,7 +1515,7 @@
     "url": "/games/play.html?id=mini-runway-stylist",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/runway-stylist.html",
     "keywords": "mini runway stylist ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "fair-wordsearch",
@@ -1523,7 +1523,7 @@
     "title": "Поиск слов",
     "originalTitle": "Word Search",
     "description": "Найдите шесть слов на буквенном поле. Выделяйте буквы слова по прямой линии.",
-    "controls": "Управление и правила показаны на странице игры. Для игр со словами используйте русскую раскладку или экранную клавиатуру.",
+    "controls": "Нажмите первую букву слова, затем последнюю. Выделение должно идти по прямой: горизонтально, вертикально или по диагонали. Найдите все слова списка; обратное направление тоже допускается.",
     "category": "word",
     "path": "/games/night-fair/ru/index.html#g/wordsearch",
     "originalPath": "/games/night-fair/en/index.html#g/wordsearch",
@@ -1538,7 +1538,7 @@
     "title": "Поймай крота",
     "originalTitle": "Whack-a-Mole",
     "description": "За 30 секунд нажмите на как можно больше кротов, пока они не спрятались.",
-    "controls": "Управляйте мышью, касанием или клавишами, указанными в правилах на странице игры. Кнопка «Новая игра» начинает новый раунд.",
+    "controls": "Нажимайте на появившихся кротов, пока они не спрятались. Наберите больше попаданий до окончания таймера.",
     "category": "action",
     "path": "/games/night-fair/ru/index.html#g/whack",
     "originalPath": "/games/night-fair/en/index.html#g/whack",
@@ -1560,7 +1560,7 @@
     "url": "/games/play.html?id=mini-midnight-monitor",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/midnight-monitor.html",
     "keywords": "mini midnight monitor ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "mini-midnight-chess",
@@ -1575,7 +1575,7 @@
     "url": "/games/play.html?id=mini-midnight-chess",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/midnight-chess.html",
     "keywords": "mini midnight chess chess шахматы",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "mini-air-hockey",
@@ -1590,7 +1590,7 @@
     "url": "/games/play.html?id=mini-air-hockey",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/air-hockey.html",
     "keywords": "mini air hockey ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "fair-pong",
@@ -1598,7 +1598,7 @@
     "title": "Понг",
     "originalTitle": "Pong",
     "description": "Отбивайте мяч ракеткой. Кто первым наберёт 7 очков, тот победит.",
-    "controls": "Управляйте мышью, касанием или клавишами, указанными в правилах на странице игры. Кнопка «Новая игра» начинает новый раунд.",
+    "controls": "Двигайте ракетку мышью, пальцем или стрелками ↑ ↓. Пробел или щелчок запускает мяч. Отбивайте его и первым наберите 7 очков.",
     "category": "action",
     "path": "/games/night-fair/ru/index.html#g/pong",
     "originalPath": "/games/night-fair/en/index.html#g/pong",
@@ -1620,7 +1620,7 @@
     "url": "/games/play.html?id=mini-prism-breaker",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/prism-breaker.html",
     "keywords": "mini prism breaker арканоид",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "mini-prism-orchard",
@@ -1635,7 +1635,7 @@
     "url": "/games/play.html?id=mini-prism-orchard",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/prism-orchard.html",
     "keywords": "mini prism orchard ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "mini-claw-carnival",
@@ -1650,7 +1650,7 @@
     "url": "/games/play.html?id=mini-claw-carnival",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/claw-carnival.html",
     "keywords": "mini claw carnival ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "fair-slots",
@@ -1658,7 +1658,7 @@
     "title": "Призовые барабаны",
     "originalTitle": "Slot Machine",
     "description": "Запустите барабаны за пять игровых билетов. Одинаковые символы приносят приз.",
-    "controls": "Управляйте мышью, касанием или клавишами, указанными в правилах на странице игры. Кнопка «Новая игра» начинает новый раунд.",
+    "controls": "Выберите игровую ставку и запустите барабаны. Комбинация после остановки определяет награду по таблице. Все жетоны виртуальные.",
     "category": "carnival",
     "path": "/games/night-fair/ru/index.html#g/slots",
     "originalPath": "/games/night-fair/en/index.html#g/slots",
@@ -1680,7 +1680,7 @@
     "url": "/games/play.html?id=mini-tidal-grid",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/tidal-grid.html",
     "keywords": "mini tidal grid ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "fair-reaction",
@@ -1688,7 +1688,7 @@
     "title": "Проверка реакции",
     "originalTitle": "Reaction Time",
     "description": "Дождитесь зелёного сигнала и сразу нажмите на поле. Результат — среднее время реакции за пять попыток.",
-    "controls": "Управляйте мышью, касанием или клавишами, указанными в правилах на странице игры. Кнопка «Новая игра» начинает новый раунд.",
+    "controls": "Нажмите, чтобы начать попытку. Дождитесь зелёного поля и сразу нажмите снова. Раннее нажатие не считается успешной реакцией. Результат усредняется по попыткам.",
     "category": "brain",
     "path": "/games/night-fair/ru/index.html#g/reaction",
     "originalPath": "/games/night-fair/en/index.html#g/reaction",
@@ -1703,7 +1703,7 @@
     "title": "Пропущенные гласные",
     "originalTitle": "Missing Vowels",
     "description": "В слове спрятаны гласные буквы. Восстановите его и введите целиком.",
-    "controls": "Управление и правила показаны на странице игры. Для игр со словами используйте русскую раскладку или экранную клавиатуру.",
+    "controls": "Восстановите гласные в показанном слове, введите его целиком на русском и подтвердите. После ответа игра покажет следующий раунд.",
     "category": "word",
     "path": "/games/night-fair/ru/index.html#g/vowels",
     "originalPath": "/games/night-fair/en/index.html#g/vowels",
@@ -1718,7 +1718,7 @@
     "title": "Пропущенный знак",
     "originalTitle": "Missing Operator",
     "description": "Подберите знак +, −, × или ÷, чтобы равенство стало верным. Решите как можно больше примеров за минуту.",
-    "controls": "Управляйте мышью, касанием или клавишами, указанными в правилах на странице игры. Кнопка «Новая игра» начинает новый раунд.",
+    "controls": "Нажмите знак +, −, × или ÷, который делает равенство верным. Решите как можно больше примеров до конца таймера.",
     "category": "brain",
     "path": "/games/night-fair/ru/index.html#g/missingop",
     "originalPath": "/games/night-fair/en/index.html#g/missingop",
@@ -1740,7 +1740,7 @@
     "url": "/games/play.html?id=mini-pathogen-protocol",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/pathogen-protocol.html",
     "keywords": "mini pathogen protocol ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "mini-sky-hop",
@@ -1755,7 +1755,7 @@
     "url": "/games/play.html?id=mini-sky-hop",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/sky-hop.html",
     "keywords": "mini sky hop ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "fair-jumper",
@@ -1763,7 +1763,7 @@
     "title": "Прыжки по башне",
     "originalTitle": "Jump Tower",
     "description": "Прыгайте с платформы на платформу и поднимайтесь выше.",
-    "controls": "Управляйте мышью, касанием или клавишами, указанными в правилах на странице игры. Кнопка «Новая игра» начинает новый раунд.",
+    "controls": "Герой прыгает автоматически. Стрелками ← → направляйте его на платформы. Поднимайтесь выше и не падайте вниз.",
     "category": "action",
     "path": "/games/night-fair/ru/index.html#g/jumper",
     "originalPath": "/games/night-fair/en/index.html#g/jumper",
@@ -1785,7 +1785,7 @@
     "url": "/games/play.html?id=mini-market-pulse",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/market-pulse.html",
     "keywords": "mini market pulse ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "fair-slide15",
@@ -1793,7 +1793,7 @@
     "title": "Пятнашки",
     "originalTitle": "15 Puzzle",
     "description": "Передвигайте плитки через свободную клетку и расположите числа от 1 до 15 по порядку.",
-    "controls": "Управляйте мышью, касанием или клавишами, указанными в правилах на странице игры. Кнопка «Новая игра» начинает новый раунд.",
+    "controls": "Нажимайте на плитку рядом с пустой клеткой, чтобы сдвинуть её. Расположите числа по порядку, оставив пустую клетку в конце.",
     "category": "puzzle",
     "path": "/games/night-fair/ru/index.html#g/slide15",
     "originalPath": "/games/night-fair/en/index.html#g/slide15",
@@ -1815,7 +1815,7 @@
     "url": "/games/play.html?id=mini-drone-survey",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/drone-survey.html",
     "keywords": "mini drone survey ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "fair-reversi",
@@ -1823,7 +1823,7 @@
     "title": "Реверси",
     "originalTitle": "Reversi",
     "description": "Зажимайте фишки соперника между своими, чтобы перевернуть их. В конце партии побеждает тот, у кого больше фишек.",
-    "controls": "Управляйте мышью, касанием или клавишами, указанными в правилах на странице игры. Кнопка «Новая игра» начинает новый раунд.",
+    "controls": "Нажмите допустимую клетку, чтобы зажать ряд чужих фишек между новой и своей существующей фишкой. Захваченные фишки перевернутся. При отсутствии ходов ход передаётся автоматически. В конце важнее число фишек, а не первый захват.",
     "category": "board",
     "path": "/games/night-fair/ru/index.html#g/reversi",
     "originalPath": "/games/night-fair/en/index.html#g/reversi",
@@ -1845,7 +1845,7 @@
     "url": "/games/play.html?id=mini-relay-coordination",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/relay-coordination.html",
     "keywords": "mini relay coordination ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "mini-river-holdem",
@@ -1860,7 +1860,7 @@
     "url": "/games/play.html?id=mini-river-holdem",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/river-holdem.html",
     "keywords": "mini river holdem ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "mini-curling-endgame",
@@ -1875,7 +1875,7 @@
     "url": "/games/play.html?id=mini-curling-endgame",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/curling-endgame.html",
     "keywords": "mini curling endgame ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "mini-beat-bento",
@@ -1890,7 +1890,7 @@
     "url": "/games/play.html?id=mini-beat-bento",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/beat-bento.html",
     "keywords": "mini beat bento ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "mini-auto-chess-forge",
@@ -1905,7 +1905,7 @@
     "url": "/games/play.html?id=mini-auto-chess-forge",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/auto-chess-forge.html",
     "keywords": "mini auto chess forge ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "mini-fishing-harbor",
@@ -1920,7 +1920,7 @@
     "url": "/games/play.html?id=mini-fishing-harbor",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/fishing-harbor.html",
     "keywords": "mini fishing harbor ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "mini-clean-slate",
@@ -1935,7 +1935,7 @@
     "url": "/games/play.html?id=mini-clean-slate",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/clean-slate.html",
     "keywords": "mini clean slate ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "mini-gem-garden",
@@ -1950,7 +1950,7 @@
     "url": "/games/play.html?id=mini-gem-garden",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/gem-garden.html",
     "keywords": "mini gem garden три в ряд match3",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "fair-mines",
@@ -1958,7 +1958,7 @@
     "title": "Сапёр",
     "originalTitle": "Minesweeper",
     "description": "Найдите 12 мин на поле 9×9. Число в клетке показывает, сколько мин находится рядом. Первый ход безопасен.",
-    "controls": "Управляйте мышью, касанием или клавишами, указанными в правилах на странице игры. Кнопка «Новая игра» начинает новый раунд.",
+    "controls": "Обычное нажатие открывает клетку. Правый клик или режим флажков отмечает предполагаемую мину. Число показывает мины в восьми соседних клетках. Откройте безопасные клетки, не задев мину.",
     "category": "puzzle",
     "path": "/games/night-fair/ru/index.html#g/mines",
     "originalPath": "/games/night-fair/en/index.html#g/mines",
@@ -1973,7 +1973,7 @@
     "title": "Силомер",
     "originalTitle": "High Striker",
     "description": "Нажмите на кнопку, когда индикатор силы будет у максимальной отметки.",
-    "controls": "Управляйте мышью, касанием или клавишами, указанными в правилах на странице игры. Кнопка «Новая игра» начинает новый раунд.",
+    "controls": "Остановите движущийся индикатор нажатием в нужный момент. Чем ближе к зоне лучшего удара, тем выше результат силомера.",
     "category": "carnival",
     "path": "/games/night-fair/ru/index.html#g/striker",
     "originalPath": "/games/night-fair/en/index.html#g/striker",
@@ -1988,7 +1988,7 @@
     "title": "Скачки",
     "originalTitle": "Horse Race",
     "description": "Выберите лошадь и поставьте игровые билеты. Если она победит, вы получите тройную ставку.",
-    "controls": "Управляйте мышью, касанием или клавишами, указанными в правилах на странице игры. Кнопка «Новая игра» начинает новый раунд.",
+    "controls": "Выберите участника и игровую ставку, затем запустите забег. Дождитесь финиша, чтобы увидеть результат и выплату. Используются только виртуальные жетоны.",
     "category": "carnival",
     "path": "/games/night-fair/ru/index.html#g/horserace",
     "originalPath": "/games/night-fair/en/index.html#g/horserace",
@@ -2003,7 +2003,7 @@
     "title": "Сколько точек?",
     "originalTitle": "Dot Estimate",
     "description": "Оцените количество точек и введите ответ. Всего десять раундов; чем точнее оценка, тем больше очков.",
-    "controls": "Управляйте мышью, касанием или клавишами, указанными в правилах на странице игры. Кнопка «Новая игра» начинает новый раунд.",
+    "controls": "Быстро оцените число появившихся точек. Введите свою оценку и подтвердите. Чем ближе к точному количеству, тем больше очков за раунд.",
     "category": "brain",
     "path": "/games/night-fair/ru/index.html#g/estimate",
     "originalPath": "/games/night-fair/en/index.html#g/estimate",
@@ -2018,7 +2018,7 @@
     "title": "Скорость печати",
     "originalTitle": "Speed Typer",
     "description": "Перепечатывайте предложенные фразы в течение 30 секунд. Скорость и точность считаются отдельно.",
-    "controls": "Управление и правила показаны на странице игры. Для игр со словами используйте русскую раскладку или экранную клавиатуру.",
+    "controls": "Нажмите на поле и перепечатывайте предложенную русскую фразу. Таймер запускается с первым вводом. Следите за точностью: скорость считается отдельно от ошибок.",
     "category": "word",
     "path": "/games/night-fair/ru/index.html#g/typing",
     "originalPath": "/games/night-fair/en/index.html#g/typing",
@@ -2033,7 +2033,7 @@
     "title": "Слово дня",
     "originalTitle": "Daily Word",
     "description": "Угадайте русское слово из пяти букв за шесть попыток. Цвет клетки показывает, есть ли буква в слове и верно ли выбрано её место.",
-    "controls": "Управление и правила показаны на странице игры. Для игр со словами используйте русскую раскладку или экранную клавиатуру.",
+    "controls": "Введите русское слово из пяти букв и нажмите Enter. Зелёная буква на своём месте, жёлтая есть в слове на другом месте, серая отсутствует. Используйте ответы предыдущих строк; всего шесть попыток.",
     "category": "word",
     "path": "/games/night-fair/ru/index.html#g/wordle",
     "originalPath": "/games/night-fair/en/index.html#g/wordle",
@@ -2055,7 +2055,7 @@
     "url": "/games/play.html?id=mini-noodle-shift",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/noodle-shift.html",
     "keywords": "mini noodle shift ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "mini-lockmaster-shift",
@@ -2070,7 +2070,7 @@
     "url": "/games/play.html?id=mini-lockmaster-shift",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/lockmaster-shift.html",
     "keywords": "mini lockmaster shift ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "mini-snow-ridge",
@@ -2085,7 +2085,7 @@
     "url": "/games/play.html?id=mini-snow-ridge",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/snow-ridge.html",
     "keywords": "mini snow ridge ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "fair-sokoban",
@@ -2093,7 +2093,7 @@
     "title": "Сокобан",
     "originalTitle": "Sokoban",
     "description": "Расставьте все ящики на отмеченные места. Ящики можно только толкать; заранее оставляйте себе проход.",
-    "controls": "Управляйте мышью, касанием или клавишами, указанными в правилах на странице игры. Кнопка «Новая игра» начинает новый раунд.",
+    "controls": "Стрелками двигайте персонажа и толкайте ящики на отмеченные места. Тянуть ящики нельзя. «Отменить ход» возвращает последний шаг; не загоняйте ящики в углы без цели.",
     "category": "puzzle",
     "path": "/games/night-fair/ru/index.html#g/sokoban",
     "originalPath": "/games/night-fair/en/index.html#g/sokoban",
@@ -2115,7 +2115,7 @@
     "url": "/games/play.html?id=mini-sokoban-quest",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/sokoban-quest.html",
     "keywords": "mini sokoban quest sokoban",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "mini-tide-salvage",
@@ -2130,7 +2130,7 @@
     "url": "/games/play.html?id=mini-tide-salvage",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/tide-salvage.html",
     "keywords": "mini tide salvage ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "mini-abyss-sonar",
@@ -2145,7 +2145,7 @@
     "url": "/games/play.html?id=mini-abyss-sonar",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/abyss-sonar.html",
     "keywords": "mini abyss sonar ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "mini-spectrum-console",
@@ -2160,7 +2160,7 @@
     "url": "/games/play.html?id=mini-spectrum-console",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/spectrum-console.html",
     "keywords": "mini spectrum console ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "mini-radish-guard",
@@ -2175,7 +2175,7 @@
     "url": "/games/play.html?id=mini-radish-guard",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/radish-guard.html",
     "keywords": "mini radish guard ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "mini-courtroom-clash",
@@ -2190,7 +2190,7 @@
     "url": "/games/play.html?id=mini-courtroom-clash",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/courtroom-clash.html",
     "keywords": "mini courtroom clash ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "fair-sudoku",
@@ -2198,7 +2198,7 @@
     "title": "Судоку",
     "originalTitle": "Sudoku",
     "description": "Заполните поле числами. В каждой строке, столбце и блоке 3×3 цифры от 1 до 9 должны встречаться ровно один раз.",
-    "controls": "Управляйте мышью, касанием или клавишами, указанными в правилах на странице игры. Кнопка «Новая игра» начинает новый раунд.",
+    "controls": "Выберите пустую клетку и цифру. В строке, столбце и квадрате 3×3 каждое число от 1 до 9 должно встречаться один раз. «Стереть» убирает ваш ввод.",
     "category": "puzzle",
     "path": "/games/night-fair/ru/index.html#g/sudoku",
     "originalPath": "/games/night-fair/en/index.html#g/sudoku",
@@ -2213,7 +2213,7 @@
     "title": "Таблица Шульте",
     "originalTitle": "Schulte Table",
     "description": "Нажмите на числа от 1 до 25 по порядку. Постарайтесь закончить как можно быстрее.",
-    "controls": "Управляйте мышью, касанием или клавишами, указанными в правилах на странице игры. Кнопка «Новая игра» начинает новый раунд.",
+    "controls": "Нажимайте числа от 1 до 25 по порядку. Следующее нужное число показано над таблицей. Завершите цепочку как можно быстрее.",
     "category": "brain",
     "path": "/games/night-fair/ru/index.html#g/schulte",
     "originalPath": "/games/night-fair/en/index.html#g/schulte",
@@ -2235,7 +2235,7 @@
     "url": "/games/play.html?id=mini-ember-tactics",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/ember-tactics.html",
     "keywords": "mini ember tactics ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "mini-shadow-post",
@@ -2250,7 +2250,7 @@
     "url": "/games/play.html?id=mini-shadow-post",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/shadow-post.html",
     "keywords": "mini shadow post ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "fair-chimp",
@@ -2258,7 +2258,7 @@
     "title": "Запомни порядок",
     "originalTitle": "Chimp Test",
     "description": "Запомните, где стоят числа, затем нажмите на них по возрастанию.",
-    "controls": "Управляйте мышью, касанием или клавишами, указанными в правилах на странице игры. Кнопка «Новая игра» начинает новый раунд.",
+    "controls": "Запомните расположение чисел. Нажатие на первое скрывает остальные; дальше выбирайте их клетки по возрастанию. Ошибки расходуют попытки.",
     "category": "brain",
     "path": "/games/night-fair/ru/index.html#g/chimp",
     "originalPath": "/games/night-fair/en/index.html#g/chimp",
@@ -2273,7 +2273,7 @@
     "title": "Тест Струпа",
     "originalTitle": "Stroop Test",
     "description": "Выбирайте цвет, которым написано слово, а не значение самого слова. На игру даётся 45 секунд.",
-    "controls": "Управляйте мышью, касанием или клавишами, указанными в правилах на странице игры. Кнопка «Новая игра» начинает новый раунд.",
+    "controls": "Назовите цвет краски, а не прочитанное слово. Например, если слово «красный» написано синим, выбирайте синий. До конца таймера отвечайте быстро и точно.",
     "category": "brain",
     "path": "/games/night-fair/ru/index.html#g/stroop",
     "originalPath": "/games/night-fair/en/index.html#g/stroop",
@@ -2288,7 +2288,7 @@
     "title": "Точки и квадраты",
     "originalTitle": "Dots & Boxes",
     "description": "По очереди соединяйте соседние точки. Кто замкнул квадрат, забирает его. Победит тот, у кого больше квадратов.",
-    "controls": "Управляйте мышью, касанием или клавишами, указанными в правилах на странице игры. Кнопка «Новая игра» начинает новый раунд.",
+    "controls": "По очереди нажимайте на рёбра между соседними точками. Замкнутый квадрат становится вашим и даёт ещё один ход. После заполнения поля сравнивается число квадратов.",
     "category": "board",
     "path": "/games/night-fair/ru/index.html#g/dotsboxes",
     "originalPath": "/games/night-fair/en/index.html#g/dotsboxes",
@@ -2303,7 +2303,7 @@
     "title": "Три в ряд",
     "originalTitle": "Triple Pop",
     "description": "Меняйте местами соседние фишки, чтобы собрать ряд из трёх и более одинаковых. На игру даётся 60 секунд.",
-    "controls": "Управляйте мышью, касанием или клавишами, указанными в правилах на странице игры. Кнопка «Новая игра» начинает новый раунд.",
+    "controls": "Нажмите на фишку и соседнюю с ней, чтобы поменять их местами. Собирайте горизонтальные или вертикальные ряды от трёх одинаковых. Наберите больше очков до конца времени.",
     "category": "puzzle",
     "path": "/games/night-fair/ru/index.html#g/match3",
     "originalPath": "/games/night-fair/en/index.html#g/match3",
@@ -2325,7 +2325,7 @@
     "url": "/games/play.html?id=mini-drift-racer",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/drift-racer.html",
     "keywords": "mini drift racer ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "fair-guessnum",
@@ -2333,7 +2333,7 @@
     "title": "Угадай число",
     "originalTitle": "Guess the Number",
     "description": "Загадано целое число от 1 до 1000. Вводите варианты и сужайте диапазон по подсказкам.",
-    "controls": "Управляйте мышью, касанием или клавишами, указанными в правилах на странице игры. Кнопка «Новая игра» начинает новый раунд.",
+    "controls": "Введите число от 1 до 1000. Подсказка «больше» означает, что загаданное число выше вашего варианта, «меньше» — ниже. Сужайте диапазон после каждой попытки.",
     "category": "brain",
     "path": "/games/night-fair/ru/index.html#g/guessnum",
     "originalPath": "/games/night-fair/en/index.html#g/guessnum",
@@ -2355,7 +2355,7 @@
     "url": "/games/play.html?id=mini-basin-control",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/basin-control.html",
     "keywords": "mini basin control ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "fair-ducks",
@@ -2363,7 +2363,7 @@
     "title": "Утиный тир",
     "originalTitle": "Duck Shoot",
     "description": "За 30 секунд попадите по как можно большему количеству движущихся уток.",
-    "controls": "Управляйте мышью, касанием или клавишами, указанными в правилах на странице игры. Кнопка «Новая игра» начинает новый раунд.",
+    "controls": "Нажимайте на движущиеся мишени-уток. Старайтесь попадать до того, как они уйдут за край. Играйте до конца таймера.",
     "category": "carnival",
     "path": "/games/night-fair/ru/index.html#g/ducks",
     "originalPath": "/games/night-fair/en/index.html#g/ducks",
@@ -2385,7 +2385,7 @@
     "url": "/games/play.html?id=mini-cozy-organizer",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/cozy-organizer.html",
     "keywords": "mini cozy organizer ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "mini-pocket-farm",
@@ -2400,7 +2400,7 @@
     "url": "/games/play.html?id=mini-pocket-farm",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/pocket-farm.html",
     "keywords": "mini pocket farm ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "mini-photo-safari",
@@ -2415,7 +2415,7 @@
     "url": "/games/play.html?id=mini-photo-safari",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/photo-safari.html",
     "keywords": "mini photo safari ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "mini-fruit-slice",
@@ -2430,7 +2430,7 @@
     "url": "/games/play.html?id=mini-fruit-slice",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/fruit-slice.html",
     "keywords": "mini fruit slice ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "mini-touchline-manager",
@@ -2445,7 +2445,7 @@
     "url": "/games/play.html?id=mini-touchline-manager",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/touchline-manager.html",
     "keywords": "mini touchline manager ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "fair-hanoi",
@@ -2453,7 +2453,7 @@
     "title": "Ханойские башни",
     "originalTitle": "Tower of Hanoi",
     "description": "Перенесите всю башню на другой стержень по одному диску за ход. Большой диск нельзя класть на маленький.",
-    "controls": "Управляйте мышью, касанием или клавишами, указанными в правилах на странице игры. Кнопка «Новая игра» начинает новый раунд.",
+    "controls": "Нажмите на стержень с диском, затем на стержень назначения. За ход переносится один верхний диск. Большой нельзя положить на меньший. Перенесите всю башню на другой стержень.",
     "category": "puzzle",
     "path": "/games/night-fair/ru/index.html#g/hanoi",
     "originalPath": "/games/night-fair/en/index.html#g/hanoi",
@@ -2475,7 +2475,7 @@
     "url": "/games/play.html?id=mini-glyph-warden",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/glyph-warden.html",
     "keywords": "mini glyph warden ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "mini-chromatic-press",
@@ -2490,7 +2490,7 @@
     "url": "/games/play.html?id=mini-chromatic-press",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/chromatic-press.html",
     "keywords": "mini chromatic press ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "mini-bomb-grid",
@@ -2505,7 +2505,7 @@
     "url": "/games/play.html?id=mini-bomb-grid",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/bomb-grid.html",
     "keywords": "mini bomb grid ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "fair-connect4",
@@ -2513,7 +2513,7 @@
     "title": "Четыре в ряд",
     "originalTitle": "Connect 4",
     "description": "Опускайте фишки в столбцы. Соберите четыре своих фишки в ряд раньше соперника.",
-    "controls": "Управляйте мышью, касанием или клавишами, указанными в правилах на странице игры. Кнопка «Новая игра» начинает новый раунд.",
+    "controls": "Выберите столбец: фишка упадёт в нижнюю свободную клетку. Соберите четыре фишки по горизонтали, вертикали или диагонали и не дайте сделать это сопернику.",
     "category": "board",
     "path": "/games/night-fair/ru/index.html#g/connect4",
     "originalPath": "/games/night-fair/en/index.html#g/connect4",
@@ -2535,7 +2535,7 @@
     "url": "/games/play.html?id=mini-ecosystem-keeper",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/ecosystem-keeper.html",
     "keywords": "mini ecosystem keeper ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "mini-monster-tamer",
@@ -2550,7 +2550,7 @@
     "url": "/games/play.html?id=mini-monster-tamer",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/monster-tamer.html",
     "keywords": "mini monster tamer ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "mini-cipher-relay",
@@ -2565,7 +2565,7 @@
     "url": "/games/play.html?id=mini-cipher-relay",
     "source": "https://github.com/wangzifan396-wzf/mini-browser-games/blob/02106d2f52963fdaace080280b9f065f885d77b0/cipher-relay.html",
     "keywords": "mini cipher relay ",
-    "translationNote": "Управление и справка отредактированы вручную. В сложных сюжетных описаниях исходного перевода ещё возможны неточности."
+    "translationNote": "Перевод интерфейса и полных сообщений. Для начала откройте «Как играть»: там цель, первые шаги, управление и условия результата. Оригинальный вариант доступен в переключателе языка."
   },
   {
     "id": "fair-nonogram",
@@ -2573,7 +2573,7 @@
     "title": "Японский кроссворд",
     "originalTitle": "Nonogram",
     "description": "Закрасьте клетки по числам у строк и столбцов. Числа задают длину последовательных групп закрашенных клеток.",
-    "controls": "Управляйте мышью, касанием или клавишами, указанными в правилах на странице игры. Кнопка «Новая игра» начинает новый раунд.",
+    "controls": "Числа у строк и столбцов задают длины закрашенных групп в их порядке. Между группами нужна пустая клетка. Нажимайте для закраски; отдельный режим позволяет отмечать пустые клетки.",
     "category": "puzzle",
     "path": "/games/night-fair/ru/index.html#g/nonogram",
     "originalPath": "/games/night-fair/en/index.html#g/nonogram",
@@ -2588,7 +2588,7 @@
     "title": "Ятзи",
     "originalTitle": "Yahtzee",
     "description": "Бросайте пять костей, оставляйте нужные и записывайте результат в одну из категорий. В раунде доступно до трёх бросков, в партии — 13 раундов.",
-    "controls": "Управляйте мышью, касанием или клавишами, указанными в правилах на странице игры. Кнопка «Новая игра» начинает новый раунд.",
+    "controls": "Бросьте пять костей. Нажмите кости, которые хотите удержать, и перебросьте остальные; за ход доступно до трёх бросков. Затем выберите ещё не использованную категорию таблицы, чтобы записать результат. Каждую категорию можно заполнить один раз.",
     "category": "cards",
     "path": "/games/night-fair/ru/index.html#g/yahtzee",
     "originalPath": "/games/night-fair/en/index.html#g/yahtzee",

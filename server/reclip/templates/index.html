@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101313">
+  <title>ReClip — видео и аудио по ссылке</title>
+  <link rel="icon" href="{{ url_for('static', filename='favicon.svg') }}" type="image/svg+xml">
+  <link rel="stylesheet" href="{{ url_for('static', filename='reclip-custom.css') }}?v=20261116-15">
+  <script src="{{ url_for('static', filename='reclip.js') }}?v=20261116-15" defer></script>
+  <script src="/favorites/favorites.js?v=20261116-2" defer></script>
+  <script src="/reclip/static/multitool-ui.js?v=20261116-15" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="{{ url_for('index') }}" aria-label="ReClip — главная"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M5 4.5h9.8c2.6 0 4.2 1.4 4.2 3.7 0 1.8-1 2.9-2.7 3.4l3.2 5.9h-3.6l-2.8-5.3H8.4v5.3H5zM8.4 7.2v2.5h6c.9 0 1.3-.4 1.3-1.3s-.4-1.2-1.3-1.2z" fill="currentColor"/></svg></span><span>RE<span>CLIP</span></span></a>
+      <span class="top-label"><span class="status-dot"></span>Веб-версия</span>
+      <button type="button" class="favorite-page reclip-favorite" data-fav-url="/reclip/">☆ В избранное</button><a class="top-link" href="/#news">Мультитул <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main class="page">
+    <div class="breadcrumb"><a href="/">Мультитул</a><span>/</span><a href="/#news">Поиск и загрузка</a><span>/</span><span>Видео и аудио</span></div>
+    <section class="intro" aria-labelledby="page-title">
+      <div class="intro-copy"><div class="eyebrow"><span class="eyebrow-dot"></span> ИНСТРУМЕНТ ДЛЯ МЕДИА</div><h1 id="page-title">Видео и аудио <span>по ссылке</span></h1><p>Вставьте ссылку, выберите формат и сохраните файл на устройство.</p></div>
+      <div class="intro-motif" aria-hidden="true"><span class="orbit orbit-one"></span><span class="orbit orbit-two"></span><span class="motif-play"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l10-6.5z" fill="currentColor"/></svg></span><span class="motif-label">VIDEO <i></i> AUDIO</span></div>
+    </section>
+
+    <section class="workspace" aria-labelledby="workspace-title">
+      <div class="workspace-main">
+        <div class="panel-heading"><div><div class="section-kicker">01 / ЗАГРУЗКА</div><h2 id="workspace-title">Добавьте ссылку</h2></div><span class="panel-tag">RECLIP</span></div>
+        <label for="urls" class="field-label">Ссылка на видео или аудио</label>
+        <div class="input-wrap"><span class="input-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M10 13.5 14 9.5M8.5 16H7a4 4 0 0 1 0-8h3M15.5 8H17a4 4 0 0 1 0 8h-3" stroke-linecap="round"/></svg></span><textarea id="urls" placeholder="https://..." rows="2" spellcheck="false" aria-describedby="url-hint form-status"></textarea></div>
+        <p class="hint" id="url-hint">Можно вставить несколько ссылок, каждую с новой строки</p>
+        <div class="actions-row"><div class="format-block"><span class="field-label">Формат</span><div class="pill-group" aria-label="Формат файла"><button type="button" class="pill active" data-format="video" aria-pressed="true" onclick="setFormat(this)"><span class="format-icon">▶</span> MP4 <small>видео</small></button><button type="button" class="pill" data-format="audio" aria-pressed="false" onclick="setFormat(this)"><span class="format-icon">♫</span> MP3 <small>аудио</small></button></div></div><button type="button" class="fetch-btn" id="goBtn" onclick="go()"><span>Найти видео</span><span aria-hidden="true">↗</span></button></div>
+        <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+      </div>
+      <aside class="workspace-guide"><div class="guide-top"><span class="guide-icon" aria-hidden="true">↗</span><span class="section-kicker">КАК ЭТО РАБОТАЕТ</span></div><h2>Три простых шага</h2><ol><li><span>01</span><div><strong>Вставьте ссылку</strong><small>Одну или несколько</small></div></li><li><span>02</span><div><strong>Выберите формат</strong><small>Видео MP4 или аудио MP3</small></div></li><li><span>03</span><div><strong>Сохраните файл</strong><small>После подготовки загрузки</small></div></li></ol><div class="guide-note"><span aria-hidden="true">✦</span><p>Сервер скачивает ролик и при необходимости готовит MP4 или MP3. Затем вы сохраняете файл на устройство. Лимит загрузки — 250 МБ. Временные копии старше часа удаляются автоматической очисткой примерно раз в 10 минут.</p></div></aside>
+    </section>
+
+    <section class="supported-sources" aria-labelledby="sources-title"><div class="results-heading"><div><div class="section-kicker">ИСТОЧНИКИ</div><h2 id="sources-title">Откуда можно загрузить</h2></div><label class="source-filter">Найти хостинг<input type="search" id="source-filter" placeholder="Например, VK или Threads"></label></div><ul class="source-grid"><li data-source-name="youtube youtube.com, youtu.be"><strong>YouTube</strong><span>youtube.com, youtu.be</span></li><li data-source-name="vk видео vkvideo.ru, vk.com"><strong>VK Видео</strong><span>vkvideo.ru, vk.com</span></li><li data-source-name="rutube rutube.ru"><strong>Rutube</strong><span>rutube.ru</span></li><li data-source-name="tiktok tiktok.com"><strong>TikTok</strong><span>tiktok.com</span></li><li data-source-name="instagram instagram.com"><strong>Instagram</strong><span>instagram.com</span></li><li data-source-name="threads threads.com, threads.net"><strong>Threads</strong><span>threads.com, threads.net</span></li><li data-source-name="x / twitter x.com, twitter.com"><strong>X / Twitter</strong><span>x.com, twitter.com</span></li><li data-source-name="facebook facebook.com"><strong>Facebook</strong><span>facebook.com</span></li><li data-source-name="vimeo vimeo.com"><strong>Vimeo</strong><span>vimeo.com</span></li><li data-source-name="twitch twitch.tv"><strong>Twitch</strong><span>twitch.tv</span></li><li data-source-name="dailymotion dailymotion.com"><strong>Dailymotion</strong><span>dailymotion.com</span></li><li data-source-name="pinterest pinterest.com"><strong>Pinterest</strong><span>pinterest.com</span></li><li data-source-name="reddit reddit.com"><strong>Reddit</strong><span>reddit.com</span></li><li data-source-name="soundcloud soundcloud.com"><strong>SoundCloud</strong><span>soundcloud.com</span></li><li data-source-name="bilibili bilibili.com"><strong>Bilibili</strong><span>bilibili.com</span></li></ul><p id="source-empty" hidden>Такого хостинга нет в кратком списке. Можно проверить ссылку в форме выше.</p><p class="hint">Это основные источники, распознаваемые установленным движком. Доступность конкретного ролика зависит от сайта: удалённые, закрытые и требующие авторизации материалы могут быть недоступны. Для Threads используйте ссылку на публикацию с видео; фото здесь не загружаются.</p><a href="https://github.com/yt-dlp/yt-dlp/blob/master/supportedsites.md" target="_blank" rel="noopener noreferrer">Полный список источников yt-dlp ↗</a></section>
+    <section class="results-section" aria-labelledby="results-title"><div class="results-heading"><div><div class="section-kicker">02 / МАТЕРИАЛЫ</div><h2 id="results-title">Ваши загрузки</h2></div><span id="results-count" class="results-count">Список пока пуст</span></div><div id="cards" class="cards" aria-live="polite"></div><div id="empty-state" class="empty-state"><span class="empty-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 4v11m0 0 4-4m-4 4-4-4M5 17v2h14v-2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><strong>Здесь появятся найденные материалы</strong><p>Добавьте ссылку выше, чтобы начать</p></div></div></section>
+    <footer class="footer"><span>Работает на базе <a href="https://github.com/averygan/reclip" target="_blank" rel="noopener noreferrer">ReClip</a> и yt-dlp</span><span>Поддерживаемые сайты зависят от источника</span></footer>
+  </main>
+</body>
+</html>
