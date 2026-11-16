@@ -36,7 +36,19 @@
       original.textContent = ukrainian ? 'Відкрити окремо ↗' : 'Открыть отдельно ↗';
       original.hidden = false;
       frame.title = game.title;
-      frame.addEventListener('load', () => { status.hidden = true; }, { once: true });
+      frame.addEventListener('load', () => {
+        status.hidden = true;
+        // Внутренняя ссылка «Все уроки» возвращает каталог во всё окно.
+        try {
+          const page = frame.contentDocument;
+          const isCatalog = url => url.origin === location.origin && /^\/market-apps\/school\/app\/(?:ru\/|ua\/)?(?:index\.html)?$/.test(url.pathname);
+          const current = new URL(frame.contentWindow.location.href);
+          if (isCatalog(current)) { location.assign(current.href); return; }
+          page.querySelectorAll('a[href]').forEach(link => {
+            if (isCatalog(new URL(link.href))) link.target = '_top';
+          });
+        } catch (_) { /* Внешние документы не участвуют в навигации каталога. */ }
+      });
       frame.hidden = false;
       frame.src = url;
     } catch (_) {

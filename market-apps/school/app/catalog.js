@@ -14,6 +14,8 @@
   const searchable = new Map(cards.map(card => [card, normalize(card.dataset.search)]));
 
   function filter() {
+    const wasPinned = controls.getBoundingClientRect().top <= 1;
+    const controlsStart = controls.previousElementSibling.getBoundingClientRect().bottom + scrollY;
     const words = normalize(input.value).split(/\s+/).filter(Boolean);
     let total = 0;
     sections.forEach((section, index) => {
@@ -33,6 +35,8 @@
     clear.hidden = words.length === 0;
     empty.hidden = total !== 0;
     status.textContent = words.length ? `${ukrainian ? 'Знайдено' : 'Найдено'}: ${total} / ${cards.length}` : '';
+    // После поиска из нижнего раздела показываем начало результатов, а не подвал.
+    if (wasPinned) scrollTo({ top: controlsStart, behavior: 'instant' });
     updateActive();
   }
 
