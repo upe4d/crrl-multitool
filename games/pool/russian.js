@@ -31,4 +31,18 @@ function installRussianPool(){
   screen.addEventListener('pointermove',e=>{if(e.pointerType!=='mouse'){e.preventDefault();touchPosition(e);}});
   screen.addEventListener('pointerup',e=>{if(e.pointerType!=='mouse')Mouse._left.down=false;});
   document.addEventListener('visibilitychange',()=>{if(document.hidden){Keyboard._keyStates.forEach(k=>k.down=false);Mouse._left.down=false;}});
+  // Семантические кнопки поверх авторского Canvas: тот же вид, но меню доступно
+  // с клавиатуры и скринридера. Координаты берём из настоящих игровых кнопок.
+  const overlay=document.createElement('nav');overlay.setAttribute('aria-label','Меню бильярда');Object.assign(overlay.style,{position:'fixed',inset:'0',pointerEvents:'none'});document.body.append(overlay);let previousButtons,previousWidth=0;
+  function syncMenu(){
+    const menu=Game.mainMenu,rect=screen.getBoundingClientRect();overlay.hidden=!menu.active;
+    if(menu.active&&(previousButtons!==menu.buttons||previousWidth!==rect.width)){
+      previousButtons=menu.buttons;previousWidth=rect.width;overlay.replaceChildren();
+      for(const item of menu.buttons||[]){const key=Object.keys(labels).find(k=>sprites[k]===item.sprite);if(!key)continue;const button=document.createElement('button');button.type='button';button.textContent=originalLanguage?({twoPlayersButton:'Two players',onePlayersButton:'Against computer',easyButton:'Easy',mediumButton:'Medium',hardButton:'Hard',insaneButton:'Expert',continueButton:'Continue',backButton:'Back'}[key]):labels[key];
+        Object.assign(button.style,{position:'absolute',left:rect.left+item.position.x*rect.width/1500+'px',top:rect.top+item.position.y*rect.height/825+'px',width:item.sprite.width*rect.width/1500+'px',height:item.sprite.height*rect.height/825+'px',background:'transparent',color:'transparent',border:'0',borderRadius:'15px',pointerEvents:'auto',cursor:'pointer'});
+        button.onmousedown=button.onmouseup=e=>e.stopPropagation();button.onclick=e=>{e.stopPropagation();Mouse.reset();Mouse._left.down=false;menu.sound?.play().catch(()=>{});item.callback.call(item);};overlay.append(button);
+      }
+    }
+    requestAnimationFrame(syncMenu);
+  }requestAnimationFrame(syncMenu);
 }
