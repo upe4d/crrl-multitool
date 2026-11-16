@@ -1,0 +1,12 @@
+Neverball WebAssembly runtime for PLAYCHIVE
+
+Engine and game data source: https://github.com/Neverball/neverball
+Pinned source revision: 6fd419cfc0896d70d2d1d69c67ef97d827b4bd14
+WebGL translation layer: https://github.com/ptitSeb/gl4es
+Pinned gl4es revision: c9895df34cd466c23bc60c2bd3db3d87e98fcbe7
+Build route: the upstream Emscripten makefile (emscripten/ball.mk).
+
+This distribution bundles Neverball's libre base data plus the official Easy
+and Medium level-set packages compiled from the pinned source. It does not
+download campaigns, accept add-ons, or request any game data from the player.
+Saves and replay state stay in the browser's IndexedDB storage.

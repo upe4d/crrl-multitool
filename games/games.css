@@ -7,3 +7,6 @@
 /* На телефоне жанры листаются в одну строку, оставляя место самим играм. */
 #account svg{display:none}
 @media(max-width:700px){.catalog-page{padding-top:20px}.hero{margin-bottom:16px}.hero h1{font-size:30px;margin:10px 0}.hero p:not(.eyebrow){display:none}.hero-total strong{font-size:38px}.categories{flex-wrap:nowrap;overflow-x:auto;overscroll-behavior-inline:contain;padding-bottom:9px;margin-bottom:18px;scrollbar-width:thin}.categories button{flex:0 0 auto;white-space:nowrap}#account{flex:0 0 44px;width:44px;padding:11px}#account span{display:none}#account svg{display:block;width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.6}.collection{min-width:0}}
+
+/* Подготовка больших игр до скачивания */
+.launch-intro{max-width:800px;margin:clamp(24px,6vh,70px) auto;padding:24px;line-height:1.65}.launch-intro h2{font-size:32px;line-height:1.2}.launch-intro button{background:#d0eaa0;color:#142116;padding:14px 22px;font-weight:bold;border:0;border-radius:10px;cursor:pointer}.launch-note{color:#aebcaa;font-size:14px}.launch-intro button:focus-visible{outline:3px solid #f1c279;outline-offset:4px}@media(max-width:600px){.launch-intro{margin:12px auto;padding:18px}.launch-intro h2{font-size:26px}}

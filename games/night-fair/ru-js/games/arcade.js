@@ -1,4 +1,4 @@
-/* Русская адаптация Мультитула, 16.11.2026. Авторская лицензия: ../LICENSE. */
+/* Ручная русская редакция Мультитула, 16.11.2026. Исходный дизайн и механика сохранены. */
 /* ============================================================
    Night Fair — ARCADE pack (13 games)
    snake, tetris, breakout, pong, flappy, runner, shooter,
@@ -21,7 +21,7 @@ function overlay(ctx, w, h, text, sub) {
 /* ================= SNAKE ================= */
 (function () {
   var STR = {
-    en: { t: "Змейка", d: "Три режима: классический, без стен, с препятствиями.", over: "Разбился!", mClassic: "классический", mWrap: "Нет стен", mObs: "Препятствия" },
+    en: {"t":"Змейка","d":"Собирайте еду и растите. В классическом режиме нельзя задевать стены и собственный хвост.","over":"Змейка столкнулась с препятствием.","mClassic":"Классика","mWrap":"Без стен","mObs":"С препятствиями"},
     tr: { t: 'Yılan', d: 'Üç mod: klasik, duvarsız, engelli.', over: 'Çarptın!', mClassic: 'Klasik', mWrap: 'Duvarsız', mObs: 'Engelli' }
   };
   var W = STR[NF.lang] || STR.en;
@@ -129,7 +129,7 @@ function overlay(ctx, w, h, text, sub) {
 /* ================= TETRIS ================= */
 (function () {
   var STR = {
-    en: { t: "Падающие блоки", d: "Укладка тетромино — четкие линии, уровни подъема.", lines: "Линии" },
+    en: {"t":"Тетрис","d":"Укладывайте падающие фигуры. Заполненная горизонтальная линия исчезает; если поле заполнится доверху, партия закончится.","lines":"Линии"},
     tr: { t: 'Blok Yağmuru', d: 'Tetromino istifle — satır temizle, seviye atla.', lines: 'Satır' }
   };
   var W = STR[NF.lang] || STR.en;
@@ -272,7 +272,7 @@ function overlay(ctx, w, h, text, sub) {
 /* ================= BREAKOUT ================= */
 (function () {
   var STR = {
-    en: { t: "Арканоид", d: "Из кирпичей выпадают бонусы: широкая ракетка, медленный мяч, жизни…", lvl: "волна" },
+    en: {"t":"Арканоид","d":"Двигайте платформу и отбивайте мяч, чтобы разбить все кирпичи. Подбирайте выпадающие улучшения.","lvl":"Волна"},
     tr: { t: 'Tuğla Kıran', d: 'Tuğlalardan güçler düşer: geniş raket, yavaş top, can…', lvl: 'Dalga' }
   };
   var W = STR[NF.lang] || STR.en;
@@ -408,7 +408,7 @@ function overlay(ctx, w, h, text, sub) {
 /* ================= PONG ================= */
 (function () {
   var STR = {
-    en: { t: "Понг", d: "Сначала до 7 против бота. Извращайте свои удары.", you: "ты", bot: "бот" },
+    en: {"t":"Понг","d":"Отбивайте мяч ракеткой. Кто первым наберёт 7 очков, тот победит.","you":"Вы","bot":"Компьютер"},
     tr: { t: 'Pong', d: 'Bota karşı 7 sayıya ilk ulaşan kazanır.', you: 'Sen', bot: 'Bot' }
   };
   var W = STR[NF.lang] || STR.en;
@@ -488,7 +488,7 @@ function overlay(ctx, w, h, text, sub) {
 /* ================= FLAPPY (Balloon Flight) ================= */
 (function () {
   var STR = {
-    en: { t: "Воздушный шар", d: "Нажмите, чтобы поднять воздушный шар через промежутки." },
+    en: {"t":"Воздушный шар","d":"Нажимайте, чтобы шар поднимался. Пролетайте через промежутки между препятствиями."},
     tr: { t: 'Balon Uçuşu', d: 'Panayır balonunu boşluklardan geçirmek için dokun.' }
   };
   var W = STR[NF.lang] || STR.en;
@@ -548,7 +548,7 @@ function overlay(ctx, w, h, text, sub) {
 /* ================= RUNNER (Night Run) ================= */
 (function () {
   var STR = {
-    en: { t: "Ночной забег", d: "Перепрыгивайте препятствия в этом бесконечном ночном забеге." },
+    en: {"t":"Ночной забег","d":"Перепрыгивайте препятствия и старайтесь пробежать как можно дальше."},
     tr: { t: 'Gece Koşusu', d: 'Bu sonsuz gece koşusunda engellerin üzerinden atla.' }
   };
   var W = STR[NF.lang] || STR.en;
@@ -653,7 +653,7 @@ function overlay(ctx, w, h, text, sub) {
 /* ================= SHOOTER (Star Hunter) ================= */
 (function () {
   var STR = {
-    en: { t: "Звёздный стрелок", d: "Сбивайте вражеские волны. Выберите свою сложность.", kills: "Убийства", easy: "Легко", normal: "Обычно", hard: "Сложно" },
+    en: {"t":"Звёздный стрелок","d":"Сбивайте вражеские корабли и переживите как можно больше волн.","kills":"Сбито","easy":"Легко","normal":"Обычно","hard":"Сложно"},
     tr: { t: 'Yıldız Avcısı', d: 'Düşman dalgalarını vur. Zorluğunu seç.', kills: 'Vuruş', easy: 'Kolay', normal: 'Normal', hard: 'Zor' }
   };
   var W = STR[NF.lang] || STR.en;
@@ -828,7 +828,7 @@ function overlay(ctx, w, h, text, sub) {
 /* ================= WHACK (Whack-a-Mole) ================= */
 (function () {
   var STR = {
-    en: { t: "Поймай крота", d: "Ударьте 30 секундами появления кротов! Нажмите быстро.", time: "Время" },
+    en: {"t":"Поймай крота","d":"За 30 секунд нажмите на как можно больше кротов, пока они не спрятались.","time":"Время"},
     tr: { t: 'Köstebek Vur', d: '30 saniye boyunca köstebekleri vur! Hızlı dokun.', time: 'Süre' }
   };
   var W = STR[NF.lang] || STR.en;
@@ -952,7 +952,7 @@ function overlay(ctx, w, h, text, sub) {
 /* ================= HOPPER (Road Crossing) ================= */
 (function () {
   var STR = {
-    en: { t: "Переход через дорогу", d: "Пересеките движение и реку, как лягушка. Не получить удар!" },
+    en: {"t":"Переход через дорогу","d":"Перейдите дорогу и реку. Избегайте машин и не падайте в воду."},
     tr: { t: 'Yol Geçidi', d: 'Trafik ve nehri kurbağa gibi geç. Çarpılma!' }
   };
   var W = STR[NF.lang] || STR.en;
@@ -1115,7 +1115,7 @@ function overlay(ctx, w, h, text, sub) {
 /* ================= STACKER (Tower Stack) ================= */
 (function () {
   var STR = {
-    en: { t: "Башня из блоков", d: "Складывайте движущиеся блоки, чтобы построить самую высокую башню.", floors: "Этажи" },
+    en: {"t":"Башня из блоков","d":"Останавливайте движущийся блок над предыдущим. Чем точнее попадание, тем выше получится башня.","floors":"Этажи"},
     tr: { t: 'Kule İstifi', d: 'Hareket eden blokları istifle, en yüksek kuleyi yap.', floors: 'Kat' }
   };
   var W = STR[NF.lang] || STR.en;
@@ -1203,7 +1203,7 @@ function overlay(ctx, w, h, text, sub) {
 /* ================= CATCHER (Candy Catch) ================= */
 (function () {
   var STR = {
-    en: { t: "Ловец конфет", d: "Лови падающие конфеты, избегай бомб! 3 жизни." },
+    en: {"t":"Ловец конфет","d":"Ловите падающие конфеты и избегайте бомб. У вас три жизни."},
     tr: { t: 'Şeker Yakala', d: 'Düşen şekerleri yakala, bombalardan kaç! 3 can.' }
   };
   var W = STR[NF.lang] || STR.en;
@@ -1308,7 +1308,7 @@ function overlay(ctx, w, h, text, sub) {
 /* ================= DODGER (Meteor Dodge) ================= */
 (function () {
   var STR = {
-    en: { t: "Метеоритный дождь", d: "Уклоняйтесь от падающих метеоритов как можно дольше!", surv: "Выжил" },
+    en: {"t":"Метеоритный дождь","d":"Уклоняйтесь от падающих метеоритов и продержитесь как можно дольше.","surv":"Продержались"},
     tr: { t: 'Meteor Kaçışı', d: 'Düşen meteorlardan olabildiğince uzun kaç!', surv: 'Hayatta' }
   };
   var W = STR[NF.lang] || STR.en;
@@ -1419,7 +1419,7 @@ function overlay(ctx, w, h, text, sub) {
 /* ================= JUMPER (Jump Tower) ================= */
 (function () {
   var STR = {
-    en: { t: "Прыжки по башне", d: "Подпрыгивайте по платформам — как высоко вы сможете подняться?", height: "высота" },
+    en: {"t":"Прыжки по башне","d":"Прыгайте с платформы на платформу и поднимайтесь выше.","height":"Высота"},
     tr: { t: 'Zıplama Kulesi', d: 'Platformlarda zıpla — ne kadar yükseğe çıkabilirsin?', height: 'Yükseklik' }
   };
   var W = STR[NF.lang] || STR.en;

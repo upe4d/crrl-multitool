@@ -1,0 +1,24 @@
+OpenTTD WebAssembly port source: https://github.com/swords02/openttd-online
+Pinned source commit: d9736f76d80a3677d473578d6248e65ef2239f77
+OpenTTD Engine license: GPL-2.0-only (see ENGINE-COPYING.txt)
+
+OpenGFX 8.0 source: https://github.com/OpenTTD/OpenGFX
+Archive: https://cdn.openttd.org/opengfx-releases/8.0/opengfx-8.0-all.zip
+SHA-256: 43a0c1dabf39cb865394f3a6cc36d4da5c10ecfaaf55652043104806810903be
+License: GPL-2.0-only (see OPENGFX-LICENSE.txt)
+
+OpenSFX 1.0.3 source: https://github.com/OpenTTD/OpenSFX
+Archive: https://cdn.openttd.org/opensfx-releases/1.0.3/opensfx-1.0.3-all.zip
+SHA-256: e0a218b7dd9438e701503b0f84c25a97c1c11b7c2f025323fb19d6db16ef3759
+License: CC-BY-SA-3.0 for the collection; see OPENSFX-LICENSE.txt for details.
+
+OpenMSX 0.4.2 source: https://github.com/OpenTTD/OpenMSX
+Archive: https://cdn.openttd.org/openmsx-releases/0.4.2/openmsx-0.4.2-all.zip
+SHA-256: 5a4277a2e62d87f2952ea5020dc20fb2f6ffafdccf9913fbf35ad45ee30ec762
+License: GPL-2.0-only (see OPENMSX-LICENSE.txt)
+
+PLAYCHIVE profile: fully bundled libre base graphics, sound and music. The browser glue is
+patched only to resolve its shipped language files from the local openttd/lang/ path and to seed
+OpenTTD's documented network.participate_survey = no preference on a missing first-launch profile.
+Existing browser-local player settings are preserved. No proprietary Transport Tycoon Deluxe files
+and no user file upload are requested or used.

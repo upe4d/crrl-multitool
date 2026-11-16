@@ -1,0 +1,6 @@
+Classic Pool Game / Chen Shmilovich
+https://github.com/henshmi/Classic-Pool-Game
+Commit: f60e9b824648faabe1d931e9116b20333559da2a
+MIT, see LICENSE.txt.
+Multitool: Russian text menus, touch power controls, image-loading fix. Original table, physics, rules and AI retained.
+Music: Bossa Antigua, Kevin MacLeod (incompetech.com), CC BY 3.0: https://creativecommons.org/licenses/by/3.0/

@@ -1,0 +1,7 @@
+Doom browser port: https://github.com/MahanKenway/PlayChive/tree/b3506725a754e973becdf14215fc4b6024427225/linuxdoom-1.10
+Source and build scripts: ../browser-port-sources.zip
+Doom engine: GPL-2.0; https://github.com/id-Software/DOOM
+Freedoom data: https://github.com/freedoom/freedoom/releases/tag/v0.13.0
+Freedoom license and credits: COPYING.txt, CREDITS.txt, CREDITS-MUSIC.txt
+Original free-data archive: freedoom-0.13.0.zip
+Multitool modifications: Russian launcher, local hosting, separate saves for each campaign, touch controls.
