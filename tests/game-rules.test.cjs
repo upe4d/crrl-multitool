@@ -25,7 +25,6 @@ for(let game=0;game<200;game++){
  assert(completed,'Domino game must terminate');
 }
 const ru=JSON.parse(fs.readFileSync(path.join(root,'locales/night-fair.ru.json'),'utf8'));assert.equal(Object.keys(ru).length,64);for(const value of Object.values(ru))assert(!/[\u3400-\u9fff]/.test(JSON.stringify(value)));
-const catalog=JSON.parse(fs.readFileSync(path.join(root,'catalog.json'),'utf8'));assert.equal(catalog.length,182);assert.equal(new Set(catalog.map(x=>x.id)).size,182);assert.equal(new Set(catalog.map(x=>x.url)).size,182);
+const catalog=JSON.parse(fs.readFileSync(path.join(root,'catalog.json'),'utf8'));assert.equal(catalog.length,173);assert.equal(new Set(catalog.map(x=>x.id)).size,173);assert.equal(new Set(catalog.map(x=>x.url)).size,173);
 for(const game of catalog){assert(game.controls.length>30);for(const url of[game.path,game.originalPath])assert(fs.existsSync(path.join(root,'..',url.split(/[?#]/)[0])),'Missing '+url);}
-const wasm=new WebAssembly.Module(fs.readFileSync(path.join(root,'classic/doom/doom.wasm')));assert(WebAssembly.Module.exports(wasm).some(x=>x.name==='initGame'));assert(WebAssembly.Module.exports(wasm).some(x=>x.name==='tickGame'));
-console.log('PASS: Russian checkers edge cases + 100 games; 200 complete domino games; 64 reviewed dictionaries; 182 unique local game entries; Doom WASM exports.');
+console.log('PASS: Russian checkers edge cases + 100 games; 200 complete domino games; 64 reviewed dictionaries; 173 unique local game entries.');

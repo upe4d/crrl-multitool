@@ -15,13 +15,6 @@
       "license": "MIT"
     },
     {
-      "collection": "classic",
-      "repository": "https://github.com/MahanKenway/PlayChive",
-      "commit": "b3506725a754e973becdf14215fc4b6024427225",
-      "games": 9,
-      "license": "Separate engine/data licenses; see /games/classic/licenses.html"
-    },
-    {
       "collection": "table",
       "repository": "https://github.com/henshmi/Classic-Pool-Game",
       "commit": "f60e9b824648faabe1d931e9116b20333559da2a",

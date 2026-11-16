@@ -1,4 +1,0 @@
-Browser shell: https://github.com/MahanKenway/PlayChive/tree/b3506725a754e973becdf14215fc4b6024427225
-Runtime files downloaded from https://playchive.ir/neverball/
-Local build scripts: ../browser-port-sources.zip, scripts/build-neverball-web.sh
-Multitool modifications 2026-11-16: Russian launcher/help, local paths, compact player; OpenTTD first-profile language=russian.lng. Engine/data licenses are separate from the MIT shell.

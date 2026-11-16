@@ -23,8 +23,10 @@ function installRussianPool(){
     const code=Number(button.dataset.key),release=()=>{Keyboard._keyStates[code].down=false;};
     button.onpointerdown=e=>{e.preventDefault();e.stopPropagation();button.setPointerCapture(e.pointerId);Keyboard._keyStates[code].pressed=true;Keyboard._keyStates[code].down=true;};
     button.onpointerup=button.onpointercancel=release;
+    button.onclick=e=>{if(e.detail===0&&Game.gameWorld?.stick){const stick=Game.gameWorld.stick,change=code===87?5:code===83?-5:0;stick.power=Math.max(0,Math.min(75,stick.power+change));stick.origin.x=970+stick.power/1.2*2;if(code===27){Keyboard._keyStates[code].pressed=true;Keyboard._keyStates[code].down=true;setTimeout(release,80);}}};
   });
-  const fire=document.getElementById('pool-shoot');fire.onpointerdown=e=>{e.preventDefault();e.stopPropagation();if(!Game.mainMenu.active&&!Game.policy.turnPlayed&&!(AI_ON&&Game.policy.turn===AI_PLAYER_NUM)&&Game.gameWorld.stick.power>0)Game.gameWorld.stick.shoot(Game.gameWorld.stick.power,Game.gameWorld.stick.rotation);};
+  document.getElementById('pool-touch').addEventListener('mousemove',e=>e.stopPropagation());
+  const fire=document.getElementById('pool-shoot');function shoot(){if(!Game.mainMenu.active&&!Game.policy.turnPlayed&&!(AI_ON&&Game.policy.turn===AI_PLAYER_NUM)&&Game.gameWorld.stick.power>0)Game.gameWorld.stick.shoot(Game.gameWorld.stick.power,Game.gameWorld.stick.rotation);}fire.onpointerdown=e=>{e.preventDefault();e.stopPropagation();shoot();};fire.onclick=e=>{if(e.detail===0)shoot();};
   const screen=document.getElementById('screen');
   function touchPosition(e){const rect=screen.getBoundingClientRect();Mouse._position=new Vector2((e.clientX-rect.left)/rect.width*1500,(e.clientY-rect.top)/rect.height*825);}
   screen.addEventListener('pointerdown',e=>{if(e.pointerType==='mouse')return;e.preventDefault();screen.setPointerCapture(e.pointerId);touchPosition(e);if(Game.mainMenu.active||Game.policy?.foul){Mouse._left.pressed=true;Mouse._left.down=true;setTimeout(()=>{Mouse._left.down=false;},100);}});
@@ -34,8 +36,10 @@ function installRussianPool(){
   // Семантические кнопки поверх авторского Canvas: тот же вид, но меню доступно
   // с клавиатуры и скринридера. Координаты берём из настоящих игровых кнопок.
   const overlay=document.createElement('nav');overlay.setAttribute('aria-label','Меню бильярда');Object.assign(overlay.style,{position:'fixed',inset:'0',pointerEvents:'none'});document.body.append(overlay);let previousButtons,previousWidth=0;
+  const power=document.createElement('output');power.setAttribute('aria-label','Сила удара');Object.assign(power.style,{position:'fixed',left:'50%',bottom:'52px',transform:'translateX(-50%)',color:'#fff',font:'14px system-ui',background:'#12352bcc',padding:'5px 10px',borderRadius:'8px',pointerEvents:'none'});document.body.append(power);let previousPower;
   function syncMenu(){
     const menu=Game.mainMenu,rect=screen.getBoundingClientRect();overlay.hidden=!menu.active;
+    power.hidden=menu.active;const percent=Math.round((Game.gameWorld?.stick?.power||0)/75*100);if(percent!==previousPower){power.textContent=(originalLanguage?'Power: ':'Сила: ')+percent+'%';previousPower=percent;}
     if(menu.active&&(previousButtons!==menu.buttons||previousWidth!==rect.width)){
       previousButtons=menu.buttons;previousWidth=rect.width;overlay.replaceChildren();
       for(const item of menu.buttons||[]){const key=Object.keys(labels).find(k=>sprites[k]===item.sprite);if(!key)continue;const button=document.createElement('button');button.type='button';button.textContent=originalLanguage?({twoPlayersButton:'Two players',onePlayersButton:'Against computer',easyButton:'Easy',mediumButton:'Medium',hardButton:'Hard',insaneButton:'Expert',continueButton:'Continue',backButton:'Back'}[key]):labels[key];

@@ -1,2 +1,0 @@
-Source repository: https://github.com/aescarcha/opentyrian-wasm
-Game data archive: https://www.camanis.net/tyrian/tyrian2000.zip

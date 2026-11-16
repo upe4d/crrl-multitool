@@ -6,8 +6,6 @@
   fetch('./catalog.json').then(r=>{if(!r.ok)throw Error();return r.json();}).then(items=>{
     game=items.find(x=>x.id===id);if(!game)throw Error('Игра не найдена');document.title=game.title+' · Мультитул';$('game-title').textContent=game.title;$('help-title').textContent=game.title;$('description').textContent=game.description;$('controls').textContent=game.controls;$('translation-note').textContent=game.translationNote||'';$('language').hidden=['shell','ru-only'].includes(game.languageMode);$('play-favorite').dataset.favUrl=game.url;
     const a=document.createElement('a');a.href=game.source;a.textContent='Авторские исходники ↗';a.target='_blank';a.rel='noopener noreferrer';$('source').append(a);document.dispatchEvent(new Event('multitool:favorites-render'));
-    if(game.collection==='classic'&&!game.id.startsWith('classic-freedoom-')){
-      $('state').hidden=true;const intro=document.createElement('section');intro.className='launch-intro';const title=document.createElement('h2');title.textContent=game.title;const desc=document.createElement('p');desc.textContent=game.description;const controls=document.createElement('p');controls.textContent=game.controls;const note=document.createElement('p');note.className='launch-note';note.textContent=game.translationNote+' Первый запуск скачает около '+game.downloadMB+' МБ. Сохранения хранятся в этом браузере.';const start=document.createElement('button');start.type='button';start.textContent='Загрузить и играть';start.onclick=()=>{intro.remove();launch();};intro.append(title,desc,controls,note,start);$('scene').append(intro);
-    }else launch();
+    launch();
   }).catch(e=>{$('game-title').textContent='Не удалось открыть игру';$('state').textContent=e.message||'Обновите страницу';$('language').disabled=true;});
 })();

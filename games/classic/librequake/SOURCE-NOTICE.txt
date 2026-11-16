@@ -1,3 +1,0 @@
-Qwasm source: https://github.com/GMH-Code/Qwasm
-LibreQuake data: https://github.com/lavenderdotpet/LibreQuake/releases/tag/v0.09-beta
-Runtime data profile: LibreQuake Lite (complete shorter, simplified free game data release)
