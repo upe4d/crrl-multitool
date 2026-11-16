@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "textarea",
+  "type": "registry:ui",
+  "title": "Textarea",
+  "description": "A textarea component for multi-line text input.",
+  "dependencies": [
+    "class-variance-authority"
+  ],
+  "files": [
+    {
+      "path": "registry/solid/textarea.tsx",
+      "content": "import { cx } from \"class-variance-authority\";\nimport { splitProps, type ComponentProps, type ValidComponent } from \"solid-js\";\n\nexport type TextareaProps<T extends ValidComponent = \"textarea\"> =\n\tComponentProps<T>;\n\nexport const Textarea = <T extends ValidComponent = \"textarea\">(\n\tprops: TextareaProps<T>,\n) => {\n\tconst [, rest] = splitProps(props as ComponentProps<\"textarea\">, [\"class\"]);\n\n\treturn (\n\t\t<textarea\n\t\t\tdata-slot=\"textarea\"\n\t\t\tclass={cx(\n\t\t\t\t\"placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex min-h-16 w-full rounded-md border bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm\",\n\t\t\t\t\"focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]\",\n\t\t\t\t\"aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive\",\n\t\t\t\tprops.class,\n\t\t\t)}\n\t\t\t{...rest}\n\t\t/>\n\t);\n};\n",
+      "type": "registry:ui"
+    }
+  ]
+}

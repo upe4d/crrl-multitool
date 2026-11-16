@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!-- The title, icon and scene placeholders are filled from the lesson's lesson.json and scene.json, the double-brace
+     keys from strings.json in the lesson's language (build_scripts/build.mjs) -->
+<title>Четырёхмерный куб</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧊</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<link rel="manifest" href="../../manifest.webmanifest">
+<meta name="theme-color" content="#d7f0ff">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<meta name="apple-mobile-web-app-title" content="Весёлая школа">
+<script>
+  if ("serviceWorker" in navigator) addEventListener("load", () => navigator.serviceWorker.register("../../sw.js").catch(() => {}));
+</script>
+</head>
+<body data-scene="tesseract">
+<!-- The whole screen is the scene; the panels float over it -->
+<canvas id="stage" class="stage"></canvas>
+
+<header class="top">
+  <div class="heading">
+    <h1 class="title"><span aria-hidden="true">🧊</span> Четырёхмерный куб</h1>
+    <p id="question" class="question"></p>
+  </div>
+  <button id="about-open" class="chip round" title="Что тут происходит?" aria-label="Что тут происходит?">?</button>
+</header>
+
+<div id="readout" class="readout" aria-live="polite" hidden></div>
+<p id="hint" class="hint" hidden></p>
+<p id="no-gl" class="no-gl" hidden>Этот браузер не умеет рисовать трёхмерную графику (WebGL 2), а без неё сцена не появится. Попробуйте открыть урок в свежем Chrome, Safari или Firefox.</p>
+
+<nav id="controls" class="controls" aria-label="Управление"></nav>
+
+<div id="about" class="overlay" hidden>
+  <div class="card" role="dialog" aria-modal="true" aria-labelledby="about-title">
+    <div class="card-icon" aria-hidden="true">🧊</div>
+    <h2 id="about-title">Что тут происходит?</h2>
+    <div id="about-text" class="about-text"></div>
+    <button id="about-close" class="btn primary">Понятно!</button>
+  </div>
+</div>
+
+<!-- Classic scripts, not modules: this way the scene also opens by double-click, without a server -->
+<script src="data.js"></script>
+<script src="common.js"></script>
+<script src="tesseract.js"></script>
+
+<a class="home-button" href="../" title="Все уроки" aria-label="Все уроки"><span aria-hidden="true">🏠</span><span class="home-button-text">Все уроки</span></a>
+<style>
+  .home-button {
+    position: fixed;
+    z-index: 5;
+    bottom: calc(14px + env(safe-area-inset-bottom));
+    left: calc(12px + env(safe-area-inset-left));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-width: 48px;
+    height: 48px;
+    padding: 0 16px 0 10px;
+    border-radius: 999px;
+    background: #fff;
+    border: 3px solid #eadfcd;
+    box-shadow: 0 3px 0 #eadfcd;
+    color: #3d2b2f;
+    font: 800 17px "Nunito", system-ui, sans-serif;
+    line-height: 1;
+    text-decoration: none;
+    transition: transform 0.1s;
+  }
+  .home-button span:first-child { font-size: 22px; }
+  .home-button:hover { transform: translateY(-2px); }
+  .home-button:active { transform: translateY(2px); box-shadow: 0 1px 0 #eadfcd; }
+  @media (max-width: 700px) {
+    .home-button { width: 48px; padding: 0; }
+    .home-button-text { display: none; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .home-button { transition: none; }
+  }
+</style>
+</body>
+</html>

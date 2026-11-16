@@ -1,0 +1,1112 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<!-- viewport-fit=cover hands the notch and the home indicator to env(safe-area-inset-*);
+     resizes-content makes Chrome on Android shrink the page, not cover it, with the keyboard. -->
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
+<!-- Nothing may leave the page: no fetch, no images or fonts from elsewhere, no forms posting
+     out. The microphone is not a network request: getUserMedia is outside the policy. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data:; connect-src 'none'; form-action 'none'; base-uri 'none'">
+<meta name="referrer" content="no-referrer">
+<title>Morse Decoder</title>
+<link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+DQogIDxyZWN0IHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgcng9IjE0IiBmaWxsPSIjMGIxNjMwIi8+DQogIDxwYXRoIGQ9Ik02IDQwaDUyIiBzdHJva2U9IiMxZjNiNzMiIHN0cm9rZS13aWR0aD0iMiIvPg0KICA8cGF0aCBkPSJNNiA0MCBRMTQgNDAgMTYgMjIgUTE4IDQwIDI2IDQwIFEzMCA0MCAzMiAzMCBRMzQgNDAgMzggNDAgUTQ0IDQwIDQ2IDE0IFE0OCA0MCA1OCA0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjOGZkM2ZmIiBzdHJva2Utd2lkdGg9IjIuNiIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+DQogIDxjaXJjbGUgY3g9IjE0IiBjeT0iNTEiIHI9IjMuMiIgZmlsbD0iI2ZmOGEzZCIvPg0KICA8cmVjdCB4PSIyMiIgeT0iNDgiIHdpZHRoPSIxNiIgaGVpZ2h0PSI2LjQiIHJ4PSIzLjIiIGZpbGw9IiNmZjhhM2QiLz4NCiAgPGNpcmNsZSBjeD0iNDYiIGN5PSI1MSIgcj0iMy4yIiBmaWxsPSIjZmY4YTNkIi8+DQo8L3N2Zz4=">
+<style>/* Colours are variables on :root; the dark theme redefines them. The waterfall keeps its own
+   dark palette in both themes: a spectrum reads best as light on dark. */
+:root {
+  --bg: #f5f5f2;
+  --panel: #ffffff;
+  --panel-2: #f0f0ec;
+  --line: #e2e2dc;
+  --line-strong: #cfcfc7;
+  --text: #1c1d21;
+  --muted: #6b6d75;
+  --accent: #2563eb;
+  --accent-text: #ffffff;
+  --accent-soft: #e6eefe;
+  --danger: #c2410c;
+  --scope-bg: #050b18;
+  --scope-grid: rgba(255, 255, 255, 0.09);
+  --scope-text: rgba(255, 255, 255, 0.62);
+  --scope-line: #8fd3ff;
+  --slot-a: #ff8a3d;
+  --slot-b: #c27dff;
+  --shadow: 0 1px 2px rgba(20, 20, 30, 0.05), 0 6px 24px rgba(20, 20, 30, 0.05);
+  --radius: 14px;
+  --mono: ui-monospace, 'SF Mono', 'JetBrains Mono', Menlo, Consolas, monospace;
+  color-scheme: light;
+}
+
+:root[data-theme='dark'] {
+  --bg: #111216;
+  --panel: #191a20;
+  --panel-2: #22232a;
+  --line: #2b2c34;
+  --line-strong: #3a3b45;
+  --text: #ececf1;
+  --muted: #9a9ba7;
+  --accent: #5b8cff;
+  --accent-text: #0b0d14;
+  --accent-soft: #1d2741;
+  --danger: #fb923c;
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 28px rgba(0, 0, 0, 0.25);
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Elements given a display of their own would otherwise ignore the hidden attribute. */
+[hidden] {
+  display: none !important;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 15px/1.45 system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex: none;
+}
+
+kbd {
+  font: 12px var(--mono);
+  padding: 1px 5px;
+  border: 1px solid var(--line-strong);
+  border-bottom-width: 2px;
+  border-radius: 5px;
+  background: var(--panel);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* ---------- Top bar ---------- */
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 20px 20px 8px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.brand-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+}
+
+.brand-name {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+}
+
+.brand-sub {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.topbar-controls {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* ---------- Layout ---------- */
+
+.layout {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 8px 20px 12px;
+  display: grid;
+  gap: 16px;
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 16px;
+  min-width: 0;
+}
+
+.panel-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.panel-title {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 650;
+}
+
+.panel-sub {
+  margin: 2px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.hint {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* ---------- Controls ---------- */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-height: 36px;
+  padding: 0 14px;
+  border: 1px solid var(--line-strong);
+  border-radius: 10px;
+  background: var(--panel);
+  cursor: pointer;
+  font-weight: 550;
+  white-space: nowrap;
+  transition: background-color 0.12s, border-color 0.12s;
+}
+
+.button:hover:not(:disabled) {
+  background: var(--panel-2);
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.button--primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-text);
+}
+
+.button--primary:hover:not(:disabled) {
+  background: var(--accent);
+  filter: brightness(1.08);
+}
+
+.button[aria-pressed='true'] {
+  background: var(--danger);
+  border-color: var(--danger);
+  color: #fff;
+}
+
+.button--primary svg path[d^='M7 5'] {
+  fill: currentColor;
+}
+
+.icon-button {
+  display: inline-grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.icon-button:hover {
+  background: var(--panel-2);
+  color: var(--text);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.select-field,
+.range-field {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 36px;
+  padding: 0 4px 0 10px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--panel);
+}
+
+.select-label {
+  color: var(--muted);
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+select {
+  border: 0;
+  background: transparent;
+  padding: 6px 4px;
+  cursor: pointer;
+  max-width: 100%;
+}
+
+select option {
+  background: var(--panel);
+  color: var(--text);
+}
+
+.range-field {
+  padding-inline-end: 10px;
+}
+
+.range-field input[type='range'] {
+  width: 110px;
+  accent-color: var(--accent);
+}
+
+.range-value {
+  min-width: 3.4em;
+  font: 13px var(--mono);
+  text-align: end;
+  font-variant-numeric: tabular-nums;
+}
+
+.number {
+  width: 5.5em;
+  padding: 5px 8px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel-2);
+  font-variant-numeric: tabular-nums;
+}
+
+.check {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.check input {
+  width: 17px;
+  height: 17px;
+  accent-color: var(--accent);
+  margin: 0;
+}
+
+/* ---------- Scope: spectrum over waterfall ---------- */
+
+.scope {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--scope-bg);
+  cursor: crosshair;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.scope canvas {
+  display: block;
+  width: 100%;
+}
+
+.scope-spectrum {
+  height: 120px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.scope-waterfall {
+  height: 300px;
+}
+
+.scope-markers {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.marker {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  border-inline: 1px solid color-mix(in srgb, var(--slot) 70%, transparent);
+  background: color-mix(in srgb, var(--slot) 14%, transparent);
+}
+
+.marker::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  border-left: 1px dashed color-mix(in srgb, var(--slot) 80%, transparent);
+}
+
+.marker-label {
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 1px 7px;
+  border-radius: 6px;
+  background: var(--slot);
+  color: #111;
+  font: 600 12px var(--mono);
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.marker[data-slot='0'] {
+  --slot: var(--slot-a);
+}
+
+.marker[data-slot='1'] {
+  --slot: var(--slot-b);
+}
+
+.scope-cursor {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 0;
+  border-left: 1px solid rgba(255, 255, 255, 0.55);
+  pointer-events: none;
+}
+
+.scope-cursor-label {
+  position: absolute;
+  bottom: 8px;
+  left: 6px;
+  padding: 1px 6px;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.65);
+  color: #fff;
+  font: 12px var(--mono);
+  white-space: nowrap;
+}
+
+.scope-cursor.is-flipped .scope-cursor-label {
+  left: auto;
+  right: 6px;
+}
+
+.scope-empty {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  text-align: center;
+  color: var(--scope-text);
+  pointer-events: none;
+}
+
+.scope-empty p {
+  margin: 0;
+  max-width: 34ch;
+}
+
+.scope-foot {
+  display: flex;
+  align-items: center;
+  gap: 8px 16px;
+  flex-wrap: wrap;
+  margin: 12px 0 14px;
+}
+
+.segmented {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 3px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+
+.segmented-label {
+  padding: 0 8px 0 6px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.segmented-item {
+  min-width: 34px;
+  height: 28px;
+  border: 0;
+  border-radius: 7px;
+  background: transparent;
+  font: 600 13px var(--mono);
+  cursor: pointer;
+}
+
+.segmented-item[aria-checked='true'] {
+  color: #111;
+}
+
+.segmented-item[data-pick='0'][aria-checked='true'] {
+  background: var(--slot-a);
+}
+
+.segmented-item[data-pick='1'][aria-checked='true'] {
+  background: var(--slot-b);
+}
+
+/* ---------- Decoders ---------- */
+
+.decoders {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr));
+  gap: 12px;
+}
+
+.decoder {
+  --slot: var(--slot-a);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--slot);
+  border-radius: 12px;
+  background: var(--panel);
+  min-width: 0;
+}
+
+.decoder[data-slot='1'] {
+  --slot: var(--slot-b);
+}
+
+.decoder.is-active {
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--slot) 55%, transparent);
+}
+
+.decoder-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding: 8px 8px 8px 10px;
+  border-bottom: 1px solid var(--line);
+}
+
+.decoder-badge {
+  display: inline-grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 7px;
+  background: var(--slot);
+  color: #111;
+  font: 700 13px var(--mono);
+  cursor: pointer;
+}
+
+.decoder-freq {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.decoder-freq .number {
+  width: 5.2em;
+}
+
+.decoder-lang {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel-2);
+  padding: 5px 6px;
+  font-size: 13px;
+}
+
+.decoder-stats {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font: 12px var(--mono);
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.decoder-led {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--line-strong);
+  transition: background-color 0.04s;
+}
+
+.decoder-led.is-on {
+  background: var(--slot);
+  box-shadow: 0 0 8px var(--slot);
+}
+
+.decoder-wpm {
+  min-width: 5.5em;
+}
+
+.decoder-meter {
+  position: relative;
+  width: 56px;
+  height: 6px;
+  border-radius: 3px;
+  background: var(--panel-2);
+  overflow: hidden;
+}
+
+.decoder-meter-fill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 0;
+  background: var(--slot);
+  border-radius: 3px;
+}
+
+.decoder-meter.is-closed .decoder-meter-fill {
+  background: var(--line-strong);
+}
+
+.decoder-snr {
+  min-width: 4.2em;
+}
+
+.decoder-actions {
+  display: inline-flex;
+  margin-inline-start: auto;
+}
+
+.decoder-body {
+  position: relative;
+  height: 168px;
+  overflow-y: auto;
+  padding: 10px 12px;
+  overscroll-behavior: contain;
+}
+
+.decoder-text {
+  margin: 0;
+  font: 16px/1.55 var(--mono);
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.decoder-symbol {
+  color: var(--slot);
+  font-weight: 700;
+}
+
+.decoder-empty {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.decoder.is-off .decoder-freq,
+.decoder.is-off .decoder-stats,
+.decoder.is-off .decoder-off {
+  display: none;
+}
+
+/* ---------- Generator ---------- */
+
+.gen-text {
+  width: 100%;
+  min-height: 74px;
+  padding: 10px 12px;
+  border: 1px solid var(--line-strong);
+  border-radius: 10px;
+  background: var(--panel);
+  font: 16px/1.5 var(--mono);
+  resize: vertical;
+}
+
+.gen-code {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 2px;
+  min-height: 44px;
+  max-height: 150px;
+  overflow-y: auto;
+  margin: 10px 0 14px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  background: var(--panel-2);
+}
+
+.gen-char {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 18px;
+  padding: 2px 4px;
+  border-radius: 6px;
+  line-height: 1.2;
+}
+
+.gen-char b {
+  font: 600 14px var(--mono);
+}
+
+.gen-char i {
+  font: normal 12px var(--mono);
+  color: var(--muted);
+  letter-spacing: 0.06em;
+}
+
+.gen-char.is-space {
+  min-width: 14px;
+}
+
+.gen-char.is-unknown b {
+  color: var(--danger);
+  text-decoration: line-through;
+}
+
+.gen-char.is-active {
+  background: var(--accent);
+  color: var(--accent-text);
+}
+
+.gen-char.is-active i {
+  color: var(--accent-text);
+}
+
+.gen-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 10px;
+}
+
+.range-field--wide {
+  display: flex;
+}
+
+.range-field--wide input[type='range'] {
+  flex: 1;
+  width: auto;
+  min-width: 60px;
+}
+
+.range-field--wide .select-label {
+  min-width: 5.5em;
+}
+
+.range-field--wide .number {
+  margin-inline-start: auto;
+}
+
+.gen-options {
+  display: flex;
+  gap: 10px 22px;
+  flex-wrap: wrap;
+  margin: 14px 0;
+}
+
+.gen-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.gen-status {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* ---------- Footer, toast ---------- */
+
+.footer {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 6px 20px 28px;
+  color: var(--muted);
+  font-size: 12px;
+  text-align: center;
+}
+
+.footer small {
+  font-size: inherit;
+}
+
+/* A button that reads as a link: "Check for updates", "Update". */
+.link-button {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--accent);
+  cursor: pointer;
+  font-size: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: calc(24px + env(safe-area-inset-bottom));
+  transform: translateX(-50%);
+  max-width: min(92vw, 520px);
+  padding: 10px 16px;
+  border-radius: 10px;
+  background: var(--text);
+  color: var(--bg);
+  box-shadow: var(--shadow);
+  font-size: 14px;
+  z-index: 10;
+}
+
+.toast.is-error {
+  background: var(--danger);
+  color: #fff;
+}
+
+/* ---------- Phone ---------- */
+
+@media (max-width: 640px) {
+  .topbar {
+    padding: 14px 12px 4px;
+  }
+
+  .brand-sub {
+    display: none;
+  }
+
+  .layout {
+    padding: 6px 8px 10px;
+    gap: 10px;
+  }
+
+  .panel {
+    padding: 12px;
+    border-radius: 12px;
+  }
+
+  .toolbar {
+    width: 100%;
+  }
+
+  .toolbar #mic {
+    flex: 1 1 100%;
+  }
+
+  .toolbar .select-field {
+    flex: 1;
+  }
+
+  .toolbar .range-field {
+    flex: 1 1 100%;
+  }
+
+  .toolbar .range-field input {
+    flex: 1;
+  }
+
+  .scope-spectrum {
+    height: 90px;
+  }
+
+  .scope-waterfall {
+    height: 220px;
+  }
+
+  .decoder-body {
+    height: 128px;
+  }
+
+  .gen-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .footer-dot {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}
+
+
+/* Тема и плотность интерфейса согласованы с Мультитулом, светлый режим остаётся доступным. */
+:root[data-theme='dark'] {
+  --bg:#0d1110; --panel:#151c18; --panel-2:#1e2922; --line:#344238;
+  --line-strong:#495c4c; --text:#edf3e9; --muted:#a3b2a5; --accent:#c5f17f;
+  --accent-text:#17220f; --accent-soft:#293d29; --scope-bg:#090f0c;
+  --scope-line:#b8e88a; --slot-a:#bfe880; --slot-b:#b7a5eb;
+  --shadow:none;
+}
+html { scrollbar-gutter: stable; }
+.topbar,.layout,.footer { max-width: 1500px; }
+.topbar { padding-top: 22px; padding-bottom: 14px; }
+.brand-name { font-size: 25px; letter-spacing: -.03em; }
+.layout { grid-template-columns: minmax(0,1.35fr) minmax(340px,.85fr); align-items:start; gap:18px; }
+.panel { padding:20px; border-radius:14px; }
+.scope-spectrum { height:90px; }
+.scope-waterfall { height:180px; }
+.decoder-body { height:100px; }
+.gen-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+.gen-text { min-height:100px; }
+.button--primary { font-weight:700; }
+@media(max-width:1050px) { .layout { grid-template-columns:minmax(0,1fr); } }
+@media(max-width:600px) { .topbar { padding:16px 14px 8px; } .layout { padding:8px 14px 12px; } .panel { padding:14px; } .brand-name { font-size:20px; } .scope-waterfall { height:150px; } .gen-grid { grid-template-columns:minmax(0,1fr); } }
+
+/* Подписи и ползунки не перекрывают друг друга в узкой колонке генератора. */
+.gen-grid .range-field--wide { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:3px 8px; padding:7px 10px; }
+.gen-grid .range-field--wide .select-label { min-width:0; white-space:normal; grid-column:1; }
+.gen-grid .range-field--wide output { grid-column:2; grid-row:1; }
+.gen-grid .range-field--wide input[type='range'] { grid-column:1 / -1; grid-row:2; width:100%; min-width:0; }
+.gen-grid .range-field--wide input.number { grid-column:2; grid-row:1; width:5em; }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <img class="brand-logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+DQogIDxyZWN0IHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgcng9IjE0IiBmaWxsPSIjMGIxNjMwIi8+DQogIDxwYXRoIGQ9Ik02IDQwaDUyIiBzdHJva2U9IiMxZjNiNzMiIHN0cm9rZS13aWR0aD0iMiIvPg0KICA8cGF0aCBkPSJNNiA0MCBRMTQgNDAgMTYgMjIgUTE4IDQwIDI2IDQwIFEzMCA0MCAzMiAzMCBRMzQgNDAgMzggNDAgUTQ0IDQwIDQ2IDE0IFE0OCA0MCA1OCA0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjOGZkM2ZmIiBzdHJva2Utd2lkdGg9IjIuNiIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+DQogIDxjaXJjbGUgY3g9IjE0IiBjeT0iNTEiIHI9IjMuMiIgZmlsbD0iI2ZmOGEzZCIvPg0KICA8cmVjdCB4PSIyMiIgeT0iNDgiIHdpZHRoPSIxNiIgaGVpZ2h0PSI2LjQiIHJ4PSIzLjIiIGZpbGw9IiNmZjhhM2QiLz4NCiAgPGNpcmNsZSBjeD0iNDYiIGN5PSI1MSIgcj0iMy4yIiBmaWxsPSIjZmY4YTNkIi8+DQo8L3N2Zz4=" alt="">
+    <div>
+      <h1 class="brand-name" data-i18n="app">Morse decoder</h1>
+      <p class="brand-sub" data-i18n="app">Spectrum, two decoders and a generator — in one offline page</p>
+    </div>
+  </div>
+  <div class="topbar-controls">
+    <!-- The installed app (build/pages/) only: a new version waits for this. -->
+    <button id="update-ready" class="button button--primary" type="button" hidden></button>
+    <label class="select-field">
+      <span class="select-label" data-i18n="settings">Language</span>
+      <select id="ui-language"></select>
+    </label>
+    <label class="select-field">
+      <span class="select-label" data-i18n="settings">Theme</span>
+      <select id="theme"></select>
+    </label>
+  </div>
+</header>
+
+<main class="layout">
+  <section class="panel receiver" aria-labelledby="receiver-title">
+    <div class="panel-head">
+      <h2 id="receiver-title" class="panel-title" data-i18n="receiver">Receiver</h2>
+      <div class="toolbar">
+        <button id="mic" class="button button--primary" type="button" aria-pressed="false">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg>
+          <span id="mic-label" data-i18n="receiver">Start microphone</span>
+        </button>
+        <label class="select-field">
+          <span class="select-label" data-i18n="receiver">Filter</span>
+          <select id="bandwidth"></select>
+        </label>
+        <label class="select-field">
+          <span class="select-label" data-i18n="receiver">Range</span>
+          <select id="span"></select>
+        </label>
+        <label class="range-field" title="How far a signal must stand above the noise to be decoded" data-i18n-attr="receiver">
+          <span class="select-label" data-i18n="receiver">Squelch</span>
+          <input id="squelch" type="range" step="1">
+          <output id="squelch-value" class="range-value"></output>
+        </label>
+      </div>
+    </div>
+
+    <div id="scope" class="scope">
+      <canvas id="spectrum" class="scope-spectrum"></canvas>
+      <canvas id="waterfall" class="scope-waterfall"></canvas>
+      <div id="markers" class="scope-markers" aria-hidden="true"></div>
+      <div id="cursor" class="scope-cursor" aria-hidden="true" hidden><span id="cursor-label" class="scope-cursor-label"></span></div>
+      <div id="scope-empty" class="scope-empty">
+        <p data-i18n="receiver">Start the microphone, or play the generator into the decoder.</p>
+      </div>
+    </div>
+
+    <div class="scope-foot">
+      <div class="segmented" role="radiogroup" aria-label="Click tunes" data-i18n-attr="receiver">
+        <span class="segmented-label" data-i18n="receiver">Click tunes</span>
+        <button class="segmented-item" type="button" role="radio" data-pick="0" aria-checked="true">A</button>
+        <button class="segmented-item" type="button" role="radio" data-pick="1" aria-checked="false">B</button>
+      </div>
+      <p class="hint" data-i18n="receiver">Click a signal to decode it. <kbd data-slot="shift">Shift</kbd>-click or right-click tunes the other decoder.</p>
+    </div>
+
+    <div id="decoders" class="decoders"></div>
+  </section>
+
+  <section class="panel generator" aria-labelledby="generator-title">
+    <div class="panel-head">
+      <div>
+        <h2 id="generator-title" class="panel-title" data-i18n="generator">Generator</h2>
+        <p class="panel-sub" data-i18n="generator">Type a text and hear it in Morse — to try the decoder.</p>
+      </div>
+    </div>
+
+    <label class="visually-hidden" for="gen-text" data-i18n="generator">Text to send</label>
+    <textarea id="gen-text" class="gen-text" rows="3" spellcheck="false" placeholder="Text in Latin or Cyrillic letters" data-i18n-attr="generator"></textarea>
+    <div id="gen-code" class="gen-code" aria-label="The text in Morse" data-i18n-attr="generator"></div>
+
+    <div class="gen-grid">
+      <label class="range-field range-field--wide">
+        <span class="select-label" data-i18n="generator">Speed</span>
+        <input id="gen-wpm" type="range" step="1">
+        <output id="gen-wpm-value" class="range-value"></output>
+      </label>
+      <label class="range-field range-field--wide">
+        <span class="select-label" data-i18n="generator">Tone, Hz</span>
+        <input id="gen-tone" class="number" type="number" step="10" inputmode="numeric">
+      </label>
+      <label class="range-field range-field--wide">
+        <span class="select-label" data-i18n="generator">Volume</span>
+        <input id="gen-volume" type="range" min="0" max="1" step="0.05">
+        <output id="gen-volume-value" class="range-value"></output>
+      </label>
+      <label class="range-field range-field--wide" title="White noise into the decoder only, to try it on weak signals" data-i18n-attr="generator">
+        <span class="select-label" data-i18n="generator">Test noise</span>
+        <input id="gen-noise" type="range" min="0" max="1" step="0.05">
+        <output id="gen-noise-value" class="range-value"></output>
+      </label>
+    </div>
+
+    <div class="gen-options">
+      <label class="check"><input id="gen-hear" type="checkbox"> <span data-i18n="generator">Play through the speakers</span></label>
+      <label class="check"><input id="gen-feed" type="checkbox"> <span data-i18n="generator">Feed straight into the decoder</span></label>
+      <label class="check"><input id="gen-loop" type="checkbox"> <span data-i18n="generator">Repeat</span></label>
+    </div>
+
+    <div class="gen-actions">
+      <button id="gen-play" class="button button--primary" type="button">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5l12 7-12 7z"/></svg>
+        <span data-i18n="generator">Play</span>
+      </button>
+      <button id="gen-stop" class="button" type="button" disabled>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="1.5"/></svg>
+        <span data-i18n="generator">Stop</span>
+      </button>
+      <span id="gen-status" class="gen-status" aria-live="polite"></span>
+    </div>
+    <p class="hint" data-i18n="generator">Every Play starts one more transmission: change the tone and press Play again to hear two signals at once.</p>
+  </section>
+</main>
+
+<footer class="footer">
+  <small data-i18n="app">Version <span id="version" data-slot="version"></span></small>
+  <span id="update-dot" class="footer-dot" aria-hidden="true" hidden>·</span>
+  <span id="update" class="footer-update" hidden></span>
+  <span class="footer-dot" aria-hidden="true">·</span>
+  <span data-i18n="app">Nothing leaves this page: the sound is processed right here.</span>
+</footer>
+
+<div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+<template id="decoder-template">
+  <article class="decoder">
+    <header class="decoder-head">
+      <span class="decoder-badge"></span>
+      <label class="decoder-freq">
+        <input class="decoder-freq-input number" type="number" step="1" inputmode="numeric" aria-label="Frequency, Hz" data-i18n-attr="decoder">
+        <span class="decoder-unit" data-i18n="decoder">Hz</span>
+      </label>
+      <select class="decoder-lang" aria-label="Alphabet" data-i18n-attr="decoder">
+        <option value="en" data-i18n="decoder">Latin (EN)</option>
+        <option value="ru" data-i18n="decoder">Cyrillic (RU)</option>
+      </select>
+      <span class="decoder-stats">
+        <span class="decoder-led" title="Key down" data-i18n-attr="decoder"></span>
+        <span class="decoder-wpm"></span>
+        <span class="decoder-meter" title="Signal over noise" data-i18n-attr="decoder"><span class="decoder-meter-fill"></span></span>
+        <span class="decoder-snr"></span>
+      </span>
+      <span class="decoder-actions">
+        <button class="icon-button decoder-copy" type="button" title="Copy the text" data-i18n-attr="decoder">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h8"/></svg>
+        </button>
+        <button class="icon-button decoder-clear" type="button" title="Clear the text" data-i18n-attr="decoder">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3"/></svg>
+        </button>
+        <button class="icon-button decoder-off" type="button" title="Turn this decoder off" data-i18n-attr="decoder">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </span>
+    </header>
+    <div class="decoder-body">
+      <p class="decoder-text"><span class="decoder-out"></span><span class="decoder-symbol"></span></p>
+      <p class="decoder-empty"></p>
+    </div>
+  </article>
+</template>
+
+<script>"use strict";(()=>{var Te={app:{"Morse decoder":"Декодер азбуки Морзе","Spectrum, two decoders and a generator — in one offline page":"Спектр, два декодера и генератор — на одной странице без сети","Version {version}":"Версия {version}","Nothing leaves this page: the sound is processed right here.":"Ничего не уходит со страницы: звук обрабатывается прямо здесь."},settings:{"As in the system":"Как в системе",Light:"Светлая",Dark:"Тёмная",Language:"Язык",Theme:"Тема"},receiver:{"{hz} Hz":"{hz} Гц","200–1400 Hz":"200–1400 Гц","0–3 kHz":"0–3 кГц","0–6 kHz":"0–6 кГц","Stop microphone":"Выключить микрофон","Start microphone":"Включить микрофон","The browser was not allowed to use the microphone. Allow it in the site settings and try again.":"Браузеру не разрешили микрофон. Разрешите его в настройках сайта и попробуйте снова.","No microphone found":"Микрофон не найден","The microphone works only on https:// or in a file opened from the disk":"Микрофон работает только по https:// или в файле, открытом с диска","The microphone could not be started":"Не удалось включить микрофон",Receiver:"Приёмник",Filter:"Фильтр",Range:"Диапазон",Squelch:"Шумоподавитель","Start the microphone, or play the generator into the decoder.":"Включите микрофон или запустите генератор в декодер.","Click tunes":"Клик настраивает","Click a signal to decode it. {shift}-click or right-click tunes the other decoder.":"Кликните по сигналу, чтобы декодировать его. {shift}+клик или правый клик настраивает другой декодер.","How far a signal must stand above the noise to be decoded":"Насколько сигнал должен быть выше шума, чтобы его декодировать"},decoder:{"Nothing decoded yet":"Пока ничего не декодировано","{count} characters copied":{one:"Скопирован {count} символ",few:"Скопировано {count} символа",many:"Скопировано {count} символов",other:"Скопировано {count} символа"},"The browser did not allow copying":"Браузер не разрешил копирование","Click a signal on the waterfall to decode it.":"Кликните по сигналу на водопаде, чтобы декодировать его.","For a second signal: Shift-click it, or pick B above and click.":"Для второго сигнала: Shift+клик по нему или выберите B выше и кликните.","{wpm} WPM":"{wpm} сл/мин","— WPM":"— сл/мин","{db} dB":"{db} дБ","Listening…":"Слушаю…",Hz:"Гц","Latin (EN)":"Латиница (EN)","Cyrillic (RU)":"Кириллица (RU)","Frequency, Hz":"Частота, Гц",Alphabet:"Алфавит","Key down":"Ключ нажат","Signal over noise":"Сигнал над шумом","Copy the text":"Скопировать текст","Clear the text":"Очистить текст","Turn this decoder off":"Выключить этот декодер"},generator:{"Type something to send: Latin or Cyrillic letters, digits, punctuation":"Напишите, что передать: латиница или кириллица, цифры, знаки препинания","Turn on the speakers or the decoder: otherwise it plays to no one":"Включите динамики или декодер — иначе играть некому","{wpm} WPM":"{wpm} сл/мин","{count} transmissions on the air":{one:"{count} передача в эфире",few:"{count} передачи в эфире",many:"{count} передач в эфире",other:"{count} передачи в эфире"},"Morse has no code for this character: it is skipped":"В азбуке Морзе нет кода для этого символа: он пропускается",Generator:"Генератор","Type a text and hear it in Morse — to try the decoder.":"Напишите текст и услышьте его азбукой Морзе — чтобы проверить декодер.","Text to send":"Текст для передачи",Speed:"Скорость","Tone, Hz":"Тон, Гц",Volume:"Громкость","Test noise":"Тестовый шум","Play through the speakers":"Играть через динамики","Feed straight into the decoder":"Подавать прямо в декодер",Repeat:"Повторять",Play:"Играть",Stop:"Стоп","Every Play starts one more transmission: change the tone and press Play again to hear two signals at once.":"Каждое «Играть» запускает ещё одну передачу: смените тон и нажмите «Играть» снова — будет два сигнала сразу.","Text in Latin or Cyrillic letters":"Текст латиницей или кириллицей","The text in Morse":"Текст азбукой Морзе","White noise into the decoder only, to try it on weak signals":"Белый шум только в декодер — чтобы проверить его на слабых сигналах"},update:{"Update to version {version}":"Обновить до версии {version}",Update:"Обновить","Check for updates":"Проверить обновления","Checking for updates…":"Проверяю обновления…","This is the latest version.":"Это последняя версия.","No connection: could not check for updates.":"Нет связи: не удалось проверить обновления.","Version {version} is ready.":"Версия {version} готова.","A new version is ready.":"Новая версия готова.","Updated to version {version}.":"Обновлено до версии {version}."}};var _={en:"English",ru:"Русский"},Ce={ru:Te},ne="en",Fe=new Intl.PluralRules("en");function re(i){return typeof i=="string"&&Object.hasOwn(_,i)}function ie(i=typeof navigator>"u"?[]:navigator.languages){for(let e of i){let t=e.toLowerCase().split("-")[0];if(re(t))return t}return"en"}function He(i){ne=i,Fe=new Intl.PluralRules(i),!(typeof document>"u")&&(document.documentElement.lang=i)}function B(i,e){return e?i.replace(/\{(\w+)\}/g,(t,n)=>Object.hasOwn(e,n)?String(e[n]):t):i}function u(i,e,t){let n=Ce[ne]?.[i]?.[e];return B(typeof n=="string"&&n?n:e,t)}function D(i,e,t,n,r){let s=Ce[ne]?.[i]?.[t],o={count:n,...r};if(typeof s=="string"&&s)return B(s,o);if(s&&typeof s=="object"){let a=s[Fe.select(n)]??s.other;if(a)return B(a,o)}return B(n===1?e:t,o)}var yt=["title","placeholder","aria-label"],Ae=new WeakMap,Ne=new WeakMap;function bt(i){let e=Ae.get(i);if(!e){let t=new Map,n="";for(let r of Array.from(i.childNodes)){let s=r instanceof Element?r.getAttribute("data-slot"):null;s&&r instanceof Element?(t.set(s,r),n+=`{${s}}`):n+=r.textContent??""}e={text:n.replace(/\s+/g," ").trim(),slots:t},Ae.set(i,e)}return e}function G(i=document){for(let e of Array.from(i.querySelectorAll("[data-i18n]"))){let t=e.getAttribute("data-i18n")??"",{text:n,slots:r}=bt(e),s=u(t,n).split(/(\{\w+\})/);e.replaceChildren(...s.filter(Boolean).map(o=>r.get(o.slice(1,-1))??document.createTextNode(o)))}for(let e of Array.from(i.querySelectorAll("[data-i18n-attr]"))){let t=e.getAttribute("data-i18n-attr")??"",n=Ne.get(e);if(!n){n={};for(let r of yt){let s=e.getAttribute(r);s&&(n[r]=s)}Ne.set(e,n)}for(let[r,s]of Object.entries(n))e.setAttribute(r,u(t,s))}}function Ie(i){return i==="en"||i==="ru"}var Re={A:".-",B:"-...",C:"-.-.",D:"-..",E:".",F:"..-.",G:"--.",H:"....",I:"..",J:".---",K:"-.-",L:".-..",M:"--",N:"-.",O:"---",P:".--.",Q:"--.-",R:".-.",S:"...",T:"-",U:"..-",V:"...-",W:".--",X:"-..-",Y:"-.--",Z:"--.."},qe={А:".-",Б:"-...",В:".--",Г:"--.",Д:"-..",Е:".",Ж:"...-",З:"--..",И:"..",Й:".---",К:"-.-",Л:".-..",М:"--",Н:"-.",О:"---",П:".--.",Р:".-.",С:"...",Т:"-",У:"..-",Ф:"..-.",Х:"....",Ц:"-.-.",Ч:"---.",Ш:"----",Щ:"--.-",Ъ:"--.--",Ы:"-.--",Ь:"-..-",Э:"..-..",Ю:"..--",Я:".-.-"},se={0:"-----",1:".----",2:"..---",3:"...--",4:"....-",5:".....",6:"-....",7:"--...",8:"---..",9:"----."},oe={".":".-.-.-",",":"--..--","?":"..--..","'":".----.","!":"-.-.--","/":"-..-.","(":"-.--.",")":"-.--.-","&":".-...",":":"---...",";":"-.-.-.","=":"-...-","+":".-.-.","-":"-....-",_:"..--.-",'"':".-..-.",$:"...-..-","@":".--.-."},wt={Ё:"Е"};function Pe(...i){let e=new Map;for(let t of i)for(let[n,r]of Object.entries(t))e.set(r,n);return e}var Mt={en:Pe(oe,se,Re),ru:Pe(oe,{".":"......"},se,qe)},xt="*";function Oe(i,e){return Mt[e].get(i)??xt}function kt(i){let e=i.toUpperCase(),t=wt[e]??e;return Re[t]??qe[t]??se[t]??oe[t]??null}function ae(i){let e=[],t=0;for(let n of i)/\s/.test(n)?e.length&&e.at(-1)?.char!==" "&&e.push({index:t,char:" ",code:null}):e.push({index:t,char:n,code:kt(n)}),t+=n.length;for(;e.at(-1)?.char===" ";)e.pop();return e}function Et(i){return 1200/i}function V(i,e){let t=Et(e),n=[],r=(o,a)=>{if(!n.length)return;let l=n.at(-1);l&&!l.on?l.ms=Math.max(l.ms,o*t):n.push({on:!1,ms:o*t,index:a})},s=!1;for(let{index:o,char:a,code:l}of ae(i)){if(a===" "){s=!0;continue}l&&(r(s?7:3,o),s=!1,[...l].forEach((h,c)=>{c&&r(1,o),n.push({on:!0,ms:(h==="-"?3:1)*t,index:o})}))}return n}var St=200,Lt=20,Tt=300,W=class{b0=0;b1=0;a1=0;a2=0;i1=0;i2=0;q1=0;q2=0;set(e,t,n){let r=2*Math.PI*e/t,s=Math.sin(r)/(2*n),o=1+s;this.b0=(1-Math.cos(r))/2/o,this.b1=(1-Math.cos(r))/o,this.a1=-2*Math.cos(r)/o,this.a2=(1-s)/o}run(e){let{b0:t,b1:n,a1:r,a2:s}=this,o=e[0],a=e[1],l=t*o+this.i1;this.i1=n*o-r*l+this.i2,this.i2=t*o-s*l;let h=t*a+this.q1;this.q1=n*a-r*h+this.q2,this.q2=t*a-s*h,e[0]=l,e[1]=h}},j=class{sampleRate;phase=0;step;stages=[new W,new W];io=new Float64Array(2);counter=0;tickSamples;tickMs;constructor(e,t,n){this.sampleRate=e,this.step=2*Math.PI*t/e,this.tickSamples=Math.max(1,Math.round(e/St)),this.tickMs=this.tickSamples*1e3/e,this.setBandwidth(n)}setFrequency(e){this.step=2*Math.PI*e/this.sampleRate}setBandwidth(e){this.stages[0]?.set(e/2,this.sampleRate,.5412),this.stages[1]?.set(e/2,this.sampleRate,1.3066)}process(e,t){let{io:n,step:r,stages:s}=this,[o,a]=s,{phase:l,counter:h}=this;for(let c=0;c<e.length;c++){let p=e[c];n[0]=p*Math.cos(l),n[1]=-p*Math.sin(l),l+=r,l>2*Math.PI&&(l-=2*Math.PI),o.run(n),a.run(n),++h>=this.tickSamples&&(h=0,t(2*Math.hypot(n[0],n[1])))}this.phase=l,this.counter=h}},C={window:2,settleTicks:10,peakHold:4,peakDecay:3,lookahead:100},At=.1,Nt=8,le=class{noise=Number.NaN;peak=Number.NaN;level=-120;down=!1;open=!1;squelch;minRunMs=10;tickMs;levels;sorted;filled=0;written=0;recent=[];delayed=[];pending=0;ticks=0;constructor(e,t){this.tickMs=e,this.squelch=t,this.levels=new Float32Array(Math.round(C.window*1e3/e)),this.sorted=new Float32Array(this.levels.length)}get snr(){return Number.isNaN(this.peak)||Number.isNaN(this.noise)?0:Math.max(0,this.peak-this.noise)}reset(){this.noise=Number.NaN,this.peak=Number.NaN,this.down=!1,this.open=!1,this.filled=0,this.written=0,this.recent=[],this.delayed.length=0,this.pending=0,this.ticks=0}measureNoise(e){if(this.levels[this.written]=e,this.written=(this.written+1)%this.levels.length,this.filled=Math.min(this.levels.length,this.filled+1),this.filled>8&&this.ticks%4!==0)return;let t=this.sorted.subarray(0,this.filled);t.set(this.levels.subarray(0,this.filled)),t.sort(),this.noise=t[Math.floor(this.filled*At)]+Nt}push(e){let t=20*Math.log10(e+1e-9);if(this.level=t,this.ticks+=1,this.delayed.push(e),this.ticks>C.settleTicks){this.measureNoise(t),this.recent.push(t),this.recent.length>C.peakHold&&this.recent.shift();let c=Math.min(...this.recent);this.peak=Number.isNaN(this.peak)?c:Math.max(c,this.peak-C.peakDecay*this.tickMs/1e3)}if(this.delayed.length<=C.lookahead)return-1;let n=this.delayed.shift(),r=10**(this.noise/20),s=10**(this.peak/20),o=(r+s)/2;this.open=this.peak-this.noise>=this.squelch-(this.open?3:0);let l=this.open&&(this.down?n>o*.9:n>o*1.1);if(l===this.down)return this.pending=0,-1;if(this.pending+=1,this.pending*this.tickMs<this.minRunMs)return-1;let h=this.pending;return this.pending=0,this.down=l,h}},ce=class{dot;tokens=[];revision=0;marks=[];history=[];inner=[];confident=!1;heard=[];heardFrom=0;down=!1;since=0;spaced=!0;constructor(e=20){this.dot=1200/e}get wpm(){return 1200/this.dot}get locked(){return this.confident}get symbol(){return this.marks.map(e=>this.classify(e)).join("")}classify(e){return e<2*this.dot?".":"-"}edge(e,t){if(e===this.down)return;let n=t-this.since;this.down=e,this.since=t,e?(this.confident?n<2*this.dot&&(this.inner.push(n),this.inner.length>16&&this.inner.shift()):this.heard.push(-n),this.gap(n)):this.mark(n)}tick(e){this.down||this.gap(e-this.since)}mark(e){this.history.push(e),this.history.length>16&&this.history.shift(),this.confident||this.heard.push(e),this.learn()&&this.heard.length?this.replay():(this.marks.push(e),this.spaced=!1)}gap(e){this.marks.length&&e>2*this.dot&&this.letter(),!this.spaced&&!this.marks.length&&e>5*this.dot&&this.tokens.length&&(this.push(" "),this.spaced=!0)}replay(){let e=this.heard;this.heard=[],this.tokens.length=Math.min(this.tokens.length,this.heardFrom),this.marks=[],this.spaced=!this.tokens.length||this.tokens.at(-1)===" "||this.tokens.at(-1)===`
+`;for(let t of e)t>0?(this.marks.push(t),this.spaced=!1):this.gap(-t);this.revision+=1}letter(){let e=this.marks.map(t=>this.classify(t)).join("");this.marks=[],this.push(e)}push(e){this.tokens.push(e),this.tokens.length>2e4&&(this.tokens.splice(0,5e3),this.heardFrom=Math.max(0,this.heardFrom-5e3)),this.revision+=1}learn(){let e=this.history;if(e.length<2)return!1;let t=Math.min(...e),n=Math.max(...e);if(n<t*2)return!1;let r=[],s=[];for(let l=0;l<8;l++){let h=Math.sqrt(t*n);r=e.filter(c=>c<h),s=e.filter(c=>c>=h),t=r.reduce((c,p)=>c+p,0)/r.length,n=s.reduce((c,p)=>c+p,0)/s.length}let a=(r.reduce((l,h)=>l+h,0)+s.reduce((l,h)=>l+h,0)/3)/e.length;if(this.inner.length>=4){let l=[...this.inner].sort((c,p)=>c-p),h=l[l.length>>1];h>a/2&&h<a*2&&(a=(a+h)/2)}return this.dot=Math.min(Tt,Math.max(Lt,a)),this.confident?!1:(this.confident=!0,!0)}restart(){this.marks.length&&this.letter(),this.tokens.at(-1)===" "&&this.tokens.pop(),this.tokens.length&&this.tokens.at(-1)!==`
+`&&this.push(`
+`),this.history.length=0,this.inner.length=0,this.confident=!1,this.heard=[],this.heardFrom=this.tokens.length,this.down=!1,this.spaced=!0}clear(){this.tokens.length=0,this.marks=[],this.heard=[],this.heardFrom=0,this.spaced=!0,this.revision+=1}};function Ct(i,e){let t="";for(let n of i)t+=n===" "||n===`
+`?n:Oe(n,e);return t}var z=class{sampleRate;frequency;demodulator;detector;decoder;bandwidth;ticks=0;constructor(e,t,n){this.sampleRate=e,this.frequency=t,this.demodulator=new j(e,t,n.bandwidth),this.detector=new le(this.demodulator.tickMs,n.squelch),this.decoder=new ce(n.wpm),this.bandwidth=n.bandwidth}push(e){let{tickMs:t}=this.demodulator;this.demodulator.process(e,n=>{this.ticks+=1,this.detector.minRunMs=this.decoder.locked?Math.min(40,Math.max(10,this.decoder.dot*.3)):15;let r=this.detector.push(n),s=this.ticks-C.lookahead;r>=0&&this.decoder.edge(this.detector.down,(s-r)*t),this.decoder.tick(s*t)})}setBandwidth(e){this.bandwidth=e,this.demodulator.setBandwidth(e)}setSquelch(e){this.detector.squelch=e}nudge(e){this.frequency=e,this.demodulator.setFrequency(e)}get bandwidthHz(){return this.bandwidth}retune(e){this.frequency=e,this.demodulator=new j(this.sampleRate,e,this.bandwidth),this.detector.reset(),this.decoder.restart()}text(e){return Ct(this.decoder.tokens,e)}};var $=class{size;window;cos;sin;reversed;re;im;constructor(e){if(e<2||(e&e-1)!==0)throw new Error(`FFT size must be a power of two, not ${e}`);this.size=e,this.window=new Float32Array(e);for(let n=0;n<e;n++)this.window[n]=.5-.5*Math.cos(2*Math.PI*n/e);this.cos=new Float64Array(e/2),this.sin=new Float64Array(e/2);for(let n=0;n<e/2;n++)this.cos[n]=Math.cos(2*Math.PI*n/e),this.sin[n]=-Math.sin(2*Math.PI*n/e);this.reversed=new Uint32Array(e);let t=Math.log2(e);for(let n=0;n<e;n++){let r=0;for(let s=0;s<t;s++)r=r<<1|n>>s&1;this.reversed[n]=r}this.re=new Float64Array(e),this.im=new Float64Array(e)}levels(e,t=0,n=new Float32Array(this.size/2)){let{size:r,re:s,im:o,reversed:a,window:l}=this;for(let c=0;c<r;c++){let p=a[c];s[p]=e[(t+c)%e.length]*l[c],o[p]=0}for(let c=1;c<r;c*=2){let p=r/(c*2);for(let w=0;w<r;w+=c*2)for(let x=0;x<c;x++){let f=this.cos[x*p],g=this.sin[x*p],b=w+x,N=b+c,ke=s[N],Ee=o[N],Se=ke*f-Ee*g,Le=ke*g+Ee*f;s[N]=s[b]-Se,o[N]=o[b]-Le,s[b]=s[b]+Se,o[b]=o[b]+Le}}let h=4/r;for(let c=0;c<r/2;c++){let p=Math.hypot(s[c],o[c])*h;n[c]=20*Math.log10(p+1e-12)}return n}};var K=class{sampleRate;fftSize;binHz;hop;channels;average;onFrame=null;options;spectrum;ring;frame;written=0;sinceFrame=0;averaged=!1;constructor({sampleRate:e,fftSize:t=4096,slots:n=2,...r}){this.sampleRate=e,this.fftSize=t,this.binHz=e/t,this.hop=t/4,this.options=r,this.channels=Array.from({length:n},()=>null),this.spectrum=new $(t),this.ring=new Float32Array(t),this.frame=new Float32Array(t/2),this.average=new Float32Array(t/2).fill(-120)}push(e){for(let t of this.channels)t?.push(e);for(let t=0;t<e.length;t++)this.ring[this.written]=e[t],this.written=(this.written+1)%this.fftSize,++this.sinceFrame>=this.hop&&(this.sinceFrame=0,this.spectrum.levels(this.ring,this.written,this.frame),this.updateAverage(),this.onFrame?.(this.frame))}updateAverage(){let e=this.averaged?.92:0;for(let t=0;t<this.frame.length;t++){let n=e*10**(this.average[t]/10)+(1-e)*10**(this.frame[t]/10);this.average[t]=10*Math.log10(n+1e-24)}this.averaged=!0}snap(e,t){let{average:n,binHz:r}=this,s=Math.max(1,Math.floor((e-t)/r)),o=Math.min(n.length-2,Math.ceil((e+t)/r)),a=-1;for(let f=s;f<=o;f++)(a<0||n[f]>n[a])&&(a=f);if(a<0)return e;let l=[];for(let f=Math.max(0,a-40);f<=Math.min(n.length-1,a+40);f++)l.push(n[f]);l.sort((f,g)=>f-g);let h=l[Math.floor(l.length/2)];if(n[a]-h<6)return e;let c=n[a-1],p=n[a],w=n[a+1],x=c-2*p+w===0?0:.5*(c-w)/(c-2*p+w);return(a+Math.max(-.5,Math.min(.5,x)))*r}tune(e,t){let n=this.channels[e];if(n)return Math.abs(t-n.frequency)<=n.bandwidthHz/2?n.nudge(t):n.retune(t),n;let r=new z(this.sampleRate,t,this.options);return this.channels[e]=r,r}off(e){this.channels[e]=null}configure(e){this.options={...this.options,...e};for(let t of this.channels)e.bandwidth!==void 0&&t?.setBandwidth(e.bandwidth),e.squelch!==void 0&&t?.setSquelch(e.squelch)}};var de="morse-decoder",Q=[50,100,200],I={cw:[200,1400],voice:[0,3e3],wide:[0,6e3]},F={min:3,max:30,default:8},H={min:5,max:50,default:18},E={min:200,max:3e3,default:700},ue=2e3;function Ft(i="en"){return{language:"system",theme:"dark",bandwidth:100,span:"cw",squelch:F.default,decoders:[i,i],generator:{text:i==="ru"?"ПРИВЕТ МИР":"CQ CQ DE TEST K",wpm:H.default,tone:E.default,volume:.5,hear:!0,feed:!0,loop:!1,noise:0}}}var Ue=i=>i&&typeof i=="object"&&!Array.isArray(i)?i:{},P=(i,e,t,n,r=0)=>{if(typeof i!="number"||!Number.isFinite(i))return n;let s=Math.min(t,Math.max(e,i));return r?Math.round(s/r)*r:s},he=(i,e)=>typeof i=="boolean"?i:e;function Be(i,e="en"){let t=Ft(e),n=null;try{n=i?JSON.parse(i):null}catch{n=null}let r=Ue(n),s=Ue(r.generator),o=Array.isArray(r.decoders)?r.decoders:[];return{language:r.language==="system"||re(r.language)?r.language:t.language,theme:r.theme==="light"||r.theme==="dark"||r.theme==="system"?r.theme:t.theme,bandwidth:Q.find(a=>a===r.bandwidth)??t.bandwidth,span:typeof r.span=="string"&&Object.hasOwn(I,r.span)?r.span:t.span,squelch:P(r.squelch,F.min,F.max,t.squelch,1),decoders:[0,1].map(a=>Ie(o[a])?o[a]:t.decoders[a]),generator:{text:typeof s.text=="string"?s.text.slice(0,ue):t.generator.text,wpm:P(s.wpm,H.min,H.max,t.generator.wpm,1),tone:P(s.tone,E.min,E.max,t.generator.tone,1),volume:P(s.volume,0,1,t.generator.volume),hear:he(s.hear,t.generator.hear),feed:he(s.feed,t.generator.feed),loop:he(s.loop,t.generator.loop),noise:P(s.noise,0,1,t.generator.noise)}}}var X=class{ctx;input;processor;mic=null;micSource=null;noise=null;noiseGain;constructor(e){this.ctx=new AudioContext({latencyHint:"interactive"}),this.input=this.ctx.createGain(),this.processor=this.ctx.createScriptProcessor(2048,1,1),this.processor.onaudioprocess=n=>e(n.inputBuffer.getChannelData(0)),this.input.connect(this.processor);let t=this.ctx.createGain();t.gain.value=0,this.processor.connect(t).connect(this.ctx.destination),this.noiseGain=this.ctx.createGain(),this.noiseGain.gain.value=0,this.noiseGain.connect(this.input)}get sampleRate(){return this.ctx.sampleRate}get micOn(){return this.mic!==null}async resume(){this.ctx.state==="suspended"&&await this.ctx.resume()}async startMic(){if(this.mic)return null;if(!navigator.mediaDevices?.getUserMedia)return"insecure";try{let e=await navigator.mediaDevices.getUserMedia({audio:{echoCancellation:!1,noiseSuppression:!1,autoGainControl:!1}});return this.mic=e,this.micSource=this.ctx.createMediaStreamSource(e),this.micSource.connect(this.input),await this.resume(),null}catch(e){let t=e instanceof DOMException?e.name:"";return t==="NotAllowedError"||t==="SecurityError"?"denied":t==="NotFoundError"||t==="OverconstrainedError"?"missing":"failed"}}stopMic(){this.micSource?.disconnect();for(let e of this.mic?.getTracks()??[])e.stop();this.mic=null,this.micSource=null}setNoise(e){if(e>0&&!this.noise){let n=this.ctx.createBuffer(1,this.ctx.sampleRate*2,this.ctx.sampleRate),r=n.getChannelData(0);for(let s=0;s<r.length;s++)r[s]=Math.random()*2-1;this.noise=this.ctx.createBufferSource(),this.noise.buffer=n,this.noise.loop=!0,this.noise.connect(this.noiseGain),this.noise.start()}this.noiseGain.gain.setTargetAtTime(e*e*.6,this.ctx.currentTime,.05)}};function d(i){let e=document.getElementById(i);if(!e)throw new Error(`#${i} is missing from the page`);return e}function v(i,e){let t=i.querySelector(e);if(!t)throw new Error(`${e} is missing`);return t}var _e=0;function k(i,e="info"){let t=d("toast");t.textContent=i,t.classList.toggle("is-error",e==="error"),t.hidden=!1,clearTimeout(_e),_e=window.setTimeout(()=>{t.hidden=!0},e==="error"?6e3:2600)}function R(i,e,t){i.replaceChildren(...e.map(([n,r])=>{let s=document.createElement("option");return s.value=n,s.textContent=r,s.selected=n===t,s}))}var Ht=["A","B"],Pt=30,It=i=>i.replaceAll(".","·").replaceAll("-","−"),Y=class{slot;element;frequency;language;led;wpm;meter;meterFill;snr;body;out;symbol;empty;channel=null;shown={revision:-1,language:"",channel:null,symbol:""};text="";constructor(e,t,n,r){this.slot=e;let o=document.getElementById("decoder-template").content.firstElementChild?.cloneNode(!0);if(!(o instanceof HTMLElement))throw new Error("The decoder template is empty");this.element=o,o.dataset.slot=String(e),t.append(o),G(o);let a=v(o,".decoder-badge");a.textContent=Ht[e]??String(e),a.addEventListener("click",()=>r.onActivate(e)),this.frequency=v(o,".decoder-freq-input"),this.frequency.min="50",this.frequency.max="8000",this.language=v(o,".decoder-lang"),this.language.value=n,this.led=v(o,".decoder-led"),this.wpm=v(o,".decoder-wpm"),this.meter=v(o,".decoder-meter"),this.meterFill=v(o,".decoder-meter-fill"),this.snr=v(o,".decoder-snr"),this.body=v(o,".decoder-body"),this.out=v(o,".decoder-out"),this.symbol=v(o,".decoder-symbol"),this.empty=v(o,".decoder-empty"),this.language.addEventListener("change",()=>r.onLanguage(e,this.language.value==="ru"?"ru":"en")),this.frequency.addEventListener("change",()=>{let l=Number(this.frequency.value);Number.isFinite(l)&&l>=50&&l<=8e3?r.onFrequency(e,l):this.channel&&(this.frequency.value=String(Math.round(this.channel.frequency)))}),v(o,".decoder-copy").addEventListener("click",()=>void this.copy()),v(o,".decoder-clear").addEventListener("click",()=>r.onClear(e)),v(o,".decoder-off").addEventListener("click",()=>r.onOff(e)),o.addEventListener("pointerdown",()=>r.onActivate(e)),this.update(null,n,e===0)}async copy(){let e=this.text.trim();if(!e){k(u("decoder","Nothing decoded yet"));return}try{await navigator.clipboard.writeText(e),k(D("decoder","{count} character copied","{count} characters copied",[...e].length))}catch{k(u("decoder","The browser did not allow copying"),"error")}}update(e,t,n){if(this.channel=e,this.element.classList.toggle("is-active",n),this.element.classList.toggle("is-off",!e),this.language.value!==t&&(this.language.value=t),!e){this.led.classList.remove("is-on"),(this.shown.channel!==null||this.shown.language!==`${t}|off`)&&(this.out.textContent="",this.symbol.textContent="",this.text="",this.frequency.value="",this.shown={revision:-1,language:`${t}|off`,channel:null,symbol:""}),this.empty.hidden=!1,this.empty.textContent=this.slot===0?u("decoder","Click a signal on the waterfall to decode it."):u("decoder","For a second signal: Shift-click it, or pick B above and click.");return}let{decoder:r,detector:s}=e;if(document.activeElement!==this.frequency){let c=String(Math.round(e.frequency));this.frequency.value!==c&&(this.frequency.value=c)}this.led.classList.toggle("is-on",s.down),this.wpm.textContent=r.locked?u("decoder","{wpm} WPM",{wpm:Math.round(r.wpm)}):u("decoder","— WPM");let o=s.snr;this.meterFill.style.width=`${Math.min(100,o/Pt*100)}%`,this.meter.classList.toggle("is-closed",!s.open),this.snr.textContent=u("decoder","{db} dB",{db:o>60?"60+":Math.round(o)});let a=It(r.symbol),l=r.revision!==this.shown.revision||t!==this.shown.language||e!==this.shown.channel;if(!l&&a===this.shown.symbol)return;let h=this.body.scrollHeight-this.body.scrollTop-this.body.clientHeight<24;l&&(this.text=e.text(t),this.out.textContent=this.text),this.symbol.textContent=a,this.shown={revision:r.revision,language:t,channel:e,symbol:a},this.empty.hidden=!!(this.text||a),this.empty.textContent=u("decoder","Listening…"),h&&(this.body.scrollTop=this.body.scrollHeight)}retranslate(){this.shown.language=""}};var De=5;var Ge=32,Ve=Float32Array.from({length:Ge},(i,e)=>.5-.5*Math.cos(Math.PI*e/(Ge-1))),Rt=Ve.slice().reverse(),me=class{text;engine;osc;envelope;volume;segments;round;loop;started;next;timer=0;hear=!1;feed=!1;ended=!1;constructor(e,t,n,r){this.engine=e,this.text=t;let{ctx:s}=e;this.segments=V(t,n.wpm);let o=1.2/n.wpm;this.round=this.segments.reduce((a,{ms:l})=>a+l,0)/1e3+7*o,this.loop=n.loop,this.osc=s.createOscillator(),this.osc.frequency.value=n.tone,this.envelope=s.createGain(),this.envelope.gain.value=0,this.volume=s.createGain(),this.volume.gain.value=n.volume,this.osc.connect(this.envelope).connect(this.volume),this.route(n.hear,n.feed),this.started=s.currentTime+.08,this.next=this.started,this.schedule(),this.loop&&this.scheduleAhead(),this.osc.start(this.started),this.osc.onended=()=>{this.ended=!0,this.osc.disconnect(),this.volume.disconnect(),r(this)},this.loop?this.timer=window.setInterval(()=>this.scheduleAhead(),250):this.osc.stop(this.next)}scheduleAhead(){for(;this.engine.ctx.currentTime>this.next-1.5;)this.schedule()}schedule(){let e=this.envelope.gain,t=De/1e3,n=this.next;for(let{on:r,ms:s}of this.segments){let o=s/1e3;r&&(e.setValueCurveAtTime(Ve,n,t),e.setValueCurveAtTime(Rt,n+o-t,t)),n+=o}this.next+=this.round}route(e,t){e!==this.hear&&(e?this.volume.connect(this.engine.ctx.destination):this.volume.disconnect(this.engine.ctx.destination),this.hear=e),t!==this.feed&&(t?this.volume.connect(this.engine.input):this.volume.disconnect(this.engine.input),this.feed=t)}setVolume(e){this.volume.gain.setTargetAtTime(e,this.engine.ctx.currentTime,.02)}stop(){if(this.ended)return;clearInterval(this.timer);let e=this.engine.ctx.currentTime,t=this.envelope.gain;t.cancelScheduledValues(e),t.setTargetAtTime(0,e,.004),this.osc.stop(e+.05)}position(){let e=(this.engine.ctx.currentTime-this.started)*1e3;if(e<0)return-1;e%=this.round*1e3;for(let{ms:t,index:n}of this.segments){if(e<t)return n;e-=t}return-1}},J=class{settings;getEngine;onChange;text=d("gen-text");code=d("gen-code");wpm=d("gen-wpm");wpmValue=d("gen-wpm-value");tone=d("gen-tone");volume=d("gen-volume");volumeValue=d("gen-volume-value");noise=d("gen-noise");noiseValue=d("gen-noise-value");hear=d("gen-hear");feed=d("gen-feed");loop=d("gen-loop");play=d("gen-play");stop=d("gen-stop");status=d("gen-status");transmissions=[];chars=[];active=-1;engine=null;constructor(e,t,n){this.settings=e,this.getEngine=t,this.onChange=n,this.text.maxLength=ue,this.text.value=e.text,this.wpm.min=String(H.min),this.wpm.max=String(H.max),this.wpm.value=String(e.wpm),this.tone.min=String(E.min),this.tone.max=String(E.max),this.tone.value=String(e.tone),this.volume.value=String(e.volume),this.noise.value=String(e.noise),this.hear.checked=e.hear,this.feed.checked=e.feed,this.loop.checked=e.loop,this.text.addEventListener("input",()=>{e.text=this.text.value,this.renderCode(),n()}),this.wpm.addEventListener("input",()=>{e.wpm=Number(this.wpm.value),this.renderValues(),n()}),this.tone.addEventListener("change",()=>{let r=Math.round(Number(this.tone.value));e.tone=Number.isFinite(r)?Math.min(E.max,Math.max(E.min,r)):E.default,this.tone.value=String(e.tone),n()}),this.volume.addEventListener("input",()=>{e.volume=Number(this.volume.value);for(let r of this.transmissions)r.setVolume(e.volume);this.renderValues(),n()}),this.noise.addEventListener("input",()=>{e.noise=Number(this.noise.value),this.renderValues(),this.engine?this.engine.setNoise(e.noise):e.noise>0&&this.getEngine().then(r=>r.setNoise(e.noise)),n()});for(let r of[this.hear,this.feed])r.addEventListener("change",()=>{e.hear=this.hear.checked,e.feed=this.feed.checked;for(let s of this.transmissions)s.route(e.hear,e.feed);n()});this.loop.addEventListener("change",()=>{e.loop=this.loop.checked,n()}),this.play.addEventListener("click",()=>void this.start()),this.stop.addEventListener("click",()=>this.stopAll()),this.renderValues(),this.renderCode(),this.renderStatus()}async start(){let e=this.text.value;if(!V(e,this.settings.wpm).length){k(u("generator","Type something to send: Latin or Cyrillic letters, digits, punctuation"));return}if(!this.settings.hear&&!this.settings.feed){k(u("generator","Turn on the speakers or the decoder: otherwise it plays to no one"));return}let t=await this.getEngine();this.engine=t;let n=new me(t,e,this.settings,r=>{this.transmissions=this.transmissions.filter(s=>s!==r),this.renderStatus()});this.transmissions.push(n),this.renderStatus()}stopAll(){for(let e of this.transmissions)e.stop()}renderValues(){this.wpmValue.value=u("generator","{wpm} WPM",{wpm:this.settings.wpm}),this.volumeValue.value=`${Math.round(this.settings.volume*100)}%`,this.noiseValue.value=`${Math.round(this.settings.noise*100)}%`}renderStatus(){let e=this.transmissions.length;this.stop.disabled=e===0,this.status.textContent=e?D("generator","{count} transmission on the air","{count} transmissions on the air",e):""}renderCode(){this.active=-1,this.chars=[];let e=ae(this.text.value).map(({index:t,char:n,code:r})=>{let s=document.createElement("span");if(s.className="gen-char",n===" ")s.classList.add("is-space");else{r||(s.classList.add("is-unknown"),s.title=u("generator","Morse has no code for this character: it is skipped"));let o=document.createElement("b");o.textContent=n;let a=document.createElement("i");a.textContent=r?r.replaceAll(".","·").replaceAll("-","−"):"∅",s.append(o,a)}return this.chars[t]=s,s});this.code.replaceChildren(...e)}tick(){let e=[...this.transmissions].reverse().find(n=>n.text===this.text.value),t=e?e.position():-1;t!==this.active&&(this.chars[this.active]?.classList.remove("is-active"),this.chars[t]?.classList.add("is-active"),this.active=t)}retranslate(){this.renderValues(),this.renderStatus(),this.renderCode()}};var We=42,qt=50,Ot=60,Ut=["A","B"];function Bt(){let i=[[0,4,8,22],[.25,12,40,110],[.5,30,140,210],[.7,110,225,200],[.86,255,222,90],[1,255,255,255]],e=new Uint8ClampedArray(256*4);for(let t=0;t<256;t++){let n=t/255,r=i.findIndex(([c])=>c>=n),[s,...o]=i[Math.max(0,r-1)],[a,...l]=i[Math.max(0,r)],h=a===s?0:(n-s)/(a-s);for(let c=0;c<3;c++)e[t*4+c]=o[c]+(l[c]-o[c])*h;e[t*4+3]=255}return e}var Z=class{root=d("scope");spectrum=d("spectrum");waterfall=d("waterfall");markersBox=d("markers");cursor=d("cursor");cursorLabel=d("cursor-label");empty=d("scope-empty");lut=Bt();receiver=null;span;queue=[];floor=Number.NaN;noiseFloor=Number.NaN;strongest=Number.NaN;from=new Int32Array(0);to=new Int32Array(0);at=new Float32Array(0);pixels=new Float32Array(0);sorted=new Float32Array(0);row=null;dirty=!0;markers=[];colors={grid:"",text:"",line:""};constructor(e,t){this.span=e,new ResizeObserver(()=>this.resize()).observe(this.root),this.root.addEventListener("pointermove",n=>this.hover(n)),this.root.addEventListener("pointerleave",()=>{this.cursor.hidden=!0}),this.root.addEventListener("click",n=>t(this.frequencyAt(n.clientX),n.shiftKey)),this.root.addEventListener("contextmenu",n=>{n.preventDefault(),t(this.frequencyAt(n.clientX),!0)}),this.readColors()}attach(e){this.receiver=e,e.onFrame=t=>{this.queue.push(t.slice()),this.queue.length>Ot&&this.queue.shift()},this.mapPixels()}setSpan(e){this.span=e,this.mapPixels(),this.clearWaterfall(),this.dirty=!0,this.placeMarkers()}setMarkers(e){e.length===this.markers.length&&e.every((n,r)=>{let s=this.markers[r];return s&&s.slot===n.slot&&Math.abs(s.frequency-n.frequency)<.5&&s.bandwidth===n.bandwidth})||(this.markers=e,this.placeMarkers())}readColors(){let e=getComputedStyle(document.documentElement);this.colors={grid:e.getPropertyValue("--scope-grid").trim(),text:e.getPropertyValue("--scope-text").trim(),line:e.getPropertyValue("--scope-line").trim()},this.dirty=!0}frequencyAt(e){let t=this.root.getBoundingClientRect(),n=Math.min(1,Math.max(0,(e-t.left)/t.width)),[r,s]=this.span;return r+n*(s-r)}draw(){if(!this.receiver)return;let e=this.queue;this.queue=[],e.length&&(this.empty.hidden=!0,this.drawRows(e),this.dirty=!0),this.dirty&&(this.drawSpectrum(),this.dirty=!1)}resize(){let e=Math.min(2,window.devicePixelRatio||1);for(let t of[this.spectrum,this.waterfall]){let n=Math.max(1,Math.round(t.clientWidth*e)),r=Math.max(1,Math.round(t.clientHeight*e));(t.width!==n||t.height!==r)&&(t.width=n,t.height=r)}this.mapPixels(),this.clearWaterfall(),this.dirty=!0}clearWaterfall(){let e=this.waterfall.getContext("2d");e&&(e.fillStyle="rgb(4, 8, 22)",e.fillRect(0,0,this.waterfall.width,this.waterfall.height))}mapPixels(){let e=this.waterfall.width,t=this.receiver?.binHz??1,n=(this.receiver?.fftSize??2)/2,[r,s]=this.span,o=(s-r)/e;this.from=new Int32Array(e),this.to=new Int32Array(e),this.at=new Float32Array(e);for(let a=0;a<e;a++){let l=r+a*o,h=l+o;this.from[a]=Math.min(n-1,Math.max(0,Math.floor(l/t))),this.to[a]=Math.min(n-1,Math.max(0,Math.floor(h/t))),this.at[a]=Math.min(n-1.001,Math.max(0,(l+o/2)/t))}this.pixels=new Float32Array(e),this.sorted=new Float32Array(e),this.row=null}sample(e,t){for(let n=0;n<t.length;n++){let r=this.from[n],s=this.to[n];if(s>r){let o=-1/0;for(let a=r;a<=s;a++)o=Math.max(o,e[a]);t[n]=o}else{let o=this.at[n],a=Math.floor(o),l=o-a;t[n]=e[a]*(1-l)+e[a+1]*l}}}drawRows(e){let t=this.waterfall.getContext("2d");if(!t)return;let{width:n,height:r}=this.waterfall;(!this.row||this.row.width!==n)&&(this.row=t.createImageData(n,1));let s=Math.min(e.length,r);t.drawImage(this.waterfall,0,0,n,r-s,0,s,n,r-s),e.slice(-s).forEach((o,a)=>{this.sample(o,this.pixels),this.updateFloor();let l=this.row.data;for(let h=0;h<n;h++){let c=(this.pixels[h]-this.floor)/We,p=Math.max(0,Math.min(255,Math.round(c*255)))*4;l[h*4]=this.lut[p],l[h*4+1]=this.lut[p+1],l[h*4+2]=this.lut[p+2],l[h*4+3]=255}t.putImageData(this.row,0,s-1-a)})}updateFloor(){this.sorted.set(this.pixels),this.sorted.sort();let e=this.sorted[this.sorted.length-1];this.strongest=Number.isNaN(this.strongest)?e:Math.max(e,this.strongest-.3);let t=Math.max(this.sorted[Math.floor(this.sorted.length*.3)],-130);this.noiseFloor=Number.isNaN(this.noiseFloor)?t:this.noiseFloor+(t-this.noiseFloor)*.05,this.floor=Math.max(this.noiseFloor,this.strongest-qt)}gridStep(){let[e,t]=this.span,n=(t-e)/Math.max(1,this.spectrum.clientWidth);return[50,100,200,250,500,1e3,2e3].find(r=>r/n>=70)??2e3}drawSpectrum(){let e=this.spectrum.getContext("2d");if(!e)return;let{width:t,height:n}=this.spectrum,r=t/Math.max(1,this.spectrum.clientWidth);e.clearRect(0,0,t,n);let[s,o]=this.span,a=g=>(g-s)/(o-s)*t,l=this.gridStep();e.strokeStyle=this.colors.grid,e.fillStyle=this.colors.text,e.lineWidth=1,e.font=`${11*r}px ui-monospace, Menlo, monospace`,e.textBaseline="bottom";for(let g=Math.ceil(s/l)*l;g<=o;g+=l){let b=Math.round(a(g))+.5;e.beginPath(),e.moveTo(b,0),e.lineTo(b,n),e.stroke();let N=g>=1e3&&l>=500?`${g/1e3}k`:String(g);e.fillText(N,b+4*r,n-3*r)}if(!this.receiver||Number.isNaN(this.floor))return;let h=new Float32Array(this.from.length);this.sample(this.receiver.average,h);let c=t/Math.max(1,h.length),p=6*r,w=n-16*r,x=g=>w-Math.max(0,Math.min(1,(g-this.floor+4)/(We+6)))*(w-p);e.beginPath(),e.moveTo(0,w);for(let g=0;g<h.length;g++)e.lineTo(g*c,x(h[g]));e.lineTo(t,w),e.closePath();let f=e.createLinearGradient(0,p,0,w);f.addColorStop(0,"rgba(143, 211, 255, 0.45)"),f.addColorStop(1,"rgba(143, 211, 255, 0.02)"),e.fillStyle=f,e.fill(),e.beginPath();for(let g=0;g<h.length;g++){let b=x(h[g]);g?e.lineTo(g*c,b):e.moveTo(0,b)}e.strokeStyle=this.colors.line,e.lineWidth=1.2*r,e.stroke()}placeMarkers(){let[e,t]=this.span,n=r=>`${(r-e)/(t-e)*100}%`;this.markersBox.replaceChildren(...this.markers.filter(({frequency:r})=>r>=e&&r<=t).map(({slot:r,frequency:s,bandwidth:o})=>{let a=document.createElement("div");a.className="marker",a.dataset.slot=String(r),a.style.left=n(s-o/2),a.style.width=`${o/(t-e)*100}%`;let l=document.createElement("span");return l.className="marker-label",l.textContent=`${Ut[r]??r} ${Math.round(s)}`,a.append(l),a}))}hover(e){if(e.pointerType==="touch")return;let t=this.root.getBoundingClientRect(),n=e.clientX-t.left;this.cursor.hidden=!1,this.cursor.style.left=`${n}px`,this.cursor.classList.toggle("is-flipped",n>t.width-90),this.cursorLabel.textContent=u("receiver","{hz} Hz",{hz:Math.round(this.frequencyAt(e.clientX))})}};var ge=document.querySelector('meta[name="service-worker"]')?.content,ze=!!ge&&"serviceWorker"in navigator,y=null,S={kind:"idle"},fe=()=>{},$e=!1,ee=Date.now(),_t=360*60*1e3,je="morse-decoder-version",Ke=()=>S,Qe=()=>y!==null;function te(i){S=i,fe(S)}function Xe(i){if(!ze||!ge)return;fe=i;let e=async()=>{try{y=await navigator.serviceWorker.register(ge)}catch{return}fe(S);let t=y.waiting??y.installing;t&&y.active&&ve(t).then(n=>n?ye(t):void 0),y.addEventListener("updatefound",()=>{let n=y?.installing;n&&y?.active&&ve(n).then(r=>r?ye(n):void 0)})};document.readyState==="complete"?e():addEventListener("load",()=>void e(),{once:!0}),navigator.serviceWorker.addEventListener("controllerchange",()=>{$e&&location.reload()}),document.addEventListener("visibilitychange",pe),addEventListener("online",pe),window.setInterval(pe,3600*1e3)}function pe(){!y||!navigator.onLine||S.kind==="checking"||S.kind==="ready"||Date.now()-ee<_t||(ee=Date.now(),y.update().catch(()=>ee=0))}function Ye(){if(!ze)return!1;try{let i=localStorage.getItem(je);return localStorage.setItem(je,"0.1.0"),i!==null&&i!=="0.1.0"}catch{return!1}}async function Je(){if(!y||S.kind==="checking"||S.kind==="ready")return;te({kind:"checking"}),ee=Date.now();try{await y.update()}catch{te({kind:"offline"});return}let i=y.installing??y.waiting;i&&y.active&&await ve(i)?await ye(i):te({kind:"latest"})}function be(){let i=y?.waiting;if(!i){location.reload();return}$e=!0,i.postMessage("activate"),window.setTimeout(()=>location.reload(),5e3)}function ve(i){return new Promise(e=>{let t=()=>i.state==="installing"?!1:(e(i.state!=="redundant"),!0);t()||i.addEventListener("statechange",function n(){t()&&i.removeEventListener("statechange",n)})})}async function ye(i){te({kind:"ready",version:await Dt(i)})}function Dt(i){return new Promise(e=>{let t=new MessageChannel,n=window.setTimeout(()=>e(null),2e3);t.port1.onmessage=r=>{window.clearTimeout(n),e(typeof r.data=="string"?r.data:null)},i.postMessage("version",[t.port2])})}var st=2;function Gt(){let i=null;try{i=localStorage.getItem(de)}catch{i=null}return Be(i,ie()==="ru"?"ru":"en")}var m=Gt(),Ze=0;function A(){clearTimeout(Ze),Ze=window.setTimeout(()=>{try{localStorage.setItem(de,JSON.stringify(m))}catch{}},300)}var ot=window.matchMedia("(prefers-color-scheme: dark)");function Me(){let i=m.theme==="dark"||m.theme==="system"&&ot.matches;document.documentElement.dataset.theme=i?"dark":"light",U.readColors()}function at(){He(m.language==="system"?ie():m.language),G(),R(d("ui-language"),[["system",u("settings","As in the system")],...Object.entries(_)],m.language),R(d("theme"),[["system",u("settings","As in the system")],["light",u("settings","Light")],["dark",u("settings","Dark")]],m.theme),R(d("bandwidth"),Q.map(i=>[String(i),u("receiver","{hz} Hz",{hz:i})]),String(m.bandwidth)),R(d("span"),[["cw",u("receiver","200–1400 Hz")],["voice",u("receiver","0–3 kHz")],["wide",u("receiver","0–6 kHz")]],m.span),ht(),ct();for(let i of mt)i.retranslate();pt.retranslate(),gt(),L()}var T=null,M=null;async function xe(){return T||(T=new X(i=>M?.push(i)),M=new K({sampleRate:T.sampleRate,bandwidth:m.bandwidth,squelch:m.squelch}),U.attach(M),m.generator.noise>0&&T.setNoise(m.generator.noise)),await T.resume(),T}var q=0,U=new Z(I[m.span],(i,e)=>{let t=e?(q+1)%st:q;lt(t,i,!0)});async function lt(i,e,t){if(await xe(),!M)return;let n=t?M.snap(e,Math.max(m.bandwidth,3*M.binHz)):e;M.tune(i,Math.round(n)),L()}function ct(){let i=T?.micOn??!1;d("mic").setAttribute("aria-pressed",String(i)),d("mic-label").textContent=i?u("receiver","Stop microphone"):u("receiver","Start microphone")}var Vt={denied:()=>u("receiver","The browser was not allowed to use the microphone. Allow it in the site settings and try again."),missing:()=>u("receiver","No microphone found"),insecure:()=>u("receiver","The microphone works only on https:// or in a file opened from the disk"),failed:()=>u("receiver","The microphone could not be started")};d("mic").addEventListener("click",async()=>{let i=await xe();if(i.micOn)i.stopMic();else{let e=await i.startMic();e&&k(Vt[e](),"error")}ct()});var et=d("bandwidth");et.addEventListener("change",()=>{m.bandwidth=Q.find(i=>String(i)===et.value)??100,M?.configure({bandwidth:m.bandwidth}),A(),L()});var we=d("span");we.addEventListener("change",()=>{m.span=Object.hasOwn(I,we.value)?we.value:"cw",U.setSpan(I[m.span]),A()});var O=d("squelch");O.min=String(F.min);O.max=String(F.max);O.value=String(m.squelch);function ht(){d("squelch-value").value=u("decoder","{db} dB",{db:m.squelch})}O.addEventListener("input",()=>{m.squelch=Number(O.value),M?.configure({squelch:m.squelch}),ht(),A()});var dt=Array.from(document.querySelectorAll("[data-pick]"));function ut(i){q=i;for(let e of dt)e.setAttribute("aria-checked",String(e.dataset.pick===String(i)));L()}for(let i of dt)i.addEventListener("click",()=>ut(Number(i.dataset.pick)));var mt=Array.from({length:st},(i,e)=>new Y(e,d("decoders"),m.decoders[e]??"en",{onLanguage(t,n){m.decoders[t]=n,A(),L()},onFrequency(t,n){lt(t,n,!1)},onOff(t){M?.off(t),L()},onActivate(t){t!==q&&ut(t)},onClear(t){M?.channels[t]?.decoder.clear(),L()}}));function L(){let i=M?.channels??[];mt.forEach((e,t)=>e.update(i[t]??null,m.decoders[t]??"en",t===q)),U.setMarkers(i.flatMap((e,t)=>e?[{slot:t,frequency:e.frequency,bandwidth:m.bandwidth}]:[]))}var pt=new J(m.generator,xe,A),tt=d("ui-language");tt.addEventListener("change",()=>{let i=tt.value;m.language=i==="system"||Object.hasOwn(_,i)?i:"system",A(),at()});var nt=d("theme");nt.addEventListener("change",()=>{let i=nt.value;m.theme=["system","light","dark"].includes(i)?i:"system",A(),Me()});ot.addEventListener("change",Me);function rt(i,e){let t=document.createElement("button");return t.type="button",t.className="link-button",t.textContent=i,t.addEventListener("click",e),t}function gt(){let i=Ke(),e=d("update-ready");e.hidden=i.kind!=="ready",i.kind==="ready"&&(e.textContent=i.version?u("update","Update to version {version}",{version:i.version}):u("update","Update"));let t=d("update");if(t.hidden=d("update-dot").hidden=!Qe(),t.hidden)return;let n=()=>rt(u("update","Check for updates"),()=>void Je()),r;switch(i.kind){case"idle":r=[n()];break;case"checking":r=[u("update","Checking for updates…")];break;case"latest":r=[u("update","This is the latest version.")];break;case"offline":r=[u("update","No connection: could not check for updates.")," ",n()];break;case"ready":r=[i.version?u("update","Version {version} is ready.",{version:i.version}):u("update","A new version is ready.")," ",rt(u("update","Update"),be)];break}t.replaceChildren(...r)}d("update-ready").addEventListener("click",be);d("version").textContent="0.1.0";Me();at();Xe(gt);Ye()&&k(u("update","Updated to version {version}.",{version:"0.1.0"}));var it=0;function ft(i){U.draw(),pt.tick(),i-it>100&&(it=i,L()),requestAnimationFrame(ft)}requestAnimationFrame(ft);})();
+</script>
+</body>
+</html>

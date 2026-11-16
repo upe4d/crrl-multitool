@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- The title and icon placeholders are filled from the lesson's lesson.json, the double-brace keys from
+     strings.json in the lesson's language (build_scripts/build.mjs) -->
+<title>Ділення дробів</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>➗</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<link rel="manifest" href="../../manifest.webmanifest">
+<meta name="theme-color" content="#d7f0ff">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<meta name="apple-mobile-web-app-title" content="Весела школа">
+<script>
+  if ("serviceWorker" in navigator) addEventListener("load", () => navigator.serviceWorker.register("../../sw.js").catch(() => {}));
+</script>
+</head>
+<body>
+<header>
+  <nav id="levels" class="levels" aria-label="Рівні"></nav>
+  <div class="score" aria-label="Рахунок">
+    <span class="chip" title="Приклад із раунду"><span id="progress">0 / 0</span></span>
+    <span class="chip ok" title="Правильних відповідей">✅ <span id="right">0</span></span>
+    <span class="chip bad" title="Помилок і пропущених">❌ <span id="wrong">0</span></span>
+    <span class="chip" title="Середній час правильної відповіді">⏱ <span id="avg">—</span></span>
+  </div>
+</header>
+
+<main>
+  <section id="paper" class="paper" aria-live="polite"></section>
+  <div class="timer" aria-hidden="true"><div id="timer-fill" class="timer-fill"></div></div>
+  <p id="message" role="status"></p>
+  <section id="options" class="options" aria-label="Відповіді"></section>
+</main>
+
+<div id="overlay" class="overlay" hidden>
+  <div class="card" role="dialog" aria-modal="true" aria-labelledby="overlay-title">
+    <div id="overlay-icon" class="card-icon"></div>
+    <h2 id="overlay-title"></h2>
+    <div id="overlay-stars" class="stars big" aria-hidden="true"></div>
+    <p id="overlay-text"></p>
+    <div class="card-buttons">
+      <button id="overlay-again" class="btn">Ще раз</button>
+      <button id="overlay-btn" class="btn primary"></button>
+    </div>
+  </div>
+</div>
+
+<div id="confetti" class="confetti" aria-hidden="true"></div>
+
+<!-- Classic scripts, not modules: this way the drill also opens by double-click, without a server -->
+<script src="data.js"></script>
+<script src="main.js"></script>
+
+<a class="home-button" href="../" title="Усі уроки" aria-label="Усі уроки"><span aria-hidden="true">🏠</span><span class="home-button-text">Усі уроки</span></a>
+<style>
+  .home-button {
+    position: fixed;
+    z-index: 5;
+    bottom: calc(14px + env(safe-area-inset-bottom));
+    left: calc(12px + env(safe-area-inset-left));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-width: 48px;
+    height: 48px;
+    padding: 0 16px 0 10px;
+    border-radius: 999px;
+    background: #fff;
+    border: 3px solid #eadfcd;
+    box-shadow: 0 3px 0 #eadfcd;
+    color: #3d2b2f;
+    font: 800 17px "Nunito", system-ui, sans-serif;
+    line-height: 1;
+    text-decoration: none;
+    transition: transform 0.1s;
+  }
+  .home-button span:first-child { font-size: 22px; }
+  .home-button:hover { transform: translateY(-2px); }
+  .home-button:active { transform: translateY(2px); box-shadow: 0 1px 0 #eadfcd; }
+  @media (max-width: 700px) {
+    .home-button { width: 48px; padding: 0; }
+    .home-button-text { display: none; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .home-button { transition: none; }
+  }
+</style>
+</body>
+</html>

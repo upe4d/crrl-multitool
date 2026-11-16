@@ -1,0 +1,27 @@
+/* Журнал открывается поверх страницы, прокручивается отдельно и не меняет её ширину. */
+.pwa-controls .updates-trigger{color:#d7e9ce}
+.updates-icon{position:relative;display:inline-flex}
+.updates-trigger.has-unread .updates-icon:after{content:"";position:absolute;right:-2px;top:-2px;width:7px;height:7px;background:#c7f778;border-radius:50%;box-shadow:0 0 0 3px #c7f77825;animation:updates-pulse 1.8s ease-in-out infinite}
+@keyframes updates-pulse{50%{box-shadow:0 0 0 7px #c7f77808,0 0 12px #c7f778a0}}
+.updates-dialog{box-sizing:border-box;width:min(650px,calc(100vw - 28px));max-width:none;max-height:min(720px,calc(100dvh - 28px));padding:0;border:1px solid #435147;border-radius:18px;background:#121815;color:#edf3eb;box-shadow:0 24px 80px #000a;font:15px/1.5 "Segoe UI",Arial,sans-serif;overflow:hidden}
+.updates-dialog::backdrop{background:#020705bd}
+.updates-dialog[open]{display:flex;flex-direction:column}
+.updates-head{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;padding:25px 28px 21px;border-bottom:1px solid #344139}
+.updates-kicker{color:#b9e877;font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase}
+.updates-head h2{margin:6px 0 2px;font-size:28px;line-height:1.15;letter-spacing:-.03em;text-wrap:balance}
+.updates-head p{margin:0;color:#a4b2a8;font-size:13px}
+.updates-close{flex:none;width:38px;height:38px;border:1px solid #425247;border-radius:10px;color:#d8e6d6;background:#1b2720;font-family:inherit;font-size:24px;line-height:1;cursor:pointer}
+.updates-close:hover{background:#2a3b2e}
+.updates-dialog :focus-visible{outline:2px solid #baf66b;outline-offset:3px}
+.updates-body{overflow:auto;overscroll-behavior:contain;scrollbar-gutter:stable;min-height:0;padding:8px 28px 25px}
+.updates-date{position:sticky;top:0;z-index:1;margin:0;padding:17px 0 9px;background:#121815;color:#9dae9f;font-size:12px;font-weight:700;letter-spacing:.06em}
+.updates-item{display:grid;grid-template-columns:12px minmax(0,1fr);gap:12px;padding:14px 0 17px;border-bottom:1px solid #29372e}
+.updates-item:before{content:"";width:7px;height:7px;margin-top:8px;border-radius:50%;background:#baf66b;box-shadow:0 0 0 4px #baf66b16}
+.updates-section{color:#b9e877;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.updates-item h3{margin:3px 0 3px;font-size:16px;line-height:1.3}
+.updates-item p{margin:0;color:#b1beb4;font-size:14px;line-height:1.5}
+.updates-item a{display:inline-block;margin-top:7px;color:#d2f9a3;text-decoration:none;font-size:13px;font-weight:600}
+.updates-item a:hover{text-decoration:underline}
+.updates-state{margin:18px 0;color:#b1beb4}
+@media(max-width:600px){.updates-head{padding:20px 20px 16px}.updates-head h2{font-size:24px}.updates-body{padding:4px 20px 20px}.updates-dialog{max-height:calc(100dvh - 20px)}}
+@media(prefers-reduced-motion:reduce){.updates-trigger.has-unread .updates-icon:after{animation:none}}

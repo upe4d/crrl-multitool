@@ -1,0 +1,15 @@
+{
+  "snapshot_date": "2026-11-16",
+  "directions": 11,
+  "base_catalog_entries": 191,
+  "cheat_sheets": 216,
+  "additional_catalog_modules": 13,
+  "game_catalog_entries": 172,
+  "sources": [
+    "directions/hub.js",
+    "directions/catalog.json",
+    "reference/search.json",
+    "pwa/external-resources.json",
+    "games-catalog.json"
+  ]
+}

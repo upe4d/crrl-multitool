@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Скажи фразу англійською</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💬</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<link rel="manifest" href="../../manifest.webmanifest">
+<meta name="theme-color" content="#d7f0ff">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<meta name="apple-mobile-web-app-title" content="Весела школа">
+<script>
+  if ("serviceWorker" in navigator) addEventListener("load", () => navigator.serviceWorker.register("../../sw.js").catch(() => {}));
+</script>
+</head>
+<!-- The double-brace keys are filled by the build: title, icon and mode from the lesson, the rest from
+     strings.json in the lesson's language.
+     Set by the build: data-mode — game.json mode; data-code — its code file: speak (to-russian, to-english),
+     assemble or tenses (tenses-listen, tenses-say); data-mic — the answer is spoken. Elements marked only-<code>,
+     only-<mode> or only-mic are shown in those lessons only (style.css). -->
+<body data-mode="to-english" data-code="speak" data-mic>
+<header>
+  <nav id="topics" class="topics" aria-label="Теми"></nav>
+  <div id="score" class="score" title="Бали: скільки фраз вдалося перекласти" aria-live="polite"></div>
+</header>
+
+<main>
+  <section class="board">
+    <div id="task" class="task"></div>
+    <div id="question" class="question"></div>
+    <div id="target" class="target only-tenses-say"></div>
+    <div id="line" class="line only-assemble" aria-label="Фраза"></div>
+    <div id="answer" class="answer" hidden></div>
+    <div id="clue" class="clue only-tenses"></div>
+    <div id="heard" class="heard only-mic" aria-live="polite"></div>
+  </section>
+
+  <section class="times only-tenses-listen" aria-label="Коли?">
+    <button id="time-past" class="time time-past" title="Учора (1)">⏪<span>Учора</span></button>
+    <button id="time-now" class="time time-now" title="Зараз (2)">🟢<span>Зараз</span></button>
+    <button id="time-future" class="time time-future" title="Завтра (3)">⏩<span>Завтра</span></button>
+  </section>
+
+  <section id="bank" class="bank only-assemble" aria-label="Слова"></section>
+
+  <section class="actions">
+    <button id="listen" class="round listen" title="Послухати фразу (пробіл)">
+      <span class="round-icon" aria-hidden="true">🔊</span><span class="round-label">Послухай</span>
+    </button>
+    <button id="speak" class="round speak only-mic" title="Сказати переклад (Enter)">
+      <span class="round-icon" aria-hidden="true">🎤</span><span id="speak-label" class="round-label">Скажи</span>
+    </button>
+    <button id="hint" class="round hint-btn" title="Підказка (H)">
+      <span class="round-icon" aria-hidden="true">💡</span><span class="round-label">Підказка</span>
+    </button>
+  </section>
+
+  <p id="message" role="status"></p>
+
+  <section class="controls">
+    <button id="manual-ok" class="btn only-mic" hidden>👍 Вийшло</button>
+    <button id="next" class="btn">Інша фраза</button>
+  </section>
+
+  <p id="note" class="note only-mic" hidden></p>
+</main>
+
+<div id="overlay" class="overlay" hidden>
+  <div class="card" role="dialog" aria-modal="true" aria-labelledby="overlay-title">
+    <div id="overlay-icon" class="card-icon"></div>
+    <h2 id="overlay-title"></h2>
+    <p id="overlay-text"></p>
+    <button id="overlay-btn" class="btn primary">Далі →</button>
+  </div>
+</div>
+
+<div id="confetti" class="confetti" aria-hidden="true"></div>
+
+<!-- Classic scripts, not modules: this way the game also opens by double-click, without a server -->
+<script src="data.js"></script>
+<script src="common.js"></script>
+<script src="speak.js"></script>
+
+<a class="home-button" href="../" title="Усі уроки" aria-label="Усі уроки"><span aria-hidden="true">🏠</span><span class="home-button-text">Усі уроки</span></a>
+<style>
+  .home-button {
+    position: fixed;
+    z-index: 5;
+    bottom: calc(14px + env(safe-area-inset-bottom));
+    left: calc(12px + env(safe-area-inset-left));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-width: 48px;
+    height: 48px;
+    padding: 0 16px 0 10px;
+    border-radius: 999px;
+    background: #fff;
+    border: 3px solid #eadfcd;
+    box-shadow: 0 3px 0 #eadfcd;
+    color: #3d2b2f;
+    font: 800 17px "Nunito", system-ui, sans-serif;
+    line-height: 1;
+    text-decoration: none;
+    transition: transform 0.1s;
+  }
+  .home-button span:first-child { font-size: 22px; }
+  .home-button:hover { transform: translateY(-2px); }
+  .home-button:active { transform: translateY(2px); box-shadow: 0 1px 0 #eadfcd; }
+  @media (max-width: 700px) {
+    .home-button { width: 48px; padding: 0; }
+    .home-button-text { display: none; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .home-button { transition: none; }
+  }
+</style>
+</body>
+</html>

@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- The lesson list of one language: build_scripts/build.mjs fills __PLACEHOLDERS__ from its LANGUAGES -->
+<title>Весела школа</title>
+<meta name="description" content="Навчальні ігри та тренажери для дітей: читання, лічба й не тільки.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎒</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;800;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #3d2b2f;
+    --muted: #8b7576;
+    --sky: #d7f0ff;
+    --cream: #fff8ec;
+    --card: #ffffff;
+    --card-border: #eadfcd;
+    --accent: #ff7096;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(180deg, var(--sky) 0%, var(--cream) 50%) fixed;
+    color: var(--ink);
+    font-family: "Nunito", system-ui, sans-serif;
+    font-weight: 600;
+  }
+
+  main { max-width: 1040px; margin: 0 auto; padding: 40px 16px 64px; }
+
+  header { text-align: center; margin-bottom: 32px; }
+  h1 { font-size: clamp(36px, 7vw, 56px); font-weight: 900; margin: 0; letter-spacing: -0.5px; }
+  .lead { color: var(--muted); font-size: 18px; margin: 8px 0 0; }
+
+  /* Back to the language choice */
+  .language {
+    display: inline-block;
+    margin-top: 14px;
+    padding: 8px 16px;
+    border: 3px solid var(--card-border);
+    border-radius: 999px;
+    background: var(--card);
+    color: var(--ink);
+    font-size: 16px;
+    font-weight: 800;
+    text-decoration: none;
+  }
+  .language:hover, .language:focus-visible { border-color: var(--accent); outline: none; }
+
+  .subject { margin-top: 32px; }
+  h2 { font-size: 24px; font-weight: 900; margin: 0 0 14px; }
+
+  .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; }
+
+  .card {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr;
+    column-gap: 14px;
+    row-gap: 4px;
+    padding: 18px;
+    background: var(--card);
+    border: 3px solid var(--card-border);
+    border-radius: 20px;
+    color: inherit;
+    text-decoration: none;
+    box-shadow: 0 4px 0 var(--card-border);
+    transition: transform 0.12s, border-color 0.12s, box-shadow 0.12s;
+  }
+  .card:hover, .card:focus-visible { transform: translateY(-3px); border-color: var(--accent); box-shadow: 0 7px 0 var(--accent); outline: none; }
+  .card:active { transform: translateY(1px); box-shadow: 0 2px 0 var(--accent); }
+
+  .card-icon { grid-row: span 2; font-size: 44px; line-height: 1; }
+  .card-title { font-size: 21px; font-weight: 900; }
+  .card-text { color: var(--muted); font-size: 15px; line-height: 1.35; }
+
+  .empty { text-align: center; color: var(--muted); }
+</style>
+
+<link rel="manifest" href="../manifest.webmanifest">
+<meta name="theme-color" content="#d7f0ff">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<meta name="apple-mobile-web-app-title" content="Весела школа">
+<script>
+  if ("serviceWorker" in navigator) addEventListener("load", () => navigator.serviceWorker.register("../sw.js").catch(() => {}));
+</script>
+</head>
+<body>
+<main>
+  <header>
+    <h1>🎒 Весела школа</h1>
+    <p class="lead">Навчальні ігри та тренажери для дітей</p>
+    <a class="language" href="../">🌐 Мова</a>
+  </header>
+
+    <section class="subject">
+      <h2>Читання</h2>
+      <div class="cards">
+      <a class="card" href="read-syllables/">
+        <span class="card-icon" aria-hidden="true">🐷</span>
+        <span class="card-title">Збери слово</span>
+        <span class="card-text">Читаємо по складах: збираємо слова з казки «Три поросятка» й будуємо три будиночки.</span>
+      </a>
+      <a class="card" href="read-potter/">
+        <span class="card-icon" aria-hidden="true">🪄</span>
+        <span class="card-title">Чарівні слова</span>
+        <span class="card-text">Читаємо по складах: збираємо слова з «Гаррі Поттера» й добираємося до Гоґвортсу.</span>
+      </a>
+      <a class="card" href="read-potter-aloud/">
+        <span class="card-icon" aria-hidden="true">🎤</span>
+        <span class="card-title">Прочитай вголос</span>
+        <span class="card-text">Читаємо вголос слова з «Гаррі Поттера», розбиті на склади, — без картинки й підказки: браузер слухає і ставить зірочку.</span>
+      </a>
+      <a class="card" href="riddles/">
+        <span class="card-icon" aria-hidden="true">🦉</span>
+        <span class="card-title">Загадки</span>
+        <span class="card-text">Слухаємо загадку і збираємо відгадку по складах.</span>
+      </a>
+      <a class="card" href="read-roblox/">
+        <span class="card-icon" aria-hidden="true">🎮</span>
+        <span class="card-title">Секрети Роблокса</span>
+        <span class="card-text">Читаємо вголос короткі фрази про Роблокс — браузер слухає, а в нагороду розповідає секрет, пораду чи загадку.</span>
+      </a>
+      </div>
+    </section>
+
+    <section class="subject">
+      <h2>Математика</h2>
+      <div class="cards">
+      <a class="card" href="math-addition/">
+        <span class="card-icon" aria-hidden="true">➕</span>
+        <span class="card-title">Додавання</span>
+        <span class="card-text">4 рівні: сума до 5, до 10, через десяток і до 18. На кожен приклад — 5 секунд.</span>
+      </a>
+      <a class="card" href="math-subtraction/">
+        <span class="card-icon" aria-hidden="true">➖</span>
+        <span class="card-title">Віднімання</span>
+        <span class="card-text">Додавання навпаки, 4 рівні: від чисел до 5, до 10, через десяток і до 18. На кожен приклад — 5 секунд.</span>
+      </a>
+      <a class="card" href="math-multiplication/">
+        <span class="card-icon" aria-hidden="true">✖️</span>
+        <span class="card-title">Множення</span>
+        <span class="card-text">Таблиця множення, 4 рівні: на 0 і 1, на 2 і 5, на 3 і 4, на 6–9. На кожен приклад — 5 секунд.</span>
+      </a>
+      <a class="card" href="math-division/">
+        <span class="card-icon" aria-hidden="true">➗</span>
+        <span class="card-title">Ділення</span>
+        <span class="card-text">Таблиця множення навпаки, 4 рівні — від ділення на 1 до таблиць на 6–9. На кожен приклад — 5 секунд.</span>
+      </a>
+      <a class="card" href="math-mix/">
+        <span class="card-icon" aria-hidden="true">🎲</span>
+        <span class="card-title">Усе впереміш</span>
+        <span class="card-text">Додавання, віднімання, множення й ділення в одному раунді: 4 рівні, 20 прикладів, на кожен — 5 секунд.</span>
+      </a>
+      <a class="card" href="math-compare/">
+        <span class="card-icon" aria-hidden="true">⚖️</span>
+        <span class="card-title">Порівняння чисел</span>
+        <span class="card-text">Яке число більше? Постав знак &lt;, &gt; або =. 4 рівні: до 5, до 10, до 20 і до 100. 20 прикладів, на кожен — 5 секунд.</span>
+      </a>
+      <a class="card" href="math-equations/">
+        <span class="card-icon" aria-hidden="true">🔎</span>
+        <span class="card-title">Рівняння</span>
+        <span class="card-text">Знайди x: x + 4 = 7, 3 × x = 12 — усі чотири дії впереміш. 4 рівні, 20 прикладів, на кожен — 5 секунд.</span>
+      </a>
+      </div>
+    </section>
+
+    <section class="subject">
+      <h2>Дроби</h2>
+      <div class="cards">
+      <a class="card" href="fractions-addition/">
+        <span class="card-icon" aria-hidden="true">➕</span>
+        <span class="card-title">Додавання дробів</span>
+        <span class="card-text">Додаємо дроби: 1/5 + 2/5, 1/2 + 1/3, 2 + 3/4… 4 рівні, на кожен приклад — 10 секунд.</span>
+      </a>
+      <a class="card" href="fractions-subtraction/">
+        <span class="card-icon" aria-hidden="true">➖</span>
+        <span class="card-title">Віднімання дробів</span>
+        <span class="card-text">Віднімаємо дроби: 4/5 − 1/5, 2/3 − 1/2, 1 − 1/3… 4 рівні, на кожен приклад — 10 секунд.</span>
+      </a>
+      <a class="card" href="fractions-multiplication/">
+        <span class="card-icon" aria-hidden="true">✖️</span>
+        <span class="card-title">Множення дробів</span>
+        <span class="card-text">Множимо дроби: 2/3 × 3/4, 3 × 1/3… 2 рівні, на кожен приклад — 10 секунд.</span>
+      </a>
+      <a class="card" href="fractions-division/">
+        <span class="card-icon" aria-hidden="true">➗</span>
+        <span class="card-title">Ділення дробів</span>
+        <span class="card-text">Ділимо дроби: 1/2 ÷ 1/3, 2 ÷ 2/3… 2 рівні, на кожен приклад — 10 секунд.</span>
+      </a>
+      <a class="card" href="fractions-mix/">
+        <span class="card-icon" aria-hidden="true">🎲</span>
+        <span class="card-title">Дроби впереміш</span>
+        <span class="card-text">Додавання, віднімання, множення й ділення дробів в одному раунді. 2 рівні, на кожен приклад — 10 секунд.</span>
+      </a>
+      <a class="card" href="fractions-equations/">
+        <span class="card-icon" aria-hidden="true">🔎</span>
+        <span class="card-title">Рівняння з дробами</span>
+        <span class="card-text">Знайди x: x + 1/3 = 5/6, 2/3 × x = 1/3 — усі чотири дії впереміш. 2 рівні, на кожен приклад — 10 секунд.</span>
+      </a>
+      </div>
+    </section>
+
+    <section class="subject">
+      <h2>Англійська</h2>
+      <div class="cards">
+      <a class="card" href="english-words/">
+        <span class="card-icon" aria-hidden="true">🗣️</span>
+        <span class="card-title">Скажи англійською</span>
+        <span class="card-text">Перші 300 англійських слів: слухаємо, як звучить слово, повторюємо вголос — і отримуємо зірочку.</span>
+      </a>
+      <a class="card" href="english-pictures/">
+        <span class="card-icon" aria-hidden="true">👂</span>
+        <span class="card-title">Знайди картинку</span>
+        <span class="card-text">Слухаємо англійське слово й знаходимо його серед чотирьох картинок.</span>
+      </a>
+      <a class="card" href="english-phrases-ru/">
+        <span class="card-icon" aria-hidden="true">🎧</span>
+        <span class="card-title">Переклади українською</span>
+        <span class="card-text">300 популярних англійських фраз: слухаємо фразу й кажемо її українською — браузер перевіряє. Не знаєш — є підказка.</span>
+      </a>
+      <a class="card" href="english-phrases-en/">
+        <span class="card-icon" aria-hidden="true">💬</span>
+        <span class="card-title">Скажи фразу англійською</span>
+        <span class="card-text">Ті самі 300 фраз навпаки: читаємо українською й кажемо англійською. Підказка дає послухати, як це звучить.</span>
+      </a>
+      <a class="card" href="english-phrases-assemble/">
+        <span class="card-icon" aria-hidden="true">🧩</span>
+        <span class="card-title">Збери фразу</span>
+        <span class="card-text">Слухаємо англійську фразу й збираємо її зі слів — по черзі. Переклад підказує зміст, а 💡 — наступне слово.</span>
+      </a>
+      <a class="card" href="english-tenses-listen/">
+        <span class="card-icon" aria-hidden="true">⏳</span>
+        <span class="card-title">Учора, зараз чи завтра?</span>
+        <span class="card-text">Англійські часи на слух: слухаємо речення й вгадуємо, коли це було — учора, зараз чи завтра.</span>
+      </a>
+      <a class="card" href="english-tenses-say/">
+        <span class="card-icon" aria-hidden="true">🔁</span>
+        <span class="card-title">Скажи вчора й завтра</span>
+        <span class="card-text">Англійські часи вголос: речення про «зараз» кажемо про «вчора» або «завтра» — і навпаки. Браузер слухає й перевіряє.</span>
+      </a>
+      </div>
+    </section>
+
+    <section class="subject">
+      <h2>Дива фізики</h2>
+      <div class="cards">
+      <a class="card" href="physics-billiard/">
+        <span class="card-icon" aria-hidden="true">🎱</span>
+        <span class="card-title">Чарівний більярд</span>
+        <span class="card-text">Тисяча кульок вилітає з однієї точки й відскакує від бортиків. В овалі вони знову зустрічаються, а на стадіоні розбігаються хто куди.</span>
+      </a>
+      <a class="card" href="physics-pendulums/">
+        <span class="card-icon" aria-hidden="true">🌈</span>
+        <span class="card-title">Тисяча маятників</span>
+        <span class="card-text">Тисяча подвійних маятників стартують майже однаково й спершу гойдаються як один. А за кілька секунд розлітаються веселкою хто куди.</span>
+      </a>
+      <a class="card" href="physics-lorenz/">
+        <span class="card-icon" aria-hidden="true">🦋</span>
+        <span class="card-title">Метелик Лоренца</span>
+        <span class="card-text">Тисячі точок вилітають з одного місця й спочатку летять разом. А потім розповзаються по двох крилах чарівного метелика — так влаштована погода.</span>
+      </a>
+      <a class="card" href="physics-three-body/">
+        <span class="card-icon" aria-hidden="true">✨</span>
+        <span class="card-title">Три зірки</span>
+        <span class="card-text">Три зірки притягують одна одну й кружляють у танці. Іноді танець гарний і повторюється, а іноді одну зірку викидає геть.</span>
+      </a>
+      <a class="card" href="physics-pendulum-wave/">
+        <span class="card-icon" aria-hidden="true">🎐</span>
+        <span class="card-title">Маятникова хвиля</span>
+        <span class="card-text">Вісімнадцять маятників різної довжини гойдаються поруч. З рівного ряду виходять змійки, потім суцільна плутанина — і за хвилину вони знову в ряд.</span>
+      </a>
+      <a class="card" href="physics-double-slit/">
+        <span class="card-icon" aria-hidden="true">🔦</span>
+        <span class="card-title">Дві щілини</span>
+        <span class="card-text">Хвиля проходить крізь дві щілини й малює на екрані смужки. А потім по одному летять електрони — і складаються в такі самі смужки!</span>
+      </a>
+      <a class="card" href="physics-quantum/">
+        <span class="card-icon" aria-hidden="true">👻</span>
+        <span class="card-title">Квантова частинка</span>
+        <span class="card-text">Крихітна частинка — це хвиля-веселка. Вона може пройти крізь стіну, як привид, і гойдатися в ямці, як вода в мисці.</span>
+      </a>
+      <a class="card" href="physics-orbitals/">
+        <span class="card-icon" aria-hidden="true">⚛️</span>
+        <span class="card-title">Хмара електрона</span>
+        <span class="card-text">Електрон в атомі — не кулька, а сяйлива хмара. Сто тисяч точок малюють справжні форми орбіталей атома водню: куля, гантель, конюшина, квітка.</span>
+      </a>
+      <a class="card" href="physics-chladni/">
+        <span class="card-icon" aria-hidden="true">🔊</span>
+        <span class="card-title">Співучий пісок</span>
+        <span class="card-text">Металева пластинка дзвенить, а пісок на ній сам збирається у візерунки-сніжинки. Що вищий звук, то складніший візерунок.</span>
+      </a>
+      <a class="card" href="physics-caustics/">
+        <span class="card-icon" aria-hidden="true">🏊</span>
+        <span class="card-title">Світло на дні басейну</span>
+        <span class="card-text">Сонце світить крізь хвилі, і на дні басейну тремтить яскрава сітка світла. Проведи пальцем по воді — і сітка оживе.</span>
+      </a>
+      <a class="card" href="physics-bubble-chamber/">
+        <span class="card-icon" aria-hidden="true">🫧</span>
+        <span class="card-title">Бульбашкова камера</span>
+        <span class="card-text">Невидимі частинки залишають у рідині доріжки з крихітних бульбашок, а магніт закручує їх у дуги й спіралі — як на знаменитих знімках ЦЕРН.</span>
+      </a>
+      <a class="card" href="physics-quarks/">
+        <span class="card-icon" aria-hidden="true">🔗</span>
+        <span class="card-title">Кварки на гумці</span>
+        <span class="card-text">Кварки тримаються на сяйливій «гумці», яка тягне однаково сильно, хоч як далеко тягни. Розірви її — і з порожнечі народиться нова пара кварків.</span>
+      </a>
+      <a class="card" href="physics-magnets/">
+        <span class="card-icon" aria-hidden="true">🧲</span>
+        <span class="card-title">Магнітне поле</span>
+        <span class="card-text">Невидиме поле навколо магнітів стає видимим: ошурки шикуються у візерунки, стрілки компасів повертаються, а кольорові лінії біжать від півночі до півдня.</span>
+      </a>
+      <a class="card" href="physics-black-hole/">
+        <span class="card-icon" aria-hidden="true">🕳️</span>
+        <span class="card-title">Чорна діра</span>
+        <span class="card-text">Облети справжню чорну діру: вона закручує довкола себе світло зір і розпечений газ, як у фільмі «Інтерстеллар».</span>
+      </a>
+      <a class="card" href="physics-spacetime/">
+        <span class="card-icon" aria-hidden="true">🪐</span>
+        <span class="card-title">Батут простору</span>
+        <span class="card-text">Зірка продавлює простір, як важкий м’яч — батут, а планети катаються навколо неї, як кульки у вирві. Запускай свої планети!</span>
+      </a>
+      <a class="card" href="physics-string/">
+        <span class="card-icon" aria-hidden="true">🎻</span>
+        <span class="card-title">Співоча струна</span>
+        <span class="card-text">Відтягни струну й відпусти: вона тремтить і співає, а внизу видно, з яких простих хвиль-«обертонів» складається її звук.</span>
+      </a>
+      <a class="card" href="physics-calabi-yau/">
+        <span class="card-icon" aria-hidden="true">🌀</span>
+        <span class="card-title">Приховані виміри</span>
+        <span class="card-text">Райдужна фігура Калабі — Яу: так математики малюють крихітні згорнуті виміри, про які мріє теорія струн.</span>
+      </a>
+      <a class="card" href="physics-tesseract/">
+        <span class="card-icon" aria-hidden="true">🧊</span>
+        <span class="card-title">Чотиривимірний куб</span>
+        <span class="card-text">Тесеракт — куб із чотирьох вимірів. Ми бачимо тільки його тінь, і вона весь час вивертається навиворіт.</span>
+      </a>
+      <a class="card" href="physics-fluid/">
+        <span class="card-icon" aria-hidden="true">🎨</span>
+        <span class="card-title">Рідкі фарби</span>
+        <span class="card-text">Проведи пальцем — і різнокольорові фарби закрутяться у вири, як чорнило у воді. Справжні рівняння рідини, пораховані відеокартою.</span>
+      </a>
+      <a class="card" href="physics-turing/">
+        <span class="card-icon" aria-hidden="true">🦓</span>
+        <span class="card-title">Візерунки Тюрінга</span>
+        <span class="card-text">Дві невидимі речовини розтікаються й поїдають одна одну — і самі собою малюють смужки зебри, плями леопарда та корали. Помалюй пальцем, і візерунок виросте з твоєї лінії.</span>
+      </a>
+      <a class="card" href="physics-entropy/">
+        <span class="card-icon" aria-hidden="true">⏳</span>
+        <span class="card-title">Стріла часу</span>
+        <span class="card-text">Червоний і синій газ перемішуються, щойно прибрати перегородку. А чи можна повернути час назад і знову їх розділити?</span>
+      </a>
+      <a class="card" href="physics-ising/">
+        <span class="card-icon" aria-hidden="true">🧭</span>
+        <span class="card-title">Магніт зі стрілочок</span>
+        <span class="card-text">Тисячі крихітних стрілочок-магнітиків: у холоді вони домовляються й дивляться в один бік, а в спеку киплять і сперечаються. Рухай температуру й знайди чарівну точку посередині.</span>
+      </a>
+      <a class="card" href="physics-sandpile/">
+        <span class="card-icon" aria-hidden="true">🏖️</span>
+        <span class="card-title">Піщана купа</span>
+        <span class="card-text">Піщинки падають в одну точку, купа раз у раз обсипається лавинами — і сама собою виростає у величезний візерунок-мандалу. Натисни, щоб насипати пісок, де хочеш.</span>
+      </a>
+      </div>
+    </section>
+
+    <section class="subject">
+      <h2>Помічники</h2>
+      <div class="cards">
+      <a class="card" href="merlin/">
+        <span class="card-icon" aria-hidden="true">🧙</span>
+        <span class="card-title">Мерлін читає</span>
+        <span class="card-text">Напиши будь-який текст — чарівник Мерлін прочитає його вголос. А можна сказати — і він запише.</span>
+      </a>
+      </div>
+    </section>
+</main>
+</body>
+</html>

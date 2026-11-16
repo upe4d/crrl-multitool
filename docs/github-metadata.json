@@ -1,0 +1,5 @@
+{
+  "description": "A browser-first workspace for files, text, media, design and development. Includes visual builders, bilingual cheat sheets, in-page code execution, PWA and PHP services.",
+  "homepage": "https://tools.crrl.ru/",
+  "topics": ["multitool", "browser-tools", "web-utilities", "productivity", "self-hosted", "pwa", "php", "javascript", "webassembly", "pdf-tools", "image-tools", "developer-tools", "design-tools", "code-playground", "form-builder", "cheatsheets", "file-sharing", "document-tools"]
+}

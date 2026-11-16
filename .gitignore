@@ -11,3 +11,6 @@
 .env
 .env.*
 /models/
+
+# Локальная страница проверки не входит в публикацию
+/qa-playground-local.html

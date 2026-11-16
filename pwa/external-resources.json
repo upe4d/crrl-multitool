@@ -1,0 +1,140 @@
+[
+  {
+    "title": "TANCN — конструктор форм и таблиц",
+    "description": "Визуальный конструктор форм и таблиц с предпросмотром, шаблонами и экспортом компонентов. Работает в Мультитуле.",
+    "url": "/tancn/",
+    "category": "catalog",
+    "label": "ФОРМЫ И ТАБЛИЦЫ",
+    "groups": [
+      "dev",
+      "design"
+    ]
+  },
+  {
+    "title": "QuickRef — шпаргалки",
+    "description": "Шпаргалки по программированию, командам, инструментам и дизайну с русскими пояснениями.",
+    "url": "/reference/",
+    "category": "catalog",
+    "label": "СПРАВОЧНИК",
+    "groups": [
+      "dev",
+      "design"
+    ]
+  },
+  {
+    "title": "Uiverse — UI-компоненты",
+    "description": "Каталог компонентов сообщества Uiverse: предпросмотр и копирование HTML и CSS.",
+    "url": "/ui-components/",
+    "category": "catalog",
+    "label": "ИНТЕРФЕЙСЫ",
+    "groups": [
+      "design",
+      "dev"
+    ]
+  },
+  {
+    "title": "DashBeam — передача файлов",
+    "description": "Передача файлов между устройствами через DashBeam; веб-версия использует публичные реле.",
+    "url": "/dashbeam/",
+    "category": "notes",
+    "label": "ПЕРЕДАЧА ФАЙЛОВ",
+    "groups": [
+      "files",
+      "work"
+    ]
+  },
+  {
+    "title": "ACE Music — генератор музыки",
+    "description": "Внешний сервис для создания песен. Доступна бесплатная генерация; скачивание зависит от выбранной модели и тарифа.",
+    "url": "https://acemusic.ai/create/",
+    "category": "audio",
+    "groups": [
+      "audio",
+      "ai"
+    ],
+    "label": "МУЗЫКА И ИИ"
+  },
+  {
+    "title": "Gitmsg — мессенджер",
+    "description": "В разработке: переписка через репозитории GitHub. Требуется настройка собственного приложения GitHub.",
+    "url": "https://github.com/yiaany/gitmsg",
+    "category": "catalog",
+    "groups": [
+      "dev"
+    ],
+    "label": "В РАЗРАБОТКЕ"
+  },
+  {
+    "title": "Декодер и генератор Морзе",
+    "description": "Приём и генерация азбуки Морзе. Русский и английский интерфейс; автор MarketKernel.",
+    "url": "/market-apps/morse/",
+    "category": "audio",
+    "groups": [
+      "audio",
+      "text"
+    ],
+    "label": "АЗБУКА МОРЗЕ"
+  },
+  {
+    "title": "Редактор изображений HTML Paint",
+    "description": "Графический редактор со слоями и эффектами, русский и английский интерфейс. Автор MarketKernel.",
+    "url": "/market-apps/paint/",
+    "category": "images",
+    "groups": [
+      "images",
+      "design"
+    ],
+    "label": "ГРАФИКА"
+  },
+  {
+    "title": "Сравнение файлов и папок",
+    "description": "Сравнивайте файлы и папки, находите различия в тексте и коде. Автор MarketKernel.",
+    "url": "/market-apps/merge/",
+    "category": "files",
+    "groups": [
+      "files",
+      "dev"
+    ],
+    "label": "СРАВНЕНИЕ ФАЙЛОВ"
+  },
+  {
+    "title": "BAP Studio — конструктор приложений",
+    "description": "Конструктор приложений с таблицами, формами и отчётами. Автор MarketKernel.",
+    "url": "/market-apps/bap/",
+    "category": "pro",
+    "groups": [],
+    "label": "ПРИЛОЖЕНИЯ И ДАННЫЕ"
+  },
+  {
+    "title": "Временная шкала",
+    "description": "Создавайте и изучайте хронологии событий с текстом и изображениями. Автор MarketKernel.",
+    "url": "/market-apps/timeline/",
+    "category": "work",
+    "groups": [
+      "work",
+      "text"
+    ],
+    "label": "ХРОНОЛОГИЯ"
+  },
+  {
+    "title": "Эмулятор процессора",
+    "description": "Изучайте ARM64 и x86-64, выполняйте и отлаживайте программы в браузере. Автор MarketKernel.",
+    "url": "/market-apps/cpu/",
+    "category": "catalog",
+    "groups": [
+      "dev"
+    ],
+    "label": "РАЗРАБОТКА"
+  },
+  {
+    "title": "Учебные игры для детей",
+    "description": "Тренажёры чтения, математики, английского и наглядные опыты по физике. Русский и украинский языки. Автор School Lessons.",
+    "url": "/market-apps/school/",
+    "category": "games",
+    "groups": [
+      "games",
+      "work"
+    ],
+    "label": "ОБУЧЕНИЕ"
+  }
+]

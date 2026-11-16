@@ -1,0 +1,11 @@
+/* Компактные фильтры без изменения сетки карточек. */
+.catalog-sections{display:flex;gap:8px;flex-wrap:wrap;margin-top:24px}
+.catalog-sections button{display:inline-flex;align-items:center;gap:7px;border:1px solid #35473b;border-radius:999px;background:#151e19;color:#c5d4c8;padding:9px 14px;font:inherit;font-size:14px;cursor:pointer;transition:background .18s,border-color .18s,color .18s}
+.catalog-sections button span{font-size:11px;color:#9cb19e}
+.catalog-sections button:hover{border-color:#a7d681;color:#f2f8ef}
+.catalog-sections button[aria-pressed=true]{background:#c8ee91;border-color:#c8ee91;color:#172313;font-weight:650}
+.catalog-sections button[aria-pressed=true] span{color:#344b2a}
+.catalog-sections button:focus-visible{outline:2px solid #d8ffab;outline-offset:3px}
+#catalogs .catalog-card[hidden]{display:none!important}
+@media(max-width:600px){.catalog-sections{gap:6px;margin-top:18px}.catalog-sections button{padding:8px 11px;font-size:13px}}
+@media(prefers-reduced-motion:reduce){.catalog-sections button{transition:none}}
