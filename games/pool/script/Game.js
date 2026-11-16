@@ -67,7 +67,7 @@ Game_Singleton.prototype.assetLoadingLoop = function () {
         requestAnimationFrame(Game.assetLoadingLoop);
     else {
         Game.initialize();
-        requestAnimationFrame(this.mainMenu.load.bind(this.mainMenu));
+        requestAnimationFrame(Game.mainMenu.load.bind(Game.mainMenu));
     }
 };
 

@@ -451,10 +451,10 @@
   var W = STR[NF.lang] || STR.en;
 
   var COLORS = [
-    { en: 'Red', tr: 'Kırmızı', hex: '#E74C3C' },
-    { en: 'Blue', tr: 'Mavi', hex: '#3498DB' },
-    { en: 'Green', tr: 'Yeşil', hex: '#2ECC71' },
-    { en: 'Yellow', tr: 'Sarı', hex: '#F1C40F' },
+    { en: 'Красный', tr: 'Kırmızı', hex: '#E74C3C' },
+    { en: 'Синий', tr: 'Mavi', hex: '#3498DB' },
+    { en: 'Зелёный', tr: 'Yeşil', hex: '#2ECC71' },
+    { en: 'Жёлтый', tr: 'Sarı', hex: '#F1C40F' },
     { en: 'Purple', tr: 'Mor', hex: '#9B59B6' },
     { en: 'Orange', tr: 'Turuncu', hex: '#E67E22' }
   ];

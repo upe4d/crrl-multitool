@@ -26,7 +26,8 @@ Menu.prototype.load = function(){
         this.sound.volume = 0.8;
     }
 
-    this.sound.play();
+    // До первого нажатия браузер может запретить музыку; игра при этом запускается.
+    this.sound.play().catch(function(){});
 }
 
 Menu.prototype.draw = function(){
