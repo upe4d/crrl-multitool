@@ -24,6 +24,13 @@ $dir = getenv('MULTITOOL_ACCOUNTS_DIR') ?: '/var/lib/multitool-accounts';
 if (!is_dir($dir) || !is_writable($dir)) reply(503, ['error' => 'Сервис избранного временно недоступен']);
 $catalog = json_decode((string) @file_get_contents(dirname(__DIR__, 2) . '/directions/catalog.json'), true);
 if (!is_array($catalog)) reply(503, ['error' => 'Каталог временно недоступен']);
+// Игры участвуют в том же избранном; допустимы только адреса из локального каталога.
+$games = json_decode((string) @file_get_contents(dirname(__DIR__, 2) . '/games/catalog.json'), true);
+if (is_array($games)) {
+    foreach ($games as $game) {
+        if (is_array($game) && is_string($game['url'] ?? null) && preg_match('/\A\/games\/play\.html\?id=[a-z0-9-]+\z/D', $game['url'])) $catalog[] = $game;
+    }
+}
 $allowed = [];
 foreach ($catalog as $item) if (isset($item['url']) && is_string($item['url'])) $allowed[$item['url']] = true;
 $method = $_SERVER['REQUEST_METHOD'] ?? 'GET';

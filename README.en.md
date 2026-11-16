@@ -14,7 +14,7 @@ The project focuses on everyday work. Most operations run in the browser, while 
 
 | Directions | Base catalog | Cheat sheets |
 | :---: | :---: | :---: |
-| **11** | **191 entries** | **216 materials** |
+| **11** | **193 entries** | **216 materials** |
 
 These figures describe the [repository snapshot dated 16 November 2026](docs/catalog-snapshot.json). Additional modules are listed separately. Catalog entries have different runtime and offline requirements.
 
@@ -119,3 +119,11 @@ Cheat-sheet explanations use machine translation. AI generation in TANCN require
 Multitool combines the CRRL application shell with third-party projects while preserving attribution. Component-specific licenses include MIT, GPL, AGPL and other terms. Project references, license locations and available source archives are listed in [THIRD_PARTY.md](docs/THIRD_PARTY.md).
 
 **Development and integration:** [Creative Relab](https://crrl.ru/) · [GitHub](https://github.com/upe4d) · [Contact](https://t.me/creativerelab).
+
+## Browser games and a virtual computer environment
+
+[Play on Multitool](https://tools.crrl.ru/games/): **170 locally hosted games** from two collections, 106 active Mini Browser Games and 64 Night Fair games. Includes 12 counted genres, search, collection filters, Russian interfaces, original-language versions, and shared favorites with account synchronization. Game progress remains in browser storage.
+
+Original game visuals are preserved. Main titles have been manually edited; longer text uses machine translation. Night Fair word games include Russian vocabulary, a Cyrillic keyboard and typing exercises. See [credits](games/credits.html) and [pinned sources](games/sources.json). Archived games and native Mini Browser Games clients are excluded.
+
+[Aurora OS.js](https://tools.crrl.ru/pro/aurora/) is available in the Pro section: an experimental desktop, terminal and virtual filesystem environment, version 0.8.5, pre-alpha. Story gameplay and MMO are on the upstream roadmap. [Complete deployed source archive](https://tools.crrl.ru/pro/aurora/aurora-source.tar.gz), AGPL-3.0.

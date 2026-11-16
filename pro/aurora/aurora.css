@@ -1,0 +1,2 @@
+/* Общая навигация остаётся в теме Мультитула, а рабочий стол Aurora сохраняет свой дизайн. */
+.player-bar small{display:inline-block;font-size:10px;vertical-align:middle;font-weight:400;background:#35422b;color:#d2eaa9;padding:5px 8px;border-radius:5px;margin-left:10px}.player-help li{font-size:14px;color:var(--muted);line-height:1.8;margin-bottom:7px}.player-help code{color:var(--accent)}.player-help ol{padding-left:20px}@media(max-width:600px){.player-bar small{margin-left:0;font-size:9px}}

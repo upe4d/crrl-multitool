@@ -1,13 +1,13 @@
 /* Кэшируется только публичная оболочка; личные данные и модели сюда не попадают. */
 const CACHE_PREFIX = 'multitool-pwa-';
 const VERSION = '20261107-5';
-const SHELL_CACHE = CACHE_PREFIX + 'shell-v18';
-const ASSET_CACHE = CACHE_PREFIX + 'assets-v18';
+const SHELL_CACHE = CACHE_PREFIX + 'shell-v19';
+const ASSET_CACHE = CACHE_PREFIX + 'assets-v19';
 const OFFLINE_PAGE = '/pwa/offline.html';
 const REQUIRED = ['/', OFFLINE_PAGE, '/pwa/offline.css', '/pwa/pwa.css', '/pwa/register.js', '/pwa/manifest.webmanifest', '/pwa/avatar-180.png', '/pwa/avatar-192.png', '/pwa/avatar-512.png', '/pwa/avatar-maskable-512.png', '/pwa/avatar.ico'];
 const OPTIONAL = ['/pwa/updates.json','/pwa/updates.js','/pwa/updates.css','/pwa/external-resources.json','/pwa/global-search.js','/pwa/global-search.css','/directions/icons.svg','/favorites/favorites.js','/favorites/favorites.css','/directions/hub.css','/directions/hub.js','/directions/catalog.json','/pwa/brand.css','/nav-shell.css','/nav-groups.css','/navigation.js','/catalog-navigation.css','/text-ui.js','/text-ui.css','/image-tools.js','/image-tools.css','/calculation-tools.js','/calculation-tools.css','/pdf-ui.js','/pdf-ui.css','/news-editor.js','/rss-ui.js','/rss-ui.css','/games-ui.js','/games-ui.css','/maps_ui.js','/maps_ui.css','/subcategory-theme.css','/phosphor-icons.css','/compact-forms.css','/tool-layout.js','/tool-layout.css','/assets/pdf/pdf-lib.min.js','/assets/pdf/jszip.min.js','/host-convert.js'];
 // Версионированные CSS и JS доступны также при автономном запуске PWA.
-const versions = {'/pwa/pwa.css':'20261116-1','/directions/hub.css':'20261109-3','/directions/hub.js':'20261115-3','/navigation.js':'20261115-4','/nav-groups.css':'20261108-1','/nav-shell.css':'20261108-6','/catalog-navigation.css':'20261108-3','/pwa/register.js':'20261116-1','/pwa/updates.js':'20261115-1','/pwa/updates.css':'20261115-1','/pwa/global-search.js':'20261115-3','/pwa/global-search.css':'20261110-2','/favorites/favorites.js':'20261109-1','/favorites/favorites.css':'20261109-1','/pwa/brand.css':'20261108-1'};
+const versions = {'/pwa/pwa.css':'20261116-1','/directions/hub.css':'20261109-3','/directions/hub.js':'20261115-3','/navigation.js':'20261115-4','/nav-groups.css':'20261108-1','/nav-shell.css':'20261108-6','/catalog-navigation.css':'20261108-3','/pwa/register.js':'20261116-1','/pwa/updates.js':'20261115-1','/pwa/updates.css':'20261115-1','/pwa/global-search.js':'20261116-1','/pwa/global-search.css':'20261110-2','/favorites/favorites.js':'20261116-1','/favorites/favorites.css':'20261109-1','/pwa/brand.css':'20261108-1'};
 const versioned = path => /\.(?:css|js)$/.test(path) ? `${path}?v=${versions[path] || VERSION}` : path;
 for (let i=0;i<REQUIRED.length;i++) REQUIRED[i]=versioned(REQUIRED[i]);
 for (let i=0;i<OPTIONAL.length;i++) OPTIONAL[i]=versioned(OPTIONAL[i]);

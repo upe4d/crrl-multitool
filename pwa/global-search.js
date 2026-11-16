@@ -47,8 +47,10 @@
   }
   Promise.all([
     fetch('/directions/catalog.json').then(r=>{if(!r.ok)throw new Error();return r.json();}),
+    fetch('/games/catalog.json').then(r=>{if(!r.ok)throw new Error();return r.json();}).catch(()=>[]),
     fetch('/pwa/external-resources.json').then(r=>{if(!r.ok)throw new Error();return r.json();}).catch(()=>[])
-  ]).then(([data,external])=>{
+  ]).then(([data,games,external])=>{
+    data=[...data,...games];
     if(!Array.isArray(data))throw new Error();
     resources=Array.isArray(external)?external.filter(i=>i && typeof i.title==='string' && typeof i.url==='string' && (/^(?:https:\/\/|\/(?!\/))/.test(i.url))):[];
     items=[...data.filter(i=>i && typeof i.title==='string' && typeof i.url==='string' && i.url.startsWith('/') && !i.url.startsWith('//')),...resources.map(i=>({...i,external:i.url.startsWith('https://')}))];

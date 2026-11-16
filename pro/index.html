@@ -7,14 +7,14 @@
   <title>Профессиональные инструменты — Мультитул</title>
   <link rel="icon" href="/pwa/avatar.ico">
   <link rel="stylesheet" href="./pro.css?v=20261115-1">
-  <script src="./pro.js?v=20261115-1" defer></script>
+  <script src="./pro.js?v=20261116-1" defer></script>
 </head>
 <body>
   <header class="topbar"><a class="brand" href="/">МУЛЬТИ<span>ТУЛ</span></a><nav aria-label="Навигация"><a href="/">Мультитул</a><a href="/#news">Агрегаторы</a><a href="/#catalogs">Дизайнеру и разработчику</a><a href="/#notes">Обмен данными</a><a href="/#games">Игры</a></nav></header>
   <main class="page">
     <a class="back" href="/">← На главную</a>
     <section class="hero"><p class="eyebrow">РАБОЧЕЕ ПРОСТРАНСТВО / ПРОФИ</p><h1>Профессиональные<br>инструменты</h1><p>Для работы с доменами, документами и сложными задачами</p></section>
-    <div class="tabs" role="tablist" aria-label="Инструменты"><button role="tab" aria-selected="true" aria-controls="dns" id="tab-dns" data-tab="dns">Проверка DNS</button><button role="tab" aria-selected="false" aria-controls="documents" id="tab-documents" data-tab="documents">Документы и сканы</button><button role="tab" aria-selected="false" aria-controls="bap" id="tab-bap" data-tab="bap">Бизнес-приложения</button></div>
+    <div class="tabs" role="tablist" aria-label="Инструменты"><button role="tab" aria-selected="true" aria-controls="dns" id="tab-dns" data-tab="dns">Проверка DNS</button><button role="tab" aria-selected="false" aria-controls="documents" id="tab-documents" data-tab="documents">Документы и сканы</button><button role="tab" aria-selected="false" aria-controls="bap" id="tab-bap" data-tab="bap">Бизнес-приложения</button><button role="tab" aria-selected="false" aria-controls="aurora" id="tab-aurora" data-tab="aurora">Симулятор компьютера</button></div>
     <section id="dns" role="tabpanel" aria-labelledby="tab-dns" class="panel">
       <div class="panel-heading"><div><p class="eyebrow">СЕТЬ / ДОМЕНЫ</p><h2>Проверка DNS</h2><p>Сравните ответы общедоступных DNS-серверов после изменения записи</p></div><span class="badge">2 DNS-СЕРВИСА</span></div>
       <form id="dns-form" class="form-row"><label>Домен<input id="domain" name="domain" type="text" placeholder="example.com" autocomplete="url" required maxlength="253"></label><label>Тип записи<select id="type" name="type"><option>A</option><option>AAAA</option><option>CNAME</option><option>MX</option><option>NS</option><option>TXT</option><option>SOA</option></select></label><button class="primary" type="submit">Проверить ↗</button></form>
@@ -31,6 +31,7 @@
       <a class="pro-open" href="/market-apps/bap/">Открыть конструктор ↗</a>
       <p class="hint">Данные можно хранить в браузере или сохранить в файл. Приложение поддерживает русский и английский языки.</p>
     </section>
+    <section id="aurora" role="tabpanel" aria-labelledby="tab-aurora" class="panel" hidden><div class="panel-heading"><div><p class="eyebrow">ЭКСПЕРИМЕНТЫ / КОМПЬЮТЕРНАЯ СРЕДА</p><h2>Aurora OS.js</h2><p>Виртуальный рабочий стол, терминал, файлы и приложения. Исследуйте устройство компьютерной среды прямо в браузере.</p></div><span class="badge pending">PRE-ALPHA · 0.8.5</span></div><a class="pro-open" href="./aurora/">Открыть симулятор →</a><p class="hint">Состояние хранится в браузере. Сюжетная игра и MMO пока в планах автора. Для работы удобнее большой экран и клавиатура.</p><a href="./aurora/aurora-source.tar.gz">Исходники нашей сборки · AGPL-3.0</a></section>
   </main>
 </body>
 </html>

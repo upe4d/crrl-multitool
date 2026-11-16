@@ -1,0 +1,21 @@
+{
+  "date": "2026-11-16",
+  "sources": [
+    {
+      "repository": "https://github.com/wangzifan396-wzf/mini-browser-games",
+      "commit": "02106d2f52963fdaace080280b9f065f885d77b0",
+      "games": 106,
+      "license": "MIT",
+      "excluded": "18 архивных игр, настольный клиент и серверные расширения"
+    },
+    {
+      "repository": "https://github.com/berkaslan7988/night-fair",
+      "commit": "ce38886ff483947dbc6c0a637db0a86c1e433ee7",
+      "games": 64,
+      "license": "MIT"
+    }
+  ],
+  "excludedRepositories": [
+    "https://github.com/sausi-7/games"
+  ]
+}

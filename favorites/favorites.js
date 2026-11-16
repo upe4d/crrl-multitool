@@ -10,7 +10,9 @@
   for (const name of ['urls','add','remove']) if (!Array.isArray(state[name])) state[name] = [];
   let catalog = [], csrf = '', username = null, online = false, busy = false, showAll = false;
   const link = document.createElement('link'); link.rel = 'stylesheet'; link.href = '/favorites/favorites.css?v=20261109-1'; document.head.append(link);
-  function persist() { try { localStorage.setItem(key, JSON.stringify(state)); } catch (_) {} }
+  function persist() { try { localStorage.setItem(key, JSON.stringify(state)); } catch (_) {} document.dispatchEvent(new Event('multitool:favorites-change')); }
+  // Общий список доступен каталогам игр без отдельного хранилища.
+  window.multitoolFavorites = Object.freeze({urls:()=>[...state.urls]});
   function title(url) { return catalog.find(item => item.url === url)?.title || 'Инструмент'; }
   function setMessage(message) { const el = document.querySelector('.favorite-message'); if (el) el.textContent = message; }
   function paintButtons() {
@@ -108,6 +110,8 @@
     }
     draw();
   }
+  async function openAccount() { if(!online) await refreshAccount(); mountDialog(); const dialog=document.querySelector('#favorites-dialog'); dialog.querySelector('.favorites-logout').hidden=!username; setMessage(online ? '' : 'Нет соединения с сервисом аккаунтов'); dialog.showModal(); }
+  document.addEventListener('click',event=>{if(event.target.closest('[data-favorites-account]'))openAccount();});
   document.addEventListener('click', event => { const b=event.target.closest('[data-fav-url]'); if (b) { event.preventDefault(); toggle(b.dataset.favUrl); } });
   document.addEventListener('multitool:favorites-render', draw);
   window.addEventListener('storage', event => { if (event.key===key) { try { const next=JSON.parse(event.newValue || '{}'); if(next && typeof next==='object' && ['urls','add','remove'].every(name=>Array.isArray(next[name]))) state=next; } catch (_) {} draw(); } });
@@ -115,6 +119,7 @@
   window.addEventListener('online', refreshAccount);
   Promise.all([
     fetch('/directions/catalog.json').then(r=>{if(!r.ok) throw new Error(); return r.json();}),
+    fetch('/games/catalog.json').then(r=>{if(!r.ok) throw new Error(); return r.json();}).catch(()=>[]),
     fetch('/api/favorites/', {credentials:'same-origin', cache:'no-store'}).then(r=>{if(!r.ok) throw new Error(); return r.json();}).catch(()=>null)
-  ]).then(async ([items,account]) => { catalog=items; mount(); if (account) await adoptAccount(account); else { username=state.owner || null; online=false; draw(); } }).catch(()=>{});
+  ]).then(async ([items,games,account]) => { catalog=[...items,...games]; document.dispatchEvent(new Event('multitool:favorites-change'));  mount(); if (account) await adoptAccount(account); else { username=state.owner || null; online=false; draw(); } }).catch(()=>{});
 })();
