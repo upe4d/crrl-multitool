@@ -13,7 +13,7 @@
   }
   function translate(raw){
     if(typeof raw!=='string'||!raw.trim()||raw.length>12000)return raw;if(cache.has(raw))return cache.get(raw);
-    let result=dict[raw],trimmed=raw.trim();if(result===undefined&&dict[trimmed]!==undefined)result=raw.replace(trimmed,dict[trimmed]);
+    let result=dict[raw],trimmed=raw.trim();if(result!==undefined&&/[\u3400-\u9fff]/.test(result))result=undefined;if(result===undefined&&dict[trimmed]!==undefined)result=raw.replace(trimmed,dict[trimmed]);
     if(result===undefined){for(const [pattern,value,tokens] of templates){const m=raw.match(pattern);if(m){result=value;tokens.forEach((token,i)=>{result=result.split(token).join(m[i+1]);});break;}}}
     if(result===undefined&&/[\u3400-\u9fff]/.test(raw)){
       result='';for(let i=0;i<raw.length;){let node=trie,j=i,end=i,value;while(j<raw.length&&node[raw[j]]){node=node[raw[j++]];if(node.$!==undefined){end=j;value=node.$;}}if(value!==undefined){result+=value;i=end;}else result+=raw[i++];}
@@ -28,5 +28,5 @@
   function element(el){if(!(el instanceof Element)||el.matches(skip))return;for(const name of ['title','placeholder','aria-label','alt']){const raw=el.getAttribute(name);if(raw!==null){const value=translate(raw);if(value!==raw)el.setAttribute(name,value);}}}
   function walk(root){if(root.nodeType===3){textNode(root);return;}if(root.nodeType!==1||root.matches(skip))return;element(root);const walker=document.createTreeWalker(root,NodeFilter.SHOW_ELEMENT|NodeFilter.SHOW_TEXT);while(walker.nextNode()){const node=walker.currentNode;if(node.nodeType===3)textNode(node);else element(node);}}
   const observer=new MutationObserver(records=>{for(const m of records){if(m.type==='characterData')textNode(m.target);else if(m.type==='attributes')element(m.target);else m.addedNodes.forEach(walk);}});
-  document.addEventListener('DOMContentLoaded',()=>{document.documentElement.lang='ru';walk(document.body);document.title=translate(document.title);observer.observe(document.body,{subtree:true,childList:true,characterData:true,attributes:true,attributeFilter:['title','placeholder','aria-label','alt']});});
+  document.addEventListener('DOMContentLoaded',()=>{document.documentElement.lang='ru';const style=document.createElement('style');style.textContent='button{min-width:0!important;max-width:100%;white-space:normal!important;overflow-wrap:anywhere}';document.head.append(style);walk(document.body);document.title=translate(document.title);observer.observe(document.body,{subtree:true,childList:true,characterData:true,attributes:true,attributeFilter:['title','placeholder','aria-label','alt']});});
 })();

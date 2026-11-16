@@ -114,7 +114,7 @@
   document.addEventListener('click',event=>{if(event.target.closest('[data-favorites-account]'))openAccount();});
   document.addEventListener('click', event => { const b=event.target.closest('[data-fav-url]'); if (b) { event.preventDefault(); toggle(b.dataset.favUrl); } });
   document.addEventListener('multitool:favorites-render', draw);
-  window.addEventListener('storage', event => { if (event.key===key) { try { const next=JSON.parse(event.newValue || '{}'); if(next && typeof next==='object' && ['urls','add','remove'].every(name=>Array.isArray(next[name]))) state=next; } catch (_) {} draw(); } });
+  window.addEventListener('storage', event => { if (event.key===key) { try { const next=JSON.parse(event.newValue || '{}'); if(next && typeof next==='object' && ['urls','add','remove'].every(name=>Array.isArray(next[name]))) state=next; } catch (_) {} document.dispatchEvent(new Event('multitool:favorites-change')); draw(); } });
   async function refreshAccount() { try { const response=await fetch('/api/favorites/', {credentials:'same-origin',cache:'no-store'}); if(!response.ok) throw new Error(); await adoptAccount(await response.json()); } catch (_) { online=false; draw(); } }
   window.addEventListener('online', refreshAccount);
   Promise.all([
