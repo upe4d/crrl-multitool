@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Занятие — Мультитул</title>
+  <link rel="icon" href="/pwa/avatar.ico">
+  <link rel="stylesheet" href="./catalog.css?v=20261116-2">
+  <script src="./player.js?v=20261116-2" defer></script>
+</head>
+<body class="lesson-player">
+  <header class="player-bar">
+    <a class="player-back" id="player-back" href="./ru/"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg><span>К занятиям</span></a>
+    <div class="player-heading"><h1 id="lesson-title">Учебные игры</h1><p>Мультитул · School Lessons</p></div>
+    <div class="player-actions">
+      <a id="open-original" href="./" target="_blank" rel="noopener noreferrer" hidden>Открыть отдельно ↗</a>
+      <button type="button" id="player-fullscreen" aria-label="На весь экран"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"/></svg><span>На весь экран</span></button>
+    </div>
+  </header>
+  <div class="player-stage" id="player-stage">
+    <iframe id="lesson-frame" title="Учебное занятие" allow="microphone; fullscreen" hidden></iframe>
+    <div class="player-status" id="player-status" role="status"><h2>Открываем занятие</h2><p>Подготавливаем игровую область…</p></div>
+  </div>
+</body>
+</html>

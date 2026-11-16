@@ -1,0 +1,594 @@
+{
+  "ru": [
+    {
+      "slug": "read-syllables",
+      "title": "Собери слово",
+      "category": "reading",
+      "microphone": false
+    },
+    {
+      "slug": "read-potter",
+      "title": "Волшебные слова",
+      "category": "reading",
+      "microphone": false
+    },
+    {
+      "slug": "read-potter-aloud",
+      "title": "Прочитай вслух",
+      "category": "reading",
+      "microphone": true
+    },
+    {
+      "slug": "riddles",
+      "title": "Загадки",
+      "category": "reading",
+      "microphone": false
+    },
+    {
+      "slug": "read-roblox",
+      "title": "Секреты Роблокса",
+      "category": "reading",
+      "microphone": true
+    },
+    {
+      "slug": "math-addition",
+      "title": "Сложение",
+      "category": "math",
+      "microphone": false
+    },
+    {
+      "slug": "math-subtraction",
+      "title": "Вычитание",
+      "category": "math",
+      "microphone": false
+    },
+    {
+      "slug": "math-multiplication",
+      "title": "Умножение",
+      "category": "math",
+      "microphone": false
+    },
+    {
+      "slug": "math-division",
+      "title": "Деление",
+      "category": "math",
+      "microphone": false
+    },
+    {
+      "slug": "math-mix",
+      "title": "Всё вперемешку",
+      "category": "math",
+      "microphone": false
+    },
+    {
+      "slug": "math-compare",
+      "title": "Сравнение чисел",
+      "category": "math",
+      "microphone": false
+    },
+    {
+      "slug": "math-equations",
+      "title": "Уравнения",
+      "category": "math",
+      "microphone": false
+    },
+    {
+      "slug": "fractions-addition",
+      "title": "Сложение дробей",
+      "category": "fractions",
+      "microphone": false
+    },
+    {
+      "slug": "fractions-subtraction",
+      "title": "Вычитание дробей",
+      "category": "fractions",
+      "microphone": false
+    },
+    {
+      "slug": "fractions-multiplication",
+      "title": "Умножение дробей",
+      "category": "fractions",
+      "microphone": false
+    },
+    {
+      "slug": "fractions-division",
+      "title": "Деление дробей",
+      "category": "fractions",
+      "microphone": false
+    },
+    {
+      "slug": "fractions-mix",
+      "title": "Дроби вперемешку",
+      "category": "fractions",
+      "microphone": false
+    },
+    {
+      "slug": "fractions-equations",
+      "title": "Уравнения с дробями",
+      "category": "fractions",
+      "microphone": false
+    },
+    {
+      "slug": "english-words",
+      "title": "Скажи по-английски",
+      "category": "english",
+      "microphone": true
+    },
+    {
+      "slug": "english-pictures",
+      "title": "Найди картинку",
+      "category": "english",
+      "microphone": false
+    },
+    {
+      "slug": "english-phrases-ru",
+      "title": "Переведи на русский",
+      "category": "english",
+      "microphone": true
+    },
+    {
+      "slug": "english-phrases-en",
+      "title": "Скажи фразу по-английски",
+      "category": "english",
+      "microphone": true
+    },
+    {
+      "slug": "english-phrases-assemble",
+      "title": "Собери фразу",
+      "category": "english",
+      "microphone": false
+    },
+    {
+      "slug": "english-tenses-listen",
+      "title": "Вчера, сейчас или завтра?",
+      "category": "english",
+      "microphone": false
+    },
+    {
+      "slug": "english-tenses-say",
+      "title": "Скажи вчера и завтра",
+      "category": "english",
+      "microphone": true
+    },
+    {
+      "slug": "physics-billiard",
+      "title": "Волшебный бильярд",
+      "category": "physics",
+      "microphone": false
+    },
+    {
+      "slug": "physics-pendulums",
+      "title": "Тысяча маятников",
+      "category": "physics",
+      "microphone": false
+    },
+    {
+      "slug": "physics-lorenz",
+      "title": "Бабочка Лоренца",
+      "category": "physics",
+      "microphone": false
+    },
+    {
+      "slug": "physics-three-body",
+      "title": "Три звезды",
+      "category": "physics",
+      "microphone": false
+    },
+    {
+      "slug": "physics-pendulum-wave",
+      "title": "Маятниковая волна",
+      "category": "physics",
+      "microphone": false
+    },
+    {
+      "slug": "physics-double-slit",
+      "title": "Две щели",
+      "category": "physics",
+      "microphone": false
+    },
+    {
+      "slug": "physics-quantum",
+      "title": "Квантовая частица",
+      "category": "physics",
+      "microphone": false
+    },
+    {
+      "slug": "physics-orbitals",
+      "title": "Облако электрона",
+      "category": "physics",
+      "microphone": false
+    },
+    {
+      "slug": "physics-chladni",
+      "title": "Поющий песок",
+      "category": "physics",
+      "microphone": false
+    },
+    {
+      "slug": "physics-caustics",
+      "title": "Свет на дне бассейна",
+      "category": "physics",
+      "microphone": false
+    },
+    {
+      "slug": "physics-bubble-chamber",
+      "title": "Пузырьковая камера",
+      "category": "physics",
+      "microphone": false
+    },
+    {
+      "slug": "physics-quarks",
+      "title": "Кварки на резинке",
+      "category": "physics",
+      "microphone": false
+    },
+    {
+      "slug": "physics-magnets",
+      "title": "Магнитное поле",
+      "category": "physics",
+      "microphone": false
+    },
+    {
+      "slug": "physics-black-hole",
+      "title": "Чёрная дыра",
+      "category": "physics",
+      "microphone": false
+    },
+    {
+      "slug": "physics-spacetime",
+      "title": "Батут пространства",
+      "category": "physics",
+      "microphone": false
+    },
+    {
+      "slug": "physics-string",
+      "title": "Поющая струна",
+      "category": "physics",
+      "microphone": false
+    },
+    {
+      "slug": "physics-calabi-yau",
+      "title": "Скрытые измерения",
+      "category": "physics",
+      "microphone": false
+    },
+    {
+      "slug": "physics-tesseract",
+      "title": "Четырёхмерный куб",
+      "category": "physics",
+      "microphone": false
+    },
+    {
+      "slug": "physics-fluid",
+      "title": "Жидкие краски",
+      "category": "physics",
+      "microphone": false
+    },
+    {
+      "slug": "physics-turing",
+      "title": "Узоры Тьюринга",
+      "category": "physics",
+      "microphone": false
+    },
+    {
+      "slug": "physics-entropy",
+      "title": "Стрела времени",
+      "category": "physics",
+      "microphone": false
+    },
+    {
+      "slug": "physics-ising",
+      "title": "Магнит из стрелочек",
+      "category": "physics",
+      "microphone": false
+    },
+    {
+      "slug": "physics-sandpile",
+      "title": "Песочная куча",
+      "category": "physics",
+      "microphone": false
+    },
+    {
+      "slug": "merlin",
+      "title": "Мерлин читает",
+      "category": "helpers",
+      "microphone": true
+    }
+  ],
+  "ua": [
+    {
+      "slug": "read-syllables",
+      "title": "Збери слово",
+      "category": "reading",
+      "microphone": false
+    },
+    {
+      "slug": "read-potter",
+      "title": "Чарівні слова",
+      "category": "reading",
+      "microphone": false
+    },
+    {
+      "slug": "read-potter-aloud",
+      "title": "Прочитай вголос",
+      "category": "reading",
+      "microphone": true
+    },
+    {
+      "slug": "riddles",
+      "title": "Загадки",
+      "category": "reading",
+      "microphone": false
+    },
+    {
+      "slug": "read-roblox",
+      "title": "Секрети Роблокса",
+      "category": "reading",
+      "microphone": true
+    },
+    {
+      "slug": "math-addition",
+      "title": "Додавання",
+      "category": "math",
+      "microphone": false
+    },
+    {
+      "slug": "math-subtraction",
+      "title": "Віднімання",
+      "category": "math",
+      "microphone": false
+    },
+    {
+      "slug": "math-multiplication",
+      "title": "Множення",
+      "category": "math",
+      "microphone": false
+    },
+    {
+      "slug": "math-division",
+      "title": "Ділення",
+      "category": "math",
+      "microphone": false
+    },
+    {
+      "slug": "math-mix",
+      "title": "Усе впереміш",
+      "category": "math",
+      "microphone": false
+    },
+    {
+      "slug": "math-compare",
+      "title": "Порівняння чисел",
+      "category": "math",
+      "microphone": false
+    },
+    {
+      "slug": "math-equations",
+      "title": "Рівняння",
+      "category": "math",
+      "microphone": false
+    },
+    {
+      "slug": "fractions-addition",
+      "title": "Додавання дробів",
+      "category": "fractions",
+      "microphone": false
+    },
+    {
+      "slug": "fractions-subtraction",
+      "title": "Віднімання дробів",
+      "category": "fractions",
+      "microphone": false
+    },
+    {
+      "slug": "fractions-multiplication",
+      "title": "Множення дробів",
+      "category": "fractions",
+      "microphone": false
+    },
+    {
+      "slug": "fractions-division",
+      "title": "Ділення дробів",
+      "category": "fractions",
+      "microphone": false
+    },
+    {
+      "slug": "fractions-mix",
+      "title": "Дроби впереміш",
+      "category": "fractions",
+      "microphone": false
+    },
+    {
+      "slug": "fractions-equations",
+      "title": "Рівняння з дробами",
+      "category": "fractions",
+      "microphone": false
+    },
+    {
+      "slug": "english-words",
+      "title": "Скажи англійською",
+      "category": "english",
+      "microphone": true
+    },
+    {
+      "slug": "english-pictures",
+      "title": "Знайди картинку",
+      "category": "english",
+      "microphone": false
+    },
+    {
+      "slug": "english-phrases-ru",
+      "title": "Переклади українською",
+      "category": "english",
+      "microphone": true
+    },
+    {
+      "slug": "english-phrases-en",
+      "title": "Скажи фразу англійською",
+      "category": "english",
+      "microphone": true
+    },
+    {
+      "slug": "english-phrases-assemble",
+      "title": "Збери фразу",
+      "category": "english",
+      "microphone": false
+    },
+    {
+      "slug": "english-tenses-listen",
+      "title": "Учора, зараз чи завтра?",
+      "category": "english",
+      "microphone": false
+    },
+    {
+      "slug": "english-tenses-say",
+      "title": "Скажи вчора й завтра",
+      "category": "english",
+      "microphone": true
+    },
+    {
+      "slug": "physics-billiard",
+      "title": "Чарівний більярд",
+      "category": "physics",
+      "microphone": false
+    },
+    {
+      "slug": "physics-pendulums",
+      "title": "Тисяча маятників",
+      "category": "physics",
+      "microphone": false
+    },
+    {
+      "slug": "physics-lorenz",
+      "title": "Метелик Лоренца",
+      "category": "physics",
+      "microphone": false
+    },
+    {
+      "slug": "physics-three-body",
+      "title": "Три зірки",
+      "category": "physics",
+      "microphone": false
+    },
+    {
+      "slug": "physics-pendulum-wave",
+      "title": "Маятникова хвиля",
+      "category": "physics",
+      "microphone": false
+    },
+    {
+      "slug": "physics-double-slit",
+      "title": "Дві щілини",
+      "category": "physics",
+      "microphone": false
+    },
+    {
+      "slug": "physics-quantum",
+      "title": "Квантова частинка",
+      "category": "physics",
+      "microphone": false
+    },
+    {
+      "slug": "physics-orbitals",
+      "title": "Хмара електрона",
+      "category": "physics",
+      "microphone": false
+    },
+    {
+      "slug": "physics-chladni",
+      "title": "Співучий пісок",
+      "category": "physics",
+      "microphone": false
+    },
+    {
+      "slug": "physics-caustics",
+      "title": "Світло на дні басейну",
+      "category": "physics",
+      "microphone": false
+    },
+    {
+      "slug": "physics-bubble-chamber",
+      "title": "Бульбашкова камера",
+      "category": "physics",
+      "microphone": false
+    },
+    {
+      "slug": "physics-quarks",
+      "title": "Кварки на гумці",
+      "category": "physics",
+      "microphone": false
+    },
+    {
+      "slug": "physics-magnets",
+      "title": "Магнітне поле",
+      "category": "physics",
+      "microphone": false
+    },
+    {
+      "slug": "physics-black-hole",
+      "title": "Чорна діра",
+      "category": "physics",
+      "microphone": false
+    },
+    {
+      "slug": "physics-spacetime",
+      "title": "Батут простору",
+      "category": "physics",
+      "microphone": false
+    },
+    {
+      "slug": "physics-string",
+      "title": "Співоча струна",
+      "category": "physics",
+      "microphone": false
+    },
+    {
+      "slug": "physics-calabi-yau",
+      "title": "Приховані виміри",
+      "category": "physics",
+      "microphone": false
+    },
+    {
+      "slug": "physics-tesseract",
+      "title": "Чотиривимірний куб",
+      "category": "physics",
+      "microphone": false
+    },
+    {
+      "slug": "physics-fluid",
+      "title": "Рідкі фарби",
+      "category": "physics",
+      "microphone": false
+    },
+    {
+      "slug": "physics-turing",
+      "title": "Візерунки Тюрінга",
+      "category": "physics",
+      "microphone": false
+    },
+    {
+      "slug": "physics-entropy",
+      "title": "Стріла часу",
+      "category": "physics",
+      "microphone": false
+    },
+    {
+      "slug": "physics-ising",
+      "title": "Магніт зі стрілочок",
+      "category": "physics",
+      "microphone": false
+    },
+    {
+      "slug": "physics-sandpile",
+      "title": "Піщана купа",
+      "category": "physics",
+      "microphone": false
+    },
+    {
+      "slug": "merlin",
+      "title": "Мерлін читає",
+      "category": "helpers",
+      "microphone": true
+    }
+  ]
+}
