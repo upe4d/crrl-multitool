@@ -30,6 +30,20 @@ let currentFormat = 'video';
       return `${m}:${sec.toString().padStart(2, '0')}`;
     }
 
+    function fmtSize(bytes) {
+      if (!Number.isFinite(bytes) || bytes <= 0) return '';
+      if (bytes < 1024 * 1024) return `≈ ${Math.max(1, Math.round(bytes / 1024))} КБ`;
+      return `≈ ${(bytes / 1024 / 1024).toFixed(bytes < 100 * 1024 * 1024 ? 1 : 0)} МБ`;
+    }
+
+    function estimatedSize(card, format) {
+      if (!card.duration) return '';
+      if (format === 'audio') return fmtSize(card.duration * 128 * 1000 / 8);
+      const selected = card.formats?.find(item => item.id === card.selectedFormatId) || card.formats?.[0];
+      const videoKbps = Number(selected?.tbr) || (Number(selected?.height) >= 2160 ? 18000 : Number(selected?.height) >= 1440 ? 9000 : Number(selected?.height) >= 1080 ? 5000 : Number(selected?.height) >= 720 ? 2800 : 1400);
+      return fmtSize(card.duration * (videoKbps + 128) * 1000 / 8 * 1.08);
+    }
+
     function esc(s) {
       const d = document.createElement('div');
       d.textContent = s;
@@ -196,7 +210,7 @@ let currentFormat = 'video';
       let qualityChips = '';
       if (!isAudio && c.formats && c.formats.length > 1) {
         qualityChips = c.formats.map((f, n) =>
-          `<button class="q-chip${f.id === c.selectedFormatId ? ' active' : ''}" onclick="pickFormat(${idx}, ${n})">${esc(f.label)}</button>`
+          `<button class="q-chip${f.id === c.selectedFormatId ? ' active' : ''}" onclick="pickFormat(${idx}, ${n})">${esc(f.label)}${f.estimated_size ? ` <small>${esc(f.estimated_size)}</small>` : ''}</button>`
         ).join('');
       }
 
@@ -206,8 +220,7 @@ let currentFormat = 'video';
       } else if (c.status === 'downloading') {
         actionHtml = `<span class="card-status downloading"><span class="spin"></span> Скачиваем...</span>`;
       } else if (c.status === 'done') {
-        actionHtml = `<button class="card-dl-btn done" onclick="saveCard(${idx})">Сохранить</button>
-          <span class="card-status done">${esc(c.filename || '')}</span>`;
+        actionHtml = `<span class="card-status done">Файл передан на устройство и удалён с сервера${c.filename ? ` · ${esc(c.filename)}` : ''}</span>`;
       } else if (c.status === 'error') {
         actionHtml = `<button class="card-dl-btn" onclick="dlCard(${idx})">Повторить</button>
           <span class="card-status error">${esc(friendlyError(c.error || 'Не удалось скачать'))}</span>`;
@@ -217,7 +230,7 @@ let currentFormat = 'video';
         <div class="card-thumb">${thumbHtml}</div>
         <div class="card-body">
           <div class="source-badge">Источник: ${esc(sourceName(c.url))}</div><div class="card-title">${esc(c.title || 'Без названия')}</div>
-          <div class="card-meta">${esc(c.uploader)}${c.duration ? ' · ' + fmtDur(c.duration) : ''}</div>
+          <div class="card-meta">${esc(c.uploader)}${c.duration ? ' · ' + fmtDur(c.duration) : ''}${estimatedSize(c, currentFormat) ? ' · ' + esc(estimatedSize(c, currentFormat)) : ''}</div>
           <div class="card-actions">${actionHtml}</div>
         </div>
       `;
@@ -284,6 +297,7 @@ let currentFormat = 'video';
             c.filename = data.filename;
             renderCard(idx);
             saveCard(idx);
+            c.saved = true;
           } else if (data.status === 'error') {
             clearInterval(iv);
             c.status = 'error';

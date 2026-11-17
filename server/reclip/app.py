@@ -23,7 +23,8 @@ YTDLP_BASE = ["yt-dlp", "--ignore-config", "--plugin-dirs", os.path.join(os.path
 jobs = {}
 download_slot = threading.BoundedSemaphore(1)
 info_slots = threading.BoundedSemaphore(2)
-MAX_DOWNLOAD_BYTES = 250 * 1024 * 1024
+MAX_DOWNLOAD_BYTES = 1024 * 1024 * 1024
+MAX_DOWNLOAD_LABEL = "1 ГБ"
 
 
 def expire_jobs():
@@ -85,7 +86,7 @@ def run_download(job_id, url, format_choice, format_id):
     # В Windows FFmpeg на этом компьютере не открывает файлы напрямую.
     if os.name == "nt":
         return run_download_windows(job_id, url, format_choice, format_id)
-    cmd = YTDLP_BASE + ["--no-playlist", "--socket-timeout", "15", "--max-filesize", "250M", "-o", out_template]
+    cmd = YTDLP_BASE + ["--no-playlist", "--socket-timeout", "15", "--max-filesize", "1G", "-o", out_template]
 
     if format_choice == "audio":
         cmd += ["-x", "--audio-format", "mp3"]
@@ -151,7 +152,7 @@ def run_download_windows(job_id, url, format_choice, format_id):
             raise ValueError("Некорректный идентификатор качества")
         def fetch(kind, selection):
             template = os.path.join(DOWNLOAD_DIR, f"{job_id}.{kind}.%(ext)s")
-            cmd = YTDLP_BASE + ["--no-playlist", "--no-progress", "-f", selection, "-o", template, "--", url]
+            cmd = YTDLP_BASE + ["--no-playlist", "--no-progress", "--max-filesize", "1G", "-f", selection, "-o", template, "--", url]
             result = subprocess.run(cmd, capture_output=True, text=True, encoding="utf-8", errors="replace", timeout=300)
             if result.returncode:
                 raise RuntimeError(result.stderr.strip().split("\n")[-1] or "Не удалось скачать дорожку")
@@ -208,6 +209,7 @@ def get_info():
                 "id": f["format_id"],
                 "label": f"{height}p",
                 "height": height,
+                "tbr": f.get("tbr") or 0,
             })
         formats.sort(key=lambda x: x["height"], reverse=True)
 
@@ -280,7 +282,7 @@ def start_download():
             job = jobs.get(job_id, {})
             if job.get("status") == "done" and os.path.getsize(job["file"]) > MAX_DOWNLOAD_BYTES:
                 job["status"] = "error"
-                job["error"] = "Готовый файл больше 250 МБ. Выберите меньшее качество."
+                job["error"] = f"Готовый файл больше {MAX_DOWNLOAD_LABEL}. Выберите меньшее качество."
         finally:
             download_slot.release()
     thread = threading.Thread(target=execute)
@@ -312,7 +314,22 @@ def download_file(job_id):
     job = jobs.get(job_id)
     if not job or job["status"] != "done":
         return jsonify({"error": "File not ready"}), 404
-    return send_file(job["file"], as_attachment=True, download_name=job["filename"])
+    file_path = job["file"]
+    response = send_file(file_path, as_attachment=True, download_name=job["filename"])
+
+    def remove_after_response():
+        # Удаляем временный результат только после завершения ответа браузеру.
+        try:
+            os.remove(file_path)
+        except FileNotFoundError:
+            pass
+        except OSError:
+            app.logger.warning("Не удалось удалить временный файл %s", file_path)
+        job.pop("file", None)
+        job["removed"] = True
+
+    response.call_on_close(remove_after_response)
+    return response
 
 
 if __name__ == "__main__":
