@@ -1,7 +1,7 @@
 /* Альтернативная временная почта: создаёт ящик и читает входящие через Mail.tm API. */
 (() => {
   'use strict';
-  const api = 'https://api.mail.tm';
+  const api = './mailtm-proxy.php';
   const create = document.getElementById('mailtm-create');
   const refresh = document.getElementById('mailtm-refresh');
   const address = document.getElementById('mailtm-address');
@@ -13,7 +13,7 @@
   async function request(path, options = {}) {
     const headers = { Accept: 'application/json', ...(options.headers || {}) };
     if (token) headers.Authorization = `Bearer ${token}`;
-    const response = await fetch(api + path, { ...options, headers });
+    const response = await fetch(`${api}?path=${encodeURIComponent(path)}`, { ...options, headers });
     if (!response.ok) throw new Error(`Mail.tm: HTTP ${response.status}`);
     return response.json();
   }
