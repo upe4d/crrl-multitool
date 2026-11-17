@@ -43,15 +43,17 @@
   async function loadMessages() {
     if (!token) return;
     const data = await request('/messages?page=1');
-    render(data['hydra:member'] || []);
-    status.textContent = `Адрес готов: ${email} · писем: ${(data['hydra:member'] || []).length}`;
+    const items = Array.isArray(data) ? data : (data['hydra:member'] || []);
+    render(items);
+    status.textContent = `Адрес готов: ${email} · писем: ${items.length}`;
   }
 
   create.addEventListener('click', async () => {
     create.disabled = true; refresh.disabled = true; status.textContent = 'Создаём временный ящик…';
     try {
       const domains = await request('/domains?page=1');
-      const domain = domains['hydra:member']?.find((item) => item.isActive);
+      const domainList = Array.isArray(domains) ? domains : (domains['hydra:member'] || []);
+      const domain = domainList.find((item) => item.isActive);
       if (!domain) throw new Error('Mail.tm не вернул активный домен');
       const local = `mt${Date.now().toString(36)}${Math.random().toString(36).slice(2, 6)}`;
       email = `${local}@${domain.domain}`;
