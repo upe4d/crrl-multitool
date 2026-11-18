@@ -7,8 +7,14 @@
   const address = document.getElementById('mailtm-address');
   const messages = document.getElementById('mailtm-messages');
   const status = document.getElementById('mailtm-status');
+  const count = document.getElementById('mailtm-count');
+  const reader = document.getElementById('mailtm-reader');
+  const readerSubject = document.getElementById('mailtm-reader-subject');
+  const readerMeta = document.getElementById('mailtm-reader-meta');
+  const readerBody = document.getElementById('mailtm-reader-body');
+  const download = document.getElementById('mailtm-download');
   if (!create) return;
-  let token = '', email = '';
+  let token = '', email = '', openedMessage = null, refreshTimer = null;
 
   async function request(path, options = {}) {
     const headers = { Accept: 'application/json', ...(options.headers || {}) };
@@ -20,6 +26,7 @@
 
   function render(items) {
     messages.replaceChildren();
+    count.textContent = `${items.length} ${items.length === 1 ? 'письмо' : 'писем'}`;
     if (!items.length) {
       messages.innerHTML = '<p class="mailtm-empty">Пока писем нет. Нажмите «Обновить входящие» после отправки письма.</p>';
       return;
@@ -28,12 +35,21 @@
       const button = document.createElement('button');
       button.type = 'button';
       button.className = 'mailtm-message';
-      button.innerHTML = `<strong>${item.subject || '(без темы)'}</strong><span>${item.from?.address || 'Неизвестный отправитель'}</span>`;
+      button.innerHTML = `<span class="mailtm-message-icon">✉</span><span class="mailtm-message-copy"><strong>${item.subject || '(без темы)'}</strong><span>${item.from?.address || 'Неизвестный отправитель'} · ${item.intro || 'Открыть письмо'}</span></span><span class="mailtm-message-date">${item.createdAt ? new Date(item.createdAt).toLocaleString('ru-RU') : ''}</span>`;
       button.addEventListener('click', async () => {
+        document.querySelectorAll('.mailtm-message').forEach((node) => node.classList.remove('active'));
+        button.classList.add('active');
+        reader.hidden = false;
+        readerSubject.textContent = 'Загружаем письмо…';
+        readerMeta.textContent = '';
+        readerBody.textContent = '';
         try {
           const full = await request(`/messages/${encodeURIComponent(item.id)}`);
-          const body = full.text || full.html?.[0] || 'Текст письма недоступен.';
-          alert(`${full.subject || '(без темы)'}\n\n${body}`);
+          openedMessage = full;
+          readerSubject.textContent = full.subject || '(без темы)';
+          readerMeta.textContent = `${full.from?.address || 'Неизвестный отправитель'} · ${full.createdAt ? new Date(full.createdAt).toLocaleString('ru-RU') : ''}`;
+          readerBody.textContent = full.text || 'Текст письма недоступен.';
+          download.disabled = false;
         } catch (error) { status.textContent = `Не удалось открыть письмо: ${error.message}`; }
       });
       messages.append(button);
@@ -64,6 +80,8 @@
       address.textContent = email;
       refresh.disabled = false;
       await loadMessages();
+      clearInterval(refreshTimer);
+      refreshTimer = setInterval(() => loadMessages().catch(() => {}), 30000);
     } catch (error) {
       status.textContent = `Не удалось создать ящик: ${error.message}`;
       create.disabled = false;
@@ -72,7 +90,19 @@
 
   refresh.addEventListener('click', async () => {
     refresh.disabled = true;
+    refresh.classList.add('is-loading');
     try { await loadMessages(); } catch (error) { status.textContent = `Не удалось обновить входящие: ${error.message}`; }
+    refresh.classList.remove('is-loading');
     refresh.disabled = false;
+  });
+
+  download.addEventListener('click', () => {
+    if (!openedMessage) return;
+    const text = `Тема: ${openedMessage.subject || '(без темы)'}\nОт: ${openedMessage.from?.address || ''}\nДата: ${openedMessage.createdAt || ''}\n\n${openedMessage.text || ''}`;
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(new Blob([text], { type: 'text/plain;charset=utf-8' }));
+    link.download = 'mailtm-letter.txt';
+    link.click();
+    URL.revokeObjectURL(link.href);
   });
 })();
